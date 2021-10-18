@@ -1,12 +1,12 @@
 <template>
-<div class="service-layout">
+<div class="l-service">
   <Gnb />
   <div class="address">
     <div class="l-inner">
       <div class="d-flex-be-center">
         <div class="txt-sub">
           <p v-show="!isSelect">총 <span class="txt-primary">4</span>건</p>
-          <div class="input-checkbox" v-show="isSelect"> 
+          <div class="input-checkbox" v-show="isSelect">
             <input type="checkbox" id="chk-all"/>
             <label for="chk-all"><span class="txt-primary">2</span> / <span class="txt-sub">4</span></label>
           </div>
@@ -22,7 +22,7 @@
       <div class="address-list">
         <ul>
           <li>
-            <div class="input-checkbox" v-show="isSelect"> 
+            <div class="input-checkbox" v-show="isSelect">
               <input type="checkbox" id="chk-01"/>
               <label for="chk-01"></label>
             </div>
@@ -36,7 +36,7 @@
             </div>
           </li>
           <li>
-            <div class="input-checkbox" v-show="isSelect"> 
+            <div class="input-checkbox" v-show="isSelect">
               <input type="checkbox" id="chk-02"/>
               <label for="chk-02"></label>
             </div>
@@ -50,7 +50,7 @@
             </div>
           </li>
           <li>
-            <div class="input-checkbox" v-show="isSelect"> 
+            <div class="input-checkbox" v-show="isSelect">
               <input type="checkbox" id="chk-03"/>
               <label for="chk-03"></label>
             </div>
@@ -64,7 +64,7 @@
             </div>
           </li>
           <li>
-            <div class="input-checkbox" v-show="isSelect"> 
+            <div class="input-checkbox" v-show="isSelect">
               <input type="checkbox" id="chk-04"/>
               <label for="chk-04"></label>
             </div>

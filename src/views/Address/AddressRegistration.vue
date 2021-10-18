@@ -1,5 +1,5 @@
 <template>
-<div class="service-layout">
+<div class="l-service">
   <Gnb />
   <div class="address-registration">
     <div class="l-inner">
@@ -35,7 +35,7 @@ export default {
   name:'Address',
   data() {
    return {
-     
+
    };
   },
 }

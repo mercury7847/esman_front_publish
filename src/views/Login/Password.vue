@@ -1,5 +1,5 @@
 <template>
-<div class="service-layout">
+<div class="l-service">
     <Gnb />
   <div class="password">
   <el-tabs type="card" @tab-click="handleClick">

@@ -3,7 +3,7 @@
 
 
 html, body {
-  font-size: 14px;
+  font-size: $font-size-small;
   color: #5f686b;
   height: 100%;
   //min-width: 1200px; 이거 주면 UserPlayer 모바일버전 제대로 안나옴.

@@ -1,5 +1,5 @@
 <template>
-<div class="service-layout">
+<div class="l-service">
   <Gnb />
   <div class="terminal">
     <div class="l-inner">

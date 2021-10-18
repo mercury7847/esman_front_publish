@@ -1,8 +1,8 @@
 .join{
     background-color:#fff;
-    
+
     &-form{
-        padding-top: 30px;
+        // padding-top: 15px;
     }
     &-service-check{
         margin-top:10px;
@@ -52,8 +52,8 @@
         right:0;
         transform: translateY(-65%);
         .txt-title{
-            padding:10px 0;    
-            color:$main-color;    
+            padding:10px 0;
+            color:$main-color;
         }
     }
 }

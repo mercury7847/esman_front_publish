@@ -14,6 +14,7 @@ const Landing = () => import(/* webpackChunkName: "chunk/model" */'../views/Land
 const Join = () => import(/* webpackChunkName: "chunk/model" */'../views/Login/Join');
 const Dashboard = () => import(/* webpackChunkName: "chunk/model" */'../views/Dashboard/Dashboard');
 const Shipping = () => import(/* webpackChunkName: "chunk/model" */'../views/Shipping/Shipping');
+const Delivery = () => import(/* webpackChunkName: "chunk/model" */'../views/Delivery/Delivery');
 
 Vue.use(Router)
 
@@ -29,6 +30,7 @@ const router = new Router({
     { path: '/password', name: '비밀번호 찾기', component: Password },
     { path: '/dashboard', name: '대시보드', component: Dashboard },
     { path: '/shipping', name: '배송', component: Shipping },
+    { path: '/delivery', name: '집배송 출발', component: Delivery },
 
     {
       path: '/address',
@@ -53,6 +55,12 @@ const router = new Router({
 
 
     },
+    {
+      path: '/delivery',
+      name: 'Delivery',
+      component: () => import('../views/Delivery/Delivery.vue'),
+    },
+
     // { path: '/', name: 'intro', component: intro },
     // { path: '/home', name: 'home', component: home },
     /* { path: '/sample',

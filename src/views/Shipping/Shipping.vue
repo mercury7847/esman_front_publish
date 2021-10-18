@@ -1,5 +1,5 @@
 <template>
-  <div class="service-layout">
+  <div class="l-service">
   <gnb />
   <div class="shipping">
     <div class="search-area">

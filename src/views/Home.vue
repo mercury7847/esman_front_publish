@@ -6,6 +6,7 @@
     <router-link to="/dashboard"><el-button>Dashboard</el-button></router-link>
     <router-link to="/address"><el-button>주소록관리</el-button></router-link>
     <router-link to="/terminal"><el-button>터미널, 영업점조회</el-button></router-link>
+    <router-link to="/delivery"><el-button>집배송 출발</el-button></router-link>
 
   </div>
 </template>
