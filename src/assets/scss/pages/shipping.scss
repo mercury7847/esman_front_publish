@@ -1,0 +1,157 @@
+.shipping{
+  margin:0 30px 30px;; 
+  
+  .search-area{
+    margin:15px 0;
+    height:30px;
+  }
+
+  .search-inner{
+    height:32px; 
+    margin-right:24px;
+  }
+
+  .select-button{
+    padding:0 8px; 
+    height:32px;
+    border:0 none;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 13px;
+  }
+
+  .search-btn{
+    width: 24px;
+    height: 34px; 
+    background-image: url(../../assets/images/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: 0 none;
+    float: right;
+    background-color: transparent;
+  }
+  .card.list{
+    padding:20px;
+    box-sizing: border-box;
+
+    .status::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .left{
+      float:left;
+    }
+
+    .right{
+      float:right;
+    }
+    .shipping{
+      &-code{
+        color:#555555;
+        font-size:$font-size-normal;
+        vertical-align: middle;
+        display: inline-block;
+        margin-left:8px;
+        position: relative;
+        top:2px;
+      }
+      &-label{
+        display: inline-block;
+        vertical-align: middle;
+        color:#FFF;
+        padding:7px;
+        height:23px;
+        align-items: center;
+        box-sizing: border-box;
+        border-radius: 11.5px;
+        font-size:$font-size-xsmall;
+        &.post-payment{
+          background-color:#F4BF00;
+        }
+        &.pre-payment{
+          background-color:$sub-color;
+        }
+      }
+    }
+    .distance{
+      color:$sub-color;
+      font-size:$font-size-small;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .moer{
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+      background-image: url(../../assets/images/icon-menu.svg);
+      background-position: 50% 50%;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      border:0 none;
+    }
+    
+  }
+  .shipping-address{
+      font-size:$font-size-large;
+      color:$main-color;
+      font-weight: bold;
+      line-height: 40px;
+      height:40px;
+      position: relative;
+
+      .address{
+        display: block;
+        margin-right:24px;
+      }
+
+      .foldding-btn{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right:0;
+        top:9px;
+        background-color:transparent;
+        background-image: url(../../assets/images/up-down-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        transform: rotate(180deg);
+        border:0;
+        &.on{
+          transform: unset;
+        }
+      }
+    }
+    .detail{
+      display: none;
+      border-top:1px solid #EAEAEA;
+      &.is-on{
+        display: block;
+      }
+      .row{
+        padding:8px 0;
+        font-size:0;
+      }
+      .col-6{
+        width: 50%;
+        display: inline-block;
+      }
+      em{
+        font-size:$font-size-xsmall;
+        color:#999;
+      }
+      p{
+        font-size:$font-size-normal;
+        line-height:24px;
+        color:$main-color;
+        font-weight: 400;
+        &.point-color{
+          color:$sub-color;
+        }
+        &.pay-color{
+          color:#F4BF00;
+        }
+      }
+    }
+  }

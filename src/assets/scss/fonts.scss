@@ -1,0 +1,31 @@
+$font-map-path: (
+  NotoSansKR: "../../assets/fonts/"
+) !default;
+
+// 폰트페밀리 및 파일 이름
+$font-map-NotoSansKR: (
+  Bold: "NotoSansKR-Bold",
+  Bolder: "NotoSansKR-Black",
+  Medium: "NotoSansKR-Medium",
+  Regular: "NotoSansKR-Regular",
+  Light: "NotoSansKR-Light",
+  Thin: "NotoSansKR-Thin"
+) !default;
+
+$font-NotoSansKR: map-get($font-map-NotoSansKR, Bold) 700,
+  map-get($font-map-NotoSansKR, Bolder) 800,
+  map-get($font-map-NotoSansKR, Medium) 500,
+  map-get($font-map-NotoSansKR, Regular) 400,
+  map-get($font-map-NotoSansKR, Light) 300;
+
+// font-face gen
+@each $name, $weight in $font-NotoSansKR {
+  $font-path: #{map-get($font-map-path, NotoSansKR)}#{$name};
+
+  @font-face {
+    src: url($font-path+".otf") format("opentype");
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: $weight;
+  }
+}

@@ -1,0 +1,83 @@
+.login{
+    box-sizing: border-box;
+    &-form{
+      .inp {
+        height:50px;
+        margin:9px 0 20px;
+        &-inner{
+          padding:15px;
+        }
+      }
+      label{font-weight:bold;color:$--color-black;}
+    }
+
+    &-service{
+      &::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      line-height:50px;
+
+      &-check{
+        float: left;
+      }
+      
+      &-detailview{
+        float:right;
+      }
+    }
+    .btn-group{
+      margin-bottom:20px;
+    }
+    &-header{
+      
+      height:19vh;
+      position: relative;
+      margin-bottom:40px;
+      &-inner{
+        position: absolute;
+        bottom:0;
+      }
+      h1{
+        margin-bottom:18px;
+      }
+      p{
+        color: $main-color;
+        font-size: $font-size-normal;
+        font-weight:bold;
+      }
+    }
+
+    .option{
+      &::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .app-version{
+        float: left;
+        color:$disabled-color;
+      }
+      .option-service{
+        float:right;
+        .text-link:not(:first-child){
+          margin-left:20px;
+        }
+      }
+    }
+    .welcom-message{
+      position: absolute;
+      bottom:4%;
+      left:0;
+      right: 0;
+      text-align: center;
+      font-size:$font-size-xsmall;
+      color:$attach-color;
+      font-weight:200;
+    }
+  }
+
+  
+
+  

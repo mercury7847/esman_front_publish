@@ -1,0 +1,41 @@
+.address {
+  margin-top: 15px;
+  &-list {
+    margin-top: 16px;
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 14px 16px 16px;
+        border-top: 1px solid #eee;
+        .address {
+          &-txt {
+            line-height: normal;
+          }
+          &-title {
+            font-weight: bold;
+          }
+          &-desc {
+            margin-top: 5px;
+            color: $disabled-color;
+            font-size: $font-size-xsmall;
+          }
+          &-btn {
+            position: absolute;
+            right: 16px;
+            .btn {
+              padding: 0;
+              &:not(:first-child) {
+                margin-left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-registration {
+    margin-top: 15px;
+  }
+}
