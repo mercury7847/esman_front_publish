@@ -1,8 +1,8 @@
 <template>
 <div class="l-service">
   <Gnb />
-  <div class="address">
-    <div class="l-inner">
+  <div class="address l-scroll">
+    <div class="l-inner l-fixed">
       <div class="d-flex-be-center">
         <div class="txt-sub">
           <p v-show="!isSelect">총 <span class="txt-primary">4</span>건</p>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-      <div class="address-list">
+      <div class="address-list scroll-y">
         <ul>
           <li>
             <div class="input-checkbox" v-show="isSelect">
@@ -57,6 +57,118 @@
             <div class="address-txt">
               <p class="address-title">구로 터미널</p>
               <p class="address-desc">서울특별시 금천구 가산디지털2로 83</p>
+            </div>
+            <div class="address-btn" v-show="!isSelect">
+              <button class="btn"><i class="icon-edit"></i></button>
+              <button class="btn"><i class="icon-trash"></i></button>
+            </div>
+          </li>
+          <li>
+            <div class="input-checkbox" v-show="isSelect">
+              <input type="checkbox" id="chk-04"/>
+              <label for="chk-04"></label>
+            </div>
+            <div class="address-txt">
+              <p class="address-title">GS 홈쇼핑</p>
+              <p class="address-desc">서울특별시 영등포구 선유로 75</p>
+            </div>
+            <div class="address-btn" v-show="!isSelect">
+              <button class="btn"><i class="icon-edit"></i></button>
+              <button class="btn"><i class="icon-trash"></i></button>
+            </div>
+          </li>
+          <li>
+            <div class="input-checkbox" v-show="isSelect">
+              <input type="checkbox" id="chk-04"/>
+              <label for="chk-04"></label>
+            </div>
+            <div class="address-txt">
+              <p class="address-title">GS 홈쇼핑</p>
+              <p class="address-desc">서울특별시 영등포구 선유로 75</p>
+            </div>
+            <div class="address-btn" v-show="!isSelect">
+              <button class="btn"><i class="icon-edit"></i></button>
+              <button class="btn"><i class="icon-trash"></i></button>
+            </div>
+          </li>
+          <li>
+            <div class="input-checkbox" v-show="isSelect">
+              <input type="checkbox" id="chk-04"/>
+              <label for="chk-04"></label>
+            </div>
+            <div class="address-txt">
+              <p class="address-title">GS 홈쇼핑</p>
+              <p class="address-desc">서울특별시 영등포구 선유로 75</p>
+            </div>
+            <div class="address-btn" v-show="!isSelect">
+              <button class="btn"><i class="icon-edit"></i></button>
+              <button class="btn"><i class="icon-trash"></i></button>
+            </div>
+          </li>
+          <li>
+            <div class="input-checkbox" v-show="isSelect">
+              <input type="checkbox" id="chk-04"/>
+              <label for="chk-04"></label>
+            </div>
+            <div class="address-txt">
+              <p class="address-title">GS 홈쇼핑</p>
+              <p class="address-desc">서울특별시 영등포구 선유로 75</p>
+            </div>
+            <div class="address-btn" v-show="!isSelect">
+              <button class="btn"><i class="icon-edit"></i></button>
+              <button class="btn"><i class="icon-trash"></i></button>
+            </div>
+          </li>
+          <li>
+            <div class="input-checkbox" v-show="isSelect">
+              <input type="checkbox" id="chk-04"/>
+              <label for="chk-04"></label>
+            </div>
+            <div class="address-txt">
+              <p class="address-title">GS 홈쇼핑</p>
+              <p class="address-desc">서울특별시 영등포구 선유로 75</p>
+            </div>
+            <div class="address-btn" v-show="!isSelect">
+              <button class="btn"><i class="icon-edit"></i></button>
+              <button class="btn"><i class="icon-trash"></i></button>
+            </div>
+          </li>
+          <li>
+            <div class="input-checkbox" v-show="isSelect">
+              <input type="checkbox" id="chk-04"/>
+              <label for="chk-04"></label>
+            </div>
+            <div class="address-txt">
+              <p class="address-title">GS 홈쇼핑</p>
+              <p class="address-desc">서울특별시 영등포구 선유로 75</p>
+            </div>
+            <div class="address-btn" v-show="!isSelect">
+              <button class="btn"><i class="icon-edit"></i></button>
+              <button class="btn"><i class="icon-trash"></i></button>
+            </div>
+          </li>
+          <li>
+            <div class="input-checkbox" v-show="isSelect">
+              <input type="checkbox" id="chk-04"/>
+              <label for="chk-04"></label>
+            </div>
+            <div class="address-txt">
+              <p class="address-title">GS 홈쇼핑</p>
+              <p class="address-desc">서울특별시 영등포구 선유로 75</p>
+            </div>
+            <div class="address-btn" v-show="!isSelect">
+              <button class="btn"><i class="icon-edit"></i></button>
+              <button class="btn"><i class="icon-trash"></i></button>
+            </div>
+          </li>
+          <li>
+            <div class="input-checkbox" v-show="isSelect">
+              <input type="checkbox" id="chk-04"/>
+              <label for="chk-04"></label>
+            </div>
+            <div class="address-txt">
+              <p class="address-title">GS 홈쇼핑</p>
+              <p class="address-desc">서울특별시 영등포구 선유로 75</p>
             </div>
             <div class="address-btn" v-show="!isSelect">
               <button class="btn"><i class="icon-edit"></i></button>

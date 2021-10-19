@@ -1,8 +1,8 @@
 <template>
 <div class="l-service">
   <Gnb />
-  <div class="terminal">
-    <div class="l-inner">
+  <div class="terminal l-scroll">
+    <div class="l-inner l-fixed">
       <div class="l-inp l-search">
         <div class="inp">
           <div class="inp-inner">
@@ -21,7 +21,7 @@
         <button class="btn small-size white">전체 삭제</button>
       </div>
     </div>
-    <div class="address-list" v-show="!searchResult">
+    <div class="address-list scroll-y" v-show="!searchResult">
       <ul>
         <li v-for="item in recentSearchList" :key="item">
           <div class="address-txt">
@@ -33,7 +33,7 @@
         </li>
       </ul>
     </div>
-    <div class="address-list" v-show="searchResult">
+    <div class="address-list scroll-y" v-show="searchResult">
       <ul>
         <li v-for="item in searchList" :key="item">
           <div class="address-txt">
@@ -80,6 +80,30 @@ export default {
       },
       {
         title: '한진택배 <span class="txt-primary">구로</span> 2 영업점',
+        address: '서울특별시 <span class="txt-primary">구로</span>구 가산디지털 2로 83',
+      },
+      {
+        title: '한진택배 <span class="txt-primary">구로</span> 3 영업점',
+        address: '서울특별시 <span class="txt-primary">구로</span>구 가산디지털 2로 83',
+      },
+      {
+        title: '한진택배 <span class="txt-primary">구로</span> 3 영업점',
+        address: '서울특별시 <span class="txt-primary">구로</span>구 가산디지털 2로 83',
+      },
+      {
+        title: '한진택배 <span class="txt-primary">구로</span> 3 영업점',
+        address: '서울특별시 <span class="txt-primary">구로</span>구 가산디지털 2로 83',
+      },
+      {
+        title: '한진택배 <span class="txt-primary">구로</span> 3 영업점',
+        address: '서울특별시 <span class="txt-primary">구로</span>구 가산디지털 2로 83',
+      },
+      {
+        title: '한진택배 <span class="txt-primary">구로</span> 3 영업점',
+        address: '서울특별시 <span class="txt-primary">구로</span>구 가산디지털 2로 83',
+      },
+      {
+        title: '한진택배 <span class="txt-primary">구로</span> 3 영업점',
         address: '서울특별시 <span class="txt-primary">구로</span>구 가산디지털 2로 83',
       },
       {

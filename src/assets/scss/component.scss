@@ -26,7 +26,7 @@
   border-radius: 5px;
   &-inner{
     width:calc(100% - 30px);
-    padding:12px 15px;
+    padding:12px 36px 12px 15px;
     position:relative;
   }
   &.disabled{
@@ -38,7 +38,6 @@
     }
   }
 }
-
 .input{
   &-text-line{
     border: 0;
@@ -176,7 +175,7 @@ button{
   &.small-size{
     min-width: 50px;
     height: 33px;
-    padding: 6px 12px;
+    padding: 0 12px;
     font-size: $font-size-small;
     letter-spacing: -0.7px;
   }
@@ -196,9 +195,9 @@ button{
   &.w100 {
     width: 100px;
   }
-  &:focus{
-    box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
-  }
+  // &:focus{
+  //   box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
+  // }
   &:disabled{
     background-color:$disabled-color
   }
@@ -268,7 +267,12 @@ button{
     width: 20px;
     height: 10px;
     border: none;
-    // background: url(../../assets/images/icon-drag.svg) no-repeat 50% 50%/ contain;
+    background: url(../../assets/images/icon-drag.svg) no-repeat 50% 50%/ contain;
+  }
+  &.is-on {
+    .icon-search {
+      background: url(../../assets/images/icon-search-active.svg) no-repeat 50% 50%/ contain;
+    }
   }
 }
 
@@ -328,6 +332,7 @@ button{
   }
 }
 
+// badge
 .badge{
   display: inline-block;
   min-width: 42px;
@@ -344,7 +349,7 @@ button{
     background-color:#cae7c5;
     color:#1c790d;
   }
-  &.yello{
+  &.yellow{
     background-color:#fff4d7;
     color:#ffb800;
   }
@@ -539,6 +544,9 @@ i{
   &-large {
     font-size: $font-size-large !important;
   }
+  &-xxlarge {
+    font-size: $font-size-xxlarge !important;
+  }
 }
 .ft-color {
   &-green {
@@ -549,6 +557,22 @@ i{
   }
   &-purple {
     color: #7500ac;
+  }
+  &-gray {
+    color: $--color--gray;
+  }
+}
+.ft-weight {
+  &-bold {
+    font-weight: bold !important;
+  }
+  &-normal {
+    font-weight: normal !important;
+  }
+}
+.ft-align {
+  &-right {
+    text-align: right !important;
   }
 }
 
@@ -568,5 +592,120 @@ i{
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &-flex-be-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+// dialog
+.el-dialog {
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 60px) !important;
+  margin-top: 0 !important;
+  &__header {
+    padding: 30px 16px 0;
+  }
+  &__title {
+    color: $--color-black !important;
+    font-size: $font-size-small !important;
+    font-weight: bold;
+    letter-spacing: -0.7px;
+  }
+  &__body {
+    padding: 15px 16px 30px !important;
+    color: $--color-black !important;
+
+  }
+  &__footer {
+    height: 52px;
+    padding: 0 !important;
+    border-top: 1px solid $border-color;
+    .dialog-footer {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+    .el-button {
+      width: 100%;
+      border: none;
+      font-size: $font-size-small;
+      font-weight: normal;
+      &--default {
+        color: $disabled-color;
+      }
+      &--primary {
+        background-color: $--color--white;
+        color: $sub-color;
+      }
+    }
+  }
+  &--center {
+    .el-dialog__headerbtn {
+      display: none;
+    }
+  }
+  &-full {
+    .el-dialog {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100%;
+      transform: none;
+      background-color: $--color--light-gray;
+      &__header {
+        padding: 16px 16px 30px 50px;
+        .el-dialog__title {
+          font-size: $font-size-large !important;
+        }
+        .el-dialog__close {
+          width: 24px;
+          height: 24px;
+          background: url(../../assets/images/icon-close.svg) no-repeat 50% 50% / contain;
+          &::before {
+            display: none;
+          }
+        }
+        &::after {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          width: 24px;
+          height: 24px;
+          background: url(../../assets/images/icon-settings.svg) no-repeat 50% 50% / contain;
+        }
+        &btn {
+          .el-dialog__close {
+            color: $--color-black;
+          }
+          top: 16px;
+          right: unset;
+          left: 16px;
+        }
+      }
+      &__body {
+        width: 100%;
+        height: calc(100% - 70px);
+        padding: 0 16px 30px!important;
+        box-sizing: border-box;
+        overflow-y: auto;
+        .content {
+          width: 100%;
+          height: 100%;
+          padding: 50px 20px;
+          background-color: $--color--white;
+          box-shadow: 15px 15px 30px 5px rgba(93, 114, 167, 0.1);
+          border-radius: 5px;
+          box-sizing: border-box;
+          overflow-y: auto;
+        }
+      }
+    }
   }
 }

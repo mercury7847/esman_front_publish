@@ -29,7 +29,7 @@
         <div class="contents">
           <ul>
             <li><span class="badge green">배송</span><ins>12</ins></li>
-            <li><span class="badge yello">집하</span><ins>5</ins></li>
+            <li><span class="badge yellow">집하</span><ins>5</ins></li>
             <li><span class="badge red">오류</span><ins>0</ins></li>
           </ul>
         </div>
@@ -83,12 +83,12 @@
                 <tr>
                   <th>전략화주</th>
                   <td><span class="badge red">반품</span><span class="data">6</span>건</td>
-                  <td><span class="badge yello">배송</span><span class="data">12</span>건</td>
+                  <td><span class="badge yellow">배송</span><span class="data">12</span>건</td>
                 </tr>
                 <tr>
                   <th>전략화주</th>
                   <td><span class="badge red">반품</span><span class="data">6</span>건</td>
-                  <td><span class="badge yello">배송</span><span class="data">12</span>건</td>
+                  <td><span class="badge yellow">배송</span><span class="data">12</span>건</td>
                 </tr>
                 <tr>
                   <th>반송필요</th>
@@ -132,7 +132,7 @@
         <div class="contents">
           <ul>
             <li><span class="badge green">접수</span><ins>12</ins></li>
-            <li><span class="badge yello">열람</span><ins>5</ins></li>
+            <li><span class="badge yellow">열람</span><ins>5</ins></li>
           </ul>
         </div>
       </div>
@@ -148,7 +148,7 @@
         <div class="contents">
           <ul>
             <li><span class="badge green">요청</span><ins>12</ins></li>
-            <li><span class="badge yello">열람</span><ins>5</ins></li>
+            <li><span class="badge yellow">열람</span><ins>5</ins></li>
             <li><span class="badge purple">거래중기화주</span></li>
           </ul>
         </div>
