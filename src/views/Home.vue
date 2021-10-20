@@ -8,6 +8,7 @@
     <router-link to="/address"><el-button>주소록관리</el-button></router-link>
     <router-link to="/terminal"><el-button>터미널, 영업점조회</el-button></router-link>
     <router-link to="/delivery"><el-button>집배송 출발</el-button></router-link>
+    <router-link to="/message-record"><el-button>문자/통화 기록</el-button></router-link>
 
   </div>
 </template>

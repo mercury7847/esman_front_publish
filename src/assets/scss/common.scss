@@ -1,8 +1,5 @@
-
-/*@import url('./var.scss');*/
-
-
-html, body {
+html,
+body {
   font-size: $font-size-small;
   color: $--color-black;
   height: 100%;
@@ -15,4 +12,134 @@ html, body {
   height: 100%;
   width: 100%;
 }
+button {
+  cursor: pointer;
+}
 
+.ft-size {
+  &-xsmall {
+    font-size: $font-size-xsmall !important;
+  }
+  &-small {
+    font-size: $font-size-small !important;
+  }
+  &-normal {
+    font-size: $font-size-normal !important;
+  }
+  &-large {
+    font-size: $font-size-large !important;
+  }
+  &-xxlarge {
+    font-size: $font-size-xxlarge !important;
+  }
+}
+.ft-color {
+  &-green {
+    color: #1c790d;
+  }
+  &-yellow {
+    color: #ffb800;
+  }
+  &-purple {
+    color: #7500ac;
+  }
+  &-gray {
+    color: $--color--gray;
+  }
+}
+.ft-weight {
+  &-bolder {
+    font-weight: 800 !important;
+  }
+  &-bold {
+    font-weight: 700 !important;
+  }
+  &-medium {
+    font-weight: 500 !important;
+  }
+  &-regular {
+    font-weight: 400 !important;
+  }
+  &-light {
+    font-weight: 300 !important;
+  }
+}
+.ft-align {
+  &-right {
+    text-align: right !important;
+  }
+}
+.txt {
+  &-warning {
+    font-size: $font-size-small;
+    color: $warning-color;
+  }
+  &-message {
+    font-size: $font-size-xsmall;
+    color: $attach-color;
+    line-height: 1.45em;
+    font-weight: 300;
+  }
+  &-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4em;
+  }
+  &-secondary {
+    font-size: $font-size-small;
+    color: $secondary-color;
+  }
+  &-primary {
+    color: $sub-color !important;
+  }
+  &-sub {
+    color: $disabled-color !important;
+  }
+  &-weight-normal {
+    font-weight: normal !important;
+  }
+}
+
+.d {
+  &-inline-block {
+    display: inline-block;
+  }
+  &-inline-flex {
+    display: inline-flex;
+  }
+  &-flex {
+    display: flex;
+  }
+  &-flex-align-center {
+    display: flex;
+    align-items: center;
+  }
+  &-flex-be-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-flex-be-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.border-none {
+  border: none !important;
+}
+
+.ml {
+  &-20 {
+    margin-left: 20px;
+  }
+}
+.mr {
+  &-5 {
+    margin-right: 5px;
+  }
+  &-10 {
+    margin-right: 10px;
+  }
+}

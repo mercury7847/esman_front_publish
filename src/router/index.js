@@ -18,6 +18,7 @@ const Delivery = () => import(/* webpackChunkName: "chunk/model" */'../views/Del
 const Address = () => import(/* webpackChunkName: "chunk/model" */'../views/Address/Address');
 const AddressRegistration = () => import(/* webpackChunkName: "chunk/model" */'../views/Address/AddressRegistration');
 const Terminal = () => import(/* webpackChunkName: "chunk/model" */'../views/Terminal/Terminal');
+const MessageRecord = () => import(/* webpackChunkName: "chunk/model" */'../views/MessageRecord/MessageRecord');
 
 Vue.use(Router)
 
@@ -37,6 +38,7 @@ const router = new Router({
     { path: '/address', name: '주소록 관리', component: Address },
     { path: '/address-registration', name: '주소 등록', component: AddressRegistration },
     { path: '/terminal', name: '터미널, 영업점 조회', component: Terminal },
+    { path: '/message-record', name: '문자/통화 기록', component: MessageRecord },
 
 
     // { path: '/', name: 'intro', component: intro },

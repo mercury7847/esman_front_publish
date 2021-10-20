@@ -1,10 +1,11 @@
 <template>
-<div class="l-service">
+<!-- service-menu focusout일 경우 'focus-out'추가-->
+<div class="l-service focus-out">
   <Gnb />
   <div class="delivery-start">
   <el-tabs @tab-click="handleClick">
     <el-tab-pane label="배송">
-      <div class="l-inner">
+      <div class="l-inner l-scroll">
         <div class="l-total">
           <div class="d-flex-align-center">
             <div class="input-checkbox">
@@ -31,8 +32,8 @@
           </div>
         </div>
         <!-- 스캔 후 -->
-        <ul class="l-scroll-list" v-show="!isScanBefore">
-          <li v-for="item in deliveryList01" :key="item">
+        <ul class="scroll-y" v-show="!isScanBefore">
+          <li v-for="item in deliveryList01" :key="item.index">
             <div class="card type-02">
               <div class="card-inner">
                 <div class="contents d-flex-be-center">
@@ -107,8 +108,8 @@
           </div>
         </div>
         <!-- 스캔 후 -->
-        <ul class="l-scroll-list" v-show="!isScanBefore">
-          <li v-for="item in deliveryList02" :key="item">
+        <ul class="scroll-y" v-show="!isScanBefore">
+          <li v-for="item in deliveryList02" :key="item.index">
             <div class="card type-02">
               <div class="card-inner">
                 <div class="contents d-flex-be-center">
@@ -158,13 +159,13 @@
   </el-tabs>
   </div>
 
-  <div class="l-delivery-pop card">
+  <div class="l-delivery-bottom card">
     <ul class="txt">
       <li><span class="title">배송</span><span class="num ft-color-green">4</span></li>
       <li><span class="title">집하</span><span class="num ft-color-yellow">4</span></li>
       <li><span class="title">스캔</span><span class="num ft-color-purple">4</span></li>
     </ul>
-    <button class="btn full-size reg-size primary badge-circle">출발 확정 대상</button>
+    <button class="btn full-size reg-size primary badge-circle" @click="departureDialogVisible = true">출발 확정 대상</button>
   </div>
 
   <!-- 송장번호입력 -->
@@ -250,6 +251,213 @@
       </div>
     </div>
   </el-dialog>
+
+  <!-- 출발 확정 대상 -->
+  <el-dialog
+    title="출발 확정 대상"
+    :visible.sync="departureDialogVisible"
+    class = "el-dialog-full bg-white l-dialog-departure"
+    width="100%">
+    <div class="l-departure l-scroll">
+      <div class="l-card-tab">
+        <ul>
+          <li>
+            <div class="card all">
+              <p class="card-title">ALL</p>
+              <p class="card-desc">10개</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <p class="card-title"><span class="badge-circle-secondary">A</span> ~9시</p>
+              <p class="card-desc">10개</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <p class="card-title"><span class="badge-circle-secondary">B</span> ~9시</p>
+              <p class="card-desc">10개</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <p class="card-title"><span class="badge-circle-secondary">C</span> ~9시</p>
+              <p class="card-desc">10개</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <p class="card-title"><span class="badge-circle-secondary">C</span> ~9시</p>
+              <p class="card-desc">10개</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <p class="card-title"><span class="badge-circle-secondary">C</span> ~9시</p>
+              <p class="card-desc">10개</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="l-fixed border-none">
+        <div class="d-flex-be-center">
+          <div class="txt-sub">
+            <div class="input-checkbox">
+              <input type="checkbox" id="chk-all"/>
+              <label for="chk-all">전체 <span class="txt-primary">8</span>개</label>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn xsmall-size white is-on">자동</button>
+            <!-- <button class="btn small-size white">수동</button> -->
+            <button class="btn btn-revert small ml-20" disabled></button>
+            <button class="btn btn-search small" disabled></button>
+          </div>
+        </div>
+      </div>
+      <div class="departure-list scroll-y">
+        <ul class="card-list is-drag">
+          <li>
+            <div class="input-checkbox">
+              <input type="checkbox" id="chk-01"/>
+              <label for="chk-01"></label>
+            </div>
+            <div class="departure-txt">
+              <p class="departure-title">
+                <span class="badge orange ft-weight-normal"><span>$ 착불</span></span>
+                <span class="badge green ft-weight-normal">배송</span>
+                <span class="txt-sub ft-size-xsmall ft-weight-regular">610587461481</span>
+              </p>
+              <p class="departure-desc">
+                <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
+                <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
+              </p>
+            </div>
+            <div class="departure-btn">
+              <button class="btn-drag"></button>
+            </div>
+          </li>
+        </ul>
+        <ul class="card-list">
+          <li>
+            <div class="input-checkbox">
+              <input type="checkbox" id="chk-01"/>
+              <label for="chk-01"></label>
+            </div>
+            <div class="departure-txt">
+              <p class="departure-title">
+                <span class="badge blue">$ 선불</span>
+                <span class="badge green">배송</span>
+                <span class="txt-sub ft-size-xsmall">610587461481</span>
+              </p>
+              <p class="departure-desc">
+                <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
+                <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
+              </p>
+            </div>
+            <div class="departure-btn">
+              <button class="btn-drag"></button>
+            </div>
+          </li>
+        </ul>
+        <ul class="card-list card-list-group" :class="isVisible ? 'is-on': 'is-default'">
+          <li @click="visibleLayer">
+            <div class="input-checkbox">
+              <input type="checkbox" id="chk-01"/>
+              <label for="chk-01"></label>
+            </div>
+            <div class="departure-txt">
+              <p class="departure-title">
+                <span class="txt-sub d-inline-flex mr-10 ft-weight-bold">총<span class="txt-primary">3</span>개</span>
+                <span class="badge green">배송</span><span class="mr-10 ft-weight-bold">2</span>
+                <span class="badge yellow">집하</span><span class="mr-10 ft-weight-bold">1</span>
+              </p>
+              <p class="departure-desc">
+                <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">C</span>
+                <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
+              </p>
+            </div>
+            <div class="departure-btn">
+              <button class="btn-drag" v-show="!isVisible"></button>
+              <button class="btn txt-sub ft-size-xsmall btn-txt" v-show="isVisible">접기</button>
+            </div>
+          </li>
+          <li class="l-card-layer" v-show="isVisible">
+            <ul>
+              <li>
+                <div class="input-checkbox">
+                  <input type="checkbox" id="chk-01"/>
+                  <label for="chk-01"></label>
+                </div>
+                <div class="departure-txt">
+                  <p class="departure-title">
+                    <span class="badge blue ft-weight-normal">$ 선불</span>
+                    <span class="badge green ft-weight-normal">배송</span>
+                    <span class="txt-sub ft-size-xsmall">610587461481</span>
+                  </p>
+                  <p class="departure-desc">
+                    <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
+                    <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
+                  </p>
+                </div>
+                <div class="departure-btn">
+                  <button class="btn-drag"></button>
+                </div>
+              </li>
+              <li>
+                <div class="input-checkbox">
+                  <input type="checkbox" id="chk-01"/>
+                  <label for="chk-01"></label>
+                </div>
+                <div class="departure-txt">
+                  <p class="departure-title">
+                    <span class="badge orange ft-weight-normal">$ 착불</span>
+                    <span class="badge green ft-weight-normal">배송</span>
+                    <span class="txt-sub ft-size-xsmall">610587461481</span>
+                  </p>
+                  <p class="departure-desc">
+                    <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
+                    <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
+                  </p>
+                </div>
+                <div class="departure-btn">
+                  <button class="btn-drag"></button>
+                </div>
+              </li>
+              <li>
+                <div class="input-checkbox">
+                  <input type="checkbox" id="chk-01"/>
+                  <label for="chk-01"></label>
+                </div>
+                <div class="departure-txt">
+                  <p class="departure-title">
+                    <span class="badge orange ft-weight-normal">$ 착불</span>
+                    <span class="badge yellow ft-weight-normal">집하</span>
+                    <span class="txt-sub ft-size-xsmall">610587461481</span>
+                  </p>
+                  <p class="departure-desc">
+                    <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
+                    <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
+                  </p>
+                </div>
+                <div class="departure-btn">
+                  <button class="btn-drag"></button>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="l-departure-bottom">
+        <div class="btn-group full-size">
+          <button class="btn full-size reg-size white ft-weight-bold">순서</button>
+          <button class="btn full-size reg-size white ft-weight-bold">순서</button>
+        </div>
+        <button class="btn full-size reg-size primary mr-5"><i class="icon-check-circle small white mr-5"></i>출발 확정</button>
+        <button class="btn full-size reg-size yellow"><i class="icon-map-pin small white mr-5"></i>라우팅</button>
+      </div>
+    </div>
+  </el-dialog>
   <Foot-menu />
 </div>
 </template>
@@ -266,7 +474,9 @@ export default {
       isScanBefore: false,
       centerDialogVisible: false,
       detailDialogVisible: false,
+      departureDialogVisible: true,
       isSearch: false,
+      isVisible: false,
       deliveryList01: [
         {
           number: '610587461481',
@@ -358,10 +568,13 @@ export default {
       console.log(tab, event);
     },
     handleChange(val) {
-      // console.log(val);
+      console.log(val);
     },
     switchSearch: function () {
       this.isSearch = !this.isSearch;
+    },
+    visibleLayer: function () {
+      this.isVisible = !this.isVisible;
     },
   }
 }

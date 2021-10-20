@@ -8,13 +8,18 @@
         align-items: center;
         position: relative;
         padding: 14px 16px 16px;
-        border-top: 1px solid #eee;
+        border-top: 1px solid $border-color;
+        &:first-child,
+        &:last-child {
+          border: none;
+        }
         .address {
+          &-title {
+            letter-spacing: -0.7px;
+            font-weight: bold;
+          }
           &-txt {
             line-height: normal;
-          }
-          &-title {
-            font-weight: bold;
           }
           &-desc {
             margin-top: 5px;
@@ -28,6 +33,11 @@
               padding: 0;
               &:not(:first-child) {
                 margin-left: 15px;
+              }
+              &-delete {
+                position: relative;
+                top: unset;
+                left: unset;
               }
             }
           }
