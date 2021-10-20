@@ -1,5 +1,5 @@
 <template>
-  <div class="l-service">
+  <div class="asdfsdf">
     <Gnb />
     <div class="join">
       <el-tabs v-model="activeName" @tab-click="handleClick">

@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "copy" : "npm run css && cp ./src/** /Users/pparknon/workspace/morpheus/workspace/esman/frontend/src",
     "css": "node-sass src/assets/scss/index.scss src/assets/scss/index.css"
   },
   "dependencies": {
