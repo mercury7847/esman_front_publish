@@ -1,8 +1,8 @@
 .l{
   &-service{
     height: 100%;
-    padding-top:55px;
-    padding-bottom:73px;
+    padding-top: 56px;
+    padding-bottom: 60px;
     background-color:#fff;
     box-sizing: border-box;
     overflow-y: auto;
@@ -15,7 +15,7 @@
       left:0;
       top:0;
       width: 100%;
-      height:55px;
+      height: 56px;
       background-color: #fff;
       box-sizing: border-box;
       padding:10px 16px ;
@@ -293,6 +293,15 @@
         }
       }
     }
+    &.l-scroll {
+      .el-drawer__body {
+        height: 100%;
+        overflow: hidden;
+        .scroll-y {
+          height: calc(100% - 114px);
+        }
+      }
+    }
   }
   &-list {
     margin-top: 16px;
@@ -326,16 +335,32 @@
       }
     }
   }
+  &-scroll {
+    height: 100%;
+    overflow: hidden;
+    .l-fixed {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $border-color;
+      & + .scroll-y {
+        height: calc(100% - 33px);
+        // padding-top: 33px;
+      }
+    }
+    .scroll-y {
+      overflow-y: auto;
+    }
+  }
 }
 .address-list {
-  margin-top: 16px;
   ul {
     li {
       display: flex;
       align-items: center;
       position: relative;
       padding: 14px 16px 16px;
-      border-top: 1px solid $border-color;
+      &:not(:last-child) {
+        border-top: 1px solid $border-color;
+      }
       .address {
         &-title {
           letter-spacing: -0.7px;

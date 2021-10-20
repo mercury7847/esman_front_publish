@@ -3,6 +3,7 @@
 <!--    <router-link to="/"><el-button>Home</el-button></router-link>-->
 <!--    <router-link to="/landing"><el-button type="primary">Splash</el-button></router-link>-->
 <!--    <router-link to="/login"><el-button>Login</el-button></router-link>-->
+    <router-link to="/login"><el-button>login</el-button></router-link>
     <router-link to="/dashboard"><el-button>Dashboard</el-button></router-link>
     <router-link to="/address"><el-button>주소록관리</el-button></router-link>
     <router-link to="/terminal"><el-button>터미널, 영업점조회</el-button></router-link>
