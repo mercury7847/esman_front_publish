@@ -28,7 +28,7 @@
             <div class="inp-inner">
               <input type="text" class="input-text-line" placeholder="화물을 검색하세요." id="inp" autofocus>
             </div>
-            <button class="btn btn-search" @click="switchSearch"><i class="icon-search small"></i></button>
+            <button class="btn btn-search small" @click="switchSearch"></button>
           </div>
         </div>
         <!-- 스캔 후 -->
@@ -194,6 +194,7 @@
     :visible.sync="detailDialogVisible"
     class = "el-dialog-full"
     width="100%">
+    <div slot="title" class="el-dialog__title">화물 상세정보 <button class="btn btn-setting"></button></div>
     <div class="content">
       <p class="ft-size-large ft-weight-bold">운송료</p>
       <p class="ft-size-xxlarge">13,000</p>
@@ -258,11 +259,12 @@
     :visible.sync="departureDialogVisible"
     class = "el-dialog-full bg-white l-dialog-departure"
     width="100%">
+    <div slot="title" class="el-dialog__title">출발 확정 대상 <button class="btn btn-clock" @click="drawer = true"></button></div>
     <div class="l-departure l-scroll">
       <div class="l-card-tab">
         <ul>
           <li>
-            <div class="card all">
+            <div class="card all is-on">
               <p class="card-title">ALL</p>
               <p class="card-desc">10개</p>
             </div>
@@ -274,7 +276,7 @@
             </div>
           </li>
           <li>
-            <div class="card">
+            <div class="card is-on">
               <p class="card-title"><span class="badge-circle-secondary">B</span> ~9시</p>
               <p class="card-desc">10개</p>
             </div>
@@ -327,6 +329,28 @@
                 <span class="badge orange ft-weight-normal"><span>$ 착불</span></span>
                 <span class="badge green ft-weight-normal">배송</span>
                 <span class="txt-sub ft-size-xsmall ft-weight-regular">610587461481</span>
+              </p>
+              <p class="departure-desc">
+                <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
+                <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
+              </p>
+            </div>
+            <div class="departure-btn">
+              <button class="btn-drag"></button>
+            </div>
+          </li>
+        </ul>
+        <ul class="card-list">
+          <li>
+            <div class="input-checkbox">
+              <input type="checkbox" id="chk-01"/>
+              <label for="chk-01"></label>
+            </div>
+            <div class="departure-txt">
+              <p class="departure-title">
+                <span class="badge blue">$ 선불</span>
+                <span class="badge green">배송</span>
+                <span class="txt-sub ft-size-xsmall">610587461481</span>
               </p>
               <p class="departure-desc">
                 <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
@@ -458,6 +482,7 @@
       </div>
     </div>
   </el-dialog>
+
   <Foot-menu />
 </div>
 </template>
@@ -474,9 +499,10 @@ export default {
       isScanBefore: false,
       centerDialogVisible: false,
       detailDialogVisible: false,
-      departureDialogVisible: true,
       isSearch: false,
       isVisible: false,
+      departureDialogVisible: false,
+      drawer: true,
       deliveryList01: [
         {
           number: '610587461481',

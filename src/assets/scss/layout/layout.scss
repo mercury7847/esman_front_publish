@@ -368,11 +368,6 @@
   &-dialog-departure.el-dialog__wrapper {
     overflow: hidden;
     .el-dialog {
-      &__header {
-        &::after {
-          background: url(../../assets/images/icon-clock.svg) no-repeat 50% 50% / contain;
-        }
-      }
       &__body {
         padding: 0 16px 75px !important;
         overflow-y: hidden;
@@ -493,14 +488,6 @@
               line-height: 18px;
               text-align: right;
               box-sizing: border-box;
-              &.all {
-                background-color: $secondary-color;
-                color: $--color--white;
-                box-shadow: 5px 5px 15px 5px rgba(52, 114, 197, 0.12);
-                .card-desc {
-                  color: $--color--white;
-                }
-              }
               .badge-circle-secondary {
                 position: absolute;
                 top: 10px;
@@ -511,6 +498,18 @@
               }
               &-desc {
                 color: $disabled-color;
+              }
+              &.is-on {
+                background-color: $secondary-color;
+                box-shadow: 5px 5px 15px 5px rgba(52, 114, 197, 0.12);
+                color: $--color--white;
+                .card-desc {
+                  color: $--color--white;
+                }
+                .badge-circle-secondary {
+                  background-color: $--color--white;
+                  color: $secondary-color;
+                }
               }
             }
           }
@@ -533,5 +532,72 @@
     padding: 15px 16px;
     box-sizing: border-box;
     box-shadow: 20px 0 45px 10px rgba(0, 0, 0, 0.1);
+    .btn {
+      &.full-size {
+        // width: auto;
+        padding: 0;
+      }
+    }
+  }
+  &-bubble {
+    ul::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .bubble {
+      position: relative;
+      max-width: 250px;
+      padding: 15px;
+      box-sizing: border-box;
+      margin: 0 10px 20px;
+      background-color: $--color--light-gray;
+      border-radius: 5px;
+      line-height: 21px;
+      &.left::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-right-color: $--color--light-gray;
+        border-left: 0;
+        margin-top: -10px;
+        margin-left: -10px;
+      }
+      &.right {
+        float: right;
+        background-color: $--color--white;
+        border: 1px solid $border-color;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -20px;
+          width: 0;
+          height: 0;
+          margin-top: -10px;
+          border-left: 10px solid $border-color;
+          border-right: 10px solid transparent;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -19px;
+          width: 0;
+          height: 0;
+          margin-top: -10px;
+          border-left: 10px solid $--color--white;
+          border-right: 10px solid transparent;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+        }
+      }
+    }
   }
 }

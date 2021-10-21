@@ -37,6 +37,9 @@
       }
     }
   }
+  &.white {
+    background-color: $--color--white;
+  }
 }
 .input {
   &-text-line {
@@ -138,12 +141,12 @@
       }
     }
     &.full-size {
-      min-width: 130px;
+      min-width: 120px;
       margin-right: 10px;
       border: 1px solid $border-color;
       border-radius: 5px;
       .btn {
-        min-width: 62px;
+        min-width: auto;
         width: 50%;
         margin: 0;
         border: none;
@@ -217,6 +220,13 @@
       border-color: $sub-color;
     }
   }
+  &.txt-type {
+    background-color: transparent !important;
+    color: $sub-color;
+    &:disabled {
+      color: #dbdbdb;
+    }
+  }
   &.w100 {
     width: 100px;
   }
@@ -239,7 +249,7 @@
   }
   &-more {
     float: right;
-    display: inline-block;
+    display: block;
     font-size: 0;
     padding: 0 !important;
     &::before {
@@ -330,6 +340,31 @@
     &:disabled {
       background-color: transparent;
     }
+  }
+  &-plus {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-outline-plus.svg) no-repeat 50% 50% / contain;
+  }
+  &-camera {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-camera.svg) no-repeat 50% 50% / contain;
+  }
+  &-prev {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/prev-arrow.svg) no-repeat 50% 50% / contain;
+  }
+  &-setting {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-settings.svg) no-repeat 50% 50% / contain;
+  }
+  &-clock {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-clock.svg) no-repeat 50% 50% / contain;
   }
 }
 
@@ -552,6 +587,40 @@ i {
       filter: invert(1);
     }
   }
+  &-phone-incoming {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-phone-incoming.svg) no-repeat 50% 50% / contain;
+    &.medium {
+      width: 18px;
+      height: 18px;
+    }
+    &.small {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  &-phone-outgoing {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-phone-outgoing.svg) no-repeat 50% 50% / contain;
+    &.medium {
+      width: 18px;
+      height: 18px;
+    }
+    &.small {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  &-dot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: -3px 10px 0;
+    background-color: $disabled-color;
+    border-radius: 50%;
+  }
 }
 
 //tab
@@ -571,6 +640,9 @@ i {
     // font-size:$font-size-large !important;
     font-weight: bold !important;
     text-align: center;
+    &.is-active {
+      color: #222 !important;
+    }
   }
   &__active-bar {
     background-color: $sub-color !important;
@@ -621,6 +693,9 @@ i {
     padding: 30px 16px 0;
   }
   &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: $--color-black !important;
     font-size: $font-size-small !important;
     font-weight: bold;
@@ -680,16 +755,6 @@ i {
             display: none;
           }
         }
-        &::after {
-          content: "";
-          display: inline-block;
-          position: absolute;
-          top: 16px;
-          right: 16px;
-          width: 24px;
-          height: 24px;
-          background: url(../../assets/images/icon-settings.svg) no-repeat 50% 50% / contain;
-        }
         &btn {
           .el-dialog__close {
             color: $--color-black;
@@ -720,6 +785,63 @@ i {
     &.bg-white {
       .el-dialog {
         background-color: $--color--white;
+      }
+    }
+  }
+}
+
+// collapse
+.l-collapse {
+  .el-collapse {
+    border: none;
+    &-item {
+      &.is-active {
+        border-top: 1px solid $border-color;
+      }
+      &__header {
+        position: absolute;
+        top: 28px;
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        border: none;
+        .el-icon-arrow-right {
+          margin: 0;
+          width: 24px;
+          height: 24px;
+          background: url(../../assets/images/icon-more-vertical.svg) no-repeat 50% 50% / contain;
+          &::before {
+            display: none;
+          }
+        }
+      }
+      &__content {
+        position: relative;
+        padding: 15px;
+      }
+      .btn {
+        &-close-pop {
+          padding: 0;
+          margin-right: 15px;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid $disabled-color;
+          color: $disabled-color;
+          font-size: $font-size-xsmall;
+        }
+        &-circle {
+          width: 50px;
+          height: 50px;
+          background-color: $--color--light-gray;
+          border-radius: 50%;
+          color: $secondary-color;
+          font-size: 11px;
+          letter-spacing: -0.55px;
+          &.blue {
+            background-color: $secondary-color;
+            color: $--color--light-gray;
+          }
+        }
       }
     }
   }

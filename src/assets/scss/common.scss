@@ -130,16 +130,32 @@ button {
   border: none !important;
 }
 
+.mt {
+  &-5 {
+    margin-top: 5px !important;
+  }
+  &-16 {
+    margin-top: 16px !important;
+  }
+}
+.mb {
+  &-16 {
+    margin-bottom: 16px !important;
+  }
+}
 .ml {
+  &-0 {
+    margin-left: 0 !important;
+  }
   &-20 {
-    margin-left: 20px;
+    margin-left: 20px !important;
   }
 }
 .mr {
   &-5 {
-    margin-right: 5px;
+    margin-right: 5px !important;
   }
   &-10 {
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
 }
