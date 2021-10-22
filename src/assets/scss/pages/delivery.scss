@@ -91,47 +91,6 @@
   }
 }
 
-.l-delivery-bottom {
-  position: fixed;
-  bottom: 60px;
-  width: 100%;
-  height: 110px;
-  padding: 18px 16px 14px;
-  margin: 0;
-  background-color: $--color--white;
-  box-shadow: 20px 0 45px 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  z-index: 10;
-  .txt {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px 16px;
-    li {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 18px;
-      &:not(:first-child) {
-        border-left: 1px solid $border-color;
-      }
-    }
-    .title {
-      font-size: $font-size-xsmall;
-      color: #555;
-    }
-  }
-  .badge-circle {
-    &:disabled::after {
-      display: none;
-    }
-    &:not(:disabled):after {
-      content: "2";
-      margin-bottom: 2px;
-    }
-  }
-}
-
 .el-dialog-full {
   .content {
     .ft-size-xxlarge {
@@ -166,6 +125,148 @@
             line-height: 21px;
           }
         }
+      }
+    }
+  }
+}
+.l {
+  &-delivery-bottom {
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    height: 110px;
+    padding: 18px 16px 14px;
+    margin: 0;
+    background-color: $--color--white;
+    box-shadow: 20px 0 45px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    z-index: 10;
+    .txt {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px 16px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 18px;
+        &:not(:first-child) {
+          border-left: 1px solid $border-color;
+        }
+      }
+      .title {
+        font-size: $font-size-xsmall;
+        color: #555;
+      }
+    }
+    .badge-circle {
+      &:disabled::after {
+        display: none;
+      }
+      &:not(:disabled):after {
+        content: "2";
+        margin-bottom: 2px;
+      }
+    }
+  }
+  &-departure-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    box-shadow: 20px 0 45px 10px rgba(0, 0, 0, 0.1);
+    background-color: $--color--white;
+    z-index: 11;
+    .btn {
+      &.full-size {
+        padding: 0;
+      }
+      &.yellow {
+        flex: 1;
+      }
+    }
+    &.is-order {
+      height: 135px;
+      padding-top: 75px;
+    }
+  }
+  &-delivery-order {
+    .el-drawer__body {
+      padding-bottom: 75px;
+    }
+    .l-fixed {
+      .card.type-02 {
+        padding: 10px 15px;
+        margin-bottom: 30px;
+        .inp {
+          margin-left: 86px;
+        }
+      }
+    }
+  }
+  &-delivery-time {
+    .time-list {
+      height: 185px;
+      overflow-y: auto;
+      li {
+        padding: 8px;
+        color: $disabled-color;
+        text-align: center;
+        &:not(:last-child) {
+          border-bottom: 1px solid $border-color;
+        }
+        &.is-on {
+          border-top: 1px solid #000;
+          border-bottom: 1px solid #000;
+          color: $--color-black;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &-order-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 15px 16px;
+    .btn {
+      min-width: 34px;
+      height: 45px;
+      padding: 8px;
+      margin-right: 10px;
+    }
+    .el-input {
+      &__inner {
+        height: 45px;
+      }
+    }
+  }
+  &-map {
+    .icon-pin {
+      position: relative;
+      top: 50px;
+      left: 50px;
+      padding-top: 10px;
+      color: $--color--white;
+      text-align: center;
+      &.is-on {
+        top: 100px;
+        left: 100px;
+      }
+      span {
+        display: inline-block;
+        position: absolute;
+        top: -14px;
+        left: 0;
+        min-width: 100%;
       }
     }
   }

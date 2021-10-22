@@ -162,30 +162,32 @@
   </div>
 
   <!-- 문자기록상세 -->
-  <el-dialog
-    title="+82 10-1234-1234"
-    :visible.sync="messageDialog"
-    class = "el-dialog-full bg-white"
-    width="100%">
-    <div slot="title" class="el-dialog__title">+82 10-1234-1234</div>
-      <div class="l-bubble">
-        <ul>
-          <li class="bubble left">배송이 늦어요. 언제오나요? 1시까지라고 들었는데?</li>
-          <li class="bubble right">죄송합니다. 최대한 빨리 배송해드리겠습니다.</li>
-        </ul>
-      </div>
-      <div class="l-msg-form">
-        <div class="l-inner l-inp">
-          <button class="btn btn-camera ml-0"></button>
-          <div class="inp white">
-            <div class="inp-inner">
-              <input type="text" class="input-text-line" placeholder="메세지를 입력해주세요." id="msg" autofocus>
-            </div>
-          </div>
-          <button class="btn txt-type" disabled>전송</button>
+  <div class="l-dialog">
+    <el-dialog
+      title="+82 10-1234-1234"
+      :visible.sync="messageDialog"
+      class = "el-dialog-full bg-white"
+      width="100%">
+      <div slot="title" class="el-dialog__title">+82 10-1234-1234</div>
+        <div class="l-bubble">
+          <ul>
+            <li class="bubble left">배송이 늦어요. 언제오나요? 1시까지라고 들었는데?</li>
+            <li class="bubble right">죄송합니다. 최대한 빨리 배송해드리겠습니다.</li>
+          </ul>
         </div>
-      </div>
-  </el-dialog>
+        <div class="l-msg-form">
+          <div class="l-inner l-inp">
+            <button class="btn btn-camera ml-0"></button>
+            <div class="inp white">
+              <div class="inp-inner">
+                <input type="text" class="input-text-line" placeholder="메세지를 입력해주세요." id="msg" autofocus>
+              </div>
+            </div>
+            <button class="btn txt-type" disabled>전송</button>
+          </div>
+        </div>
+    </el-dialog>
+  </div>
   <Foot-menu />
 </div>
 </template>

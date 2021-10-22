@@ -34,11 +34,17 @@ button {
   }
 }
 .ft-color {
+  &-white {
+    color: $--color--white;
+  }
   &-green {
     color: #1c790d;
   }
   &-yellow {
     color: #ffb800;
+  }
+  &-yellow-02 {
+    color: $--color--yellow;
   }
   &-purple {
     color: #7500ac;
@@ -65,6 +71,9 @@ button {
   }
 }
 .ft-align {
+  &-center {
+    text-align: center;
+  }
   &-right {
     text-align: right !important;
   }
@@ -134,6 +143,9 @@ button {
   &-5 {
     margin-top: 5px !important;
   }
+  &-10 {
+    margin-top: 10px !important;
+  }
   &-16 {
     margin-top: 16px !important;
   }
@@ -147,6 +159,12 @@ button {
   &-0 {
     margin-left: 0 !important;
   }
+  &-5 {
+    margin-left: 5px !important;
+  }
+  &-16 {
+    margin-left: 16px !important;
+  }
   &-20 {
     margin-left: 20px !important;
   }
@@ -158,4 +176,10 @@ button {
   &-10 {
     margin-right: 10px !important;
   }
+  &-16 {
+    margin-right: 16px !important;
+  }
+}
+.v-modal {
+  background: rgba(0, 0, 0, 0.8) !important;
 }
