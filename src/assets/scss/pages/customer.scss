@@ -1,0 +1,70 @@
+.customer {
+  &-service {
+    .l {
+      &-list {
+        margin-top: 0;
+      }
+      &-cs-msg {
+        ul li {
+          justify-content: flex-start;
+          a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            color: $--color-black;
+            text-decoration: none;
+          }
+          .cs-msg {
+            margin-left: 15px;
+            &-number {
+              margin-right: 10px;
+              font-weight: 700;
+            }
+            &-address {
+              margin-top: 5px;
+              color: $disabled-color;
+              font-size: $font-size-xsmall;
+              line-height: 18px;
+            }
+          }
+          &.is-read {
+            .cs-msg {
+              opacity: 0.3;
+            }
+            .icon-envelope {
+              background: url(../../assets/images/icon-envelope-open.svg) no-repeat 50% 50% / contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.l {
+  &-dialog-cs {
+    position: relative;
+    .el-dialog {
+      line-height: 1.5;
+      &__headerbtn {
+        width: 24px;
+        height: 24px;
+      }
+      &__close {
+        width: 18px;
+        height: 18px;
+        background: url(../../assets/images/prev-arrow.svg) no-repeat 50% 50% / contain;
+        vertical-align: middle;
+      }
+    }
+    .cs {
+      &-title {
+        font-weight: 700;
+      }
+      &-desc {
+        margin-top: 8px;
+        color: $--color--gray;
+        word-break: keep-all;
+      }
+    }
+  }
+}

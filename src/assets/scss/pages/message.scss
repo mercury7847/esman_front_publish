@@ -75,6 +75,20 @@
         }
       }
     }
+    & + .l-dialog {
+      .el-dialog {
+        &__headerbtn {
+          width: 24px;
+          height: 24px;
+        }
+        &__close {
+          width: 18px;
+          height: 18px;
+          background: url(../../assets/images/prev-arrow.svg) no-repeat 50% 50% / contain;
+          vertical-align: middle;
+        }
+      }
+    }
   }
   &-msg-form {
     position: absolute;

@@ -49,7 +49,7 @@
     font-size: $font-size-small;
     letter-spacing: -0.7px;
     &::placeholder {
-      color: #c9d0d7;
+      color: $attach-color;
     }
     &:focus {
       caret-color: $main-color;
@@ -142,6 +142,37 @@
     &__inner {
       width: 18px;
       height: 18px;
+    }
+  }
+}
+.l-textarea {
+  position: relative;
+  background-color: $--color--pale-gray;
+  padding: 12px 15px 36px;
+  .input__count {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: transparent !important;
+    color: $attach-color;
+    font-size: $font-size-small !important;
+    letter-spacing: normal;
+  }
+  textarea {
+    display: block;
+    resize: none;
+    width: 100%;
+    height: 150px;
+    background-color: transparent;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border: none;
+    border-radius: 5px;
+    font-family: "NotoSansKR";
+    font-weight: 400;
+    line-height: 1.5;
+    &::placeholder {
+      color: $attach-color;
     }
   }
 }
@@ -541,6 +572,18 @@
       text-align: center;
       vertical-align: middle;
     }
+    &-blue {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $sub-color;
+      color: $--color--white;
+      font-size: 11px;
+      line-height: 18px;
+      text-align: center;
+      vertical-align: middle;
+    }
   }
 }
 
@@ -712,6 +755,14 @@ i {
     background: url(../../assets/images/icon-pin.svg) no-repeat 50% 50% / contain;
     &.is-on {
       background: url(../../assets/images/icon-pin-active.svg) no-repeat 50% 50% / contain;
+    }
+  }
+  &-envelope {
+    width: 18px;
+    height: 18px;
+    background: url(../../assets/images/icon-envelope.svg) no-repeat 50% 50% / contain;
+    &.is-on {
+      background: url(../../assets/images/icon-envelope-open.svg) no-repeat 50% 50% / contain;
     }
   }
 }
