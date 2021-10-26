@@ -11,7 +11,7 @@
             display: flex;
             align-items: center;
             width: 100%;
-            color: $--color-black;
+            color: $--color--black;
             text-decoration: none;
           }
           .cs-msg {
@@ -52,7 +52,7 @@
       &__close {
         width: 18px;
         height: 18px;
-        background: url(../../assets/images/prev-arrow.svg) no-repeat 50% 50% / contain;
+        background: url(../../assets/images/icon-arrow-left.svg) no-repeat 50% 50% / contain;
         vertical-align: middle;
       }
     }

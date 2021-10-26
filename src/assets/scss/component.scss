@@ -40,6 +40,17 @@
   &.white {
     background-color: $--color--white;
   }
+  .btn-close {
+    border: none;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../../assets/images/close.svg) no-repeat 50% 50% / contain;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 .input {
   &-text-line {
@@ -114,12 +125,12 @@
   label {
     font-size: $font-size-small;
     font-weight: bold;
-    color: $--color-black;
+    color: $--color--black;
   }
 }
 .select {
   .el-input__inner {
-    color: $--color-black;
+    color: $--color--black;
   }
 }
 .l-radio {
@@ -276,7 +287,7 @@
   &.white {
     background-color: $--color--white;
     border: 1px solid $border-color;
-    color: $--color-black;
+    color: $--color--black;
     &.is-on {
       color: $sub-color;
       border-color: $sub-color;
@@ -300,17 +311,6 @@
   // }
   &:disabled {
     background-color: $disabled-color;
-  }
-  &-close {
-    border: none;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    background: url(../../assets/images/close.svg) no-repeat 50% 50% / contain;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
   }
   &-more {
     float: right;
@@ -415,12 +415,17 @@
   &-prev {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/prev-arrow.svg) no-repeat 50% 50% / contain;
+    background: url(../../assets/images/icon-arrow-left.svg) no-repeat 50% 50% / contain;
   }
   &-setting {
     width: 24px;
     height: 24px;
     background: url(../../assets/images/icon-settings.svg) no-repeat 50% 50% / contain;
+  }
+  &-close {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-close.svg) no-repeat 50% 50% / contain;
   }
   &-clock {
     width: 24px;
@@ -567,7 +572,7 @@
       border-radius: 50%;
       background-color: $secondary-color;
       color: $--color--white;
-      font-size: 11px;
+      font-size: 0.6875rem;
       line-height: 18px;
       text-align: center;
       vertical-align: middle;
@@ -579,7 +584,7 @@
       border-radius: 50%;
       background-color: $sub-color;
       color: $--color--white;
-      font-size: 11px;
+      font-size: 0.6875rem;
       line-height: 18px;
       text-align: center;
       vertical-align: middle;
@@ -765,6 +770,11 @@ i {
       background: url(../../assets/images/icon-envelope-open.svg) no-repeat 50% 50% / contain;
     }
   }
+  &-bell {
+    width: 26px;
+    height: 26px;
+    background: url(../../assets/images/icon-bell.svg) no-repeat 50% 50% / contain;
+  }
 }
 
 //tab
@@ -815,12 +825,12 @@ i {
         font-size: $font-size-small !important;
         &:hover,
         &:focus {
-          color: $--color-black !important;
+          color: $--color--black !important;
         }
         &.is-active {
           border: 1px solid #000 !important;
           border-bottom: none !important;
-          color: $--color-black !important;
+          color: $--color--black !important;
         }
       }
     }
@@ -845,7 +855,7 @@ i {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: $--color-black !important;
+      color: $--color--black !important;
       font-size: $font-size-large;
       font-weight: bold;
       letter-spacing: -0.7px;
@@ -860,7 +870,7 @@ i {
     }
     &__body {
       padding: 15px 16px 30px !important;
-      color: $--color-black !important;
+      color: $--color--black !important;
     }
     &__footer {
       height: 52px;
@@ -898,7 +908,7 @@ i {
           padding: 16px 16px 30px 50px;
           &btn {
             .el-dialog__close {
-              color: $--color-black;
+              color: $--color--black;
             }
             top: 16px;
             right: unset;
@@ -991,7 +1001,7 @@ i {
           background-color: $--color--pale-gray;
           border-radius: 50%;
           color: $secondary-color;
-          font-size: 11px;
+          font-size: 0.6875rem;
           letter-spacing: -0.55px;
           &.blue {
             background-color: $secondary-color;

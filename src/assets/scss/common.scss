@@ -1,7 +1,7 @@
 html,
 body {
   font-size: $font-size-small;
-  color: $--color-black;
+  color: $--color--black;
   height: 100%;
   //min-width: 1200px; 이거 주면 UserPlayer 모바일버전 제대로 안나옴.
   overflow: auto;
@@ -90,7 +90,7 @@ button {
     font-weight: 300;
   }
   &-title {
-    font-size: 24px;
+    font-size: $font-size-xlarge;
     font-weight: bold;
     line-height: 1.4em;
   }
