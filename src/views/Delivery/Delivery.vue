@@ -322,25 +322,25 @@
             </div>
           </div>
         </div>
-        <div class="departure-list scroll-y">
+        <div class="delivery-list scroll-y">
           <ul class="card-list is-drag">
             <li>
               <div class="input-checkbox">
                 <input type="checkbox" id="chk-01"/>
                 <label for="chk-01"></label>
               </div>
-              <div class="departure-txt">
-                <p class="departure-title">
+              <div class="delivery-txt">
+                <p class="delivery-title">
                   <span class="badge orange ft-weight-normal"><span>$ 착불</span></span>
                   <span class="badge green ft-weight-normal">배송</span>
                   <span class="txt-sub ft-size-xsmall ft-weight-regular">610587461481</span>
                 </p>
-                <p class="departure-desc">
+                <p class="delivery-desc">
                   <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
                   <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
                 </p>
               </div>
-              <div class="departure-btn">
+              <div class="delivery-btn">
                 <button class="btn-drag"></button>
               </div>
             </li>
@@ -351,18 +351,18 @@
                 <input type="checkbox" id="chk-01"/>
                 <label for="chk-01"></label>
               </div>
-              <div class="departure-txt">
-                <p class="departure-title">
+              <div class="delivery-txt">
+                <p class="delivery-title">
                   <span class="badge blue">$ 선불</span>
                   <span class="badge green">배송</span>
                   <span class="txt-sub ft-size-xsmall">610587461481</span>
                 </p>
-                <p class="departure-desc">
+                <p class="delivery-desc">
                   <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
                   <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
                 </p>
               </div>
-              <div class="departure-btn">
+              <div class="delivery-btn">
                 <button class="btn-drag"></button>
               </div>
             </li>
@@ -373,18 +373,18 @@
                 <input type="checkbox" id="chk-01"/>
                 <label for="chk-01"></label>
               </div>
-              <div class="departure-txt">
-                <p class="departure-title">
+              <div class="delivery-txt">
+                <p class="delivery-title">
                   <span class="badge blue">$ 선불</span>
                   <span class="badge green">배송</span>
                   <span class="txt-sub ft-size-xsmall">610587461481</span>
                 </p>
-                <p class="departure-desc">
+                <p class="delivery-desc">
                   <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
                   <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
                 </p>
               </div>
-              <div class="departure-btn">
+              <div class="delivery-btn">
                 <button class="btn-drag"></button>
               </div>
             </li>
@@ -395,18 +395,18 @@
                 <input type="checkbox" id="chk-01"/>
                 <label for="chk-01"></label>
               </div>
-              <div class="departure-txt">
-                <p class="departure-title">
+              <div class="delivery-txt">
+                <p class="delivery-title">
                   <span class="txt-sub d-inline-flex mr-10 ft-weight-bold">총<span class="txt-primary">3</span>개</span>
                   <span class="badge green">배송</span><span class="mr-10 ft-weight-bold">2</span>
                   <span class="badge yellow">집하</span><span class="mr-10 ft-weight-bold">1</span>
                 </p>
-                <p class="departure-desc">
+                <p class="delivery-desc">
                   <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">C</span>
                   <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
                 </p>
               </div>
-              <div class="departure-btn">
+              <div class="delivery-btn">
                 <button class="btn-drag" v-show="!isVisible"></button>
                 <button class="btn txt-sub ft-size-xsmall btn-txt" v-show="isVisible">접기</button>
               </div>
@@ -418,18 +418,18 @@
                     <input type="checkbox" id="chk-01"/>
                     <label for="chk-01"></label>
                   </div>
-                  <div class="departure-txt">
-                    <p class="departure-title">
+                  <div class="delivery-txt">
+                    <p class="delivery-title">
                       <span class="badge blue ft-weight-normal">$ 선불</span>
                       <span class="badge green ft-weight-normal">배송</span>
                       <span class="txt-sub ft-size-xsmall">610587461481</span>
                     </p>
-                    <p class="departure-desc">
+                    <p class="delivery-desc">
                       <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
                       <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
                     </p>
                   </div>
-                  <div class="departure-btn">
+                  <div class="delivery-btn">
                     <button class="btn-drag"></button>
                   </div>
                 </li>
@@ -438,18 +438,18 @@
                     <input type="checkbox" id="chk-01"/>
                     <label for="chk-01"></label>
                   </div>
-                  <div class="departure-txt">
-                    <p class="departure-title">
+                  <div class="delivery-txt">
+                    <p class="delivery-title">
                       <span class="badge orange ft-weight-normal">$ 착불</span>
                       <span class="badge green ft-weight-normal">배송</span>
                       <span class="txt-sub ft-size-xsmall">610587461481</span>
                     </p>
-                    <p class="departure-desc">
+                    <p class="delivery-desc">
                       <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
                       <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
                     </p>
                   </div>
-                  <div class="departure-btn">
+                  <div class="delivery-btn">
                     <button class="btn-drag"></button>
                   </div>
                 </li>
@@ -458,18 +458,18 @@
                     <input type="checkbox" id="chk-01"/>
                     <label for="chk-01"></label>
                   </div>
-                  <div class="departure-txt">
-                    <p class="departure-title">
+                  <div class="delivery-txt">
+                    <p class="delivery-title">
                       <span class="badge orange ft-weight-normal">$ 착불</span>
                       <span class="badge yellow ft-weight-normal">집하</span>
                       <span class="txt-sub ft-size-xsmall">610587461481</span>
                     </p>
-                    <p class="departure-desc">
+                    <p class="delivery-desc">
                       <span class="ft-weight-bold">~11시</span><span class="badge-circle-secondary">A</span>
                       <span class="ft-weight-regular"> 청파동 1가 62-20 102호</span>
                     </p>
                   </div>
-                  <div class="departure-btn">
+                  <div class="delivery-btn">
                     <button class="btn-drag"></button>
                   </div>
                 </li>
