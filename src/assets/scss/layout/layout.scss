@@ -18,6 +18,9 @@
         position: absolute;
         bottom: 0;
       }
+      .btn-floating {
+        bottom: 16px;
+      }
     }
     .header {
       display: flex;
@@ -241,12 +244,13 @@
     }
   }
   &-search {
+    position: relative;
     .inp-inner {
       padding-left: 43px;
     }
     .btn-search {
       position: absolute;
-      left: 15px;
+      left: 0;
     }
   }
   &-drawer {
@@ -640,6 +644,50 @@
     }
   }
   &-floating {
+    position: fixed;
+    z-index: 22;
+    .btn-floating {
+      position: fixed;
+      bottom: 70px;
+      right: 16px;
+      width: 60px;
+      height: 60px;
+      background-color: $sub-color;
+      border-radius: 50%;
+      box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url(../../assets/images/icon-floating-plus.svg) no-repeat 50% 50% / contain;
+        filter: invert(1);
+      }
+    }
+    .floating-menu {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      &-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background-color: $--color--white;
+        border-radius: 50%;
+      }
+      &-title {
+        padding-top: 10px;
+        color: $--color--white;
+        line-height: 21px;
+      }
+      .badge-circle-blue {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
     &-zoom {
       position: fixed;
       bottom: 16px;
@@ -659,6 +707,60 @@
             filter: invert(81%) sepia(12%) saturate(231%) hue-rotate(175deg) brightness(87%) contrast(92%);
           }
         }
+      }
+    }
+  }
+  &-bookmark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    .bookmark {
+      &-list {
+        ul {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 40px;
+          li {
+            min-width: 33.33%;
+            margin-bottom: 30px;
+            &:nth-child(3n-1) {
+              text-align: center;
+            }
+            &:nth-child(3n) {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+    .btn {
+      &-floating {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+          transform: rotate(45deg);
+        }
+      }
+      &-edit {
+        position: absolute;
+        right: 40px;
+        bottom: 49px;
+        color: $--color--white;
+        border-bottom: 1px solid $--color--white;
+        border-radius: unset;
+      }
+      &-delete {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: unset;
       }
     }
   }

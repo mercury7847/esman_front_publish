@@ -447,6 +447,15 @@
       filter: invert(46%) sepia(46%) saturate(6050%) hue-rotate(171deg) brightness(102%) contrast(101%);
     }
   }
+  &-bookmark-add {
+    width: 60px;
+    height: 60px;
+    border: 1px solid $--color--white;
+    border-radius: 50%;
+    .icon-plus {
+      filter: invert(1);
+    }
+  }
 }
 
 //card
@@ -774,6 +783,41 @@ i {
     width: 26px;
     height: 26px;
     background: url(../../assets/images/icon-bell.svg) no-repeat 50% 50% / contain;
+  }
+  &-sms {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-sms.svg) no-repeat 50% 50% / contain;
+  }
+  &-happycall {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-happycall.svg) no-repeat 50% 50% / contain;
+  }
+  &-report-defective {
+    width: 14px;
+    height: 24px;
+    background: url(../../assets/images/icon-report-defective.svg) no-repeat 50% 50% / contain;
+  }
+  &-mileage {
+    width: 26px;
+    height: 24px;
+    background: url(../../assets/images/icon-mileage.svg) no-repeat 50% 50% / contain;
+  }
+  &-refund {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-refund.svg) no-repeat 50% 50% / contain;
+  }
+  &-map {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-map.svg) no-repeat 50% 50% / contain;
+  }
+  &-customer-inquiry {
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-customer-inquiry.svg) no-repeat 50% 50% / contain;
   }
 }
 

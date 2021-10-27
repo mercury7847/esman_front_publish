@@ -169,7 +169,7 @@
       :with-header="false">
       <div class="drawer-title">위젯등록</div>
       <ul class="l-list">
-        <li v-for="item in drawerList" :key="item">
+        <li v-for="item in drawerList" :key="item.title">
           <p class="list-title">{{ item.title }}</p>
           <div>
             <el-switch v-model="item.value">
@@ -181,13 +181,15 @@
     </el-drawer>
   </div>
   <foot-menu />
+  <floating />
 </div>
 </template>
 <script>
 import Gnb from '../../components/layout/Gnb'
 import FootMenu from '../../components/layout/FootMenu'
+import Floating from '../../components/layout/Floating'
 export default {
-  components: { FootMenu,Gnb },
+  components: { FootMenu, Gnb, Floating },
   name:'Dashboard',
   data() {
     return {
