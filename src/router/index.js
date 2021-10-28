@@ -15,6 +15,7 @@ const Join = () => import(/* webpackChunkName: "chunk/model" */'../views/Login/J
 const Dashboard = () => import(/* webpackChunkName: "chunk/model" */'../views/Dashboard/Dashboard');
 const Shipping = () => import(/* webpackChunkName: "chunk/model" */'../views/Shipping/Shipping');
 const Delivery = () => import(/* webpackChunkName: "chunk/model" */'../views/Delivery/Delivery');
+const DeliveryProcessing = () => import(/* webpackChunkName: "chunk/model" */'../views/Delivery/DeliveryProcessing');
 const Address = () => import(/* webpackChunkName: "chunk/model" */'../views/Address/Address');
 const AddressRegistration = () => import(/* webpackChunkName: "chunk/model" */'../views/Address/AddressRegistration');
 const Terminal = () => import(/* webpackChunkName: "chunk/model" */'../views/Terminal/Terminal');
@@ -36,6 +37,7 @@ const router = new Router({
     { path: '/dashboard', name: '대시보드', component: Dashboard },
     { path: '/shipping', name: '배송', component: Shipping },
     { path: '/delivery', name: '집배송 출발', component: Delivery },
+    { path: '/delivery-processing', name: '집배송 처리', component: DeliveryProcessing },
     { path: '/address', name: '주소록 관리', component: Address },
     { path: '/address-registration', name: '주소 등록', component: AddressRegistration },
     { path: '/terminal', name: '터미널, 영업점 조회', component: Terminal },
