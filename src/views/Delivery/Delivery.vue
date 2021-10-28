@@ -18,7 +18,7 @@
           </div>
           <div class="btn-group">
             <button class="btn small-size secondary" disabled>삭제</button>
-            <button class="btn small-size white" @click="centerDialogVisible = true">송장번호</button>
+            <button class="btn small-size white" @click="popVisible">송장번호</button>
             <button class="btn"><i class="icon-refresh"></i></button>
             <button class="btn" @click="switchSearch" :class="isSearch ? 'is-on': 'is-default'"><i class="icon-search small"></i></button>
           </div>
@@ -94,7 +94,7 @@
           </div>
           <div class="btn-group">
             <button class="btn small-size secondary" disabled>삭제</button>
-            <button class="btn small-size white" @click="centerDialogVisible = true">송장번호</button>
+            <button class="btn small-size white" @click="popVisible">송장번호</button>
             <button class="btn"><i class="icon-refresh"></i></button>
             <button class="btn" @click="switchSearch" :class="isSearch ? 'is-on': 'is-default'"><i class="icon-search small"></i></button>
           </div>
@@ -166,28 +166,6 @@
       <li><span class="title">스캔</span><span class="num ft-color-purple">4</span></li>
     </ul>
     <button class="btn full-size reg-size primary badge-circle" @click="departureDialogVisible = true">출발 확정 대상</button>
-  </div>
-
-  <!-- 송장번호입력 -->
-  <div class="l-dialog small">
-    <el-dialog
-      title="운송장 번호"
-      :visible.sync="centerDialogVisible"
-      width="100%"
-      center>
-      <div class="l-inp l-search">
-        <div class="inp">
-          <div class="inp-inner">
-            <input type="text" class="input-text-line" placeholder="송장번호를 입력하세요." id="inp" autofocus>
-          </div>
-          <button class="btn btn-search"><i class="icon-search"></i></button>
-        </div>
-      </div>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="centerDialogVisible = false">닫기</el-button>
-        <el-button type="primary" @click="centerDialogVisible = false">입력</el-button>
-      </div>
-    </el-dialog>
   </div>
 
   <!-- 화물 상세정보 -->
@@ -727,6 +705,9 @@
     </el-drawer>
   </div>
 
+  <!-- 송장번호입력 -->
+  <pop-waybill v-if="popOn" @click="popVisible" />
+
   <Foot-menu />
 </div>
 </template>
@@ -734,14 +715,15 @@
 <script>
 import Gnb from '../../components/layout/Gnb'
 import FootMenu from '../../components/layout/FootMenu'
+import PopWaybill from '../Modal/PopWaybill'
 export default {
-  components: { Gnb, FootMenu },
+  components: { Gnb, FootMenu, PopWaybill },
   name:'Delivery',
   data() {
     return {
       activeNames: '',
       isScanBefore: false,
-      centerDialogVisible: false,
+      popOn: false,
       detailDialogVisible: false,
       isSearch: false,
       isVisible: false,
@@ -872,6 +854,9 @@ export default {
     },
     deliveryOrder: function () {
       this.isOrder = !this.isOrder;
+    },
+    popVisible: function () {
+      this.popOn = !this.popOn;
     },
   }
 }

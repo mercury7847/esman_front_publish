@@ -45,6 +45,8 @@
       </div>
       <div class="btn-group">
         <button class="btn full-size large primary" :disabled="!canLogin"  @click="$router.push('/home')" >로그인</button>
+        <!-- <button class="btn full-size large primary" :disabled="!canLogin"  @click="popVisible" >로그인</button> -->
+        <!-- <button class="btn full-size large primary" :disabled="!canLogin"  @click="popVisible" >로그인</button> -->
       </div>
 
       <div class="option">
@@ -59,18 +61,29 @@
         <p>기쁨 전하는 행복상자 한진택배</p>
       </div>
     </div>
+    <pop-login v-if="popOn" />
+    <pop-password v-if="popOn" @click="popVisible" />
   </div>
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex'
+import { mapGetters, mapState } from 'vuex';
+import PopLogin from '../Modal/PopLogin'
+import PopPassword from '../Modal/PopPassword'
 
 export default {
+  components: { PopLogin, PopPassword },
   name: 'Login',
   data() {
     return {
       isAcceptLocation : false,
+      popOn: false
     }
+  },
+  methods: {
+    popVisible: function () {
+      this.popOn = !this.popOn;
+    },
   },
  /* watch: {
     isAcceptLocation(v){

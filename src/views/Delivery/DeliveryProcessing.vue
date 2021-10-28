@@ -16,7 +16,7 @@
         </div>
         <div class="btn-group">
           <button class="btn small-size secondary">삭제</button>
-          <button class="btn small-size white" @click="centerDialogVisible = true">송장번호</button>
+          <button class="btn small-size white" @click="popVisible">송장번호</button>
           <button class="btn"><i class="icon-refresh"></i></button>
           <button class="btn" @click="switchSearch" :class="isSearch ? 'is-on': 'is-default'"><i class="icon-search small"></i></button>
         </div>
@@ -184,28 +184,6 @@
     </div>
   </div>
 
-  <!-- 송장번호입력 -->
-  <div class="l-dialog small">
-    <el-dialog
-      title="운송장 번호"
-      :visible.sync="centerDialogVisible"
-      width="100%"
-      center>
-      <div class="l-inp l-search">
-        <div class="inp">
-          <div class="inp-inner">
-            <input type="text" class="input-text-line" placeholder="송장번호를 입력하세요." id="inp" autofocus>
-          </div>
-          <button class="btn btn-search"></button>
-        </div>
-      </div>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="centerDialogVisible = false">닫기</el-button>
-        <el-button type="primary" @click="centerDialogVisible = false">입력</el-button>
-      </div>
-    </el-dialog>
-  </div>
-
   <!-- 화물 상세정보 -->
   <!-- 집하인 경우 isPickup -->
   <div class="l-dialog l-delivery-detail" :class="{'pickup': isPickup}">
@@ -313,23 +291,28 @@
     </el-dialog>
   </div>
   <foot-menu />
+
+  <!-- 송장번호입력 -->
+  <pop-waybill v-if="popOn" @click="popVisible" />
 </div>
 </template>
 
 <script>
 import Gnb from '../../components/layout/Gnb'
 import FootMenu from '../../components/layout/FootMenu'
+import PopWaybill from '../Modal/PopWaybill'
 export default {
-  components: { Gnb, FootMenu },
+  components: { Gnb, FootMenu, PopWaybill },
   name:'Delivery',
   data() {
     return {
+      activeNames: '',
       deliveryNone: false,
-      centerDialogVisible: false,
       detailDialogVisible: false,
       isSearch: false,
       isPickup: false,
       isVisible: false,
+      popOn: false,
    };
   },
   methods: {
@@ -344,6 +327,9 @@ export default {
     },
     visibleLayer: function () {
       this.isVisible = !this.isVisible;
+    },
+    popVisible: function () {
+      this.popOn = !this.popOn;
     },
   }
 }
