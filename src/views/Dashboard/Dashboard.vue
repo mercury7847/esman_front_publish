@@ -3,7 +3,7 @@
     <gnb />
   <div class="dashboard">
     <div class="status">
-      <div class="status-start" @click="$router.push('/Shipping')">
+      <div class="status-start" @click="$router.push('/delivery')">
         <strong>집배송출발</strong>
         <i class="icon-start"></i>
         <span class="ea"><span class="ea-num">22</span></span>
