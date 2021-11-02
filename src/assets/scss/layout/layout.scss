@@ -6,6 +6,7 @@
     background-color: $--color--white;
     box-sizing: border-box;
     overflow-y: auto;
+    font-size: $font-size-small;
     &.bg-page {
       background-color: #eef2f6;
     }
@@ -229,6 +230,47 @@
     justify-content: space-between;
     .select {
       margin-right: 10px;
+    }
+    &.bg {
+      .select {
+        width: 100%;
+      }
+      .el-select {
+        .el-input {
+          &__inner {
+            background-color: $--color--pale-gray;
+            border: none;
+            border-radius: 5px;
+          }
+          &__icon {
+            color: $disabled-color;
+            &.is-reverse {
+              color: #000;
+            }
+          }
+        }
+        &-dropdown {
+          margin: -2px 0 0;
+          background-color: $--color--pale-gray;
+          border: none;
+          border-top: 1px solid #dde5ed;
+          border-radius: 0;
+          box-shadow: none;
+          .popper__arrow {
+            display: none;
+          }
+          &__item {
+            height: 40px;
+            font-weight: 400;
+            &.selected {
+              color: $sub-color;
+            }
+          }
+          &__list {
+            padding: 0;
+          }
+        }
+      }
     }
   }
   &-radio {

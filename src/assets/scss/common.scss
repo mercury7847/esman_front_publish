@@ -1,9 +1,8 @@
 html,
 body {
-  font-size: $font-size-small;
+  font-size: 1rem;
   color: $--color--black;
   height: 100%;
-  //min-width: 1200px; 이거 주면 UserPlayer 모바일버전 제대로 안나옴.
   overflow: auto;
   box-sizing: border-box;
 }
