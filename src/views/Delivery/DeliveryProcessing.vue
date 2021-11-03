@@ -32,7 +32,7 @@
         </div>
 
         <!-- 1102 select 추가 -->
-        <div class="l-select bg mb-16">
+        <div class="l-select bg mb-16" v-show="!deliveryNone">
           <div class="select">
             <el-select v-model="value" value-key="value" placeholder="select" :popper-append-to-body="false">
               <el-option v-for="item in selectOptions" :key="item.value" :label="item.label" :value="item"> </el-option>
@@ -44,6 +44,7 @@
             </el-select>
           </div>
         </div>
+        <!-- //1102 select 추가 -->
 
         <div class="delivery-list scroll-y" v-show="!deliveryNone">
           <ul class="card-list is-drag">
@@ -305,6 +306,49 @@
 
     <!-- 송장번호입력 -->
     <pop-waybill v-if="popOn" @click="popVisible" />
+
+    <!-- 배송 완료 -->
+    <div class="l-drawer l-scroll l-delivery-complete">
+      <el-drawer :visible.sync="drawerDeliveryComplete" direction="btt" size="92%" :with-header="false">
+        <div class="drawer-title">
+          <span>배송 완료</span>
+        </div>
+        <div class="l-inner">
+          <div class="box">
+            <div>
+              <span class="badge blue">$ 선불</span>
+              <span class="badge green">배송</span>
+            </div>
+            <p>610587461481 외 <span class="txt-primary">3</span>건</p>
+          </div>
+          <p class="ft-weight-bold">배송 처리 유형 (사유)</p>
+        </div>
+        <div class="scroll-y l-radio l-list">
+          <el-radio-group v-model="radio" class="">
+            <el-radio :label="1">고객 본인</el-radio>
+            <el-radio :label="2">
+              <div class="d-iflex-be-center">
+                <p>위탁</p>
+                <div class="l-photo">
+                  <button class="btn small-size white" v-show="!photo">사진</button>
+                  <div v-show="photo">
+                    <img src="@/assets/images/img-test.png" alt="배송완료 이미지" />
+                    <button class="btn small-size white">변경</button>
+                  </div>
+                </div>
+              </div>
+            </el-radio>
+            <el-radio :label="3">문 앞</el-radio>
+            <el-radio :label="4">편의점</el-radio>
+            <el-radio :label="5">가족</el-radio>
+          </el-radio-group>
+        </div>
+        <div class="l-btn-bottom">
+          <button class="btn full-size primary">확인</button>
+        </div>
+      </el-drawer>
+    </div>
+    <DeliveryComplete />
   </div>
 </template>
 
@@ -312,8 +356,9 @@
 import Gnb from "../../components/layout/Gnb";
 import FootMenu from "../../components/layout/FootMenu";
 import PopWaybill from "../Modal/PopWaybill";
+import DeliveryComplete from "../Modal/DeliveryComplete";
 export default {
-  components: { Gnb, FootMenu, PopWaybill },
+  components: { Gnb, FootMenu, PopWaybill, DeliveryComplete },
   name: "Delivery",
   data() {
     return {
@@ -353,6 +398,9 @@ export default {
           label: "집하",
         },
       ],
+      drawerDeliveryComplete: true,
+      radio: "",
+      photo: false,
     };
   },
   methods: {

@@ -128,6 +128,11 @@ button {
     justify-content: space-between;
     align-items: center;
   }
+  &-iflex-be-center {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &-flex-be-start {
     display: flex;
     justify-content: space-between;
