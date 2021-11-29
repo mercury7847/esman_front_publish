@@ -1,0 +1,59 @@
+//tab
+.el-tabs {
+  &__nav {
+    display: flex;
+    width: 100%;
+    // transform:translateX(16px) !important;
+    &-wrap {
+      &:after {
+        background-color: $border-color !important;
+      }
+    }
+  }
+  &__item {
+    width: 100%;
+    // font-size:$font-size-large !important;
+    font-weight: bold !important;
+    text-align: center;
+    &.is-active {
+      color: #222 !important;
+    }
+  }
+  &__active-bar {
+    background-color: $sub-color !important;
+    padding: 0 5px !important;
+    // left:-3.8px !important;
+  }
+  &__content {
+    padding-top: 15px;
+  }
+  &--card {
+    & > .el-tabs__header {
+      text-align: center;
+      border-bottom: none !important;
+      transform: translateX(16px) !important;
+      .el-tabs__nav {
+        display: flex;
+      }
+      width: calc(100% - 32px) !important;
+      .el-tabs__nav,
+      .el-tabs__item {
+        border: none !important;
+      }
+      .el-tabs__item {
+        flex: 1;
+        border-bottom: 1px solid #000 !important;
+        font-size: $font-size-small !important;
+        &:hover,
+        &:focus {
+          color: $--color--black !important;
+        }
+        &.is-active {
+          border: 1px solid #000 !important;
+          border-bottom: none !important;
+          color: $--color--black !important;
+        }
+      }
+    }
+  }
+}

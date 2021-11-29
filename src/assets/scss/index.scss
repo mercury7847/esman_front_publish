@@ -1,12 +1,19 @@
 @import "var.scss";
 @import "reset.scss";
 @import "fonts.scss";
-@import "component.scss";
 @import "common.scss";
 
 @import "./layout/layout.scss";
 @import "./layout/sidemenu.scss";
 @import "./layout/modal.scss";
+
+@import "./component/badge.scss";
+@import "./component/button.scss";
+@import "./component/card.scss";
+@import "./component/collapse.scss";
+@import "./component/form.scss";
+@import "./component/icon.scss";
+@import "./component/tab.scss";
 
 @import "./pages/home.scss";
 @import "./pages/landing.scss";

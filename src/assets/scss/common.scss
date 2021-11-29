@@ -109,6 +109,23 @@ button {
   }
 }
 
+// text-link
+.text-link {
+  color: $text-link-color;
+  font-size: $font-size-small;
+  text-decoration: none;
+  &.underline {
+    text-decoration: underline;
+  }
+  &.detail {
+    color: $attach-color;
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    font-weight: 200;
+  }
+}
+
 .d {
   &-inline-block {
     display: inline-block;

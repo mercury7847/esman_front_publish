@@ -1,0 +1,87 @@
+// badge
+.badge {
+  display: inline-block;
+  min-width: 42px;
+  height: 24px;
+  padding: 0 10px;
+  margin-right: 8px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  font-size: $font-size-xsmall;
+  line-height: 22px;
+  letter-spacing: -0.6px;
+  text-align: center;
+  vertical-align: middle;
+  &.green {
+    background-color: #cae7c5;
+    color: #1c790d;
+  }
+  &.yellow {
+    background-color: #fff4d7;
+    color: #ffb800;
+  }
+  &.red {
+    background-color: #ffdddb;
+    color: #de0f02;
+  }
+  &.purple {
+    background-color: #e4d6ee;
+    color: #7500ac;
+  }
+  &.gray {
+    background-color: #dbdbdb;
+    color: #adb5c0;
+  }
+  &.orange {
+    border: 1px solid #ff6b00;
+    color: #ff6b00;
+  }
+  &.blue {
+    border: 1px solid #1e00d7;
+    color: #1e00d7;
+  }
+  &-circle {
+    position: relative;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-left: 8px;
+      background-color: $--color--white;
+      border-radius: 50%;
+      color: $sub-color;
+      font-size: $font-size-xxsmall;
+      font-weight: bold;
+      line-height: 18px;
+      vertical-align: middle;
+    }
+    &.blue::after {
+      background-color: $sub-color;
+    }
+    &-secondary {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $secondary-color;
+      color: $--color--white;
+      font-size: 0.6875rem;
+      line-height: 18px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    &-blue {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $sub-color;
+      color: $--color--white;
+      font-size: 0.6875rem;
+      line-height: 18px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
