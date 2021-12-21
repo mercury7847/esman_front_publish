@@ -3,52 +3,47 @@
     <div class="login">
       <div class="login-header">
         <div class="login-header-inner">
-          <h1><img src="@/assets/images/login_title.svg" alt="login"></h1>
-          <p>한진택배 사번을 입력하세요</p>
+          <h1><img src="@/assets/images/login_title.svg" alt="login" /></h1>
+          <p class="ft-color-secondary">한진택배 사번을 입력하세요</p>
         </div>
       </div>
-
-      <div class="login-form">
-
-        <div class="login-cid">
-          <label for="c-id">사번</label>
-          <div class="inp">
-            <div class="inp-inner">
-              <input type="text" class="input-text-line" placeholder="사번을 입력하세요" id="c-id" autofocus>
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form login-form" label-position="top">
+        <el-form-item label="사번" class="mb-20">
+          <div class="l-inp">
+            <div class="inp">
+              <div class="inp-inner">
+                <el-input type="text" placeholder="사번을 입력하세요" v-model="ruleForm.id" class="inp-text-line" clearable></el-input>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="login-cpw">
-          <label for="c-pw">비밀번호</label>
-          <div class="inp">
-            <div class="inp-inner">
-              <input type="text" class="input-text-line" placeholder="비밀번호를 입력하세요" id="c-pw">
-              <button class="btn-close"></button>
+        </el-form-item>
+        <el-form-item label="비밀번호" class="mb-20">
+          <div class="l-inp">
+            <div class="inp">
+              <div class="inp-inner">
+                <el-input type="password" placeholder="비밀번호를 입력하세요." v-model="ruleForm.password" class="inp-text-line" clearable></el-input>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="login-service">
-
-        <div class="login-service-check">
-          <div class="input-checkbox">
-            <input type="checkbox" id="cspot" v-model="isAcceptLocation"/>
-            <label for="cspot"><span>위치정보 제공동의</span></label>
+        </el-form-item>
+      </el-form>
+      <el-form class="l-form login-service">
+        <el-form-item class="checkbox mb-20">
+          <div class="d-flex-be-center">
+            <div class="l-checkbox login-service-check">
+              <el-checkbox v-model="isAcceptLocation">위치정보 제공동의</el-checkbox>
+            </div>
+            <div class="login-service-detailview">
+              <router-link to="" class="text-link detail"><span>상세보기</span><i class="icon-xs icon-arrow-r"></i> </router-link>
+            </div>
           </div>
-        </div>
-        <div class="login-service-detailview">
-          <router-link to="" class="text-link detail"><span>상세보기</span><i class="icon-xs icon-arrow-r"></i>
-          </router-link>
-        </div>
-
-      </div>
+        </el-form-item>
+      </el-form>
       <div class="btn-group">
-        <button class="btn full-size large primary" :disabled="!canLogin"  @click="$router.push('/home')" >로그인</button>
-        <!-- <button class="btn full-size large primary" :disabled="!canLogin"  @click="popVisible" >로그인</button> -->
-        <!-- <button class="btn full-size large primary" :disabled="!canLogin"  @click="popVisible" >로그인</button> -->
+        <!-- <button class="btn btn-full-size primary" :disabled="!canLogin" @click="$router.push('/dashboard')">로그인</button> -->
+        <button class="btn btn-full-size primary" :disabled="!canLogin" @click="loginAlertActive = true">로그인</button>
+        <!-- <button class="btn btn-full-size primary" :disabled="!canLogin" @click="loginConfirmActive = true">로그인</button> -->
       </div>
-
       <div class="option">
         <div class="app-version">v2.1.1</div>
         <div class="option-service">
@@ -56,45 +51,45 @@
           <router-link to="/join" class="text-link underline">회원가입</router-link>
         </div>
       </div>
-
       <div class="welcom-message">
         <p>기쁨 전하는 행복상자 한진택배</p>
       </div>
     </div>
-    <pop-login v-if="popOn" />
-    <pop-password v-if="popOn" @click="popVisible" />
+
+    <!-- 로그인 오류 팝업 -->
+    <pop-login-alert v-if="loginAlertActive" @click="loginAlertActive = !loginAlertActive"></pop-login-alert>
+    <!-- 비밀번호 오류 팝업 -->
+    <pop-login-confirm v-if="loginConfirmActive" @click="loginConfirmActive = !loginConfirmActive"></pop-login-confirm>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex';
-import PopLogin from '../Modal/PopLogin'
-import PopPassword from '../Modal/PopPassword'
+import PopLoginAlert from "@/views/Login/PopLoginAlert";
+import PopLoginConfirm from "@/views/Login/PopLoginConfirm";
 
 export default {
-  components: { PopLogin, PopPassword },
-  name: 'Login',
+  components: { PopLoginAlert, PopLoginConfirm },
+  name: "Login",
   data() {
     return {
-      isAcceptLocation : false,
-      popOn: false
-    }
+      isAcceptLocation: true,
+      loginAlertActive: false,
+      loginConfirmActive: false,
+      ruleForm: {
+        id: "",
+        password: "",
+      },
+      rules: {
+        id: [{ required: true, message: "사번을 입력해주세요", trigger: "blur" }],
+        password: [{ required: true, message: "비밀번호를 입력해주세요.", trigger: "blur" }],
+      },
+    };
   },
-  methods: {
-    popVisible: function () {
-      this.popOn = !this.popOn;
+  methods: {},
+  computed: {
+    canLogin() {
+      return this.isAcceptLocation;
     },
   },
- /* watch: {
-    isAcceptLocation(v){
-      alert(v)
-    }
-  },*/
-  computed: {
-    // 계산된 getter
-    canLogin: function () {
-      return this.isAcceptLocation
-    }
-  }
-}
+};
 </script>

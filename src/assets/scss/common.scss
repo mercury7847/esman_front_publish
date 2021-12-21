@@ -59,6 +59,12 @@ button {
   &-white {
     color: $--color--white;
   }
+  &-primary {
+    color: $--color--main-blue;
+  }
+  &-secondary {
+    color: $--color--main-dark-blue;
+  }
   &-green {
     color: $--color--green;
   }

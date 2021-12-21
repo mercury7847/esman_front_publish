@@ -14,11 +14,11 @@
 
         <div class="d-flex-be-center" v-show="!searchResult">
           <p class="txt-sub">최근 검색어</p>
-          <button class="btn small-size white">전체 삭제</button>
+          <button class="btn btn-small-size white">전체 삭제</button>
         </div>
         <div class="d-flex-be-center" v-show="searchResult">
           <p class="txt-sub">검색결과 <span class="txt-primary">4</span></p>
-          <button class="btn small-size white">전체 삭제</button>
+          <button class="btn btn-small-size white">전체 삭제</button>
         </div>
       </div>
       <div class="address-list scroll-y" v-show="!searchResult">

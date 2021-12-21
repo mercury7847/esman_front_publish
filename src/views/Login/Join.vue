@@ -16,7 +16,7 @@
                       <input type="text" class="input-text-line" placeholder="사번을 입력하세요" id="c-id" autofocus disabled />
                     </div>
                   </div>
-                  <button class="btn regular secondary reg-size">생성</button>
+                  <button class="btn secondary btn-regular-size">생성</button>
                 </div>
                 <label for="c-pw">비밀번호</label>
                 <div class="l-inp">
@@ -41,7 +41,7 @@
                       <input type="text" class="input-text-line" placeholder="휴대전화 번호를 입력하세요." id="c-mob" autofocus />
                     </div>
                   </div>
-                  <button class="btn regular secondary reg-size">인증번호 전송</button>
+                  <button class="btn secondary btn-regular-size">인증번호 전송</button>
                 </div>
                 <label for="c-name">이름</label>
                 <div class="l-inp">
@@ -94,7 +94,7 @@
                     테두리 안쪽에 신분증을 위치하시고<br />
                     빛이 투영되지 않도록 촬영해주세요.
                   </div>
-                  <div class="btn-group"><button class="btn full-size large primary">촬영</button></div>
+                  <div class="btn-group"><button class="btn btn-full-size primary">촬영</button></div>
                 </div>
               </el-tab-pane>
               <el-tab-pane label="운전면허증">
@@ -111,7 +111,7 @@
                     테두리 안쪽에 신분증을 위치하시고<br />
                     빛이 투영되지 않도록 촬영해주세요.
                   </div>
-                  <div class="btn-group"><button class="btn full-size large primary">촬영</button></div>
+                  <div class="btn-group"><button class="btn btn-full-size primary">촬영</button></div>
                 </div>
               </el-tab-pane>
               <el-tab-pane label="화물종사자격증">
@@ -125,7 +125,7 @@
                     테두리 안쪽에 신분증을 위치하시고<br />
                     빛이 투영되지 않도록 촬영해주세요.
                   </div>
-                  <div class="btn-group"><button class="btn full-size large primary">촬영</button></div>
+                  <div class="btn-group"><button class="btn btn-full-size primary">촬영</button></div>
                 </div>
               </el-tab-pane>
             </el-tabs>
@@ -139,7 +139,7 @@
               <div class="txt-secondary">로그인 후 E/S man 서비스를<br />사용할 수 있습니다.</div>
             </div>
             <div class="btn-group">
-              <router-link to="/login"><button class="btn full-size large primary">로그인 화면으로 이동</button></router-link>
+              <router-link to="/login"><button class="btn btn-full-size primary">로그인 화면으로 이동</button></router-link>
             </div>
           </div>
         </el-tab-pane>

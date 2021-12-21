@@ -17,8 +17,8 @@
                 </div>
               </div>
               <div class="btn-group">
-                <button class="btn small-size secondary" disabled>삭제</button>
-                <button class="btn small-size white" @click="popVisible">송장번호</button>
+                <button class="btn btn-small-size secondary" disabled>삭제</button>
+                <button class="btn btn-small-size white" @click="popVisible">송장번호</button>
                 <button class="btn"><i class="icon-refresh"></i></button>
                 <button class="btn" @click="switchSearch" :class="isSearch ? 'is-on' : 'is-default'"><i class="icon-search small"></i></button>
               </div>
@@ -93,8 +93,8 @@
                 </div>
               </div>
               <div class="btn-group">
-                <button class="btn small-size secondary" disabled>삭제</button>
-                <button class="btn small-size white" @click="popVisible">송장번호</button>
+                <button class="btn btn-small-size secondary" disabled>삭제</button>
+                <button class="btn btn-small-size white" @click="popVisible">송장번호</button>
                 <button class="btn"><i class="icon-refresh"></i></button>
                 <button class="btn" @click="switchSearch" :class="isSearch ? 'is-on' : 'is-default'"><i class="icon-search small"></i></button>
               </div>
@@ -165,7 +165,7 @@
         <li><span class="title">집하</span><span class="num ft-color-yellow">4</span></li>
         <li><span class="title">스캔</span><span class="num ft-color-purple">4</span></li>
       </ul>
-      <button class="btn full-size reg-size primary badge-circle" @click="departureDialogVisible = true">출발 확정 대상</button>
+      <button class="btn btn-full-size btn-regular-size primary badge-circle" @click="departureDialogVisible = true">출발 확정 대상</button>
     </div>
 
     <!-- 화물 상세정보 -->
@@ -285,8 +285,8 @@
                 </div>
               </div>
               <div class="btn-group">
-                <button class="btn xsmall-size white is-on">자동</button>
-                <!-- <button class="btn small-size white">수동</button> -->
+                <button class="btn  btn-xsmall-size white is-on">자동</button>
+                <!-- <button class="btn btn-small-size white">수동</button> -->
                 <button class="btn btn-revert small ml-20" disabled></button>
                 <button class="btn btn-search small" disabled></button>
               </div>
@@ -465,12 +465,12 @@
                 <button class="btn pale-gray"><i class="icon-chevrons-down"></i></button>
               </div>
             </div>
-            <div class="btn-group full-size">
-              <button class="btn full-size reg-size white ft-weight-bold" @click="deliveryOrder" :class="{ 'is-on': isOrder }">순서</button>
-              <button class="btn full-size reg-size white ft-weight-bold" @click="drawerDeliveryTime = true">시간</button>
+            <div class="btn-group btn-full-size">
+              <button class="btn btn-full-size btn-regular-size white ft-weight-bold" @click="deliveryOrder" :class="{ 'is-on': isOrder }">순서</button>
+              <button class="btn btn-full-size btn-regular-size white ft-weight-bold" @click="drawerDeliveryTime = true">시간</button>
             </div>
-            <button class="btn full-size reg-size primary mr-5"><i class="icon-check-circle small white mr-5"></i>출발 확정</button>
-            <button class="btn full-size reg-size yellow" @click="drawerRouting = true"><i class="icon-map-pin small white mr-5"></i>라우팅</button>
+            <button class="btn btn-full-size btn-regular-size primary mr-5"><i class="icon-check-circle small white mr-5"></i>출발 확정</button>
+            <button class="btn btn-full-size btn-regular-size yellow" @click="drawerRouting = true"><i class="icon-map-pin small white mr-5"></i>라우팅</button>
           </div>
         </div>
       </el-dialog>
@@ -481,8 +481,8 @@
       <el-drawer :visible.sync="drawer" direction="btt" size="92%" :with-header="false">
         <div class="drawer-title d-flex-be-center">
           <span>배송 순서 / 시간 지정</span>
-          <button class="btn xsmall-size white btn-auto-manual is-on">자동</button>
-          <!-- <button class="btn small-size white">수동</button> -->
+          <button class="btn  btn-xsmall-size white btn-auto-manual is-on">자동</button>
+          <!-- <button class="btn btn-small-size white">수동</button> -->
         </div>
         <div class="l-inner l-fixed">
           <div class="l-inp card type-02">
@@ -553,8 +553,8 @@
           </table>
         </div>
         <div class="l-departure-bottom">
-          <button class="btn full-size reg-size primary mr-10">확인</button>
-          <button class="btn full-size reg-size yellow"><i class="icon-map-pin small white mr-5"></i>라우팅</button>
+          <button class="btn btn-full-size btn-regular-size primary mr-10">확인</button>
+          <button class="btn btn-full-size btn-regular-size yellow"><i class="icon-map-pin small white mr-5"></i>라우팅</button>
         </div>
       </el-drawer>
     </div>

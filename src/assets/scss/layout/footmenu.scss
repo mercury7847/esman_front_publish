@@ -1,0 +1,84 @@
+.service-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: $--color--white;
+  border-top: 1px solid $--color--border;
+  z-index: 10;
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      position: relative;
+      align-items: center;
+      flex: 1 1 25%;
+      height: 60px;
+      &.is-active {
+        a {
+          color: $--color--main-blue;
+          i {
+            &.icon-home {
+              background-image: url(../../assets/images/icon-menu-home-active.svg);
+            }
+            &.icon-start {
+              background-image: url(../../assets/images/icon-menu-start-active.svg);
+            }
+            &.icon-complet {
+              background-image: url(../../assets/images/icon-menu-complet-active.svg);
+            }
+            &.icon-search {
+              background-image: url(../../assets/images/icon-menu-search-active.svg);
+            }
+            &.icon-history {
+              background-image: url(../../assets/images/icon-menu-history-active.svg);
+            }
+          }
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        padding: 9px;
+        text-align: center;
+        // background-color: transparent;
+        color: $--color--gray;
+        font-size: 0.6875rem;
+        .btn {
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          color: $--color--gray;
+          font-size: 0.6875rem;
+        }
+        i {
+          display: block;
+          width: 100%;
+          height: 24px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &.icon-home {
+            background-image: url(../../assets/images/icon-menu-home.svg);
+          }
+          &.icon-start {
+            background-image: url(../../assets/images/icon-menu-start.svg);
+          }
+          &.icon-complet {
+            background-image: url(../../assets/images/icon-menu-complet.svg);
+          }
+          &.icon-search {
+            background-image: url(../../assets/images/icon-menu-search.svg);
+          }
+          &.icon-history {
+            background-image: url(../../assets/images/icon-menu-history.svg);
+          }
+        }
+      }
+    }
+  }
+}

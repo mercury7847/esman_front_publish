@@ -1,20 +1,48 @@
 <template>
   <div class="service-menu">
     <ul>
-      <li class="is-on"><button><i class="icon-home"></i>Home</button></li>
-      <li><button><i class="icon-start"></i>준비</button></li>
-      <li><button><i class="icon-complet"></i>처리</button></li>
-      <li><button><i class="icon-search"></i>실적</button></li>
-      <li><button><i class="icon-history"></i>이력</button></li>
+      <li v-for="item in serviceMenu" :key="item.menu" :class="{ 'is-active': $route.path == item.path }">
+        <router-link :to="item.path">
+          <i :class="item.icon"></i>
+          <span>{{ item.menu }}</span>
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
 <script>
 export default {
-  name:'FootMenu'
-}
+  name: "FootMenu",
+  data() {
+    return {
+      serviceMenu: [
+        {
+          menu: "Home",
+          path: "/dashboard",
+          icon: "icon-home",
+        },
+        {
+          menu: "준비",
+          path: "/delivery",
+          icon: "icon-start",
+        },
+        {
+          menu: "처리",
+          path: "/delivery-processing",
+          icon: "icon-complet",
+        },
+        {
+          menu: "실적",
+          path: "/",
+          icon: "icon-search",
+        },
+        {
+          menu: "이력",
+          path: "/",
+          icon: "icon-history",
+        },
+      ],
+    };
+  },
+};
 </script>
-<style   >
-/*@import "../../assets/scss/var.scss";
-@import "../../assets/scss/layout/layout.scss";*/
-</style>

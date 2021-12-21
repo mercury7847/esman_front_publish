@@ -15,9 +15,9 @@
         </el-form-item>
         <el-form-item label="label" class="mb-20">
           <div class="l-inp">
-            <div class="inp">
+            <div class="inp disabled">
               <div class="inp-inner">
-                <el-input type="text" placeholder="텍스트를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+                <el-input type="text" placeholder="텍스트를 입력하세요." v-model="input01" class="inp-text-line" disabled></el-input>
               </div>
             </div>
           </div>
@@ -63,16 +63,9 @@
             </el-radio-group>
           </div>
         </el-form-item>
-        <el-form-item prop="radioType" class="mb-20">
-          <div class="l-radio">
-            <el-radio-group v-model="ruleForm.radioType">
-              <el-radio :label="1">1</el-radio>
-              <el-radio :label="2">2</el-radio>
-            </el-radio-group>
-          </div>
-        </el-form-item>
       </el-form>
 
+      <el-divider></el-divider>
       <h2 class="ft-color-gray ft-size-large mb-16">switch</h2>
       <el-form :model="ruleForm" ref="ruleForm" class="l-form">
         <el-form-item label="label" class="switch mb-20">
@@ -81,6 +74,30 @@
           </div>
         </el-form-item>
       </el-form>
+
+      <el-divider></el-divider>
+      <div class="btn-group mb-20">
+        <button class="btn btn-full-size primary">btn-full-size</button>
+      </div>
+      <div class="btn-group btn-full-size mb-20">
+        <button class="btn btn-full-size btn-regular-size white is-on">full regular is-on</button>
+        <button class="btn btn-full-size btn-regular-size white">full regular</button>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-full-size primary mb-20" disabled>disabled</button>
+      </div>
+      <div class="btn-group mb-20">
+        <button class="btn btn-regular-size secondary">btn-regular-size</button>
+        <button class="btn txt-type">txt-type</button>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-small-size white">btn-small-size</button>
+        <button class="btn btn-xsmall-size white is-on">btn-xsmall-size</button>
+        <button class="btn btn-xsmall-size yellow">xsmall yellow</button>
+        <button class="btn btn-xsmall-size pale-gray">xsmall pale-gray</button>
+      </div>
+
+      <el-divider></el-divider>
     </div>
 
     <foot-menu />

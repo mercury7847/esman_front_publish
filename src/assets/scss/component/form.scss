@@ -27,7 +27,7 @@
           padding-top: 14px;
           color: $--color--black;
           font-size: $--font-size-regular;
-          font-weight: 600;
+          font-weight: 700;
           line-height: 1.25rem;
           letter-spacing: -0.0437rem;
           text-align: left;
@@ -183,11 +183,16 @@
         }
       }
       &.disabled {
-        background-color: $--color--gray;
-        .input-text-line {
-          &:disabled {
-            color: $--color--placeholder;
+        .inp-inner {
+          background-color: $--color--gray;
+          .el-input__inner {
+            background-color: transparent;
+            &:disabled {
+              color: $--color--placeholder;
+            }
           }
+        }
+        .inp-text-line {
         }
       }
     }
@@ -218,6 +223,8 @@
         font-size: $--font-size-regular;
         letter-spacing: -0.0437rem;
         font-weight: 700;
+        line-height: 1.25rem;
+        vertical-align: middle;
       }
       &__input {
         height: 18px;

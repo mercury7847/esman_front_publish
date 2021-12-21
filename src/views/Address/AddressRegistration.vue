@@ -19,10 +19,10 @@
                 <input type="text" class="input-text-line" placeholder="검색어를 입력하세요." id="c-pw" autofocus />
               </div>
             </div>
-            <button class="btn primary reg-size" @click="drawer = true">검색</button>
+            <button class="btn primary btn-regular-size" @click="drawer = true">검색</button>
           </div>
         </div>
-        <div class="btn-group bottom"><button class="btn full-size large primary">등록하기</button></div>
+        <div class="btn-group bottom"><button class="btn btn-full-size primary">등록하기</button></div>
       </div>
     </div>
 
@@ -54,7 +54,7 @@
                 <p class="address-title" v-html="item.title"></p>
                 <p class="address-desc" v-html="item.address"></p>
               </div>
-              <button class="btn small-size white">지도</button>
+              <button class="btn btn-small-size white">지도</button>
             </li>
           </ul>
         </div>

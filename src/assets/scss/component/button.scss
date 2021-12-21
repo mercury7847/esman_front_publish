@@ -23,7 +23,7 @@
         color: $--color--sub-blue;
       }
     }
-    &.full-size {
+    &.btn-full-size {
       min-width: 120px;
       margin-right: 10px;
       border: 1px solid $--color--border;
@@ -40,27 +40,15 @@
       }
     }
   }
-  &.large {
-    font-size: $--font-size-xlarge;
-    font-weight: 700;
-  }
-  &.regular {
-    font-size: $--font-size-large;
-    font-weight: 700;
-  }
-  &.small {
-    font-size: $--font-size-regular;
-    font-weight: 700;
-    letter-spacing: -0.7px;
-  }
-  &.full-size {
+  // size
+  &-full-size {
     width: 100%;
     height: 54px;
     font-size: $--font-size-xlarge;
     font-weight: 700;
     letter-spacing: -0.9px;
   }
-  &.reg-size {
+  &-regular-size {
     min-width: 80px;
     height: 45px;
     padding: 12px 15px;
@@ -68,20 +56,21 @@
     font-weight: 700;
     letter-spacing: -0.7px;
   }
-  &.small-size {
+  &-small-size {
     min-width: 50px;
     height: 33px;
     padding: 0 12px;
     font-size: $--font-size-regular;
     letter-spacing: -0.7px;
   }
-  &.xsmall-size {
+  &-xsmall-size {
     min-width: 46px;
     height: 27px;
     padding: 0 10px;
     font-size: $--font-size-regular;
     letter-spacing: -0.7px;
   }
+  // color
   &.primary {
     background-color: $--color--main-blue;
     color: $--color--white;
@@ -112,9 +101,6 @@
     &:disabled {
       color: $--color--inactive;
     }
-  }
-  &.w100 {
-    width: 100px;
   }
   // &:focus{
   //   box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
