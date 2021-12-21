@@ -12,31 +12,31 @@
   &-header {
     text-align: left;
     font-size: $--font-size-xlarge;
-    color: $--color--main-dark-blue;
+    color: $--color--secondary;
     font-weight: bold;
     margin-bottom: 20px;
     button {
       border: none;
       text-align: left;
       font-size: $--font-size-regular;
-      color: $--color--main-dark-blue;
+      color: $--color--secondary;
       font-weight: bolder;
       background-color: transparent;
     }
     .btn-title {
-      color: $--color--main-dark-blue;
+      color: $--color--secondary;
       font-weight: 700;
     }
     .icon-more {
-      width: 14px;
-      height: 14px;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      background-image: url(../../assets/images/icon-arrow_r.svg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      cursor: pointer;
+      // width: 14px;
+      // height: 14px;
+      // position: absolute;
+      // right: 10px;
+      // top: 10px;
+      // background-image: url(../../assets/images/icon-arrow-right.svg);
+      // background-repeat: no-repeat;
+      // background-position: center center;
+      // cursor: pointer;
     }
   }
   &-tabs {

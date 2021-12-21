@@ -31,6 +31,11 @@ a {
   display: block;
   color: $--color--black;
   text-decoration: none;
+  &.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 button {
@@ -38,72 +43,82 @@ button {
   cursor: pointer;
 }
 
-.ft-size {
-  &-xsmall {
-    font-size: $--font-size-small !important;
+.ft {
+  &-size {
+    &-small {
+      font-size: $--font-size-small !important;
+      letter-spacing: -0.0375rem;
+    }
+    &-regular {
+      font-size: $--font-size-regular !important;
+      letter-spacing: -0.0437rem;
+    }
+    // &-normal {
+    //   font-size: $--font-size-large !important;
+    // }
+    // &-large {
+    //   font-size: $--font-size-xlarge !important;
+    // }
+    // &-xxlarge {
+    //   font-size: $--font-size-xxxlarge !important;
+    // }
   }
-  &-small {
-    font-size: $--font-size-regular !important;
+  &-color {
+    &-white {
+      color: $--color--white !important;
+    }
+    &-primary {
+      color: $--color--primary !important;
+    }
+    &-secondary {
+      color: $--color--secondary !important;
+    }
+    &-green {
+      color: $--color--green !important;
+    }
+    &-yellow {
+      color: #ffb800 !important;
+    }
+    &-yellow-02 {
+      color: $--color--point !important;
+    }
+    &-purple {
+      color: #7500ac !important;
+    }
+    &-gray {
+      color: $--color--gray !important;
+    }
   }
-  &-normal {
-    font-size: $--font-size-large !important;
+  &-weight {
+    &-bolder {
+      font-weight: 800 !important;
+    }
+    &-bold {
+      font-weight: 700 !important;
+    }
+    &-medium {
+      font-weight: 500 !important;
+    }
+    &-regular {
+      font-weight: 400 !important;
+    }
+    &-light {
+      font-weight: 300 !important;
+    }
   }
-  &-large {
-    font-size: $--font-size-xlarge !important;
+  &-align {
+    &-center {
+      text-align: center !important;
+    }
+    &-left {
+      text-align: left !important;
+    }
+    &-right {
+      text-align: right !important;
+    }
   }
-  &-xxlarge {
-    font-size: $--font-size-xxxlarge !important;
-  }
-}
-.ft-color {
-  &-white {
-    color: $--color--white;
-  }
-  &-primary {
-    color: $--color--main-blue;
-  }
-  &-secondary {
-    color: $--color--main-dark-blue;
-  }
-  &-green {
-    color: $--color--green;
-  }
-  &-yellow {
-    color: #ffb800;
-  }
-  &-yellow-02 {
-    color: $--color--point;
-  }
-  &-purple {
-    color: #7500ac;
-  }
-  &-gray {
-    color: $--color--gray;
-  }
-}
-.ft-weight {
-  &-bolder {
-    font-weight: 800 !important;
-  }
-  &-bold {
-    font-weight: 700 !important;
-  }
-  &-medium {
-    font-weight: 500 !important;
-  }
-  &-regular {
-    font-weight: 400 !important;
-  }
-  &-light {
-    font-weight: 300 !important;
-  }
-}
-.ft-align {
-  &-center {
-    text-align: center;
-  }
-  &-right {
-    text-align: right !important;
+  &-letter-normal {
+    letter-spacing: normal;
   }
 }
 .txt {
@@ -127,7 +142,7 @@ button {
     color: $--color--sub-blue;
   }
   &-primary {
-    color: $--color--main-blue !important;
+    color: $--color--primary !important;
   }
   &-sub {
     color: $--color--gray !important;
@@ -139,7 +154,7 @@ button {
 
 // text-link
 .text-link {
-  color: $--color--main-dark-blue;
+  color: $--color--secondary;
   font-size: $--font-size-regular;
   text-decoration: none;
   &.underline {
@@ -213,6 +228,9 @@ button {
   &-0 {
     margin-bottom: 0 !important;
   }
+  &-15 {
+    margin-bottom: 15px !important;
+  }
   &-16 {
     margin-bottom: 16px !important;
   }
@@ -236,6 +254,9 @@ button {
   &-10 {
     margin-left: 10px !important;
   }
+  &-15 {
+    margin-left: 15px !important;
+  }
   &-16 {
     margin-left: 16px !important;
   }
@@ -252,6 +273,9 @@ button {
   }
   &-10 {
     margin-right: 10px !important;
+  }
+  &-15 {
+    margin-right: 15px !important;
   }
   &-16 {
     margin-right: 16px !important;

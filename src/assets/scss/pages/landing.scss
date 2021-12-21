@@ -20,19 +20,8 @@
     }
   }
   .slogun {
-    margin-top: 12px;
-    color: #fff;
-    font-size: $--font-size-regular;
-  }
-  .welcom-message {
-    font-size: $--font-size-regular;
-    color: #fff;
-    position: absolute;
-    display: block;
-    text-align: center;
-    bottom: 4.6%;
-    left: 0;
-    right: 0;
+    margin-top: 10px;
+    color: $--color--white;
   }
 
   .el-loading-mask {
@@ -46,4 +35,13 @@
       }
     }
   }
+}
+
+.welcom-message {
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  right: 0;
+  color: $--color--gray;
+  text-align: center;
 }

@@ -6,40 +6,53 @@ i {
   vertical-align: middle;
 }
 .icon {
-  &-xs {
+  &-small {
     width: 14px;
     height: 14px;
   }
-  &-sm {
+  &-regular {
     width: 18px;
     height: 18px;
   }
-  &-xlg {
+  &-large {
+    width: 24px;
+    height: 24px;
+  }
+  &-xlarge {
+    width: 42px;
+    height: 42px;
+  }
+  &-xxxlarge {
     width: 120px;
     height: 120px;
   }
-  &-arrow-r {
-    background: url(../../assets/images/icon-arrow_r.svg) no-repeat 50% 50% / contain;
+  &-arrow-left {
+    background: url("../../assets/images/icon-arrow-left.svg") no-repeat 50% 50% / contain;
+  }
+  &-arrow-right {
+    background: url("../../assets/images/icon-arrow-right.svg") no-repeat 50% 50% / contain;
   }
   &-arrow-down {
-    width: 18px;
-    height: 18px;
-    background: url(../../assets/images/icon-arrow-down.svg) no-repeat 50% 50% / contain;
+    background: url("../../assets/images/icon-arrow-down.svg") no-repeat 50% 50% / contain;
     &.is-on {
       background: url(../../assets/images/icon-arrow-up-active.svg) no-repeat 50% 50% / contain;
       transform: rotate(180deg);
     }
   }
   &-arrow-up {
-    width: 18px;
-    height: 18px;
-    background: url(../../assets/images/icon-arrow-down.svg) no-repeat 50% 50% / contain;
-    transform: rotate(180deg);
+    background: url("../../assets/images/icon-arrow-up.svg") no-repeat 50% 50% / contain;
     &.is-on {
       background: url(../../assets/images/icon-arrow-up-active.svg) no-repeat 50% 50% / contain;
-      transform: none;
     }
   }
+  &-more {
+    width: 14px;
+    height: 14px;
+    background: url("../../assets/images/icon-arrow-right.svg") no-repeat 50% 50% / contain;
+    margin: 2px 0 0 2px;
+  }
+
+  //
   &-chevrons-up {
     width: 18px;
     height: 18px;

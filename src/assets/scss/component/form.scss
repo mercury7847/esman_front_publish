@@ -15,7 +15,7 @@
           top: 0;
           left: 0;
           padding-top: 8px;
-          color: $--color--main-blue;
+          color: $--color--primary;
           font-size: $--font-size-regular;
           letter-spacing: -0.0437rem;
           line-height: 1.125rem;
@@ -40,7 +40,7 @@
             &::after {
               content: "*";
               display: inline-block;
-              color: $--color--main-blue;
+              color: $--color--primary;
             }
           }
         }
@@ -114,6 +114,9 @@
       .el-form-item {
         display: flex;
         flex-wrap: wrap;
+        &__label {
+          padding: 0 0 8px;
+        }
       }
     }
   }
@@ -152,7 +155,7 @@
           color: $--color--placeholder;
         }
         &:focus {
-          caret-color: $--color--main-dark-blue;
+          caret-color: $--color--secondary;
           outline: none;
         }
         &__inner {
@@ -207,8 +210,10 @@
         width: 18px;
         height: 18px;
         border-radius: 50%;
-        background-color: $--color--gray;
-        border-color: $--color--gray !important;
+        // background-color: $--color--gray;
+        // border-color: $--color--gray !important;
+        background-color: $--color--inactive;
+        border-color: $--color--inactive !important;
         &::after {
           transform: rotate(45deg) scaleY(1);
           left: 5px;
@@ -218,7 +223,7 @@
         }
       }
       &__label {
-        padding-left: 5px;
+        padding-left: 8px;
         color: $--color--gray;
         font-size: $--font-size-regular;
         letter-spacing: -0.0437rem;
@@ -232,11 +237,11 @@
       &.is-checked {
         .el-checkbox {
           &__inner {
-            background-color: $--color--main-blue;
-            border-color: $--color--main-blue !important;
+            background-color: $--color--primary;
+            border-color: $--color--primary !important;
           }
           &__label {
-            color: $--color--main-blue;
+            color: $--color--primary;
           }
         }
       }
@@ -256,7 +261,7 @@
             }
           }
           & + .el-radio__label {
-            color: $--color--main-blue;
+            color: $--color--primary;
           }
         }
       }
@@ -286,8 +291,8 @@
       &.is-checked {
         .el-switch {
           &__core {
-            background-color: $--color--main-blue;
-            border-color: $--color--main-blue;
+            background-color: $--color--primary;
+            border-color: $--color--primary;
           }
         }
       }
@@ -333,7 +338,7 @@
             height: 40px;
             font-weight: 400;
             &.selected {
-              color: $--color--main-blue;
+              color: $--color--primary;
             }
           }
           &__list {
@@ -356,7 +361,7 @@
 //       color: $--color--placeholder;
 //     }
 //     &:focus {
-//       caret-color: $--color--main-dark-blue;
+//       caret-color: $--color--secondary;
 //       outline: none;
 //     }
 //   }
@@ -372,10 +377,10 @@
 
 //       &:checked + label {
 //         &:before {
-//           background-color: $--color--main-blue;
+//           background-color: $--color--primary;
 //         }
 //         span {
-//           color: $--color--main-blue;
+//           color: $--color--primary;
 //         }
 //       }
 //     }

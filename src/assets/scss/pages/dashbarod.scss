@@ -16,7 +16,7 @@
       flex: 1;
       min-width: 100px;
       height: 90px;
-      background-color: $--color--main-dark-blue;
+      background-color: $--color--secondary;
       // display: inline-block;
       border-radius: 9px;
       text-align: left;
@@ -117,7 +117,7 @@
         text-align: right;
         .data {
           font-weight: 600;
-          color: $--color--main-dark-blue;
+          color: $--color--secondary;
         }
       }
     }
@@ -140,7 +140,7 @@
         }
         ins {
           text-decoration: none;
-          color: $--color--main-dark-blue;
+          color: $--color--secondary;
           font-size: $--font-size-regular;
           font-weight: 600;
         }

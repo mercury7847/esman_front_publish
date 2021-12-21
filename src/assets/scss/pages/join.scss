@@ -8,7 +8,7 @@
     margin-top: 10px;
   }
   .input-checkbox {
-    background: url(../../assets/images/icon-arrow_r.svg) no-repeat right 50% / contain;
+    background: url(../../assets/images/icon-arrow-right.svg) no-repeat right 50% / contain;
     margin-bottom: 16px;
   }
   .el-tabs--card > .el-tabs__header .el-tabs__item:not(:last-child) {
@@ -52,7 +52,7 @@
     transform: translateY(-65%);
     .txt-title {
       padding: 10px 0;
-      color: $--color--main-dark-blue;
+      color: $--color--secondary;
     }
   }
 }

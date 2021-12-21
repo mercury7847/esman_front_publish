@@ -1,6 +1,11 @@
+.l-login {
+  padding: 0 16px;
+}
 .login {
+  font-size: $--font-size-regular;
+  letter-spacing: -0.7px;
   &-header {
-    height: 19vh;
+    height: 22vh;
     position: relative;
     margin-bottom: 40px;
     &-inner {
@@ -10,41 +15,21 @@
     h1 {
       margin-bottom: 18px;
     }
-    p {
-      color: $--color--main-dark-blue;
-      font-size: $--font-size-large;
-      font-weight: bold;
-    }
   }
-  .btn-group {
+  &-terms {
+    margin-top: 20px;
     margin-bottom: 20px;
   }
+  &-btn-group {
+    margin-bottom: 20px;
+  }
+  &-service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  .option {
-    &::after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-    .app-version {
-      float: left;
-      color: $--color--gray;
-    }
-    .option-service {
-      float: right;
-      .text-link:not(:first-child) {
-        margin-left: 20px;
-      }
-    }
-  }
-  .welcom-message {
-    position: absolute;
-    bottom: 4%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: $--font-size-small;
-    color: $--color--placeholder;
-    font-weight: 200;
-  }
+  // .welcom-message {
+  //   font-size: $--font-size-small;
+  // }
 }

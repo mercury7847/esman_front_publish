@@ -7,6 +7,7 @@
     box-sizing: border-box;
     overflow-y: auto;
     font-size: $--font-size-regular;
+    letter-spacing: -0.7px;
     &.bg-page {
       background-color: $--color--light-blue;
     }
@@ -479,7 +480,7 @@
             }
           }
           &.is-drag {
-            border: 2px solid $--color--main-blue;
+            border: 2px solid $--color--primary;
           }
           &.disabled {
             th {
@@ -502,7 +503,7 @@
       right: 16px;
       width: 60px;
       height: 60px;
-      background-color: $--color--main-blue;
+      background-color: $--color--primary;
       border-radius: 50%;
       box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
       &::before {

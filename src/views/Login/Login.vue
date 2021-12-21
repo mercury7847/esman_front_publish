@@ -1,14 +1,14 @@
 <template>
-  <div class="l-inner">
+  <div class="l-login">
     <div class="login">
       <div class="login-header">
         <div class="login-header-inner">
           <h1><img src="@/assets/images/login_title.svg" alt="login" /></h1>
-          <p class="ft-color-secondary">한진택배 사번을 입력하세요</p>
+          <p class="ft-color-secondary ft-weight-bold">한진택배 사번을 입력하세요</p>
         </div>
       </div>
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form login-form" label-position="top">
-        <el-form-item label="사번" class="mb-20">
+        <el-form-item label="사번" class="mb-15">
           <div class="l-inp">
             <div class="inp">
               <div class="inp-inner">
@@ -17,7 +17,7 @@
             </div>
           </div>
         </el-form-item>
-        <el-form-item label="비밀번호" class="mb-20">
+        <el-form-item label="비밀번호">
           <div class="l-inp">
             <div class="inp">
               <div class="inp-inner">
@@ -27,32 +27,33 @@
           </div>
         </el-form-item>
       </el-form>
-      <el-form class="l-form login-service">
-        <el-form-item class="checkbox mb-20">
+      <el-form class="l-form login-terms">
+        <el-form-item class="checkbox mb-15">
           <div class="d-flex-be-center">
             <div class="l-checkbox login-service-check">
               <el-checkbox v-model="isAcceptLocation">위치정보 제공동의</el-checkbox>
             </div>
             <div class="login-service-detailview">
-              <router-link to="" class="text-link detail"><span>상세보기</span><i class="icon-xs icon-arrow-r"></i> </router-link>
+              <button class="btn btn-more ft-size-regular ft-color-gray"><span>상세보기</span><i class="icon-more"></i></button>
             </div>
           </div>
         </el-form-item>
       </el-form>
-      <div class="btn-group">
-        <!-- <button class="btn btn-full-size primary" :disabled="!canLogin" @click="$router.push('/dashboard')">로그인</button> -->
-        <button class="btn btn-full-size primary" :disabled="!canLogin" @click="loginAlertActive = true">로그인</button>
-        <!-- <button class="btn btn-full-size primary" :disabled="!canLogin" @click="loginConfirmActive = true">로그인</button> -->
+      <div class="login-btn-group">
+        <button class="btn btn-size-full primary" :disabled="!canLogin" @click="$router.push('/dashboard')">로그인</button>
+        <!-- <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginAlertActive = true">로그인</button> -->
+        <!-- <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginConfirmActive = true">로그인</button> -->
+        <button class="btn btn-size-full white is-active mt-15" @click="$router.push('/join')">회원가입</button>
       </div>
-      <div class="option">
-        <div class="app-version">v2.1.1</div>
-        <div class="option-service">
-          <router-link to="/password" class="text-link underline">비밀번호 찾기</router-link>
-          <router-link to="/join" class="text-link underline">회원가입</router-link>
+      <div class="login-service">
+        <button class="btn btn-txt underline ft-color-secondary">로그 전송</button>
+        <div>
+          <button class="btn btn-txt underline ft-color-secondary">사번 찾기</button>
+          <button class="btn btn-txt underline ft-color-secondary ml-15">비밀번호 재발급</button>
         </div>
       </div>
-      <div class="welcom-message">
-        <p>기쁨 전하는 행복상자 한진택배</p>
+      <div class="welcom-message ft-size-small">
+        <span>기쁨 전하는 행복상자 한진택배</span>
       </div>
     </div>
 
@@ -72,7 +73,7 @@ export default {
   name: "Login",
   data() {
     return {
-      isAcceptLocation: true,
+      isAcceptLocation: false,
       loginAlertActive: false,
       loginConfirmActive: false,
       ruleForm: {

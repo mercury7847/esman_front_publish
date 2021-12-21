@@ -251,7 +251,7 @@
             <div class="input__count"><span class="txt-primary">0</span>/150</div>
           </div>
         </div>
-        <div class="btn-group bottom"><button class="btn btn-full-size primary" @click="csDialog = false">등록하기</button></div>
+        <div class="btn-group bottom"><button class="btn btn-size-full primary" @click="csDialog = false">등록하기</button></div>
       </el-dialog>
     </div>
 
@@ -272,7 +272,7 @@
             <div class="input__count"><span class="txt-primary">0</span>/150</div>
           </div>
         </div>
-        <div class="btn-group bottom"><button class="btn btn-full-size primary" @click="claimDialog = false">등록하기</button></div>
+        <div class="btn-group bottom"><button class="btn btn-size-full primary" @click="claimDialog = false">등록하기</button></div>
       </el-dialog>
     </div>
   </div>

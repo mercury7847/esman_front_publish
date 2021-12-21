@@ -15,9 +15,9 @@
                   </div>
                 </div>
                 <div class="btn-group">
-                  <button class="btn btn-small-size white" v-show="!isSelect" @click="switchSelect">선택</button>
-                  <button class="btn btn-small-size primary" v-show="!isSelect" @click="drawerMessage = true">문자 보내기</button>
-                  <button class="btn btn-small-size primary" v-show="isSelect" @click="switchSelect">완료</button>
+                  <button class="btn btn-size-regular white" v-show="!isSelect" @click="switchSelect">선택</button>
+                  <button class="btn btn-size-regular primary" v-show="!isSelect" @click="drawerMessage = true">문자 보내기</button>
+                  <button class="btn btn-size-regular primary" v-show="isSelect" @click="switchSelect">완료</button>
                   <button class="btn ml-20" v-show="isSelect"><i class="icon-trash"></i></button>
                 </div>
               </div>
@@ -50,8 +50,8 @@
                   </div>
                 </div>
                 <div class="btn-group">
-                  <button class="btn btn-small-size white" v-show="!isSelect2" @click="switchSelect2">선택</button>
-                  <button class="btn btn-small-size primary" v-show="isSelect2" @click="switchSelect2">완료</button>
+                  <button class="btn btn-size-regular white" v-show="!isSelect2" @click="switchSelect2">선택</button>
+                  <button class="btn btn-size-regular primary" v-show="isSelect2" @click="switchSelect2">완료</button>
                   <button class="btn ml-20" v-show="isSelect2"><i class="icon-trash"></i></button>
                 </div>
               </div>
@@ -151,7 +151,7 @@
                 <input type="text" class="input-text-line" placeholder="메세지를 입력해주세요." id="msg" autofocus />
               </div>
             </div>
-            <button class="btn txt-type" disabled>전송</button>
+            <button class="btn btn-txt" disabled>전송</button>
           </div>
         </div>
       </el-drawer>
@@ -175,7 +175,7 @@
                 <input type="text" class="input-text-line" placeholder="메세지를 입력해주세요." id="msg" autofocus />
               </div>
             </div>
-            <button class="btn txt-type" disabled>전송</button>
+            <button class="btn btn-txt" disabled>전송</button>
           </div>
         </div>
       </el-dialog>

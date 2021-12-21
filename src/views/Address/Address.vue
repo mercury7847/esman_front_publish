@@ -12,9 +12,9 @@
             </div>
           </div>
           <div class="btn-group">
-            <button class="btn btn-small-size white" v-show="!isSelect" @click="switchSelect">선택</button>
-            <router-link to="/address-registration" class="btn btn-small-size primary btn-link" v-show="!isSelect">주소 등록</router-link>
-            <button class="btn btn-small-size primary" v-show="isSelect" @click="switchSelect">선택</button>
+            <button class="btn btn-size-regular white" v-show="!isSelect" @click="switchSelect">선택</button>
+            <router-link to="/address-registration" class="btn btn-size-regular primary btn-link" v-show="!isSelect">주소 등록</router-link>
+            <button class="btn btn-size-regular primary" v-show="isSelect" @click="switchSelect">선택</button>
             <button class="btn" v-show="isSelect"><i class="icon-trash"></i></button>
           </div>
         </div>

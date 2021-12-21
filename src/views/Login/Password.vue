@@ -14,7 +14,7 @@
                       <input type="text" class="input-text-line" placeholder="휴대전화 번호입력 (‘-’ 제외)" id="c-mob" autofocus />
                     </div>
                   </div>
-                  <button class="btn secondary btn-regular-size">인증번호</button>
+                  <button class="btn secondary btn-size-large">인증번호</button>
                 </div>
                 <label for="c-pw">인증번호</label>
                 <div class="l-inp">
@@ -23,11 +23,11 @@
                       <input type="text" class="input-text-line" placeholder="인증번호 입력" id="c-pw" autofocus />
                     </div>
                   </div>
-                  <button class="btn secondary btn-regular-size">확인</button>
+                  <button class="btn secondary btn-size-large">확인</button>
                 </div>
               </div>
             </div>
-            <div class="btn-group"><button class="btn btn-full-size primary">사번 찾기</button></div>
+            <div class="btn-group"><button class="btn btn-size-full primary">사번 찾기</button></div>
           </div>
         </el-tab-pane>
         <el-tab-pane label="비밀번호 찾기">
@@ -58,7 +58,7 @@
                       <input type="text" class="input-text-line" placeholder="휴대전화 번호를 입력하세요." id="c-mob" autofocus />
                     </div>
                   </div>
-                  <button class="btn secondary btn-regular-size">인증번호 전송</button>
+                  <button class="btn secondary btn-size-large">인증번호 전송</button>
                 </div>
 
                 <label for="c-certified">인증번호</label>
@@ -79,7 +79,7 @@
                 </div>
               </div>
             </div>
-            <div class="btn-group"><button class="btn btn-full-size primary">비밀번호 찾기</button></div>
+            <div class="btn-group"><button class="btn btn-size-full primary">비밀번호 찾기</button></div>
           </div>
         </el-tab-pane>
       </el-tabs>

@@ -15,8 +15,8 @@
             </div>
           </div>
           <div class="btn-group">
-            <button class="btn btn-small-size secondary">삭제</button>
-            <button class="btn btn-small-size white" @click="popVisible">송장번호</button>
+            <button class="btn btn-size-regular secondary">삭제</button>
+            <button class="btn btn-size-regular white" @click="popVisible">송장번호</button>
             <button class="btn"><i class="icon-refresh"></i></button>
             <button class="btn" @click="switchSearch" :class="isSearch ? 'is-on' : 'is-default'"><i class="icon-search small"></i></button>
           </div>
@@ -187,15 +187,15 @@
       </div>
     </div>
     <div class="l-delivery-bottom processing" v-show="!deliveryNone">
-      <button class="btn btn-full-size btn-regular-size white">대상 이관</button>
+      <button class="btn btn-size-full btn-size-large white">대상 이관</button>
       <div class="btn-group-wrap">
         <div class="btn-group">
-          <button class="btn btn-full-size btn-regular-size">집하</button>
-          <button class="btn btn-full-size btn-regular-size">대량집하</button>
+          <button class="btn btn-size-full btn-size-large">집하</button>
+          <button class="btn btn-size-full btn-size-large">대량집하</button>
         </div>
         <div class="btn-group">
-          <button class="btn btn-full-size btn-regular-size">배송</button>
-          <button class="btn btn-full-size btn-regular-size">미배송</button>
+          <button class="btn btn-size-full btn-size-large">배송</button>
+          <button class="btn btn-size-full btn-size-large">미배송</button>
         </div>
       </div>
     </div>
@@ -330,10 +330,10 @@
               <div class="d-iflex-be-center">
                 <p>위탁</p>
                 <div class="l-photo">
-                  <button class="btn btn-small-size white" v-show="!photo">사진</button>
+                  <button class="btn btn-size-regular white" v-show="!photo">사진</button>
                   <div v-show="photo">
                     <img src="@/assets/images/img-test.png" alt="배송완료 이미지" />
-                    <button class="btn btn-small-size white">변경</button>
+                    <button class="btn btn-size-regular white">변경</button>
                   </div>
                 </div>
               </div>
@@ -344,7 +344,7 @@
           </el-radio-group>
         </div>
         <div class="l-btn-bottom">
-          <button class="btn btn-full-size primary">확인</button>
+          <button class="btn btn-size-full primary">확인</button>
         </div>
       </el-drawer>
     </div>

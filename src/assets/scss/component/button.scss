@@ -6,6 +6,8 @@
   border-radius: 5px;
   background-color: transparent;
   vertical-align: middle;
+  line-height: 1rem;
+  text-align: center;
   &-group {
     &.bottom {
       position: fixed;
@@ -23,7 +25,7 @@
         color: $--color--sub-blue;
       }
     }
-    &.btn-full-size {
+    &.full {
       min-width: 120px;
       margin-right: 10px;
       border: 1px solid $--color--border;
@@ -40,46 +42,54 @@
       }
     }
   }
+
   // size
-  &-full-size {
-    width: 100%;
-    height: 54px;
-    font-size: $--font-size-xlarge;
-    font-weight: 700;
-    letter-spacing: -0.9px;
+  &-size {
+    &-full {
+      width: 100%;
+      height: 50px;
+      padding: 14px;
+      font-size: $--font-size-medium;
+      letter-spacing: -0.0469rem;
+      font-weight: 700;
+    }
+    &-large {
+      height: 45px;
+      padding: 12px 20px;
+      font-size: $--font-size-regular;
+      letter-spacing: -0.0437rem;
+      font-weight: 700;
+    }
+    &-regular {
+      height: 37px;
+      padding: 8px 15px;
+      font-size: $--font-size-regular;
+      letter-spacing: -0.0437rem;
+    }
+    &-small {
+      height: 30px;
+      padding: 6px 15px;
+      font-size: $--font-size-small;
+      letter-spacing: -0.0375rem;
+    }
+    &-xsmall {
+      height: 26px;
+      padding: 2px 12px;
+      font-size: $--font-size-small;
+      letter-spacing: -0.0375rem;
+    }
   }
-  &-regular-size {
-    min-width: 80px;
-    height: 45px;
-    padding: 12px 15px;
-    font-size: $--font-size-regular;
-    font-weight: 700;
-    letter-spacing: -0.7px;
-  }
-  &-small-size {
-    min-width: 50px;
-    height: 33px;
-    padding: 0 12px;
-    font-size: $--font-size-regular;
-    letter-spacing: -0.7px;
-  }
-  &-xsmall-size {
-    min-width: 46px;
-    height: 27px;
-    padding: 0 10px;
-    font-size: $--font-size-regular;
-    letter-spacing: -0.7px;
-  }
+
   // color
   &.primary {
-    background-color: $--color--main-blue;
+    background-color: $--color--primary;
     color: $--color--white;
   }
   &.secondary {
-    background-color: $--color--main-dark-blue;
+    background-color: $--color--secondary;
     color: $--color--white;
   }
-  &.yellow {
+  &.point {
     background-color: $--color--point;
     color: $--color--white;
   }
@@ -87,58 +97,64 @@
     background-color: $--color--white;
     border: 1px solid $--color--border;
     color: $--color--black;
-    &.is-on {
-      color: $--color--main-blue;
-      border-color: $--color--main-blue;
-    }
-  }
-  &.pale-gray {
-    background-color: $--color--light-blue;
-  }
-  &.txt-type {
-    background-color: transparent !important;
-    color: $--color--main-blue;
-    &:disabled {
-      color: $--color--inactive;
+    &.is-active {
+      color: $--color--primary;
+      border-color: $--color--primary;
     }
   }
   // &:focus{
   //   box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
   // }
   &:disabled {
-    background-color: $--color--gray;
+    background-color: $--color--inactive;
+  }
+
+  &-txt {
+    // background-color: transparent !important;
+    // color: $--color--secondary;
+    // border-bottom: 1px solid $--color--secondary;
+    // border-radius: unset;
+    &.underline {
+      text-decoration: underline;
+    }
+    // &:disabled {
+    //   color: $--color--inactive;
+    // }
   }
   &-more {
-    float: right;
-    display: block;
-    font-size: 0;
-    padding: 0 !important;
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 0;
-      height: 100%;
-      vertical-align: middle;
-      clear: both;
-    }
-    span {
-      display: inline-block;
-      font-size: $--font-size-small;
-      color: $--color--placeholder;
-      font-weight: 400;
-      vertical-align: middle;
-    }
-    .icon-more {
-      display: inline-block;
-      position: static !important;
-      vertical-align: middle;
-    }
+    display: inline-flex;
+    align-items: center;
+    height: 20px;
+    // float: right;
+    // display: block;
+    // font-size: 0;
+    // padding: 0 !important;
+    // &::before {
+    //   content: "";
+    //   display: inline-block;
+    //   width: 0;
+    //   height: 100%;
+    //   vertical-align: middle;
+    //   clear: both;
+    // }
+    // span {
+    //   display: inline-block;
+    //   font-size: $--font-size-small;
+    //   color: $--color--placeholder;
+    //   font-weight: 400;
+    //   vertical-align: middle;
+    // }
+    // .icon-more {
+    //   display: inline-block;
+    //   position: static !important;
+    //   vertical-align: middle;
+    // }
   }
   &-edit {
     padding: 0;
     border: none;
-    border-bottom: 1px solid $--color--main-dark-blue;
-    color: $--color--main-dark-blue;
+    border-bottom: 1px solid $--color--secondary;
+    color: $--color--secondary;
     font-size: $--font-size-regular;
   }
   &-delete {
@@ -168,10 +184,6 @@
       width: 18px;
       height: 8px;
     }
-  }
-  &-txt {
-    border-bottom: 1px solid $--color--gray;
-    border-radius: unset;
   }
   &-revert {
     width: 24px;

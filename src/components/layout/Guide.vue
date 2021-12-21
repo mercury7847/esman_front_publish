@@ -77,24 +77,27 @@
 
       <el-divider></el-divider>
       <div class="btn-group mb-20">
-        <button class="btn btn-full-size primary">btn-full-size</button>
-      </div>
-      <div class="btn-group btn-full-size mb-20">
-        <button class="btn btn-full-size btn-regular-size white is-on">full regular is-on</button>
-        <button class="btn btn-full-size btn-regular-size white">full regular</button>
+        <button class="btn btn-size-full primary">full</button>
       </div>
       <div class="btn-group">
-        <button class="btn btn-full-size primary mb-20" disabled>disabled</button>
+        <button class="btn btn-size-full primary mb-20" disabled>disabled</button>
+      </div>
+      <div class="btn-group full mb-20">
+        <button class="btn btn-size-full btn-size-large white is-active">full large is-on</button>
+        <button class="btn btn-size-full btn-size-large white">full large</button>
       </div>
       <div class="btn-group mb-20">
-        <button class="btn btn-regular-size secondary">btn-regular-size</button>
-        <button class="btn txt-type">txt-type</button>
+        <button class="btn btn-size-large secondary">large</button>
+        <button class="btn btn-size-regular white">regular</button>
+        <button class="btn btn-size-small white is-active">small</button>
+        <button class="btn btn-size-xsmall white is-active">xsmall버튼</button>
       </div>
-      <div class="btn-group">
-        <button class="btn btn-small-size white">btn-small-size</button>
-        <button class="btn btn-xsmall-size white is-on">btn-xsmall-size</button>
-        <button class="btn btn-xsmall-size yellow">xsmall yellow</button>
-        <button class="btn btn-xsmall-size pale-gray">xsmall pale-gray</button>
+      <div class="btn-group mb-20">
+        <button class="btn btn-size-xsmall point">xsmall yellow</button>
+      </div>
+      <div class="btn-group mb-20">
+        <button class="btn btn-txt">btn-txt</button>
+        <button class="btn btn-txt underline">btn-txt underline</button>
       </div>
 
       <el-divider></el-divider>

@@ -31,7 +31,7 @@
       <el-drawer :visible.sync="drawerNoti" direction="btt" size="92%" :with-header="false" :modal="false">
         <div class="drawer-title d-flex-be-center">
           <span>알림 <span class="txt-primary">4</span></span>
-          <button class="btn btn-small-size white">알림 모두 지우기</button>
+          <button class="btn btn-size-regular white">알림 모두 지우기</button>
         </div>
         <ul class="l-list scroll-y">
           <li v-for="noti in notiList" :key="noti.title">

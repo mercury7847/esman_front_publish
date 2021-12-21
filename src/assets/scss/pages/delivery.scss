@@ -52,7 +52,7 @@
           width: 18px;
           height: 18px;
           margin-left: 8px;
-          background-color: $--color--main-blue;
+          background-color: $--color--primary;
           border-radius: 50%;
           color: $--color--white;
           font-size: $--font-size-xsmall;
@@ -203,7 +203,7 @@
           background-color: $--color--gray;
         }
         &:last-child {
-          background-color: $--color--main-blue;
+          background-color: $--color--primary;
         }
         &-wrap {
           display: flex;
@@ -452,7 +452,7 @@
       background-color: $--color--white;
       &.is-drag {
         li {
-          border: 2px solid $--color--main-blue;
+          border: 2px solid $--color--primary;
         }
       }
       li {
