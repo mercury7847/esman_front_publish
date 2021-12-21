@@ -1,24 +1,27 @@
-$font-size-xxsmall: 0.625rem;
-$font-size-xsmall: 0.75rem;
-$font-size-small: 0.875rem;
-$font-size-normal: 1rem;
-$font-size-large: 1.125rem;
-$font-size-xlarge: 1.5rem;
-$font-size-xxlarge: 2.5rem;
+// font
+$--font-size-xsmall: 0.625rem; //10
+$--font-size-small: 0.75rem; //12
+$--font-size-regular: 0.875rem; //14
+$--font-size-large: 1rem; //16
+$--font-size-xlarge: 1.125rem; //18
+$--font-size-xxlarge: 1.5rem; //24
+$--font-size-xxxlarge: 2.5rem; //40
 
-$main-color: #182766;
-$sub-color: #009dd7;
-$secondary-color: #3472c5;
-$text-link-color: $main-color;
-$disabled-color: #adb5c0;
-$attach-color: #c9d0d7;
-$warning-color: #de0f02;
-$border-color: #eee;
-$bg-card: #f8f9fd;
-
-// text
+// color
+$--color--main-dark-blue: #182766;
+$--color--main-blue: #009dd7;
+$--color--sub-blue: #3472c5;
+$--color--border: #eee;
+$--color--light-blue: #eef2f6;
+$--color--inactive: #dbdbdb;
+$--color--placeholder: #c9d0d7;
+$--color--hover: #f8f9fd;
+$--color--point: #f4bf00;
 $--color--black: #222;
 $--color--white: #fff;
-$--color--gray: #555;
-$--color--pale-gray: #eef2f6;
-$--color--yellow: #f4bf00;
+$--color--gray: #adb5c0;
+$--color--red: #de0f02;
+$--color--skyblue: #acdbed;
+$--color--green: #1c790d;
+
+$--color--txt: #555;

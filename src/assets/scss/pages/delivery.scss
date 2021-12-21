@@ -52,10 +52,10 @@
           width: 18px;
           height: 18px;
           margin-left: 8px;
-          background-color: $sub-color;
+          background-color: $--color--main-blue;
           border-radius: 50%;
           color: $--color--white;
-          font-size: $font-size-xxsmall;
+          font-size: $--font-size-xsmall;
           font-weight: bold;
           line-height: 18px;
           text-align: center;
@@ -82,7 +82,7 @@
     .btn {
       &.secondary {
         &:disabled {
-          border: 1px solid $border-color;
+          border: 1px solid $--color--border;
           background-color: $--color--white;
           color: $--color--black;
         }
@@ -142,7 +142,7 @@
           }
           .desc {
             max-width: calc(100% - 77px);
-            color: $--color--gray;
+            color: $--color--txt;
             text-align: right;
             line-height: 21px;
           }
@@ -174,12 +174,12 @@
         width: 100%;
         padding: 0 18px;
         &:not(:first-child) {
-          border-left: 1px solid $border-color;
+          border-left: 1px solid $--color--border;
         }
       }
       .title {
-        font-size: $font-size-xsmall;
-        color: #555;
+        font-size: $--font-size-small;
+        color: $--color--txt;
       }
     }
     .badge-circle {
@@ -200,10 +200,10 @@
         border-radius: 5px;
         &:first-child {
           margin-right: 8px;
-          background-color: $disabled-color;
+          background-color: $--color--gray;
         }
         &:last-child {
-          background-color: $sub-color;
+          background-color: $--color--main-blue;
         }
         &-wrap {
           display: flex;
@@ -223,7 +223,7 @@
             position: absolute;
             top: 18px;
             left: 0;
-            background-color: $border-color;
+            background-color: $--color--border;
           }
         }
       }
@@ -276,10 +276,10 @@
       overflow-y: auto;
       li {
         padding: 8px;
-        color: $disabled-color;
+        color: $--color--gray;
         text-align: center;
         &:not(:last-child) {
-          border-bottom: 1px solid $border-color;
+          border-bottom: 1px solid $--color--border;
         }
         &.is-on {
           border-top: 1px solid #000;
@@ -337,7 +337,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: $attach-color;
+      color: $--color--placeholder;
     }
   }
   &-delivery-detail {
@@ -351,7 +351,7 @@
         .desc {
           padding: 10px 0 16px;
           border-bottom: 1px solid #cae6c5;
-          font-size: $font-size-xsmall;
+          font-size: $--font-size-small;
         }
       }
       .btn {
@@ -403,14 +403,14 @@
       align-items: center;
       padding: 15px;
       margin: 15px 0 30px;
-      border: 1px solid $border-color;
+      border: 1px solid $--color--border;
     }
     .l-radio {
       height: calc(100% - 220px);
       .el-radio {
         padding: 16px;
         &.is-checked {
-          background-color: $bg-card;
+          background-color: $--color--hover;
         }
         &__input {
           margin-top: -2px;
@@ -452,7 +452,7 @@
       background-color: $--color--white;
       &.is-drag {
         li {
-          border: 2px solid $sub-color;
+          border: 2px solid $--color--main-blue;
         }
       }
       li {
@@ -462,7 +462,7 @@
         width: 100%;
         padding: 15px 35px 15px 15px;
         background-color: $--color--white;
-        border: 1px solid $border-color;
+        border: 1px solid $--color--border;
         border-radius: 5px;
         box-sizing: border-box;
         letter-spacing: -0.7px;
@@ -488,7 +488,7 @@
         }
         &::after {
           top: 5px;
-          background-color: $--color--pale-gray;
+          background-color: $--color--light-blue;
         }
         &.is-on {
           &::before,
@@ -502,7 +502,7 @@
           ul {
             width: 100%;
             li {
-              background-color: $bg-card;
+              background-color: $--color--hover;
               border: none;
               .btn-drag {
                 display: none;

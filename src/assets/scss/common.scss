@@ -4,33 +4,55 @@ body {
   color: $--color--black;
   height: 100%;
   overflow: auto;
-  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
 }
 
-#app {
-  height: 100%;
-  width: 100%;
-}
-button {
-  cursor: pointer;
+input,
+textarea {
+  border: none;
+  background-color: transparent;
   font-family: "NotoSansKR";
+  &:focus {
+    outline: none;
+  }
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+a {
+  display: block;
+  color: $--color--black;
+  text-decoration: none;
+}
+
+button {
+  font-family: "NotoSansKR";
+  cursor: pointer;
 }
 
 .ft-size {
   &-xsmall {
-    font-size: $font-size-xsmall !important;
+    font-size: $--font-size-small !important;
   }
   &-small {
-    font-size: $font-size-small !important;
+    font-size: $--font-size-regular !important;
   }
   &-normal {
-    font-size: $font-size-normal !important;
+    font-size: $--font-size-large !important;
   }
   &-large {
-    font-size: $font-size-large !important;
+    font-size: $--font-size-xlarge !important;
   }
   &-xxlarge {
-    font-size: $font-size-xxlarge !important;
+    font-size: $--font-size-xxxlarge !important;
   }
 }
 .ft-color {
@@ -38,13 +60,13 @@ button {
     color: $--color--white;
   }
   &-green {
-    color: #1c790d;
+    color: $--color--green;
   }
   &-yellow {
     color: #ffb800;
   }
   &-yellow-02 {
-    color: $--color--yellow;
+    color: $--color--point;
   }
   &-purple {
     color: #7500ac;
@@ -80,29 +102,29 @@ button {
 }
 .txt {
   &-warning {
-    font-size: $font-size-small;
-    color: $warning-color;
+    font-size: $--font-size-regular;
+    color: $--color--red;
   }
   &-message {
-    font-size: $font-size-xsmall;
-    color: $attach-color;
+    font-size: $--font-size-small;
+    color: $--color--placeholder;
     line-height: 1.45em;
     font-weight: 300;
   }
   &-title {
-    font-size: $font-size-xlarge;
+    font-size: $--font-size-xxlarge;
     font-weight: bold;
     line-height: 1.4em;
   }
   &-secondary {
-    font-size: $font-size-small;
-    color: $secondary-color;
+    font-size: $--font-size-regular;
+    color: $--color--sub-blue;
   }
   &-primary {
-    color: $sub-color !important;
+    color: $--color--main-blue !important;
   }
   &-sub {
-    color: $disabled-color !important;
+    color: $--color--gray !important;
   }
   &-weight-normal {
     font-weight: normal !important;
@@ -111,14 +133,14 @@ button {
 
 // text-link
 .text-link {
-  color: $text-link-color;
-  font-size: $font-size-small;
+  color: $--color--main-dark-blue;
+  font-size: $--font-size-regular;
   text-decoration: none;
   &.underline {
     text-decoration: underline;
   }
   &.detail {
-    color: $attach-color;
+    color: $--color--placeholder;
     display: flex;
     align-items: center;
     justify-items: space-between;
@@ -187,6 +209,12 @@ button {
   }
   &-16 {
     margin-bottom: 16px !important;
+  }
+  &-20 {
+    margin-bottom: 20px !important;
+  }
+  &-30 {
+    margin-bottom: 30px !important;
   }
 }
 .ml {

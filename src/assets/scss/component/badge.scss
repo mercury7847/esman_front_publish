@@ -7,14 +7,14 @@
   margin-right: 8px;
   border-radius: 30px;
   box-sizing: border-box;
-  font-size: $font-size-xsmall;
+  font-size: $--font-size-small;
   line-height: 22px;
   letter-spacing: -0.6px;
   text-align: center;
   vertical-align: middle;
   &.green {
     background-color: #cae7c5;
-    color: #1c790d;
+    color: $--color--green;
   }
   &.yellow {
     background-color: #fff4d7;
@@ -22,15 +22,15 @@
   }
   &.red {
     background-color: #ffdddb;
-    color: #de0f02;
+    color: $--color--red;
   }
   &.purple {
     background-color: #e4d6ee;
     color: #7500ac;
   }
   &.gray {
-    background-color: #dbdbdb;
-    color: #adb5c0;
+    background-color: $--color--inactive;
+    color: $--color--gray;
   }
   &.orange {
     border: 1px solid #ff6b00;
@@ -50,21 +50,21 @@
       margin-left: 8px;
       background-color: $--color--white;
       border-radius: 50%;
-      color: $sub-color;
-      font-size: $font-size-xxsmall;
+      color: $--color--main-blue;
+      font-size: $--font-size-xsmall;
       font-weight: bold;
       line-height: 18px;
       vertical-align: middle;
     }
     &.blue::after {
-      background-color: $sub-color;
+      background-color: $--color--main-blue;
     }
     &-secondary {
       display: inline-block;
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background-color: $secondary-color;
+      background-color: $--color--sub-blue;
       color: $--color--white;
       font-size: 0.6875rem;
       line-height: 18px;
@@ -76,7 +76,7 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background-color: $sub-color;
+      background-color: $--color--main-blue;
       color: $--color--white;
       font-size: 0.6875rem;
       line-height: 18px;

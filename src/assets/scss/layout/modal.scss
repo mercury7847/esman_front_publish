@@ -16,7 +16,7 @@
       align-items: center;
       justify-content: space-between;
       color: $--color--black !important;
-      font-size: $font-size-large;
+      font-size: $--font-size-xlarge;
       font-weight: bold;
       letter-spacing: -0.7px;
     }
@@ -38,7 +38,7 @@
     &__footer {
       height: 52px;
       padding: 0 !important;
-      border-top: 1px solid $border-color;
+      border-top: 1px solid $--color--border;
       .dialog-footer {
         display: flex;
         width: 100%;
@@ -47,14 +47,14 @@
       .el-button {
         width: 100%;
         border: none;
-        font-size: $font-size-small;
+        font-size: $--font-size-regular;
         font-weight: 700;
         &--default {
-          color: $disabled-color;
+          color: $--color--gray;
         }
         &--primary {
           background-color: $--color--white;
-          color: $sub-color;
+          color: $--color--main-blue;
         }
       }
     }
@@ -66,7 +66,7 @@
         width: 100% !important;
         height: 100%;
         transform: none;
-        background-color: $--color--pale-gray;
+        background-color: $--color--light-blue;
         &__header {
           padding: 16px 16px 30px 50px;
           &btn {
@@ -104,14 +104,14 @@
     }
   }
   &.small {
-    font-size: $font-size-xsmall;
+    font-size: $--font-size-small;
     line-height: 21px;
     .el-dialog {
       &__header {
         padding: 30px 16px 0;
       }
       &__title {
-        font-size: $font-size-small !important;
+        font-size: $--font-size-regular !important;
         justify-content: center;
       }
       &__headerbtn {

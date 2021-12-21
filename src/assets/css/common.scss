@@ -1,9 +1,8 @@
-
 /*@import url('./var.scss');*/
 
-
-html, body {
-  font-size: $font-size-small;
+html,
+body {
+  font-size: $--font-size-regular;
   color: #5f686b;
   height: 100%;
   //min-width: 1200px; 이거 주면 UserPlayer 모바일버전 제대로 안나옴.
@@ -14,4 +13,3 @@ html, body {
   height: 100%;
   width: 100%;
 }
-

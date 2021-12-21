@@ -8,6 +8,7 @@ import Router from 'vue-router'
 // () => import(/* webpackChunkName: "chunk/intro" */'../views/intro');
 
 
+const Guide = () => import(/* webpackChunkName: "chunk/model" */'../components/layout/Guide');
 const Login = () => import(/* webpackChunkName: "chunk/model" */'../views/Login/Login');
 const Password = () => import(/* webpackChunkName: "chunk/model" */'../views/Login/Password');
 const Landing = () => import(/* webpackChunkName: "chunk/model" */'../views/Landing');
@@ -29,6 +30,7 @@ const router = new Router({
   // base: '/', // only history mode
   routes: [
 
+    { path: '/guide', name: '공통컴포넌트', component: Guide },
     { path: '/', name: 'landing', component: Landing },
     { path: '/home', name: '홈', component:  () => import('../views/Home.vue'), },
     { path: '/login', name: '로그인', component: Login },

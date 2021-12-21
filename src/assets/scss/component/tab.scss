@@ -6,13 +6,13 @@
     // transform:translateX(16px) !important;
     &-wrap {
       &:after {
-        background-color: $border-color !important;
+        background-color: $--color--border !important;
       }
     }
   }
   &__item {
     width: 100%;
-    // font-size:$font-size-large !important;
+    // font-size:$--font-size-xlarge !important;
     font-weight: bold !important;
     text-align: center;
     &.is-active {
@@ -20,7 +20,7 @@
     }
   }
   &__active-bar {
-    background-color: $sub-color !important;
+    background-color: $--color--main-blue !important;
     padding: 0 5px !important;
     // left:-3.8px !important;
   }
@@ -43,7 +43,7 @@
       .el-tabs__item {
         flex: 1;
         border-bottom: 1px solid #000 !important;
-        font-size: $font-size-small !important;
+        font-size: $--font-size-regular !important;
         &:hover,
         &:focus {
           color: $--color--black !important;

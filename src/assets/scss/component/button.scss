@@ -20,13 +20,13 @@
         margin-left: 10px;
       }
       &.is-on {
-        color: $secondary-color;
+        color: $--color--sub-blue;
       }
     }
     &.full-size {
       min-width: 120px;
       margin-right: 10px;
-      border: 1px solid $border-color;
+      border: 1px solid $--color--border;
       border-radius: 5px;
       .btn {
         min-width: auto;
@@ -35,28 +35,28 @@
         border: none;
         border-radius: unset;
         &:first-child {
-          border-right: 1px solid $border-color;
+          border-right: 1px solid $--color--border;
         }
       }
     }
   }
   &.large {
-    font-size: $font-size-large;
+    font-size: $--font-size-xlarge;
     font-weight: 700;
   }
   &.regular {
-    font-size: $font-size-normal;
+    font-size: $--font-size-large;
     font-weight: 700;
   }
   &.small {
-    font-size: $font-size-small;
+    font-size: $--font-size-regular;
     font-weight: 700;
     letter-spacing: -0.7px;
   }
   &.full-size {
     width: 100%;
     height: 54px;
-    font-size: $font-size-large;
+    font-size: $--font-size-xlarge;
     font-weight: 700;
     letter-spacing: -0.9px;
   }
@@ -64,7 +64,7 @@
     min-width: 80px;
     height: 45px;
     padding: 12px 15px;
-    font-size: $font-size-small;
+    font-size: $--font-size-regular;
     font-weight: 700;
     letter-spacing: -0.7px;
   }
@@ -72,45 +72,45 @@
     min-width: 50px;
     height: 33px;
     padding: 0 12px;
-    font-size: $font-size-small;
+    font-size: $--font-size-regular;
     letter-spacing: -0.7px;
   }
   &.xsmall-size {
     min-width: 46px;
     height: 27px;
     padding: 0 10px;
-    font-size: $font-size-small;
+    font-size: $--font-size-regular;
     letter-spacing: -0.7px;
   }
   &.primary {
-    background-color: $sub-color;
+    background-color: $--color--main-blue;
     color: $--color--white;
   }
   &.secondary {
-    background-color: $main-color;
+    background-color: $--color--main-dark-blue;
     color: $--color--white;
   }
   &.yellow {
-    background-color: $--color--yellow;
+    background-color: $--color--point;
     color: $--color--white;
   }
   &.white {
     background-color: $--color--white;
-    border: 1px solid $border-color;
+    border: 1px solid $--color--border;
     color: $--color--black;
     &.is-on {
-      color: $sub-color;
-      border-color: $sub-color;
+      color: $--color--main-blue;
+      border-color: $--color--main-blue;
     }
   }
   &.pale-gray {
-    background-color: $--color--pale-gray;
+    background-color: $--color--light-blue;
   }
   &.txt-type {
     background-color: transparent !important;
-    color: $sub-color;
+    color: $--color--main-blue;
     &:disabled {
-      color: #dbdbdb;
+      color: $--color--inactive;
     }
   }
   &.w100 {
@@ -120,7 +120,7 @@
   //   box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
   // }
   &:disabled {
-    background-color: $disabled-color;
+    background-color: $--color--gray;
   }
   &-more {
     float: right;
@@ -137,8 +137,8 @@
     }
     span {
       display: inline-block;
-      font-size: $font-size-xsmall;
-      color: $attach-color;
+      font-size: $--font-size-small;
+      color: $--color--placeholder;
       font-weight: 400;
       vertical-align: middle;
     }
@@ -151,9 +151,9 @@
   &-edit {
     padding: 0;
     border: none;
-    border-bottom: 1px solid $main-color;
-    color: $main-color;
-    font-size: $font-size-small;
+    border-bottom: 1px solid $--color--main-dark-blue;
+    color: $--color--main-dark-blue;
+    font-size: $--font-size-regular;
   }
   &-delete {
     border: none;
@@ -184,7 +184,7 @@
     }
   }
   &-txt {
-    border-bottom: 1px solid $disabled-color;
+    border-bottom: 1px solid $--color--gray;
     border-radius: unset;
   }
   &-revert {

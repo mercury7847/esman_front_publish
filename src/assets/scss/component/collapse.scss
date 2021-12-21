@@ -4,7 +4,7 @@
     border: none;
     &-item {
       &.is-active {
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $--color--border;
       }
       &__header {
         position: absolute;
@@ -33,21 +33,21 @@
           margin-right: 15px;
           background-color: transparent;
           border: none;
-          border-bottom: 1px solid $disabled-color;
-          color: $disabled-color;
-          font-size: $font-size-xsmall;
+          border-bottom: 1px solid $--color--gray;
+          color: $--color--gray;
+          font-size: $--font-size-small;
         }
         &-circle {
           width: 50px;
           height: 50px;
-          background-color: $--color--pale-gray;
+          background-color: $--color--light-blue;
           border-radius: 50%;
-          color: $secondary-color;
+          color: $--color--sub-blue;
           font-size: 0.6875rem;
           letter-spacing: -0.55px;
           &.blue {
-            background-color: $secondary-color;
-            color: $--color--pale-gray;
+            background-color: $--color--sub-blue;
+            color: $--color--light-blue;
           }
         }
       }

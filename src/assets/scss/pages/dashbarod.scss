@@ -16,7 +16,7 @@
       flex: 1;
       min-width: 100px;
       height: 90px;
-      background-color: $main-color;
+      background-color: $--color--main-dark-blue;
       // display: inline-block;
       border-radius: 9px;
       text-align: left;
@@ -39,7 +39,7 @@
         border-radius: 50%;
         &-num {
           display: block;
-          font-size: $font-size-xxsmall;
+          font-size: $--font-size-xsmall;
           color: #fff;
           position: absolute;
           left: 50%;
@@ -48,7 +48,7 @@
         }
       }
       strong {
-        font-size: $font-size-small;
+        font-size: $--font-size-regular;
         color: #fff;
         font-weight: 500;
         display: block;
@@ -86,7 +86,7 @@
       ins {
         text-decoration: none;
         color: $--color--black;
-        font-size: $font-size-small;
+        font-size: $--font-size-regular;
         font-weight: 600;
       }
     }
@@ -99,25 +99,25 @@
       tr {
         height: 46px;
         &:not(:first-child) {
-          border-top: 1px solid #eef2f6;
+          border-top: 1px solid $--color--light-blue;
         }
       }
       th,
       td {
         padding: 0 10px;
         vertical-align: middle;
-        font-size: $font-size-small;
+        font-size: $--font-size-regular;
         color: $--color--black;
       }
       th {
         text-align: left;
-        color: #555;
+        color: $--color--txt;
       }
       td {
         text-align: right;
         .data {
           font-weight: 600;
-          color: $main-color;
+          color: $--color--main-dark-blue;
         }
       }
     }
@@ -140,8 +140,8 @@
         }
         ins {
           text-decoration: none;
-          color: $main-color;
-          font-size: $font-size-small;
+          color: $--color--main-dark-blue;
+          font-size: $--font-size-regular;
           font-weight: 600;
         }
       }
@@ -162,12 +162,12 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-size: $font-size-small;
+        font-size: $--font-size-regular;
         line-height: 2.5em;
         border-bottom: 1px #eaeaea solid;
         list-style-type: disc;
         list-style-position: inside;
-        color: #555;
+        color: $--color--txt;
         &:last-child {
           border-bottom: 0;
         }
@@ -220,7 +220,7 @@
       clear: both;
       width: 1px;
       height: 100%;
-      background-color: #eef2f6;
+      background-color: $--color--light-blue;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -248,7 +248,7 @@
           position: relative;
           top: 10px;
           color: $--color--black;
-          font-size: $font-size-small;
+          font-size: $--font-size-regular;
           font-weight: 600;
           &.unit {
             padding-left: 0;
@@ -263,7 +263,7 @@
       .health {
         background-image: url(../../assets/images/iconhart.svg);
         .unit {
-          font-size: $font-size-xsmall;
+          font-size: $--font-size-small;
         }
       }
     }

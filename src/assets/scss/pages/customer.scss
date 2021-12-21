@@ -22,8 +22,8 @@
             }
             &-address {
               margin-top: 5px;
-              color: $disabled-color;
-              font-size: $font-size-xsmall;
+              color: $--color--gray;
+              font-size: $--font-size-small;
               line-height: 18px;
             }
           }
@@ -62,7 +62,7 @@
       }
       &-desc {
         margin-top: 8px;
-        color: $--color--gray;
+        color: $--color--txt;
         word-break: keep-all;
       }
     }

@@ -1,6 +1,6 @@
 <template>
   <!-- service-menu focusout일 경우 'focus-out'추가-->
-  <div class="l-service focus-out">
+  <div class="l-container focus-out">
     <gnb />
     <div class="delivery-processing">
       <div class="l-inner l-scroll">

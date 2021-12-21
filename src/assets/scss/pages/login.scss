@@ -2,9 +2,8 @@
   box-sizing: border-box;
   &-form {
     .inp {
-      height: 50px;
-      margin: 9px 0 20px;
       &-inner {
+        height: 50px;
         padding: 15px;
       }
     }
@@ -45,8 +44,8 @@
       margin-bottom: 18px;
     }
     p {
-      color: $main-color;
-      font-size: $font-size-normal;
+      color: $--color--main-dark-blue;
+      font-size: $--font-size-large;
       font-weight: bold;
     }
   }
@@ -59,7 +58,7 @@
     }
     .app-version {
       float: left;
-      color: $disabled-color;
+      color: $--color--gray;
     }
     .option-service {
       float: right;
@@ -74,8 +73,8 @@
     left: 0;
     right: 0;
     text-align: center;
-    font-size: $font-size-xsmall;
-    color: $attach-color;
+    font-size: $--font-size-small;
+    color: $--color--placeholder;
     font-weight: 200;
   }
 }

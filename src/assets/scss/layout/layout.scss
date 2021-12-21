@@ -1,14 +1,14 @@
 .l {
-  &-service {
+  &-container {
     height: 100%;
     padding-top: 56px;
     padding-bottom: 60px;
     background-color: $--color--white;
     box-sizing: border-box;
     overflow-y: auto;
-    font-size: $font-size-small;
+    font-size: $--font-size-regular;
     &.bg-page {
-      background-color: #eef2f6;
+      background-color: $--color--light-blue;
     }
     &.focus-out {
       padding-bottom: 0;
@@ -62,7 +62,7 @@
           top: -2px;
           width: 14px;
           height: 14px;
-          font-size: $font-size-xxsmall;
+          font-size: $--font-size-xsmall;
           line-height: 14px;
           font-weight: 300;
         }
@@ -88,7 +88,7 @@
           span {
             padding: 0 8px;
             display: inline-block;
-            font-size: $font-size-small;
+            font-size: $--font-size-regular;
             font-weight: 600;
           }
           .user-name {
@@ -105,7 +105,7 @@
               clear: both;
               width: 2px;
               height: 10px;
-              background-color: #eee;
+              background-color: $--color--border;
               position: absolute;
               left: 0;
               top: 50%;
@@ -130,7 +130,7 @@
         .subject {
           padding-left: 10px;
           color: $--color--black;
-          font-size: $font-size-large;
+          font-size: $--font-size-xlarge;
           font-weight: 700;
           letter-spacing: -0.9px;
         }
@@ -143,7 +143,7 @@
       width: 100%;
       bottom: 0;
       left: 0;
-      border-top: 1px solid $border-color;
+      border-top: 1px solid $--color--border;
       z-index: 10;
       ul {
         display: flex;
@@ -154,7 +154,7 @@
           position: relative;
           &.is-on {
             button {
-              color: $sub-color;
+              color: $--color--main-blue;
               i {
                 &.icon-home {
                   background-image: url(../../assets/images/icon-menu-home-active.svg);
@@ -179,7 +179,7 @@
             height: 100%;
             border: 0;
             background-color: transparent;
-            color: $disabled-color;
+            color: $--color--gray;
             font-size: 0.6875rem;
             cursor: pointer;
             i {
@@ -212,79 +212,6 @@
   &-inner {
     padding: 0 16px;
   }
-  &-inp {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 9px 0 20px;
-    button {
-      margin-left: 10px;
-    }
-    &.l-search {
-      margin: 15px 0 15px;
-    }
-  }
-  &-select {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .select {
-      margin-right: 10px;
-    }
-    &.bg {
-      .select {
-        width: 100%;
-      }
-      .el-select {
-        .el-input {
-          &__inner {
-            background-color: $--color--pale-gray;
-            border: none;
-            border-radius: 5px;
-          }
-          &__icon {
-            color: $disabled-color;
-            &.is-reverse {
-              color: #000;
-            }
-          }
-        }
-        &-dropdown {
-          margin: -2px 0 0;
-          background-color: $--color--pale-gray;
-          border: none;
-          border-top: 1px solid #dde5ed;
-          border-radius: 0;
-          box-shadow: none;
-          .popper__arrow {
-            display: none;
-          }
-          &__item {
-            height: 40px;
-            font-weight: 400;
-            &.selected {
-              color: $sub-color;
-            }
-          }
-          &__list {
-            padding: 0;
-          }
-        }
-      }
-    }
-  }
-  &-radio {
-    border-top: 1px solid $border-color;
-    overflow-x: hidden;
-    &.l-list {
-      .el-radio {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 14px 16px 16px;
-        border-bottom: 1px solid $border-color;
-      }
-    }
-  }
   &-search {
     position: relative;
     .inp-inner {
@@ -297,7 +224,7 @@
   }
   &-notification {
     .l-list {
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid $--color--border;
       li {
         display: flex;
         justify-content: space-between;
@@ -323,7 +250,7 @@
       .card {
         &.pale-gray {
           margin: 0;
-          background-color: $--color--pale-gray;
+          background-color: $--color--light-blue;
           box-shadow: none;
           span {
             vertical-align: middle;
@@ -350,7 +277,7 @@
         transform: translateX(-50%);
         width: 50px;
         height: 6px;
-        background-color: $disabled-color;
+        background-color: $--color--gray;
         border-radius: 12px;
       }
       &__body {
@@ -358,7 +285,7 @@
         .drawer {
           &-title {
             padding: 0 16px;
-            font-size: $font-size-large;
+            font-size: $--font-size-xlarge;
             font-weight: 700;
             letter-spacing: -0.9px;
           }
@@ -386,7 +313,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 14px 16px 16px;
-      border-top: 1px solid $border-color;
+      border-top: 1px solid $--color--border;
     }
     .list {
       &-title {
@@ -400,7 +327,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 14px 16px 16px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $--color--border;
         &__label {
           color: $--color--black;
           font-weight: 700;
@@ -418,7 +345,7 @@
     overflow: hidden;
     .l-fixed {
       padding-bottom: 16px;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid $--color--border;
       & + .scroll-y {
         height: 100%;
       }
@@ -483,9 +410,9 @@
               padding: 10px;
               margin: 0;
               border-radius: 5px;
-              background-color: $--color--pale-gray;
+              background-color: $--color--light-blue;
               box-shadow: none;
-              font-size: $font-size-xsmall;
+              font-size: $--font-size-small;
               line-height: 18px;
               text-align: right;
               box-sizing: border-box;
@@ -498,10 +425,10 @@
                 font-weight: 700;
               }
               &-desc {
-                color: $disabled-color;
+                color: $--color--gray;
               }
               &.is-on {
-                background-color: $secondary-color;
+                background-color: $--color--sub-blue;
                 box-shadow: 5px 5px 15px 5px rgba(52, 114, 197, 0.12);
                 color: $--color--white;
                 .card-desc {
@@ -509,7 +436,7 @@
                 }
                 .badge-circle-secondary {
                   background-color: $--color--white;
-                  color: $secondary-color;
+                  color: $--color--sub-blue;
                 }
               }
             }
@@ -533,7 +460,7 @@
       padding: 15px;
       box-sizing: border-box;
       margin: 0 10px 20px;
-      background-color: $--color--pale-gray;
+      background-color: $--color--light-blue;
       border-radius: 5px;
       line-height: 21px;
       &.left::after {
@@ -544,7 +471,7 @@
         width: 0;
         height: 0;
         border: 10px solid transparent;
-        border-right-color: $--color--pale-gray;
+        border-right-color: $--color--light-blue;
         border-left: 0;
         margin-top: -10px;
         margin-left: -10px;
@@ -552,7 +479,7 @@
       &.right {
         float: right;
         background-color: $--color--white;
-        border: 1px solid $border-color;
+        border: 1px solid $--color--border;
         &:before {
           content: "";
           position: absolute;
@@ -561,7 +488,7 @@
           width: 0;
           height: 0;
           margin-top: -10px;
-          border-left: 10px solid $border-color;
+          border-left: 10px solid $--color--border;
           border-right: 10px solid transparent;
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
@@ -591,7 +518,7 @@
           th,
           td {
             padding: 15px 16px;
-            font-size: $font-size-small;
+            font-size: $--font-size-regular;
             vertical-align: middle;
             span {
               line-height: 21px;
@@ -599,7 +526,7 @@
           }
           th {
             border-bottom: 1px solid $--color--white;
-            background-color: $secondary-color;
+            background-color: $--color--sub-blue;
             color: $--color--white;
             font-weight: 700;
             span {
@@ -610,9 +537,9 @@
             }
           }
           td {
-            border-bottom: 1px solid $border-color;
+            border-bottom: 1px solid $--color--border;
             &:not(:last-child) {
-              border-right: 1px solid $border-color;
+              border-right: 1px solid $--color--border;
             }
             .btn-drag.medium {
               margin-left: 15px;
@@ -620,18 +547,18 @@
           }
           &.is-on {
             td {
-              background-color: $bg-card;
+              background-color: $--color--hover;
             }
           }
           &.is-drag {
-            border: 2px solid $sub-color;
+            border: 2px solid $--color--main-blue;
           }
           &.disabled {
             th {
-              background-color: $disabled-color;
+              background-color: $--color--gray;
             }
             td {
-              background-color: $--color--pale-gray;
+              background-color: $--color--light-blue;
             }
           }
         }
@@ -647,7 +574,7 @@
       right: 16px;
       width: 60px;
       height: 60px;
-      background-color: $sub-color;
+      background-color: $--color--main-blue;
       border-radius: 50%;
       box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
       &::before {
