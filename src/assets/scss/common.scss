@@ -54,10 +54,10 @@ button {
       letter-spacing: -0.0437rem;
     }
     // &-normal {
-    //   font-size: $--font-size-large !important;
+    //   font-size: $--font-size-default !important;
     // }
     // &-large {
-    //   font-size: $--font-size-xlarge !important;
+    //   font-size: $--font-size-large !important;
     // }
     // &-xxlarge {
     //   font-size: $--font-size-xxxlarge !important;
@@ -121,6 +121,14 @@ button {
     letter-spacing: normal;
   }
 }
+.title {
+  &-section {
+    color: $--color--gray;
+    font-size: $--font-size-small;
+    letter-spacing: -0.0375rem;
+    font-weight: 700;
+  }
+}
 .txt {
   &-warning {
     font-size: $--font-size-regular;
@@ -133,7 +141,7 @@ button {
     font-weight: 300;
   }
   &-title {
-    font-size: $--font-size-xxlarge;
+    font-size: $--font-size-xlarge;
     font-weight: bold;
     line-height: 1.4em;
   }
@@ -280,7 +288,4 @@ button {
   &-16 {
     margin-right: 16px !important;
   }
-}
-.v-modal {
-  background: rgba(0, 0, 0, 0.8) !important;
 }

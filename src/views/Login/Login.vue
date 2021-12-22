@@ -41,15 +41,15 @@
       </el-form>
       <div class="login-btn-group">
         <button class="btn btn-size-full primary" :disabled="!canLogin" @click="$router.push('/dashboard')">로그인</button>
-        <!-- <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginAlertActive = true">로그인</button> -->
-        <!-- <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginConfirmActive = true">로그인</button> -->
+        <!-- <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginAlertActive = true">로그인</button>
+        <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginConfirmActive = true">로그인</button> -->
         <button class="btn btn-size-full white is-active mt-15" @click="$router.push('/join')">회원가입</button>
       </div>
       <div class="login-service">
-        <button class="btn btn-txt underline ft-color-secondary">로그 전송</button>
+        <button class="btn btn-txt underline ft-color-secondary" @click="logAlertActive = true">로그 전송</button>
         <div>
-          <button class="btn btn-txt underline ft-color-secondary">사번 찾기</button>
-          <button class="btn btn-txt underline ft-color-secondary ml-15">비밀번호 재발급</button>
+          <button class="btn btn-txt underline ft-color-secondary" @click="passwordActive = true">사번 찾기</button>
+          <button class="btn btn-txt underline ft-color-secondary ml-15" @click="passwordReissuance = true">비밀번호 재발급</button>
         </div>
       </div>
       <div class="welcom-message ft-size-small">
@@ -57,25 +57,36 @@
       </div>
     </div>
 
-    <!-- 로그인 오류 팝업 -->
-    <pop-login-alert v-if="loginAlertActive" @click="loginAlertActive = !loginAlertActive"></pop-login-alert>
-    <!-- 비밀번호 오류 팝업 -->
+    <!-- 로그인오류 팝업 -->
+    <pop-alert v-if="loginAlertActive" @click="loginAlertActive = !loginAlertActive" popTitle="로그인 오류" popMsg="사번 또는 비밀번호가<br>일치하지 않습니다." popBtn="닫기"></pop-alert>
+    <!-- 접속제한안내 팝업 -->
     <pop-login-confirm v-if="loginConfirmActive" @click="loginConfirmActive = !loginConfirmActive"></pop-login-confirm>
+    <!-- 로그전송 -->
+    <pop-alert v-if="logAlertActive" @click="logAlertActive = !logAlertActive" popTitle="로그 전송" popMsg="현재 E/S맨 앱의 시스템 로그를<br>서버에 전송합니다." popBtn="확인"></pop-alert>
+    <!-- 사번찾기 -->
+    <pop-password v-if="passwordActive" @click="passwordActive = !passwordActive"></pop-password>
+    <!-- 비밀번호 재발급 -->
+    <pop-password-reissuance v-if="passwordReissuance" @click="passwordReissuance = !passwordReissuance"></pop-password-reissuance>
   </div>
 </template>
 
 <script>
-import PopLoginAlert from "@/views/Login/PopLoginAlert";
+import PopAlert from "@/views/Modal/PopAlert";
 import PopLoginConfirm from "@/views/Login/PopLoginConfirm";
+import PopPassword from "@/views/Login/PopPassword";
+import PopPasswordReissuance from "@/views/Login/PopPasswordReissuance";
 
 export default {
-  components: { PopLoginAlert, PopLoginConfirm },
+  components: { PopAlert, PopLoginConfirm, PopPassword, PopPasswordReissuance },
   name: "Login",
   data() {
     return {
       isAcceptLocation: false,
       loginAlertActive: false,
       loginConfirmActive: false,
+      logAlertActive: false,
+      passwordActive: false,
+      passwordReissuance: false,
       ruleForm: {
         id: "",
         password: "",

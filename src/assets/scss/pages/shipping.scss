@@ -50,7 +50,7 @@
     .shipping {
       &-code {
         color: $--color--txt;
-        font-size: $--font-size-large;
+        font-size: $--font-size-default;
         vertical-align: middle;
         display: inline-block;
         margin-left: 8px;
@@ -93,7 +93,7 @@
     }
   }
   .shipping-address {
-    font-size: $--font-size-xlarge;
+    font-size: $--font-size-large;
     color: $--color--secondary;
     font-weight: bold;
     line-height: 40px;
@@ -141,7 +141,7 @@
       color: #999;
     }
     p {
-      font-size: $--font-size-large;
+      font-size: $--font-size-default;
       line-height: 24px;
       color: $--color--secondary;
       font-weight: 400;

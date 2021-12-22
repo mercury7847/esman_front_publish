@@ -67,11 +67,11 @@
           &-info {
             .user-name {
               padding: 0;
-              font-size: $--font-size-large;
+              font-size: $--font-size-default;
               line-height: 19px;
               span {
                 padding: 0;
-                font-size: $--font-size-large;
+                font-size: $--font-size-default;
                 line-height: 19px;
               }
             }
@@ -224,7 +224,7 @@
         margin-bottom: 15px;
         box-sizing: border-box;
         color: $--color--black;
-        font-size: $--font-size-xlarge;
+        font-size: $--font-size-large;
         font-weight: 700;
         letter-spacing: -0.9px;
         .btn-prev {

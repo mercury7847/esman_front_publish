@@ -3,6 +3,43 @@
     <gnb />
     <div class="l-inner">
       <h2 class="ft-color-gray ft-size-large mb-16">input</h2>
+      <el-form class="l-form" label-position="top">
+        <el-form-item label="label" class="mb-20">
+          <div class="l-inp">
+            <div class="inp">
+              <div class="inp-inner">
+                <el-input type="text" placeholder="텍스트를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+              </div>
+            </div>
+          </div>
+        </el-form-item>
+      </el-form>
+      <el-form class="l-form" label-position="top">
+        <el-form-item label="휴대전화 번호" class="mb-20">
+          <div class="l-inp">
+            <div class="inp">
+              <div class="inp-inner">
+                <el-input type="text" placeholder="휴대전화 번호를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+              </div>
+            </div>
+            <button class="btn btn-size-large primary">인증번호</button>
+          </div>
+        </el-form-item>
+      </el-form>
+      <el-form class="l-form" label-position="top">
+        <el-form-item label="인증 번호" class="mb-20">
+          <div class="l-inp">
+            <div class="inp">
+              <div class="inp-inner">
+                <el-input type="text" placeholder="인증 번호를 입력하세요." v-model="input01" class="inp-text-line">
+                  <span slot="suffix">2:33</span>
+                </el-input>
+              </div>
+            </div>
+            <button class="btn btn-size-large primary">확인</button>
+          </div>
+        </el-form-item>
+      </el-form>
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form login-form" label-position="top">
         <el-form-item label="비밀번호(clearable)" class="mb-20">
           <div class="l-inp">
