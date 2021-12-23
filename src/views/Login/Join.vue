@@ -1,66 +1,50 @@
 <template>
   <div class="l-container">
     <Gnb />
-    <div class="join">
-      <el-tabs v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane label="1" name="first">
-          <div class="l-inner">
-            <div class="join-form form">
-              <div class="join-cid">
-                <label for="c-id">사번</label>
-                <div class="l-inp">
-                  <!-- default : 클래스 명 'inp' -->
-                  <!-- disabled 일 경우 : 클래스 명 'inp disabled' , input 태그에 disabled 추가 -->
-                  <div class="inp disabled">
-                    <div class="inp-inner">
-                      <input type="text" class="input-text-line" placeholder="사번을 입력하세요" id="c-id" autofocus disabled />
-                    </div>
-                  </div>
-                  <button class="btn secondary btn-size-large">생성</button>
-                </div>
-                <label for="c-pw">비밀번호</label>
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <input type="text" class="input-text-line" placeholder="비밀번호를 입력하세요." id="c-pw" autofocus />
-                    </div>
-                  </div>
-                </div>
-                <label for="c-pw2">비밀번호 확인</label>
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <input type="text" class="input-text-line" placeholder="비밀번호를 입력하세요." id="c-pw2" autofocus />
-                    </div>
-                  </div>
-                </div>
-                <label for="c-mob">휴대전화 번호</label>
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <input type="text" class="input-text-line" placeholder="휴대전화 번호를 입력하세요." id="c-mob" autofocus />
-                    </div>
-                  </div>
-                  <button class="btn secondary btn-size-large">인증번호 전송</button>
-                </div>
-                <label for="c-name">이름</label>
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <input type="text" class="input-text-line" placeholder="이름을 입력하세요." id="c-name" autofocus />
-                    </div>
-                  </div>
-                </div>
-                <label for="c-birth">생년월일</label>
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <input type="text" class="input-text-line" placeholder="생년월일 8자리를 입력하세요." id="c-birth" autofocus />
-                    </div>
+    <div class="l-tab join">
+      <el-tabs v-model="activeName">
+        <el-tab-pane label="1" name="1">
+          <h2 class="title-section ft-color-primary mb-30">인원 정보 #1</h2>
+          <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form" label-position="top">
+            <el-form-item label="성명 (국문)" prop="name" class="mb-20">
+              <div class="l-inp">
+                <div class="inp">
+                  <div class="inp-inner">
+                    <el-input type="text" placeholder="성명 (국문)을 입력하세요." class="inp-text-line" v-model="ruleForm.name"></el-input>
                   </div>
                 </div>
               </div>
-            </div>
+            </el-form-item>
+            <el-form-item label="성명 (영문)" class="mb-20">
+              <div class="l-inp">
+                <div class="inp">
+                  <div class="inp-inner">
+                    <el-input type="text" placeholder="성명 (영문)을 입력하세요." class="inp-text-line" v-model="ruleForm.name2"></el-input>
+                  </div>
+                </div>
+              </div>
+            </el-form-item>
+            <el-form-item label="소속 조직 (집배점)" class="mb-20">
+              <div class="l-inp">
+                <div class="inp">
+                  <div class="inp-inner">
+                    <el-input type="text" placeholder="" class="inp-text-line" v-model="ruleForm.name2"></el-input>
+                  </div>
+                </div>
+              </div>
+            </el-form-item>
+            <el-form-item label="성명" class="mb-20">
+              <div class="l-inp">
+                <div class="inp">
+                  <div class="inp-inner">
+                    <el-input type="text" placeholder="" class="inp-text-line" v-model="ruleForm.name2"></el-input>
+                  </div>
+                </div>
+              </div>
+            </el-form-item>
+          </el-form>
+
+          <div class="l-inner">
             <div class="join-service-check">
               <div class="input-checkbox">
                 <input type="checkbox" id="cterm1" checked />
@@ -77,7 +61,7 @@
             </div>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="2" name="second">
+        <el-tab-pane label="2" name="2">
           <template class="">
             <el-tabs type="card" @tab-click="handleClick">
               <el-tab-pane label="자동차등록증">
@@ -131,7 +115,7 @@
             </el-tabs>
           </template>
         </el-tab-pane>
-        <el-tab-pane label="3" name="third">
+        <el-tab-pane label="3" name="3">
           <div class="l-inner">
             <div class="join-complete">
               <i class="icon-complete icon-xxxlarge"></i>
@@ -155,7 +139,17 @@ export default {
   name: "Join",
   data() {
     return {
-      activeName: "first",
+      activeName: "1",
+      selected: "",
+      ruleForm: {
+        name: "",
+        name2: "",
+        password: "",
+      },
+      rules: {
+        name: [{ required: true, message: "성명 (국문)을 입력해주세요", trigger: "blur" }],
+        password: [{ required: true, message: "비밀번호를 입력해주세요.", trigger: "blur" }],
+      },
     };
   },
   methods: {

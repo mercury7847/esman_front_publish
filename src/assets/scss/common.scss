@@ -122,11 +122,21 @@ button {
   }
 }
 .title {
-  &-section {
-    color: $--color--gray;
-    font-size: $--font-size-small;
-    letter-spacing: -0.0375rem;
+  &-page {
+    font-size: $--font-size-large;
+    letter-spacing: -0.0563rem;
     font-weight: 700;
+  }
+  &-section {
+    font-size: $--font-size-large;
+    letter-spacing: -0.0563rem;
+    font-weight: 700;
+    &-sub {
+      color: $--color--gray;
+      font-size: $--font-size-small;
+      letter-spacing: -0.0375rem;
+      font-weight: 700;
+    }
   }
 }
 .txt {

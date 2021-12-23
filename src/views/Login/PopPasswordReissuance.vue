@@ -2,7 +2,7 @@
   <div class="l-dialog">
     <el-dialog title="비밀번호 재발급" :visible.sync="PopPasswordReissuance" width="322px" center @close="popClick">
       <div class="dialog-body">
-        <p class="title-section mb-20">등록된 휴대폰 번호로 찾기</p>
+        <p class="title-section-sub mb-20">등록된 휴대폰 번호로 찾기</p>
         <el-form class="l-form" label-position="top">
           <el-form-item label="사번" class="mb-20">
             <div class="l-inp">

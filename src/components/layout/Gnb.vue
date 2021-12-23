@@ -1,30 +1,47 @@
 <template>
-  <div class="header">
-    <div class="user" v-if="$route.name == '대시보드'">
-      <div class="user-thumb">
-        <img src="../../assets/images/user.png" alt="" />
+  <div class="l-header">
+    <div class="header">
+      <div class="user" v-if="$route.name == 'dashboard'">
+        <!-- <router-link to="/dashboard">
+        <button class="btn"><i class="icon-home">홈</i></button>
+      </router-link> -->
+        <!-- <img src="@/assets/images/logo.svg" alt="한진택배" class="logo" /> -->
+        <div class="user-thumb">
+          <img src="../../assets/images/user.png" alt="" />
+        </div>
+        <div class="user-info">
+          <span class="user-name">김한진</span>
+          <span class="user-num">9117159</span>
+        </div>
       </div>
-      <div class="user-info">
-        <span class="user-name">김한진</span>
-        <span class="user-addr">용산2</span>
+
+      <div class="navi" v-else>
+        <div class="navi-action">
+          <button class="btn btn-prev" @click="back">뒤로</button>
+        </div>
+        <div class="subject">
+          <h1 class="title-page">
+            <span>{{ $route.name }}</span>
+          </h1>
+        </div>
       </div>
+
+      <!-- <div class="menu">
+      <button class="btn" v-show="$route.name === '거래처 관리' || $route.name === '보내는 분 관리' || $route.name === '부사용자 관리'" @click="popSearch = true">
+        <i class="icon-search"></i>
+      </button>
+      <button class="btn btn-small-size btn-edi" v-show="$route.name === '출력 관리'">EDI 출력</button>
+
+      <button class="btn" @click="sideMenuOn = true"><i class="icon-menu">menu</i></button>
+    </div> -->
+
+      <div class="global-state">
+        <button class="btn btn-bluetooth"></button>
+        <button class="btn btn-alarm" @click="toggleDrawer"><span class="alram-count-num badge-circle-blue">2</span></button>
+        <button class="btn btn-menu" @click="toggleSideMenu"></button>
+      </div>
+      <side-menu v-if="sideMenuOn" @click="toggleSideMenu" />
     </div>
-    <div class="nivigation" v-else>
-      <div class="navi-action">
-        <button class="btn btn-prev" @click="back">뒤로</button>
-      </div>
-      <div class="subject">
-        <h2>
-          <span>{{ $route.name }}</span>
-        </h2>
-      </div>
-    </div>
-    <div class="global-state">
-      <button class="btn btn-bluetooth"></button>
-      <button class="btn btn-alarm" @click="toggleDrawer"><span class="alram-count-num badge-circle-blue">2</span></button>
-      <button class="btn btn-menu" @click="toggleSideMenu"></button>
-    </div>
-    <side-menu v-if="sideMenuOn" @click="toggleSideMenu" />
 
     <!-- 알림 -->
     <div class="l-notification l-drawer l-scroll">

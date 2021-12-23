@@ -1,142 +1,35 @@
 .l {
   &-container {
+    position: relative;
+    width: 100%;
     height: 100%;
     padding-top: 56px;
-    padding-bottom: 60px;
     background-color: $--color--white;
-    box-sizing: border-box;
-    overflow-y: auto;
+    overflow: hidden;
     font-size: $--font-size-regular;
-    letter-spacing: -0.7px;
-    &.bg-page {
-      background-color: $--color--light-blue;
+    letter-spacing: -0.0437rem;
+    &.menu-active {
+      padding-bottom: 60px;
     }
-    &.focus-out {
-      padding-bottom: 0;
-      .service-menu {
-        display: none;
-      }
-      .l-delivery-bottom {
-        position: absolute;
-        bottom: 0;
-      }
-      .btn-floating {
-        bottom: 16px;
-      }
+    .l-contents {
+      height: 100%;
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 30;
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 56px;
-      padding: 16px;
-      box-sizing: border-box;
-      background-color: $--color--white;
-      .global-state {
-        display: flex;
-        align-items: center;
-        .btn {
-          width: 24px;
-          height: 24px;
-          &-bluetooth {
-            background: url(../../assets/images/icon-blue.svg) no-repeat 50% 50% / contain;
-          }
-          &-alarm {
-            position: relative;
-            width: 26px;
-            height: 26px;
-            margin: 0 24px;
-            background: url(../../assets/images/icon-bell.svg) no-repeat 50% 50% / contain;
-          }
-          &-menu {
-            background: url(../../assets/images/icon-menu.svg) no-repeat 50% 50% / contain;
-          }
-        }
-        .alram-count-num {
-          position: absolute;
-          right: -2px;
-          top: -2px;
-          width: 14px;
-          height: 14px;
-          font-size: $--font-size-xsmall;
-          line-height: 14px;
-          font-weight: 300;
-        }
-      }
-      .user {
-        display: flex;
-        align-items: center;
-        font-size: 0;
-        &-thumb {
-          display: inline-block;
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          overflow: hidden;
-          vertical-align: middle;
-          img {
-            width: 100%;
-          }
-        }
-        &-info {
-          display: inline-block;
-          vertical-align: middle;
-          span {
-            padding: 0 8px;
-            display: inline-block;
-            font-size: $--font-size-regular;
-            font-weight: 600;
-          }
-          .user-name {
-            padding: 0 10px;
-            color: $--color--black;
-          }
-          .user-addr {
-            color: #ccc;
-            font-weight: 400;
-            position: relative;
-            &:before {
-              content: "";
-              display: inline-block;
-              clear: both;
-              width: 2px;
-              height: 10px;
-              background-color: $--color--border;
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-          }
-        }
-      }
-      .nivigation {
-        display: flex;
-        align-items: center;
-        .navi-action {
-          text-align: center;
-          .btn-prev {
-            width: 24px;
-            height: 24px;
-            background: url(../../assets/images/icon-arrow-left.svg) no-repeat 50% 50% / contain;
-            border: 0 none;
-            font-size: 0;
-          }
-        }
-        .subject {
-          padding-left: 10px;
-          color: $--color--black;
-          font-size: $--font-size-large;
-          font-weight: 700;
-          letter-spacing: -0.9px;
-        }
-      }
-    }
+    // &.bg-page {
+    //   background-color: $--color--light-blue;
+    // }
+    // &.focus-out {
+    //   padding-bottom: 0;
+    //   .service-menu {
+    //     display: none;
+    //   }
+    //   .l-delivery-bottom {
+    //     position: absolute;
+    //     bottom: 0;
+    //   }
+    //   .btn-floating {
+    //     bottom: 16px;
+    //   }
+    // }
   }
   &-inner {
     padding: 0 16px;
