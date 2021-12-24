@@ -3,7 +3,7 @@
     <gnb />
     <div class="l-contents l-scroll">
       <div class="l-inner scroll-y">
-        <h2 class="ft-color-grey ft-size-large mb-16">input</h2>
+        <h2 class="title-section ft-color-secondary mb-16">input</h2>
         <el-form class="l-form" label-position="top">
           <el-form-item label="label" class="mb-20">
             <div class="l-inp">
@@ -74,7 +74,7 @@
         </el-form>
 
         <el-divider></el-divider>
-        <h2 class="ft-color-grey ft-size-large mb-16">select</h2>
+        <h2 class="title-section ft-color-secondary mb-16">select</h2>
         <el-form class="l-form" label-position="top">
           <el-form-item label="이메일" class="mb-20">
             <div class="l-select">
@@ -102,7 +102,7 @@
         </el-form>
 
         <el-divider></el-divider>
-        <h2 class="ft-color-grey ft-size-large mb-16">checkbox</h2>
+        <h2 class="title-section ft-color-secondary mb-16">checkbox</h2>
         <el-form class="l-form">
           <el-form-item label="checkboxLabel" class="checkbox mb-20">
             <div class="l-checkbox">
@@ -119,7 +119,7 @@
         </el-form>
 
         <el-divider></el-divider>
-        <h2 class="ft-color-grey ft-size-large mb-16">radio</h2>
+        <h2 class="title-section ft-color-secondary mb-16">radio</h2>
         <el-form :model="ruleForm" ref="ruleForm" class="l-form" label-position="top">
           <el-form-item label="radioLabel" prop="radioType" class="mb-20">
             <div class="l-radio">
@@ -132,7 +132,7 @@
         </el-form>
 
         <el-divider></el-divider>
-        <h2 class="ft-color-grey ft-size-large mb-16">switch</h2>
+        <h2 class="title-section ft-color-secondary mb-16">switch</h2>
         <el-form :model="ruleForm" ref="ruleForm" class="l-form">
           <el-form-item label="label" class="switch mb-20">
             <div class="l-switch">
@@ -165,6 +165,15 @@
           <button class="btn btn-txt">btn-txt</button>
           <button class="btn btn-txt underline">btn-txt underline</button>
         </div>
+
+        <el-divider></el-divider>
+        <h2 class="title-section ft-color-secondary mb-16">badge</h2>
+        <span class="badge yellow">집하</span>
+        <span class="badge red">오류</span>
+        <span class="badge purple">스캔</span>
+        <span class="badge grey">스캔</span>
+        <span class="badge blue">$ 선불</span>
+        <span class="badge orange">$ 착불</span>
 
         <el-divider></el-divider>
       </div>

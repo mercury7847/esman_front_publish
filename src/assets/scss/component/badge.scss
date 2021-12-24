@@ -6,10 +6,10 @@
   padding: 0 10px;
   margin-right: 8px;
   border-radius: 30px;
-  box-sizing: border-box;
   font-size: $--font-size-small;
+  letter-spacing: -0.0375rem;
   line-height: 22px;
-  letter-spacing: -0.6px;
+  font-weight: 400;
   text-align: center;
   vertical-align: middle;
   &.green {
@@ -17,28 +17,28 @@
     color: $--color--green;
   }
   &.yellow {
-    background-color: #fff4d7;
-    color: #ffb800;
+    background-color: $--color--light-yellow;
+    color: $--color--orange;
   }
   &.red {
-    background-color: #ffdddb;
+    background-color: $--color--light-red;
     color: $--color--red;
   }
   &.purple {
-    background-color: #e4d6ee;
-    color: #7500ac;
+    background-color: $--color--light-purple;
+    color: $--color--purple;
   }
   &.grey {
-    background-color: $--color--inactive;
-    color: $--color--grey;
+    background-color: $--color--grey;
+    color: $--color--white;
   }
   &.orange {
-    border: 1px solid #ff6b00;
-    color: #ff6b00;
+    border: 1px solid $--color--hotpink;
+    color: $--color--hotpink;
   }
   &.blue {
-    border: 1px solid #1e00d7;
-    color: #1e00d7;
+    border: 1px solid $--color--purple;
+    color: $--color--purple;
   }
   &-circle {
     position: relative;
