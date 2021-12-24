@@ -571,7 +571,7 @@
               </div>
             </div>
           </div>
-          <div class="ml-16">
+          <div class="ml-15">
             <label for="time-end" class="ft-weight-bold">완료 시간</label>
             <div class="inp mt-10">
               <div class="inp-inner">

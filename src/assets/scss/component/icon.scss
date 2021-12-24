@@ -6,25 +6,27 @@ i {
   vertical-align: middle;
 }
 .icon {
-  &-small {
-    width: 14px;
-    height: 14px;
-  }
-  &-regular {
-    width: 18px;
-    height: 18px;
-  }
-  &-large {
-    width: 24px;
-    height: 24px;
-  }
-  &-xlarge {
-    width: 42px;
-    height: 42px;
-  }
-  &-xxxlarge {
-    width: 120px;
-    height: 120px;
+  &-size {
+    &-small {
+      width: 14px;
+      height: 14px;
+    }
+    &-regular {
+      width: 18px;
+      height: 18px;
+    }
+    &-large {
+      width: 24px;
+      height: 24px;
+    }
+    &-xlarge {
+      width: 42px;
+      height: 42px;
+    }
+    &-xxxlarge {
+      width: 120px;
+      height: 120px;
+    }
   }
   &-arrow-left {
     background: url("../../assets/images/icon-arrow-left.svg") no-repeat 50% 50% / contain;

@@ -21,23 +21,24 @@
       &:not(:first-child) {
         margin-left: 10px;
       }
-      &.is-on {
-        color: $--color--sub-blue;
-      }
     }
-    &.full {
-      min-width: 120px;
-      margin-right: 10px;
+    &-type-02 {
+      display: inline-block;
+      // min-width: 120px;
+      // margin-right: 10px;
       border: 1px solid $--color--border;
       border-radius: 5px;
       .btn {
-        min-width: auto;
-        width: 50%;
-        margin: 0;
-        border: none;
-        border-radius: unset;
-        &:first-child {
-          border-right: 1px solid $--color--border;
+        &.white {
+          border: none;
+        }
+        &:not(:first-child) {
+          border-left: 1px solid $--color--border;
+        }
+        &-size-large {
+          font-size: $--font-size-regular;
+          letter-spacing: -0.0437rem;
+          font-weight: 400;
         }
       }
     }
@@ -101,12 +102,9 @@
       color: $--color--primary;
       border-color: $--color--primary;
     }
-  }
-  // &:focus{
-  //   box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.15);
-  // }
-  &:disabled {
-    background-color: $--color--inactive;
+    &.primary {
+      color: $--color--primary;
+    }
   }
 
   &-txt {
@@ -124,31 +122,25 @@
   &-more {
     display: inline-flex;
     align-items: center;
-    height: 20px;
-    // float: right;
-    // display: block;
-    // font-size: 0;
-    // padding: 0 !important;
-    // &::before {
-    //   content: "";
-    //   display: inline-block;
-    //   width: 0;
-    //   height: 100%;
-    //   vertical-align: middle;
-    //   clear: both;
-    // }
-    // span {
-    //   display: inline-block;
-    //   font-size: $--font-size-small;
-    //   color: $--color--placeholder;
-    //   font-weight: 400;
-    //   vertical-align: middle;
-    // }
-    // .icon-more {
-    //   display: inline-block;
-    //   position: static !important;
-    //   vertical-align: middle;
-    // }
+    // height: 20px;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/images/icon-arrow-right.svg") no-repeat 50% 50% / contain;
+      vertical-align: middle;
+    }
+    &.small {
+      color: $--color--grey;
+      font-size: $--font-size-regular;
+      letter-spacing: -0.0437rem;
+      &::after {
+        width: 14px;
+        height: 14px;
+        margin: 2px 0 0 2px;
+      }
+    }
   }
   &-edit {
     padding: 0;
@@ -263,5 +255,10 @@
     .icon-plus {
       filter: invert(1);
     }
+  }
+  &:disabled {
+    border: none !important;
+    background-color: $--color--inactive !important;
+    color: $--color--white !important;
   }
 }

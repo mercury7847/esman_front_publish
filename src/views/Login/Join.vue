@@ -118,7 +118,7 @@
         <el-tab-pane label="3" name="3">
           <div class="l-inner">
             <div class="join-complete">
-              <i class="icon-complete icon-xxxlarge"></i>
+              <i class="icon-complete icon-size-xxxlarge"></i>
               <h2 class="txt-title">회원가입이 완료되었습니다.</h2>
               <div class="txt-secondary">로그인 후 E/S man 서비스를<br />사용할 수 있습니다.</div>
             </div>

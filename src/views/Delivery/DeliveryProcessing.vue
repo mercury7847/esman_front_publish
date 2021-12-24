@@ -32,7 +32,7 @@
         </div>
 
         <!-- 1102 select 추가 -->
-        <div class="l-select bg mb-16" v-show="!deliveryNone">
+        <div class="l-select bg mb-15" v-show="!deliveryNone">
           <div class="select">
             <el-select v-model="value" value-key="value" placeholder="select" :popper-append-to-body="false">
               <el-option v-for="item in selectOptions" :key="item.value" :label="item.label" :value="item"> </el-option>

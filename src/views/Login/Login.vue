@@ -31,10 +31,10 @@
         <el-form-item class="checkbox mb-15">
           <div class="d-flex-be-center">
             <div class="l-checkbox login-service-check">
-              <el-checkbox v-model="isAcceptLocation">위치정보 제공동의</el-checkbox>
+              <el-checkbox v-model="isAcceptLocation"><span class="ft-weight-bold">위치정보 제공동의</span></el-checkbox>
             </div>
             <div class="login-service-detailview">
-              <button class="btn btn-more ft-size-regular ft-color-grey"><span>상세보기</span><i class="icon-more"></i></button>
+              <button class="btn btn-more"><span>상세보기</span><i class="icon-more icon-size-small"></i></button>
             </div>
           </div>
         </el-form-item>

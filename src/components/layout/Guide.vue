@@ -1,181 +1,218 @@
 <template>
   <div class="l-container menu-active">
     <gnb />
-    <div class="l-contents l-scroll">
-      <div class="l-inner scroll-y">
-        <h2 class="title-section ft-color-secondary mb-16">input</h2>
-        <el-form class="l-form" label-position="top">
-          <el-form-item label="label" class="mb-20">
-            <div class="l-inp">
-              <div class="inp">
-                <div class="inp-inner">
-                  <el-input type="text" placeholder="텍스트를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+    <div class="l-contents">
+      <div class="l-tab">
+        <el-tabs v-model="activeName" @tab-click="handleClick">
+          <el-tab-pane label="input" name="1">
+            <h2 class="title-section ft-color-primary mb-30">인원 정보 #1</h2>
+            <el-form class="l-form" label-position="top">
+              <el-form-item label="label" class="mb-20">
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="text" placeholder="텍스트를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </el-form-item>
-        </el-form>
-        <el-form class="l-form" label-position="top">
-          <el-form-item label="휴대전화 번호" class="mb-20">
-            <div class="l-inp">
-              <div class="inp">
-                <div class="inp-inner">
-                  <el-input type="text" placeholder="휴대전화 번호를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+              </el-form-item>
+            </el-form>
+            <el-form class="l-form" label-position="top">
+              <el-form-item label="휴대전화 번호" class="mb-20">
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="text" placeholder="휴대전화 번호를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+                    </div>
+                  </div>
+                  <button class="btn btn-size-large primary">인증번호</button>
                 </div>
-              </div>
-              <button class="btn btn-size-large primary">인증번호</button>
-            </div>
-          </el-form-item>
-        </el-form>
-        <el-form class="l-form" label-position="top">
-          <el-form-item label="인증 번호" class="mb-20">
-            <div class="l-inp">
-              <div class="inp">
-                <div class="inp-inner">
-                  <el-input type="text" placeholder="인증 번호를 입력하세요." v-model="input01" class="inp-text-line">
-                    <span slot="suffix">2:33</span>
-                  </el-input>
+              </el-form-item>
+            </el-form>
+            <el-form class="l-form" label-position="top">
+              <el-form-item label="인증 번호" class="mb-20">
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="text" placeholder="인증 번호를 입력하세요." v-model="input01" class="inp-text-line">
+                        <span slot="suffix">2:33</span>
+                      </el-input>
+                    </div>
+                  </div>
+                  <button class="btn btn-size-large primary">확인</button>
                 </div>
-              </div>
-              <button class="btn btn-size-large primary">확인</button>
-            </div>
-          </el-form-item>
-        </el-form>
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form login-form" label-position="top">
-          <el-form-item label="비밀번호(clearable)" class="mb-20">
-            <div class="l-inp">
-              <div class="inp">
-                <div class="inp-inner">
-                  <el-input type="password" placeholder="비밀번호를 입력하세요." v-model="inputpw" class="inp-text-line" clearable></el-input>
+              </el-form-item>
+            </el-form>
+            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form login-form" label-position="top">
+              <el-form-item label="비밀번호(clearable)" class="mb-20">
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="password" placeholder="비밀번호를 입력하세요." v-model="inputpw" class="inp-text-line" clearable></el-input>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </el-form-item>
-          <el-form-item label="label" class="mb-20">
-            <div class="l-inp">
-              <div class="inp disabled">
-                <div class="inp-inner">
-                  <el-input type="text" placeholder="텍스트를 입력하세요." v-model="input01" class="inp-text-line" disabled></el-input>
+              </el-form-item>
+              <el-form-item label="disabled" class="mb-20">
+                <div class="l-inp">
+                  <div class="inp disabled">
+                    <div class="inp-inner">
+                      <el-input type="text" placeholder="텍스트를 입력하세요." class="inp-text-line" disabled value="disabled"></el-input>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </el-form-item>
-        </el-form>
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form">
-          <el-form-item label="label(validation)" prop="sender" class="mb-20">
-            <div class="l-inp">
-              <div class="inp">
-                <div class="inp-inner">
-                  <el-input type="text" placeholder="" class="inp-text-line" v-model="ruleForm.sender"></el-input>
+              </el-form-item>
+            </el-form>
+            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form">
+              <el-form-item label="label(validation)" prop="sender" class="mb-20">
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="text" placeholder="" class="inp-text-line" v-model="ruleForm.sender"></el-input>
+                    </div>
+                  </div>
                 </div>
+              </el-form-item>
+            </el-form>
+          </el-tab-pane>
+          <el-tab-pane label="select" name="2">
+            <el-form class="l-form" label-position="top">
+              <el-form-item label="이메일" class="mb-20">
+                <div class="l-select">
+                  <div class="select">
+                    <el-select v-model="selectEmail" value-key="value" placeholder="select">
+                      <el-option v-for="item in selectOptionsEmail" :key="item.value" :label="item.label" :value="item"> </el-option>
+                    </el-select>
+                  </div>
+                </div>
+              </el-form-item>
+              <el-form-item label="소속 조직 (집배점)" class="mb-20">
+                <div class="l-select">
+                  <div class="select">
+                    <el-select v-model="select01" value-key="value" placeholder="select">
+                      <el-option v-for="item in selectOptions1" :key="item.value" :label="item.label" :value="item"> </el-option>
+                    </el-select>
+                  </div>
+                  <div class="select">
+                    <el-select v-model="select02" value-key="value" placeholder="select">
+                      <el-option v-for="item in selectOptions2" :key="item.value" :label="item.label" :value="item"> </el-option>
+                    </el-select>
+                  </div>
+                </div>
+              </el-form-item>
+            </el-form>
+          </el-tab-pane>
+          <el-tab-pane label="checkbox/radio/switch" name="3">
+            <h2 class="title-section-sub mb-15">checkbox</h2>
+            <el-form class="l-form">
+              <el-form-item label="checkboxLabel" class="checkbox mb-20">
+                <div class="l-checkbox">
+                  <el-checkbox v-model="check01"><span class="ft-weight-bold">위치정보 제공동의</span></el-checkbox>
+                </div>
+              </el-form-item>
+            </el-form>
+            <el-form class="l-form">
+              <el-form-item class="checkbox mb-20">
+                <div class="l-checkbox">
+                  <el-checkbox v-model="check01">전체 약관 동의</el-checkbox>
+                </div>
+              </el-form-item>
+              <el-form-item class="checkbox mb-15">
+                <div class="l-checkbox">
+                  <el-checkbox v-model="check02">위치정보 제공동의</el-checkbox>
+                </div>
+              </el-form-item>
+              <el-form-item class="checkbox mb-15">
+                <div class="l-checkbox">
+                  <el-checkbox v-model="check03">위치정보 제공동의</el-checkbox>
+                </div>
+              </el-form-item>
+              <el-form-item class="checkbox mb-15">
+                <div class="l-checkbox">
+                  <el-checkbox v-model="check04">위치정보 제공동의</el-checkbox>
+                </div>
+              </el-form-item>
+            </el-form>
+
+            <el-divider></el-divider>
+            <h2 class="title-section-sub mb-15">radio</h2>
+            <el-form :model="ruleForm" ref="ruleForm" class="l-form" label-position="top">
+              <el-form-item label="radioLabel" prop="radioType" class="mb-20">
+                <div class="l-radio">
+                  <el-radio-group v-model="ruleForm.radioType">
+                    <el-radio :label="1">1</el-radio>
+                    <el-radio :label="2">2</el-radio>
+                  </el-radio-group>
+                </div>
+              </el-form-item>
+            </el-form>
+            <h2 class="title-section-sub mb-15">switch</h2>
+            <el-form :model="ruleForm" ref="ruleForm" class="l-form">
+              <el-form-item label="label" class="switch mb-20">
+                <div class="l-switch">
+                  <el-switch v-model="switch01"></el-switch>
+                </div>
+              </el-form-item>
+            </el-form>
+          </el-tab-pane>
+          <el-tab-pane label="button" name="4">
+            <div class="btn-group mb-20">
+              <button class="btn btn-size-full primary">full 50 / primary</button>
+            </div>
+            <div class="btn-group mb-20">
+              <button class="btn btn-size-large secondary">large 45 / secondary</button>
+              <button class="btn btn-size-regular white">regular 37 / white</button>
+            </div>
+            <div class="btn-group mb-20">
+              <button class="btn btn-size-small white is-active">small 30 / white is-active</button>
+              <button class="btn btn-size-xsmall white is-active">xsmall 26</button>
+              <button class="btn btn-size-xsmall white">xsmall 26</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-size-full primary mb-20" disabled>full / disabled</button>
+            </div>
+            <div class="btn-group-type-02 mb-20" style="width: auto">
+              <button class="btn btn-size-large white primary">수동</button>
+              <button class="btn btn-size-large white">자동</button>
+            </div>
+            <div class="btn-group mb-20">
+              <button class="btn btn-size-xsmall point">xsmall yellow</button>
+              <button class="btn btn-txt">btn-txt</button>
+              <button class="btn btn-txt underline">btn-txt underline</button>
+            </div>
+            <p class="title-section-sub mb-15">더보기 버튼</p>
+            <div class="btn-group mb-20">
+              <button class="btn btn-more"></button>
+              <button class="btn btn-more small"><span>상세보기</span></button>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="badge" name="5">
+            <span class="badge yellow">집하</span>
+            <span class="badge red">오류</span>
+            <span class="badge purple">스캔</span>
+            <span class="badge grey">스캔</span>
+            <span class="badge blue">$ 선불</span>
+            <span class="badge orange">$ 착불</span>
+            <el-divider></el-divider>
+          </el-tab-pane>
+          <el-tab-pane label="slider" name="6">
+            <p class="mb-15">스캔 속도</p>
+            <div class="l-slider mb-15">
+              <span class="slider-title">일반</span>
+              <div class="slider">
+                <el-slider v-model="slider01" :max="10"></el-slider>
+                <span class="slider-value" v-html="slider01"></span>
               </div>
             </div>
-          </el-form-item>
-        </el-form>
-
-        <el-divider></el-divider>
-        <h2 class="title-section ft-color-secondary mb-16">select</h2>
-        <el-form class="l-form" label-position="top">
-          <el-form-item label="이메일" class="mb-20">
-            <div class="l-select">
-              <div class="select">
-                <el-select v-model="selectEmail" value-key="value" placeholder="select">
-                  <el-option v-for="item in selectOptionsEmail" :key="item.value" :label="item.label" :value="item"> </el-option>
-                </el-select>
+            <div class="l-slider">
+              <span class="slider-title">대량집하</span>
+              <div class="slider">
+                <el-slider v-model="slider02" :max="10"></el-slider>
+                <span class="slider-value" v-html="slider02"></span>
               </div>
             </div>
-          </el-form-item>
-          <el-form-item label="소속 조직 (집배점)" class="mb-20">
-            <div class="l-select">
-              <div class="select">
-                <el-select v-model="select01" value-key="value" placeholder="select">
-                  <el-option v-for="item in selectOptions1" :key="item.value" :label="item.label" :value="item"> </el-option>
-                </el-select>
-              </div>
-              <div class="select">
-                <el-select v-model="select02" value-key="value" placeholder="select">
-                  <el-option v-for="item in selectOptions2" :key="item.value" :label="item.label" :value="item"> </el-option>
-                </el-select>
-              </div>
-            </div>
-          </el-form-item>
-        </el-form>
-
-        <el-divider></el-divider>
-        <h2 class="title-section ft-color-secondary mb-16">checkbox</h2>
-        <el-form class="l-form">
-          <el-form-item label="checkboxLabel" class="checkbox mb-20">
-            <div class="l-checkbox">
-              <el-checkbox v-model="check01">위치정보 제공동의</el-checkbox>
-            </div>
-          </el-form-item>
-        </el-form>
-        <el-form class="l-form" label-position="top">
-          <el-form-item label="checkboxLabel" class="checkbox mb-20">
-            <div class="l-checkbox">
-              <el-checkbox v-model="check01">위치정보 제공동의</el-checkbox>
-            </div>
-          </el-form-item>
-        </el-form>
-
-        <el-divider></el-divider>
-        <h2 class="title-section ft-color-secondary mb-16">radio</h2>
-        <el-form :model="ruleForm" ref="ruleForm" class="l-form" label-position="top">
-          <el-form-item label="radioLabel" prop="radioType" class="mb-20">
-            <div class="l-radio">
-              <el-radio-group v-model="ruleForm.radioType">
-                <el-radio :label="1">1</el-radio>
-                <el-radio :label="2">2</el-radio>
-              </el-radio-group>
-            </div>
-          </el-form-item>
-        </el-form>
-
-        <el-divider></el-divider>
-        <h2 class="title-section ft-color-secondary mb-16">switch</h2>
-        <el-form :model="ruleForm" ref="ruleForm" class="l-form">
-          <el-form-item label="label" class="switch mb-20">
-            <div class="l-switch">
-              <el-switch v-model="switch01"></el-switch>
-            </div>
-          </el-form-item>
-        </el-form>
-
-        <el-divider></el-divider>
-        <div class="btn-group mb-20">
-          <button class="btn btn-size-full primary">full</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-size-full primary mb-20" disabled>disabled</button>
-        </div>
-        <div class="btn-group full mb-20">
-          <button class="btn btn-size-full btn-size-large white is-active">full large is-on</button>
-          <button class="btn btn-size-full btn-size-large white">full large</button>
-        </div>
-        <div class="btn-group mb-20">
-          <button class="btn btn-size-large secondary">large</button>
-          <button class="btn btn-size-regular white">regular</button>
-          <button class="btn btn-size-small white is-active">small</button>
-          <button class="btn btn-size-xsmall white is-active">xsmall버튼</button>
-        </div>
-        <div class="btn-group mb-20">
-          <button class="btn btn-size-xsmall point">xsmall yellow</button>
-        </div>
-        <div class="btn-group mb-20">
-          <button class="btn btn-txt">btn-txt</button>
-          <button class="btn btn-txt underline">btn-txt underline</button>
-        </div>
-
-        <el-divider></el-divider>
-        <h2 class="title-section ft-color-secondary mb-16">badge</h2>
-        <span class="badge yellow">집하</span>
-        <span class="badge red">오류</span>
-        <span class="badge purple">스캔</span>
-        <span class="badge grey">스캔</span>
-        <span class="badge blue">$ 선불</span>
-        <span class="badge orange">$ 착불</span>
-
-        <el-divider></el-divider>
+          </el-tab-pane>
+        </el-tabs>
       </div>
     </div>
 
@@ -192,13 +229,19 @@ export default {
   name: "Guide",
   data() {
     return {
+      activeName: "1",
       inputpw: "",
       input01: "",
       check01: false,
+      check02: false,
+      check03: false,
+      check04: false,
       switch01: false,
       selectEmail: "",
       select01: "",
       select02: "",
+      slider01: 5,
+      slider02: 7,
       ruleForm: {
         company: "",
         phone: "",
@@ -279,6 +322,8 @@ export default {
     this.select01 = this.selectOptions1[0];
     this.select02 = this.selectOptions2[0];
   },
-  methods: {},
+  methods: {
+    handleClick() {},
+  },
 };
 </script>

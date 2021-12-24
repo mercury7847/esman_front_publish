@@ -9,7 +9,7 @@
               <p><span class="txt-primary">김한진</span> 기사님! 8월 23일 (월)의<br />집배송 물량은 다음과 같습니다.</p>
               <div class="mt-10"><span class="badge green">배송</span><span class="ft-weight-bold">5</span> <span class="badge yellow ml-20">집하</span><span class="ft-weight-bold">12</span></div>
             </div>
-            <button class="btn"><i class="icon-regular icon-arrow-right"></i></button>
+            <button class="btn"><i class="icon-size-regular icon-arrow-right"></i></button>
           </div>
         </div>
         <div></div>
@@ -18,7 +18,7 @@
         <div class="card-inner">
           <div class="d-flex-be-center">
             <div><span>오늘의 새 소식 </span><span class="txt-primary">1</span><span>건이 있습니다.</span></div>
-            <button class="btn"><i class="icon-regular icon-arrow-right"></i></button>
+            <button class="btn"><i class="icon-size-regular icon-arrow-right"></i></button>
           </div>
         </div>
         <div></div>
