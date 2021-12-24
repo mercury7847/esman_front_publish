@@ -34,7 +34,7 @@
               <el-checkbox v-model="isAcceptLocation">위치정보 제공동의</el-checkbox>
             </div>
             <div class="login-service-detailview">
-              <button class="btn btn-more ft-size-regular ft-color-gray"><span>상세보기</span><i class="icon-more"></i></button>
+              <button class="btn btn-more ft-size-regular ft-color-grey"><span>상세보기</span><i class="icon-more"></i></button>
             </div>
           </div>
         </el-form-item>

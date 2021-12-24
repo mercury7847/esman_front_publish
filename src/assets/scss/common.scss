@@ -85,8 +85,8 @@ button {
     &-purple {
       color: #7500ac !important;
     }
-    &-gray {
-      color: $--color--gray !important;
+    &-grey {
+      color: $--color--grey !important;
     }
   }
   &-weight {
@@ -132,7 +132,7 @@ button {
     letter-spacing: -0.0563rem;
     font-weight: 700;
     &-sub {
-      color: $--color--gray;
+      color: $--color--grey;
       font-size: $--font-size-small;
       letter-spacing: -0.0375rem;
       font-weight: 700;
@@ -163,7 +163,7 @@ button {
     color: $--color--primary !important;
   }
   &-sub {
-    color: $--color--gray !important;
+    color: $--color--grey !important;
   }
   &-weight-normal {
     font-weight: normal !important;

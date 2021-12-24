@@ -70,7 +70,7 @@
     }
     &-dialog {
       .card {
-        &.pale-gray {
+        &.pale-grey {
           margin: 0;
           background-color: $--color--light-blue;
           box-shadow: none;
@@ -99,7 +99,7 @@
         transform: translateX(-50%);
         width: 50px;
         height: 6px;
-        background-color: $--color--gray;
+        background-color: $--color--grey;
         border-radius: 12px;
       }
       &__body {
@@ -247,7 +247,7 @@
                 font-weight: 700;
               }
               &-desc {
-                color: $--color--gray;
+                color: $--color--grey;
               }
               &.is-on {
                 background-color: $--color--sub-blue;
@@ -377,7 +377,7 @@
           }
           &.disabled {
             th {
-              background-color: $--color--gray;
+              background-color: $--color--grey;
             }
             td {
               background-color: $--color--light-blue;

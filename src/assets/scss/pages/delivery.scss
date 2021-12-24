@@ -200,7 +200,7 @@
         border-radius: 5px;
         &:first-child {
           margin-right: 8px;
-          background-color: $--color--gray;
+          background-color: $--color--grey;
         }
         &:last-child {
           background-color: $--color--primary;
@@ -276,7 +276,7 @@
       overflow-y: auto;
       li {
         padding: 8px;
-        color: $--color--gray;
+        color: $--color--grey;
         text-align: center;
         &:not(:last-child) {
           border-bottom: 1px solid $--color--border;

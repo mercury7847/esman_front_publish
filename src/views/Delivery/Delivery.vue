@@ -44,8 +44,8 @@
                         </div>
                         <div class="l-delivery-address">
                           <div class="delivery-address-badge">
-                            <!-- 스캔 처리 안된 경우: gray, 스캔 완료 된 경우 purple -->
-                            <span class="badge gray">스캔</span>
+                            <!-- 스캔 처리 안된 경우: grey, 스캔 완료 된 경우 purple -->
+                            <span class="badge grey">스캔</span>
                             <!-- <span class="badge purple">스캔</span> -->
                             <span class="badge green">배송</span>
                             <span class="txt-sub ft-size-xsmall">{{ item.number }}</span>
@@ -120,8 +120,8 @@
                         </div>
                         <div class="l-delivery-address">
                           <div class="delivery-address-badge">
-                            <!-- 스캔 처리 안된 경우: gray, 스캔 완료 된 경우 purple -->
-                            <span class="badge gray">스캔</span>
+                            <!-- 스캔 처리 안된 경우: grey, 스캔 완료 된 경우 purple -->
+                            <span class="badge grey">스캔</span>
                             <!-- <span class="badge purple">스캔</span> -->
                             <span class="badge yellow">집하</span>
                             <span class="txt-sub ft-size-xsmall">{{ item.number }}</span>
@@ -454,15 +454,15 @@
                     <el-option v-for="item in selectOptions" :key="item.value" :label="item.label" :value="item.value"> </el-option>
                   </el-select>
                 </div>
-                <button class="btn pale-gray is-on"><i class="icon-arrow-up"></i></button>
-                <button class="btn pale-gray is-on"><i class="icon-chevrons-up"></i></button>
+                <button class="btn pale-grey is-on"><i class="icon-arrow-up"></i></button>
+                <button class="btn pale-grey is-on"><i class="icon-chevrons-up"></i></button>
                 <div class="select">
                   <el-select v-model="value" placeholder="1">
                     <el-option v-for="item in selectOptions" :key="item.value" :label="item.label" :value="item.value"> </el-option>
                   </el-select>
                 </div>
-                <button class="btn pale-gray"><i class="icon-arrow-down"></i></button>
-                <button class="btn pale-gray"><i class="icon-chevrons-down"></i></button>
+                <button class="btn pale-grey"><i class="icon-arrow-down"></i></button>
+                <button class="btn pale-grey"><i class="icon-chevrons-down"></i></button>
               </div>
             </div>
             <div class="btn-group btn-size-full">

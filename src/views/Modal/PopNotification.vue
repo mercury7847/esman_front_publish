@@ -2,7 +2,7 @@
   <!-- 실시간 알림(일일 집배송 정보) -->
   <div class="">
     <el-dialog title="Today’s Report" :visible.sync="popNotification" :append-to-body="true" class="l-dialog small l-notification-dialog" width="300px" center>
-      <div class="card pale-gray">
+      <div class="card pale-grey">
         <div class="card-inner">
           <div class="d-flex-be-center">
             <div>
@@ -14,7 +14,7 @@
         </div>
         <div></div>
       </div>
-      <div class="card pale-gray mt-10">
+      <div class="card pale-grey mt-10">
         <div class="card-inner">
           <div class="d-flex-be-center">
             <div><span>오늘의 새 소식 </span><span class="txt-primary">1</span><span>건이 있습니다.</span></div>

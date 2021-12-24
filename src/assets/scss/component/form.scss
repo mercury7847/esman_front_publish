@@ -204,7 +204,7 @@
       }
       &.disabled {
         .inp-inner {
-          background-color: $--color--gray;
+          background-color: $--color--grey;
           .el-input__inner {
             background-color: transparent;
             &:disabled {
@@ -225,8 +225,8 @@
         width: 18px;
         height: 18px;
         border-radius: 50%;
-        // background-color: $--color--gray;
-        // border-color: $--color--gray !important;
+        // background-color: $--color--grey;
+        // border-color: $--color--grey !important;
         background-color: $--color--inactive;
         border-color: $--color--inactive !important;
         &::after {
@@ -239,7 +239,7 @@
       }
       &__label {
         padding-left: 8px;
-        color: $--color--gray;
+        color: $--color--grey;
         font-size: $--font-size-regular;
         letter-spacing: -0.0437rem;
         font-weight: 700;
@@ -435,13 +435,13 @@
 //         width: 18px;
 //         height: 18px;
 //         border-radius: 9px;
-//         background-color: $--color--gray;
+//         background-color: $--color--grey;
 //         vertical-align: middle;
 //         margin-right: 8px;
 //       }
 //       span {
 //         display: inline-block;
-//         color: $--color--gray;
+//         color: $--color--grey;
 //         font-size: $--font-size-regular;
 //         font-weight: 500;
 //       }
