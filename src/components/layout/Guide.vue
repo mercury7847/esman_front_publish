@@ -196,7 +196,7 @@
             <el-divider></el-divider>
           </el-tab-pane>
           <el-tab-pane label="slider" name="6">
-            <p class="mb-15">스캔 속도</p>
+            <p class="title-section-regular mb-15">스캔 속도</p>
             <div class="l-slider mb-15">
               <span class="slider-title">일반</span>
               <div class="slider">
@@ -210,6 +210,55 @@
                 <el-slider v-model="slider02" :max="10"></el-slider>
                 <span class="slider-value" v-html="slider02"></span>
               </div>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="table" name="7">
+            <div class="l-table row2">
+              <table>
+                <colgroup>
+                  <col span="2" />
+                  <col width="76px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>이름</th>
+                    <th>상태</th>
+                    <th rowspan="2"></th>
+                  </tr>
+                  <tr>
+                    <th>전화번호</th>
+                    <th>신청일시</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <template  v-for="item in tableData">
+                  <tr :key="item.index">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.status }}</td>
+                    <td rowspan="2">
+                      <div class="btn-group">
+                        <button class="btn btn-size-xsmall white is-active">요청</button>
+                        <button class="btn btn-size-xsmall white mt-20">삭제</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr :key="item.index">
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.date }}</td>
+                  </tr>
+                  </template>
+                </tbody>
+              </table>
+            </div>
+            <div class="l-table mt-30 mb-30">
+              <el-table :data="tableData2" style="width: 100%">
+                <el-table-column prop="name" label="이름" align="center">
+                  <el-table-column prop="date" label="전화번호" min-width="132" align="center"></el-table-column>
+                </el-table-column>
+                <el-table-column prop="state" label="상태" align="center"> </el-table-column>
+                <el-table-column prop="city" label="신청일시" min-width="132" align="center"></el-table-column>
+                <el-table-column prop="zip" label="Date" min-width="76" align="center"></el-table-column>
+              </el-table>
             </div>
           </el-tab-pane>
         </el-tabs>
@@ -312,6 +361,78 @@ export default {
         {
           value: "1",
           label: "잠실 2(집)",
+        },
+      ],
+      tableData: [
+        {
+          name: "김한진",
+          status: "가입대기",
+          phone: "01012345678",
+          date: "12-03 13:45:21",
+        },
+        {
+          name: "김한진",
+          status: "가입대기",
+          phone: "01012345678",
+          date: "12-03 13:45:21",
+        },
+      ],
+      tableData2: [
+        {
+          date: "2016-05-03",
+          name: "Tom",
+          state: "California",
+          city: "Los Angeles",
+          address: "No. 189, Grove St, Los Angeles",
+          zip: "CA 90036",
+        },
+        {
+          date: "2016-05-02",
+          name: "Tom",
+          state: "California",
+          city: "Los Angeles",
+          address: "No. 189, Grove St, Los Angeles",
+          zip: "CA 90036",
+        },
+        {
+          date: "2016-05-04",
+          name: "Tom",
+          state: "California",
+          city: "Los Angeles",
+          address: "No. 189, Grove St, Los Angeles",
+          zip: "CA 90036",
+        },
+        {
+          date: "2016-05-01",
+          name: "Tom",
+          state: "California",
+          city: "Los Angeles",
+          address: "No. 189, Grove St, Los Angeles",
+          zip: "CA 90036",
+        },
+        {
+          date: "2016-05-08",
+          name: "Tom",
+          state: "California",
+          city: "Los Angeles",
+          address: "No. 189, Grove St, Los Angeles",
+          zip: "CA 90036",
+        },
+        {
+          date: "2016-05-06",
+          name: "Tom",
+          state: "California",
+          city: "Los Angeles",
+          address: "No. 189, Grove St, Los Angeles",
+          zip: "CA 90036",
+        },
+        {
+          date: "2016-05-07",
+          name: "Tom",
+          state: "California",
+          city: "Los Angeles",
+          address: "No. 189, Grove St, Los Angeles",
+          zip: "CA 90036",
         },
       ],
     };

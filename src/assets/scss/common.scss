@@ -137,6 +137,11 @@ button {
       letter-spacing: -0.0375rem;
       font-weight: 700;
     }
+    &-regular {
+      font-size: $--font-size-regular;
+      letter-spacing: -0.0437rem;
+      font-weight: 700;
+    }
   }
 }
 .txt {
