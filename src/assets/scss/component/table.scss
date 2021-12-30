@@ -1,0 +1,111 @@
+.l-table {
+  border-top: 1px solid #000;
+  table {
+    width: 100%;
+    text-align: center;
+    font-size: $--font-size-small;
+    thead {
+      th {
+        height: 38px;
+        padding: 10px 0;
+        border-bottom: 1px solid $--color--border;
+        background-color: $--color--light-blue;
+        color: $--color--grey;
+        font-weight: 700;
+        vertical-align: middle;
+      }
+    }
+    tbody {
+      td {
+        position: relative;
+        height: 46px;
+        padding: 14px;
+        border-bottom: 1px solid $--color--border;
+        color: $--color--txt;
+        vertical-align: middle;
+      }
+    }
+  }
+  &.row2 {
+    border-top: 1px solid #000;
+    table {
+      thead {
+        th {
+          &:nth-child(2) {
+            border-right: 1px solid $--color--border;
+          }
+        }
+      }
+      tbody {
+        td {
+          &:nth-child(2) {
+            border-right: 1px solid $--color--border;
+          }
+          .btn-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            .btn {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-time {
+    padding: 0 16px;
+    table {
+      border-top: 1px solid #000;
+      tr {
+        th,
+        td {
+          padding: 15px 16px;
+          font-size: $--font-size-regular;
+          vertical-align: middle;
+          span {
+            line-height: 21px;
+          }
+        }
+        th {
+          border-bottom: 1px solid $--color--white;
+          background-color: $--color--sub-blue;
+          color: $--color--white;
+          font-weight: 700;
+          span {
+            &:not(:first-child) {
+              display: inline-block;
+              margin-top: 10px;
+            }
+          }
+        }
+        td {
+          border-bottom: 1px solid $--color--border;
+          &:not(:last-child) {
+            border-right: 1px solid $--color--border;
+          }
+          .btn-drag.medium {
+            margin-left: 15px;
+          }
+        }
+        &.is-on {
+          td {
+            background-color: $--color--hover;
+          }
+        }
+        &.is-drag {
+          border: 2px solid $--color--primary;
+        }
+        &.disabled {
+          th {
+            background-color: $--color--grey;
+          }
+          td {
+            background-color: $--color--light-blue;
+          }
+        }
+      }
+    }
+  }
+}
