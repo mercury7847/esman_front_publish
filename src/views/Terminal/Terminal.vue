@@ -25,7 +25,7 @@
         <ul>
           <li v-for="item in recentSearchList" :key="item">
             <div class="address-txt">
-              <p class="address-title txt-weight-normal">{{ item.title }}</p>
+              <p class="address-title ft-weight-regular">{{ item.title }}</p>
             </div>
             <div class="address-btn">
               <button class="btn-delete"></button>

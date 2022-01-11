@@ -53,15 +53,10 @@ button {
       font-size: $--font-size-regular !important;
       letter-spacing: -0.0437rem;
     }
-    // &-normal {
-    //   font-size: $--font-size-default !important;
-    // }
-    // &-large {
-    //   font-size: $--font-size-large !important;
-    // }
-    // &-xxlarge {
-    //   font-size: $--font-size-xxxlarge !important;
-    // }
+    &-large {
+      font-size: $--font-size-large !important;
+      letter-spacing: -0.0563rem;
+    }
   }
   &-color {
     &-white {
@@ -70,7 +65,7 @@ button {
     &-primary {
       color: $--color--main !important;
     }
-    &-secondary {
+    &-sub {
       color: $--color--sub !important;
     }
     &-green {
@@ -122,6 +117,9 @@ button {
   }
 }
 .title {
+  font-size: $--font-size-regular;
+  letter-spacing: -0.0437rem;
+  font-weight: 700;
   &-page {
     font-size: $--font-size-large;
     letter-spacing: -0.0563rem;
@@ -131,17 +129,13 @@ button {
     font-size: $--font-size-large;
     letter-spacing: -0.0563rem;
     font-weight: 700;
-    &-sub {
-      color: $--color--grey;
-      font-size: $--font-size-small;
-      letter-spacing: -0.0375rem;
-      font-weight: 700;
-    }
-    &-regular {
-      font-size: $--font-size-regular;
-      letter-spacing: -0.0437rem;
-      font-weight: 700;
-    }
+  }
+  &-sub {
+    font-size: $--font-size-small;
+    letter-spacing: -0.0375rem;
+    font-weight: 700;
+    color: $--color--grey;
+    font-weight: 700;
   }
 }
 .txt {
@@ -170,25 +164,20 @@ button {
   &-sub {
     color: $--color--grey !important;
   }
-  &-weight-normal {
-    font-weight: normal !important;
-  }
-}
-
-// text-link
-.text-link {
-  color: $--color--sub;
-  font-size: $--font-size-regular;
-  text-decoration: none;
-  &.underline {
-    text-decoration: underline;
-  }
-  &.detail {
-    color: $--color--placeholder;
-    display: flex;
-    align-items: center;
-    justify-items: space-between;
-    font-weight: 200;
+  &-link {
+    color: $--color--sub;
+    font-size: $--font-size-regular;
+    text-decoration: none;
+    &.underline {
+      text-decoration: underline;
+    }
+    &.detail {
+      color: $--color--placeholder;
+      display: flex;
+      align-items: center;
+      justify-items: space-between;
+      font-weight: 200;
+    }
   }
 }
 
@@ -240,6 +229,9 @@ button {
   &-15 {
     margin-top: 15px !important;
   }
+  &-20 {
+    margin-top: 20px !important;
+  }
   &-30 {
     margin-top: 30px !important;
   }
@@ -250,6 +242,9 @@ button {
   }
   &-5 {
     margin-bottom: 5 !important;
+  }
+  &-10 {
+    margin-bottom: 10px !important;
   }
   &-15 {
     margin-bottom: 15px !important;
@@ -296,5 +291,8 @@ button {
   }
   &-15 {
     margin-right: 15px !important;
+  }
+  &-20 {
+    margin-right: 20px !important;
   }
 }

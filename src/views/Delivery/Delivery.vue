@@ -301,8 +301,8 @@
                 </div>
                 <div class="delivery-txt">
                   <p class="delivery-title">
-                    <span class="badge orange ft-weight-normal"><span>$ 착불</span></span>
-                    <span class="badge green ft-weight-normal">배송</span>
+                    <span class="badge orange ft-weight-regular"><span>$ 착불</span></span>
+                    <span class="badge green ft-weight-regular">배송</span>
                     <span class="txt-sub ft-size-xsmall ft-weight-regular">610587461481</span>
                   </p>
                   <p class="delivery-desc">
@@ -389,8 +389,8 @@
                     </div>
                     <div class="delivery-txt">
                       <p class="delivery-title">
-                        <span class="badge blue ft-weight-normal">$ 선불</span>
-                        <span class="badge green ft-weight-normal">배송</span>
+                        <span class="badge blue ft-weight-regular">$ 선불</span>
+                        <span class="badge green ft-weight-regular">배송</span>
                         <span class="txt-sub ft-size-xsmall">610587461481</span>
                       </p>
                       <p class="delivery-desc">
@@ -409,8 +409,8 @@
                     </div>
                     <div class="delivery-txt">
                       <p class="delivery-title">
-                        <span class="badge orange ft-weight-normal">$ 착불</span>
-                        <span class="badge green ft-weight-normal">배송</span>
+                        <span class="badge orange ft-weight-regular">$ 착불</span>
+                        <span class="badge green ft-weight-regular">배송</span>
                         <span class="txt-sub ft-size-xsmall">610587461481</span>
                       </p>
                       <p class="delivery-desc">
@@ -429,8 +429,8 @@
                     </div>
                     <div class="delivery-txt">
                       <p class="delivery-title">
-                        <span class="badge orange ft-weight-normal">$ 착불</span>
-                        <span class="badge yellow ft-weight-normal">집하</span>
+                        <span class="badge orange ft-weight-regular">$ 착불</span>
+                        <span class="badge yellow ft-weight-regular">집하</span>
                         <span class="txt-sub ft-size-xsmall">610587461481</span>
                       </p>
                       <p class="delivery-desc">

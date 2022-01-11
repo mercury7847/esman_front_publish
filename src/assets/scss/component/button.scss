@@ -9,6 +9,11 @@
   line-height: 1rem;
   text-align: center;
   &-group {
+    .btn {
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
     &.bottom {
       position: fixed;
       left: 0;
@@ -17,12 +22,7 @@
       padding: 0 16px;
       box-sizing: border-box;
     }
-    .btn {
-      &:not(:first-child) {
-        margin-left: 10px;
-      }
-    }
-    &-type-02 {
+    &.type-02 {
       display: inline-block;
       // min-width: 120px;
       // margin-right: 10px;
@@ -30,10 +30,13 @@
       border-radius: 5px;
       .btn {
         &.white {
+          width: 56px;
+          padding: 12px 15px;
           border: none;
         }
         &:not(:first-child) {
           border-left: 1px solid $--color--border;
+          margin-left: 0;
         }
         &-size-large {
           font-size: $--font-size-regular;

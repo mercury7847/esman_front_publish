@@ -5,7 +5,6 @@
       <div class="l-tab">
         <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="input" name="1">
-            <h2 class="title-section ft-color-primary mb-30">인원 정보 #1</h2>
             <el-form class="l-form" label-position="top">
               <el-form-item label="label" class="mb-20">
                 <div class="l-inp">
@@ -16,8 +15,6 @@
                   </div>
                 </div>
               </el-form-item>
-            </el-form>
-            <el-form class="l-form" label-position="top">
               <el-form-item label="휴대전화 번호" class="mb-20">
                 <div class="l-inp">
                   <div class="inp">
@@ -28,8 +25,6 @@
                   <button class="btn btn-size-large primary">인증번호</button>
                 </div>
               </el-form-item>
-            </el-form>
-            <el-form class="l-form" label-position="top">
               <el-form-item label="인증 번호" class="mb-20">
                 <div class="l-inp">
                   <div class="inp">
@@ -42,8 +37,28 @@
                   <button class="btn btn-size-large primary">확인</button>
                 </div>
               </el-form-item>
+              <el-form-item label="disabled" class="mb-20">
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="text" placeholder="텍스트를 입력하세요." class="inp-text-line" disabled value="이정민"></el-input>
+                    </div>
+                  </div>
+                </div>
+              </el-form-item>
+              <el-form-item label="camera" class="mb-20">
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="number" placeholder="" v-model="input01" class="input-with-select">
+                        <button slot="append" class="btn btn-camera"></button>
+                      </el-input>
+                    </div>
+                  </div>
+                </div>
+              </el-form-item>
             </el-form>
-            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form login-form" label-position="top">
+            <el-form class="l-form login-form" label-position="top">
               <el-form-item label="비밀번호(clearable)" class="mb-20">
                 <div class="l-inp">
                   <div class="inp">
@@ -53,50 +68,21 @@
                   </div>
                 </div>
               </el-form-item>
-              <el-form-item label="disabled" class="mb-20">
-                <div class="l-inp">
-                  <div class="inp disabled">
-                    <div class="inp-inner">
-                      <el-input type="text" placeholder="텍스트를 입력하세요." class="inp-text-line" disabled value="disabled"></el-input>
-                    </div>
-                  </div>
-                </div>
-              </el-form-item>
             </el-form>
-            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form">
+            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form" label-position="top">
               <el-form-item label="label(validation)" prop="sender" class="mb-20">
                 <div class="l-inp">
                   <div class="inp">
                     <div class="inp-inner">
-                      <el-input type="text" placeholder="" class="inp-text-line" v-model="ruleForm.sender"></el-input>
+                      <el-input type="text" placeholder="보내는 분을 입력해주세요." class="inp-text-line" v-model="ruleForm.sender"></el-input>
                     </div>
                   </div>
                 </div>
               </el-form-item>
             </el-form>
-            <el-form class="l-form">
-              <el-form-item>
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="text" placeholder="camera" suffix-icon="el-icon-camera" v-model="input01"> </el-input>
-                    </div>
-                  </div>
-                </div>
-              </el-form-item>
-              <el-form-item>
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="text" placeholder="Please input" v-model="input01" class="input-with-select">
-                        <el-button slot="append" icon="el-icon-camera"></el-button>
-                      </el-input>
-                    </div>
-                  </div>
-                </div>
-              </el-form-item>
-            </el-form>
+            <el-form class="l-form"> </el-form>
           </el-tab-pane>
+
           <el-tab-pane label="select" name="2">
             <el-form class="l-form" label-position="top">
               <el-form-item label="이메일" class="mb-20">
@@ -124,8 +110,9 @@
               </el-form-item>
             </el-form>
           </el-tab-pane>
+
           <el-tab-pane label="checkbox/radio/switch" name="3">
-            <h2 class="title-section-sub mb-15">checkbox</h2>
+            <h2 class="title-sub mb-15">checkbox</h2>
             <el-form class="l-form">
               <el-form-item label="checkboxLabel" class="checkbox mb-20">
                 <div class="l-checkbox">
@@ -155,20 +142,38 @@
                 </div>
               </el-form-item>
             </el-form>
-
             <el-divider></el-divider>
-            <h2 class="title-section-sub mb-15">radio</h2>
+            <h2 class="title-sub mb-15">radio</h2>
             <el-form :model="ruleForm" ref="ruleForm" class="l-form" label-position="top">
               <el-form-item label="radioLabel" prop="radioType" class="mb-20">
                 <div class="l-radio">
-                  <el-radio-group v-model="ruleForm.radioType">
-                    <el-radio :label="1">1</el-radio>
-                    <el-radio :label="2">2</el-radio>
+                  <el-radio-group v-model="ruleForm.radioType1">
+                    <el-radio :label="1">배송</el-radio>
+                    <el-radio :label="2">집하</el-radio>
                   </el-radio-group>
                 </div>
               </el-form-item>
             </el-form>
-            <h2 class="title-section-sub mb-15">switch</h2>
+            <el-form :model="ruleForm" ref="ruleForm" class="l-form" label-position="top">
+              <el-form-item label="radio with border" prop="radioType" class="mb-20">
+                <div class="l-radio">
+                  <el-radio-group v-model="ruleForm.radioType2" class="border">
+                    <el-radio :label="1" border>배송</el-radio>
+                    <el-radio :label="2" border>집하</el-radio>
+                  </el-radio-group>
+                </div>
+              </el-form-item>
+              <el-form-item label="radio with border" prop="radioType" class="mb-20">
+                <div class="l-radio">
+                  <el-radio-group v-model="ruleForm.radioType3" class="border">
+                    <el-radio :label="1" border>전체</el-radio>
+                    <el-radio :label="2" border>배송</el-radio>
+                    <el-radio :label="3" border>집하</el-radio>
+                  </el-radio-group>
+                </div>
+              </el-form-item>
+            </el-form>
+            <h2 class="title-sub mb-15">switch</h2>
             <el-form :model="ruleForm" ref="ruleForm" class="l-form">
               <el-form-item label="label" class="switch mb-20">
                 <div class="l-switch">
@@ -177,32 +182,38 @@
               </el-form-item>
             </el-form>
           </el-tab-pane>
+
           <el-tab-pane label="button" name="4">
             <div class="btn-group mb-20">
-              <button class="btn btn-size-full primary">full 50 / primary</button>
+              <button class="btn btn-size-full primary">btn-size-full 50 / primary</button>
             </div>
             <div class="btn-group mb-20">
-              <button class="btn btn-size-large secondary">large 45 / secondary</button>
-              <button class="btn btn-size-regular white">regular 37 / white</button>
+              <button class="btn btn-size-full primary" disabled>full / disabled</button>
             </div>
             <div class="btn-group mb-20">
-              <button class="btn btn-size-small white is-active">small 30 / white is-active</button>
-              <button class="btn btn-size-xsmall white is-active">xsmall 26</button>
-              <button class="btn btn-size-xsmall white">xsmall 26</button>
+              <button class="btn btn-size-large secondary">btn-size-large 45 / secondary</button>
             </div>
-            <div class="btn-group">
-              <button class="btn btn-size-full primary mb-20" disabled>full / disabled</button>
+            <div class="btn-group mb-20">
+              <button class="btn btn-size-regular white">btn-size-regular 37 / white</button>
             </div>
-            <div class="btn-group-type-02 mb-20" style="width: auto">
+            <div class="btn-group mb-20">
+              <button class="btn btn-size-small white is-active">btn-size-small 30 / white is-active</button>
+              <button class="btn btn-size-small white primary">btn-size-small 30 / white primary</button>
+            </div>
+            <div class="btn-group mb-20">
+              <button class="btn btn-size-xsmall primary">btn-size-xsmall 26</button>
+              <button class="btn btn-size-xsmall white">btn-size-xsmall white</button>
+              <button class="btn btn-size-xsmall point">btn-size-xsmall point</button>
+            </div>
+            <div class="btn-group type-02 mb-20" style="width: auto">
               <button class="btn btn-size-large white primary">수동</button>
               <button class="btn btn-size-large white">자동</button>
             </div>
             <div class="btn-group mb-20">
-              <button class="btn btn-size-xsmall point">xsmall yellow</button>
               <button class="btn btn-txt">btn-txt</button>
               <button class="btn btn-txt underline">btn-txt underline</button>
             </div>
-            <p class="title-section-sub mb-15">더보기 버튼</p>
+            <p class="title-sub mb-15">더보기 버튼</p>
             <div class="btn-group mb-20">
               <button class="btn btn-more"></button>
               <button class="btn btn-more small"><span>상세보기</span></button>
@@ -218,7 +229,7 @@
             <el-divider></el-divider>
           </el-tab-pane>
           <el-tab-pane label="slider" name="6">
-            <p class="title-section-regular mb-15">스캔 속도</p>
+            <p class="title mb-15">스캔 속도</p>
             <div class="l-slider mb-15">
               <span class="slider-title">일반</span>
               <div class="slider">
@@ -293,6 +304,30 @@
               <el-button @click="next">Next step</el-button>
             </div>
           </el-tab-pane>
+          <el-tab-pane label="font" name="9">
+            <p class="ft-size-large mb-20">ft-size-large : 18px</p>
+            <p class="ft-size-regular mb-20">ft-size-regular : 14px</p>
+            <p class="ft-size-small mb-20">ft-size-small : 12px</p>
+            <el-divider></el-divider>
+            <p class="ft-color-primary mb-20">ft-color-primary</p>
+            <p class="ft-color-sub mb-20">ft-color-sub</p>
+            <p class="ft-color-grey mb-20">ft-color-grey</p>
+            <el-divider></el-divider>
+            <p class="ft-align-center mb-20">ft-align-center</p>
+            <p class="ft-align-left mb-20">ft-align-left</p>
+            <p class="ft-align-right mb-20">ft-align-right</p>
+            <el-divider></el-divider>
+            <p class="ft-weight-bold mb-20">ft-weight-bold : 700</p>
+            <p class="ft-weight-medium mb-20">ft-weight-medium : 500</p>
+            <p class="ft-weight-regular mb-20">ft-weight-regular : 400</p>
+            <p class="ft-weight-light mb-20">ft-weight-light : 300</p>
+            <el-divider></el-divider>
+            <p class="title-page mb-20">title-page</p>
+            <h2 class="title-section mb-20">title-section : 18px</h2>
+            <h2 class="title-section ft-color-primary mb-20">인원 정보 #1</h2>
+            <h2 class="title mb-20">title : 14px</h2>
+            <h2 class="title-sub mb-20">title-sub : 12px</h2>
+          </el-tab-pane>
         </el-tabs>
       </div>
     </div>
@@ -339,7 +374,9 @@ export default {
         itemPrice: "",
         productType: "일반 택배",
         paymentTerms: "신용",
-        radioType: "",
+        radioType1: "",
+        radioType2: "",
+        radioType3: "",
         waybillQuantity: "1",
         releaseNumber: "",
         datePicker: "",

@@ -4,7 +4,7 @@
       <div class="login-header">
         <div class="login-header-inner">
           <h1><img src="@/assets/images/login_title.svg" alt="login" /></h1>
-          <p class="ft-color-secondary ft-weight-bold">한진택배 사번을 입력하세요</p>
+          <p class="ft-color-sub ft-weight-bold">한진택배 사번을 입력하세요</p>
         </div>
       </div>
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form login-form" label-position="top">
@@ -46,10 +46,10 @@
         <button class="btn btn-size-full white is-active mt-15" @click="$router.push('/join')">회원가입</button>
       </div>
       <div class="login-service">
-        <button class="btn btn-txt underline ft-color-secondary" @click="logAlertActive = true">로그 전송</button>
+        <button class="btn btn-txt underline ft-color-sub" @click="logAlertActive = true">로그 전송</button>
         <div>
-          <button class="btn btn-txt underline ft-color-secondary" @click="passwordActive = true">사번 찾기</button>
-          <button class="btn btn-txt underline ft-color-secondary ml-15" @click="passwordReissuance = true">비밀번호 재발급</button>
+          <button class="btn btn-txt underline ft-color-sub" @click="passwordActive = true">사번 찾기</button>
+          <button class="btn btn-txt underline ft-color-sub ml-15" @click="passwordReissuance = true">비밀번호 재발급</button>
         </div>
       </div>
       <div class="welcom-message ft-size-small">
