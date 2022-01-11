@@ -31,7 +31,7 @@
     }
     &__body {
       padding: 0 16px 30px !important;
-      color: $--color--txt !important;
+      color: $--color--contents !important;
       // .l-inp.l-search {
       //   margin: 0;
       // }
@@ -55,7 +55,7 @@
         }
         &--primary {
           background-color: $--color--white;
-          color: $--color--primary;
+          color: $--color--main;
         }
       }
     }

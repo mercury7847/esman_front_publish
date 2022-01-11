@@ -30,9 +30,9 @@
             padding: 14px 0 16px;
             border-bottom: 1px solid $--color--border;
             cursor: pointer;
-            color: $--color--txt;
+            color: $--color--contents;
             &:hover {
-              text-decoration: underline $--color--txt;
+              text-decoration: underline $--color--contents;
             }
           }
         }
@@ -165,13 +165,13 @@
                 padding: 0 16px 0 30px;
                 margin-bottom: 10px;
                 line-height: 21px;
-                color: $--color--txt;
+                color: $--color--contents;
                 &:last-child {
                   margin-bottom: 20px;
                 }
                 &.is-active,
                 &:hover {
-                  color: $--color--primary;
+                  color: $--color--main;
                   background-color: $--color--white;
                 }
                 .badge-circle-blue {
@@ -237,7 +237,7 @@
       .el-menu-item {
         &.is-active,
         &:hover {
-          color: $--color--txt !important;
+          color: $--color--contents !important;
           cursor: default;
         }
       }

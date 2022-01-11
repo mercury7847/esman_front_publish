@@ -52,7 +52,7 @@
           width: 18px;
           height: 18px;
           margin-left: 8px;
-          background-color: $--color--primary;
+          background-color: $--color--main;
           border-radius: 50%;
           color: $--color--white;
           font-size: $--font-size-xsmall;
@@ -142,7 +142,7 @@
           }
           .desc {
             max-width: calc(100% - 77px);
-            color: $--color--txt;
+            color: $--color--contents;
             text-align: right;
             line-height: 21px;
           }
@@ -179,7 +179,7 @@
       }
       .title {
         font-size: $--font-size-small;
-        color: $--color--txt;
+        color: $--color--contents;
       }
     }
     .badge-circle {
@@ -203,7 +203,7 @@
           background-color: $--color--grey;
         }
         &:last-child {
-          background-color: $--color--primary;
+          background-color: $--color--main;
         }
         &-wrap {
           display: flex;
@@ -452,7 +452,7 @@
       background-color: $--color--white;
       &.is-drag {
         li {
-          border: 2px solid $--color--primary;
+          border: 2px solid $--color--main;
         }
       }
       li {

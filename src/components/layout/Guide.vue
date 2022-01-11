@@ -74,6 +74,28 @@
                 </div>
               </el-form-item>
             </el-form>
+            <el-form class="l-form">
+              <el-form-item>
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="text" placeholder="camera" suffix-icon="el-icon-camera" v-model="input01"> </el-input>
+                    </div>
+                  </div>
+                </div>
+              </el-form-item>
+              <el-form-item>
+                <div class="l-inp">
+                  <div class="inp">
+                    <div class="inp-inner">
+                      <el-input type="text" placeholder="Please input" v-model="input01" class="input-with-select">
+                        <el-button slot="append" icon="el-icon-camera"></el-button>
+                      </el-input>
+                    </div>
+                  </div>
+                </div>
+              </el-form-item>
+            </el-form>
           </el-tab-pane>
           <el-tab-pane label="select" name="2">
             <el-form class="l-form" label-position="top">
@@ -231,21 +253,21 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <template  v-for="item in tableData">
-                  <tr :key="item.index">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.status }}</td>
-                    <td rowspan="2">
-                      <div class="btn-group">
-                        <button class="btn btn-size-xsmall white is-active">요청</button>
-                        <button class="btn btn-size-xsmall white mt-20">삭제</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr :key="item.index">
-                    <td>{{ item.phone }}</td>
-                    <td>{{ item.date }}</td>
-                  </tr>
+                  <template v-for="item in tableData">
+                    <tr :key="item.index">
+                      <td>{{ item.name }}</td>
+                      <td>{{ item.status }}</td>
+                      <td rowspan="2">
+                        <div class="btn-group">
+                          <button class="btn btn-size-xsmall white is-active">요청</button>
+                          <button class="btn btn-size-xsmall white mt-20">삭제</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr :key="item.index">
+                      <td>{{ item.phone }}</td>
+                      <td>{{ item.date }}</td>
+                    </tr>
                   </template>
                 </tbody>
               </table>
@@ -259,6 +281,16 @@
                 <el-table-column prop="city" label="신청일시" min-width="132" align="center"></el-table-column>
                 <el-table-column prop="zip" label="Date" min-width="76" align="center"></el-table-column>
               </el-table>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="step" name="8">
+            <div class="l-step">
+              <el-steps :active="activeStep">
+                <el-step></el-step>
+                <el-step></el-step>
+                <el-step></el-step>
+              </el-steps>
+              <el-button @click="next">Next step</el-button>
             </div>
           </el-tab-pane>
         </el-tabs>
@@ -291,6 +323,7 @@ export default {
       select02: "",
       slider01: 5,
       slider02: 7,
+      activeStep: 1,
       ruleForm: {
         company: "",
         phone: "",
@@ -445,6 +478,9 @@ export default {
   },
   methods: {
     handleClick() {},
+    next() {
+      if (this.activeStep++ > 2) this.activeStep = 0;
+    },
   },
 };
 </script>

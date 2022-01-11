@@ -83,11 +83,11 @@
 
   // color
   &.primary {
-    background-color: $--color--primary;
+    background-color: $--color--main;
     color: $--color--white;
   }
   &.secondary {
-    background-color: $--color--secondary;
+    background-color: $--color--sub;
     color: $--color--white;
   }
   &.point {
@@ -99,18 +99,18 @@
     border: 1px solid $--color--border;
     color: $--color--black;
     &.is-active {
-      color: $--color--primary;
-      border-color: $--color--primary;
+      color: $--color--main;
+      border-color: $--color--main;
     }
     &.primary {
-      color: $--color--primary;
+      color: $--color--main;
     }
   }
 
   &-txt {
     // background-color: transparent !important;
-    // color: $--color--secondary;
-    // border-bottom: 1px solid $--color--secondary;
+    // color: $--color--sub;
+    // border-bottom: 1px solid $--color--sub;
     // border-radius: unset;
     &.underline {
       text-decoration: underline;
@@ -145,8 +145,8 @@
   &-edit {
     padding: 0;
     border: none;
-    border-bottom: 1px solid $--color--secondary;
-    color: $--color--secondary;
+    border-bottom: 1px solid $--color--sub;
+    color: $--color--sub;
     font-size: $--font-size-regular;
   }
   &-delete {

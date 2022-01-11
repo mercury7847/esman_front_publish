@@ -16,7 +16,7 @@
       flex: 1;
       min-width: 100px;
       height: 90px;
-      background-color: $--color--secondary;
+      background-color: $--color--sub;
       // display: inline-block;
       border-radius: 9px;
       text-align: left;
@@ -111,13 +111,13 @@
       }
       th {
         text-align: left;
-        color: $--color--txt;
+        color: $--color--contents;
       }
       td {
         text-align: right;
         .data {
           font-weight: 600;
-          color: $--color--secondary;
+          color: $--color--sub;
         }
       }
     }
@@ -140,7 +140,7 @@
         }
         ins {
           text-decoration: none;
-          color: $--color--secondary;
+          color: $--color--sub;
           font-size: $--font-size-regular;
           font-weight: 600;
         }
@@ -167,7 +167,7 @@
         border-bottom: 1px #eaeaea solid;
         list-style-type: disc;
         list-style-position: inside;
-        color: $--color--txt;
+        color: $--color--contents;
         &:last-child {
           border-bottom: 0;
         }

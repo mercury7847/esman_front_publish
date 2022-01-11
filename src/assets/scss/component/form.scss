@@ -15,7 +15,7 @@
           top: 0;
           left: 0;
           padding-top: 8px;
-          color: $--color--primary;
+          color: $--color--main;
           font-size: $--font-size-regular;
           letter-spacing: -0.0437rem;
           line-height: 1.125rem;
@@ -37,7 +37,7 @@
             &::before {
               content: "*";
               display: inline-block;
-              color: $--color--primary !important;
+              color: $--color--main !important;
               padding-right: 0;
             }
             &::after {
@@ -160,7 +160,7 @@
           color: $--color--placeholder;
         }
         &:focus {
-          caret-color: $--color--secondary;
+          caret-color: $--color--sub;
           outline: none;
         }
         &__inner {
@@ -190,7 +190,7 @@
           right: 15px;
           padding-top: 13px;
           span {
-            color: $--color--primary;
+            color: $--color--main;
             letter-spacing: normal;
             vertical-align: middle;
           }
@@ -255,11 +255,11 @@
       &.is-checked {
         .el-checkbox {
           &__inner {
-            background-color: $--color--primary;
-            border-color: $--color--primary !important;
+            background-color: $--color--main;
+            border-color: $--color--main !important;
           }
           &__label {
-            color: $--color--primary;
+            color: $--color--main;
           }
         }
       }
@@ -280,7 +280,7 @@
             }
           }
           & + .el-radio__label {
-            color: $--color--primary;
+            color: $--color--main;
           }
         }
       }
@@ -310,8 +310,8 @@
       &.is-checked {
         .el-switch {
           &__core {
-            background-color: $--color--primary;
-            border-color: $--color--primary;
+            background-color: $--color--main;
+            border-color: $--color--main;
           }
         }
       }
@@ -384,7 +384,7 @@
       font-weight: 400 !important;
       line-height: 45px !important;
       &.selected {
-        color: $--color--primary;
+        color: $--color--main;
       }
       &.hover,
       &:hover {
@@ -407,7 +407,7 @@
 //       color: $--color--placeholder;
 //     }
 //     &:focus {
-//       caret-color: $--color--secondary;
+//       caret-color: $--color--sub;
 //       outline: none;
 //     }
 //   }
@@ -423,10 +423,10 @@
 
 //       &:checked + label {
 //         &:before {
-//           background-color: $--color--primary;
+//           background-color: $--color--main;
 //         }
 //         span {
-//           color: $--color--primary;
+//           color: $--color--main;
 //         }
 //       }
 //     }

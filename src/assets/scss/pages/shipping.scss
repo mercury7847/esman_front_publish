@@ -49,7 +49,7 @@
     }
     .shipping {
       &-code {
-        color: $--color--txt;
+        color: $--color--contents;
         font-size: $--font-size-default;
         vertical-align: middle;
         display: inline-block;
@@ -71,12 +71,12 @@
           background-color: $--color--point;
         }
         &.pre-payment {
-          background-color: $--color--primary;
+          background-color: $--color--main;
         }
       }
     }
     .distance {
-      color: $--color--primary;
+      color: $--color--main;
       font-size: $--font-size-regular;
       display: inline-block;
       vertical-align: middle;
@@ -94,7 +94,7 @@
   }
   .shipping-address {
     font-size: $--font-size-large;
-    color: $--color--secondary;
+    color: $--color--sub;
     font-weight: bold;
     line-height: 40px;
     height: 40px;
@@ -143,10 +143,10 @@
     p {
       font-size: $--font-size-default;
       line-height: 24px;
-      color: $--color--secondary;
+      color: $--color--sub;
       font-weight: 400;
       &.point-color {
-        color: $--color--primary;
+        color: $--color--main;
       }
       &.pay-color {
         color: $--color--point;

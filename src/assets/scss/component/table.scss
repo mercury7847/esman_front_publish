@@ -21,7 +21,7 @@
         height: 46px;
         padding: 14px;
         border-bottom: 1px solid $--color--border;
-        color: $--color--txt;
+        color: $--color--contents;
         vertical-align: middle;
       }
     }
@@ -95,7 +95,7 @@
           }
         }
         &.is-drag {
-          border: 2px solid $--color--primary;
+          border: 2px solid $--color--main;
         }
         &.disabled {
           th {

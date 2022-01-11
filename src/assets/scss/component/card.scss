@@ -12,19 +12,19 @@
   &-header {
     text-align: left;
     font-size: $--font-size-large;
-    color: $--color--secondary;
+    color: $--color--sub;
     font-weight: bold;
     margin-bottom: 20px;
     button {
       border: none;
       text-align: left;
       font-size: $--font-size-regular;
-      color: $--color--secondary;
+      color: $--color--sub;
       font-weight: bolder;
       background-color: transparent;
     }
     .btn-title {
-      color: $--color--secondary;
+      color: $--color--sub;
       font-weight: 700;
     }
     .icon-more {

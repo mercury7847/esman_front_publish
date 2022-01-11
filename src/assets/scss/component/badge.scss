@@ -50,14 +50,14 @@
       margin-left: 8px;
       background-color: $--color--white;
       border-radius: 50%;
-      color: $--color--primary;
+      color: $--color--main;
       font-size: $--font-size-xsmall;
       font-weight: bold;
       line-height: 18px;
       vertical-align: middle;
     }
     &.blue::after {
-      background-color: $--color--primary;
+      background-color: $--color--main;
     }
     &-secondary {
       display: inline-block;
@@ -76,7 +76,7 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background-color: $--color--primary;
+      background-color: $--color--main;
       color: $--color--white;
       font-size: 0.6875rem;
       line-height: 18px;
