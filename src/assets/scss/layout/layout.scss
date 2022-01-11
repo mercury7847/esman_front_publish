@@ -250,7 +250,7 @@
                 color: $--color--grey;
               }
               &.is-on {
-                background-color: $--color--sub-blue;
+                background-color: $--color--blue;
                 box-shadow: 5px 5px 15px 5px rgba(52, 114, 197, 0.12);
                 color: $--color--white;
                 .card-desc {
@@ -258,7 +258,7 @@
                 }
                 .badge-circle-secondary {
                   background-color: $--color--white;
-                  color: $--color--sub-blue;
+                  color: $--color--blue;
                 }
               }
             }
