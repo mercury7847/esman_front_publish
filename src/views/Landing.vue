@@ -15,7 +15,7 @@ export default {
   name: "Landing",
   data() {
     return {
-      loading: false,
+      loading: true,
     };
   },
 
