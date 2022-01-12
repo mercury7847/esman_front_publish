@@ -7,12 +7,12 @@
           <p class="ft-color-sub ft-weight-bold">한진택배 사번을 입력하세요</p>
         </div>
       </div>
-      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form login-form" label-position="top">
+      <el-form class="l-form login-form" label-position="top">
         <el-form-item label="사번" class="mb-15">
           <div class="l-inp">
             <div class="inp">
               <div class="inp-inner">
-                <el-input type="text" placeholder="사번을 입력하세요" v-model="ruleForm.id" class="inp-text-line" clearable></el-input>
+                <el-input type="text" placeholder="사번을 입력하세요" v-model="id" class="inp-text-line" clearable></el-input>
               </div>
             </div>
           </div>
@@ -21,7 +21,7 @@
           <div class="l-inp">
             <div class="inp">
               <div class="inp-inner">
-                <el-input type="password" placeholder="비밀번호를 입력하세요." v-model="ruleForm.password" class="inp-text-line" clearable></el-input>
+                <el-input type="password" placeholder="비밀번호를 입력하세요." v-model="password" class="inp-text-line" clearable></el-input>
               </div>
             </div>
           </div>
@@ -33,16 +33,15 @@
             <div class="l-checkbox login-service-check">
               <el-checkbox v-model="isAcceptLocation"><span class="ft-weight-bold">위치정보 제공동의</span></el-checkbox>
             </div>
-            <div class="login-service-detailview">
-              <button class="btn btn-more"><span>상세보기</span><i class="icon-more icon-size-small"></i></button>
-            </div>
+            <button class="btn btn-more small"><span>상세보기</span></button>
           </div>
         </el-form-item>
       </el-form>
       <div class="login-btn-group">
         <button class="btn btn-size-full primary" :disabled="!canLogin" @click="$router.push('/dashboard')">로그인</button>
         <!-- <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginAlertActive = true">로그인</button>
-        <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginConfirmActive = true">로그인</button> -->
+        <button class="btn btn-size-full primary" :disabled="!canLogin" @click="loginConfirmActive = true">로그인</button>
+        <button class="btn btn-size-full primary" :disabled="!canLogin" @click="pwSettingActive = true">로그인</button> -->
         <button class="btn btn-size-full white is-active mt-15" @click="$router.push('/join')">회원가입</button>
       </div>
       <div class="login-service">
@@ -67,6 +66,8 @@
     <pop-password v-if="passwordActive" @click="passwordActive = !passwordActive"></pop-password>
     <!-- 비밀번호 재발급 -->
     <pop-password-reissuance v-if="passwordReissuance" @click="passwordReissuance = !passwordReissuance"></pop-password-reissuance>
+    <!-- 최초 로그인시 비밀번호 설정 -->
+    <pop-password-setting v-if="pwSettingActive" @click="pwSettingActive = !pwSettingActive"></pop-password-setting>
   </div>
 </template>
 
@@ -75,22 +76,23 @@ import PopAlert from "@/views/Modal/PopAlert";
 import PopLoginConfirm from "@/views/Login/PopLoginConfirm";
 import PopPassword from "@/views/Login/PopPassword";
 import PopPasswordReissuance from "@/views/Login/PopPasswordReissuance";
+import PopPasswordSetting from "@/views/Login/PopPasswordSetting";
 
 export default {
-  components: { PopAlert, PopLoginConfirm, PopPassword, PopPasswordReissuance },
+  components: { PopAlert, PopLoginConfirm, PopPassword, PopPasswordReissuance, PopPasswordSetting },
   name: "Login",
   data() {
     return {
-      isAcceptLocation: false,
+      id: "",
+      password: "",
+      isAcceptLocation: true,
       loginAlertActive: false,
       loginConfirmActive: false,
       logAlertActive: false,
       passwordActive: false,
       passwordReissuance: false,
-      ruleForm: {
-        id: "",
-        password: "",
-      },
+      pwSettingActive: false,
+      ruleForm: {},
       rules: {
         id: [{ required: true, message: "사번을 입력해주세요", trigger: "blur" }],
         password: [{ required: true, message: "비밀번호를 입력해주세요.", trigger: "blur" }],
