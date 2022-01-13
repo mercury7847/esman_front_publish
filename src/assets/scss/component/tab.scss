@@ -11,10 +11,6 @@
       height: 100%;
       padding: 0 16px;
       overflow-y: auto;
-      .bg-light-skyblue {
-        margin-left: -16px;
-        margin-right: -16px;
-      }
     }
     &__item {
       height: 42px;
@@ -41,108 +37,51 @@
         background-color: $--color--border;
       }
     }
-
     &--card {
-      > .el-tabs__header {
-        border-bottom: none;
-        .el-tabs {
-          &__nav {
-            display: flex;
-            border: none;
-          }
-          &__item {
-            height: 34px;
-            // background-color: $--color--light-grey;
-            border: 1px solid $--color--border;
-            border-bottom-color: $--color--border;
-            color: $--color--black;
-            font-size: $--font-size-xsmall;
-            letter-spacing: -0.0375rem;
-            font-weight: 500 !important;
-            text-align: center;
-            line-height: 34px;
-            &.is-active {
-              // background-color: $--color--light-skyblue;
-              border: 1px solid $--color--main;
-              color: $--color--main !important;
-            }
-            &:first-child {
-              margin-right: 8px;
-            }
-          }
-        }
-      }
-      > .el-tabs__content {
-        padding: 20px 15px;
-        border: 1px solid $--color--border;
-      }
-    }
-    &.type-02 {
       .el-tabs {
         &__header {
-          margin-bottom: 0;
+          border-bottom: none;
+          .el-tabs {
+            &__nav {
+              border: none;
+              &-wrap {
+                &.is-scrollable {
+                  padding: 0;
+                }
+              }
+              &-scroll {
+                overflow-x: auto;
+              }
+              &-next,
+              &-prev {
+                display: none;
+              }
+            }
+            &__item {
+              height: 45px;
+              padding: 14px 10px !important;
+              margin-right: 10px;
+              background-color: $--color--tab-card;
+              border: none !important;
+              border-radius: 5px;
+              font-size: $--font-size-small;
+              line-height: 18px;
+              .number {
+                color: $--color--main;
+                margin-left: 10px;
+              }
+              &.is-active {
+                background-color: $--color--main;
+                box-shadow: 5px 5px 15px 5px rgba(3, 161, 223, 0.1);
+                .time,
+                .number {
+                  color: $--color--white;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
 }
-
-// //tab
-// .el-tabs {
-//   &__nav {
-//     // display: flex;
-//     // width: 100%;
-//     // transform:translateX(16px) !important;
-//     &-wrap {
-//       &:after {
-//         background-color: $--color--border !important;
-//       }
-//     }
-//   }
-//   &__item {
-//     width: 100%;
-//     // font-size:$--font-size-large !important;
-//     font-weight: bold !important;
-//     text-align: center;
-//     &.is-active {
-//       color: #222 !important;
-//     }
-//   }
-//   &__active-bar {
-//     background-color: $--color--main !important;
-//     padding: 0 5px !important;
-//     // left:-3.8px !important;
-//   }
-//   &__content {
-//     padding-top: 15px;
-//   }
-//   &--card {
-//     & > .el-tabs__header {
-//       text-align: center;
-//       border-bottom: none !important;
-//       transform: translateX(16px) !important;
-//       .el-tabs__nav {
-//         display: flex;
-//       }
-//       width: calc(100% - 32px) !important;
-//       .el-tabs__nav,
-//       .el-tabs__item {
-//         border: none !important;
-//       }
-//       .el-tabs__item {
-//         flex: 1;
-//         border-bottom: 1px solid #000 !important;
-//         font-size: $--font-size-regular !important;
-//         &:hover,
-//         &:focus {
-//           color: $--color--black !important;
-//         }
-//         &.is-active {
-//           border: 1px solid #000 !important;
-//           border-bottom: none !important;
-//           color: $--color--black !important;
-//         }
-//       }
-//     }
-//   }
-// }

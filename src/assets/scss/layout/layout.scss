@@ -3,20 +3,25 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding-top: 56px;
     background-color: $--color--white;
     font-size: $--font-size-regular;
     letter-spacing: -0.0437rem;
+    &.bg {
+      background-color: $--color--light-blue;
+    }
     &.menu-active {
-      padding-bottom: 60px;
+      .l-contents {
+        padding-bottom: 60px;
+      }
     }
     .l-contents {
-      height: 100%;
+      padding-top: 56px;
     }
   }
   &-inner {
     padding: 0 16px;
   }
+
   &-search {
     position: relative;
     .inp-inner {
@@ -25,43 +30,6 @@
     .btn-search {
       position: absolute;
       left: 0;
-    }
-  }
-  &-notification {
-    .l-list {
-      border-bottom: 1px solid $--color--border;
-      li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        line-height: 21px;
-        .noti-list {
-          width: 100%;
-          span {
-            vertical-align: middle;
-          }
-          .txt-sub {
-            line-height: 18px;
-          }
-        }
-      }
-    }
-    .btn-delete {
-      position: relative;
-      top: unset;
-      left: unset;
-    }
-    &-dialog {
-      .card {
-        &.pale-grey {
-          margin: 0;
-          background-color: $--color--light-blue;
-          box-shadow: none;
-          span {
-            vertical-align: middle;
-          }
-        }
-      }
     }
   }
   &-drawer {
@@ -193,56 +161,6 @@
             .txt-sub {
               .txt-primary {
                 padding-left: 4px;
-              }
-            }
-          }
-          &-card-tab {
-            ul {
-              display: flex;
-              height: 75px;
-              padding-bottom: 15px;
-              box-sizing: border-box;
-              overflow-x: auto;
-              overflow-y: hidden;
-              li {
-                display: inline-block;
-                margin-right: 10px;
-              }
-            }
-            .card {
-              width: 80px;
-              height: 60px;
-              padding: 10px;
-              margin: 0;
-              border-radius: 5px;
-              background-color: $--color--light-blue;
-              box-shadow: none;
-              font-size: $--font-size-small;
-              line-height: 18px;
-              text-align: right;
-              box-sizing: border-box;
-              .badge-circle-secondary {
-                position: absolute;
-                top: 10px;
-                left: 10px;
-              }
-              &-title {
-                font-weight: 700;
-              }
-              &-desc {
-                color: $--color--grey;
-              }
-              &.is-on {
-                background-color: $--color--blue;
-                box-shadow: 5px 5px 15px 5px rgba(52, 114, 197, 0.12);
-                color: $--color--white;
-                .card-desc {
-                  color: $--color--white;
-                }
-                .badge-circle-secondary {
-                  background-color: $--color--white;
-                  color: $--color--blue;
-                }
               }
             }
           }
@@ -436,43 +354,43 @@
     }
   }
   &-drawer-routing {
-    .l-map {
-      height: 100%;
-      margin: 60px 0;
-      overflow: hidden;
-      &.is-zoom {
-        margin: 16px 0 0;
-      }
-      &-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 50%;
-        margin-left: -4px;
-        margin-right: -4px;
-        margin-bottom: 8px;
-        overflow: hidden;
-      }
-      .map {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-        border: 4px solid $--color--white;
-        &-title {
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: inline-block;
-          padding: 8px 10px;
-          background-color: rgba(0, 0, 0, 0.7);
-          border-bottom-right-radius: 5px;
-        }
-        .icon-pin {
-          position: absolute;
-        }
-      }
-    }
+    // .l-map {
+    //   height: 100%;
+    //   margin: 60px 0;
+    //   overflow: hidden;
+    //   &.is-zoom {
+    //     margin: 16px 0 0;
+    //   }
+    //   &-row {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     height: 50%;
+    //     margin-left: -4px;
+    //     margin-right: -4px;
+    //     margin-bottom: 8px;
+    //     overflow: hidden;
+    //   }
+    //   .map {
+    //     position: relative;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0, 0, 0, 0.3);
+    //     border: 4px solid $--color--white;
+    //     &-title {
+    //       position: absolute;
+    //       top: 0;
+    //       left: 0;
+    //       display: inline-block;
+    //       padding: 8px 10px;
+    //       background-color: rgba(0, 0, 0, 0.7);
+    //       border-bottom-right-radius: 5px;
+    //     }
+    //     .icon-pin {
+    //       position: absolute;
+    //     }
+    //   }
+    // }
   }
   &-btn {
     &-bottom {
