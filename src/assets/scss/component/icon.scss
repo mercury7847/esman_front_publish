@@ -30,26 +30,22 @@ i {
   &-arrow-up {
     background: url("../../assets/images/icon-arrow-up.svg") no-repeat center / contain;
   }
+
+  //
   &-chevrons-up {
-    background: url(../../assets/images/icon-chevrons-down.svg) no-repeat center / contain;
+    background: url("../../assets/images/icon-chevrons-down.svg") no-repeat center / contain;
     transform: rotate(180deg);
   }
   &-chevrons-down {
-    background: url(../../assets/images/icon-chevrons-down.svg) no-repeat center / contain;
+    background: url("../../assets/images/icon-chevrons-down.svg") no-repeat center / contain;
   }
-  &-trash {
-    background: url(../../assets/images/icon-trash.svg) no-repeat center / contain;
-  }
-  &-search {
-    background: url(../../assets/images/icon-search.svg) no-repeat center / contain;
-  }
-  &-more-vertical {
-    background: url(../../assets/images/icon-more-vertical.svg) no-repeat center / contain;
-  }
+  // &-more-vertical {
+  //   background: url("../../assets/images/icon-more-vertical.svg") no-repeat center / contain;
+  // }
   &-plus {
-    background: url(../../assets/images/icon-plus.svg) no-repeat center / contain;
+    background: url("../../assets/images/icon-plus.svg") no-repeat center / contain;
   }
   &-minus {
-    background: url(../../assets/images/icon-minus.svg) no-repeat center / contain;
+    background: url("../../assets/images/icon-minus.svg") no-repeat center / contain;
   }
 }

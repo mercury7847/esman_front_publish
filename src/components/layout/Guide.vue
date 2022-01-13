@@ -131,16 +131,15 @@
                   <el-checkbox v-model="check02">위치정보 제공동의</el-checkbox>
                 </div>
               </el-form-item>
-              <el-form-item class="checkbox mb-15">
+
+              <div class="l-checkbox">
+                <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">Check all</el-checkbox>
+              </div>
+              <el-checkbox-group v-model="checked">
                 <div class="l-checkbox">
-                  <el-checkbox v-model="check03">위치정보 제공동의</el-checkbox>
+                  <el-checkbox v-for="checkbox in checkboxs" :label="checkbox" :key="checkbox">{{ checkbox }}</el-checkbox>
                 </div>
-              </el-form-item>
-              <el-form-item class="checkbox mb-15">
-                <div class="l-checkbox">
-                  <el-checkbox v-model="check04">위치정보 제공동의</el-checkbox>
-                </div>
-              </el-form-item>
+              </el-checkbox-group>
             </el-form>
             <el-divider></el-divider>
             <h2 class="title-sub mb-15">radio</h2>
@@ -148,8 +147,8 @@
               <el-form-item label="radioLabel" prop="radioType" class="mb-20">
                 <div class="l-radio">
                   <el-radio-group v-model="ruleForm.radioType1">
-                    <el-radio :label="1">배송</el-radio>
-                    <el-radio :label="2">집하</el-radio>
+                    <el-radio label="1">배송</el-radio>
+                    <el-radio label="2">집하</el-radio>
                   </el-radio-group>
                 </div>
               </el-form-item>
@@ -158,17 +157,17 @@
               <el-form-item label="radio with border" prop="radioType" class="mb-20">
                 <div class="l-radio">
                   <el-radio-group v-model="ruleForm.radioType2" class="border">
-                    <el-radio :label="1" border>배송</el-radio>
-                    <el-radio :label="2" border>집하</el-radio>
+                    <el-radio label="1" border>배송</el-radio>
+                    <el-radio label="2" border>집하</el-radio>
                   </el-radio-group>
                 </div>
               </el-form-item>
               <el-form-item label="radio with border" prop="radioType" class="mb-20">
                 <div class="l-radio">
                   <el-radio-group v-model="ruleForm.radioType3" class="border">
-                    <el-radio :label="1" border>전체</el-radio>
-                    <el-radio :label="2" border>배송</el-radio>
-                    <el-radio :label="3" border>집하</el-radio>
+                    <el-radio label="1" border>전체</el-radio>
+                    <el-radio label="2" border>배송</el-radio>
+                    <el-radio label="3" border>집하</el-radio>
                   </el-radio-group>
                 </div>
               </el-form-item>
@@ -212,18 +211,22 @@
             <div class="btn-group mb-20">
               <button class="btn btn-txt">btn-txt</button>
               <button class="btn btn-txt underline">btn-txt underline</button>
+              <button class="btn btn-more small"><span>상세보기</span></button>
             </div>
             <el-divider></el-divider>
             <p class="title-sub mb-15">아이콘 버튼</p>
             <div class="btn-group mb-20">
-              <button class="btn btn-more small"><span>상세보기</span></button>
+              <button class="btn btn-prev"></button>
               <button class="btn btn-bluetooth"></button>
               <button class="btn btn-alarm"></button>
               <button class="btn btn-menu"></button>
-              <button class="btn btn-prev"></button>
               <button class="btn btn-setting"></button>
               <button class="btn btn-close"></button>
               <button class="btn btn-clock"></button>
+              <button class="btn btn-refresh"></button>
+              <button class="btn btn-scan"></button>
+              <button class="btn btn-search"></button>
+              <button class="btn btn-sorting"></button>
             </div>
           </el-tab-pane>
           <el-tab-pane label="badge" name="5">
@@ -336,15 +339,14 @@
             <h2 class="title-sub mb-20">title-sub : 12px</h2>
           </el-tab-pane>
           <el-tab-pane label="icon" name="10">
-            <i class="icon-arrow-left is-active"></i>
-            <i class="icon-arrow-right"></i>
-            <i class="icon-arrow-down"></i>
-            <i class="icon-arrow-up"></i>
-            <i class="icon-chevrons-up"></i>
-            <i class="icon-chevrons-down"></i>
-            <i class="icon-trash"></i>
-            <i class="icon-search"></i>
-            <i class="icon-more-vertical"></i>
+            <i class="icon-arrow-left is-active mr-10"></i>
+            <i class="icon-arrow-right mr-10"></i>
+            <i class="icon-arrow-down mr-10"></i>
+            <i class="icon-arrow-up mr-10"></i>
+
+            <i class="icon-chevrons-up mr-10"></i>
+            <i class="icon-chevrons-down mr-10"></i>
+
             <i class="icon-plus"></i>
             <i class="icon-minus"></i>
           </el-tab-pane>
@@ -365,9 +367,15 @@ export default {
   name: "Guide",
   data() {
     return {
-      activeName: "1",
+      activeName: "4",
       inputpw: "",
       input01: "",
+
+      checkAll: false,
+      checked: [],
+      checkboxs: ["check01", "check02", "check03", "check04"],
+      isIndeterminate: true,
+
       check01: false,
       check02: false,
       check03: false,
@@ -394,9 +402,9 @@ export default {
         itemPrice: "",
         productType: "일반 택배",
         paymentTerms: "신용",
-        radioType1: "",
-        radioType2: "",
-        radioType3: "",
+        radioType1: "1",
+        radioType2: "1",
+        radioType3: "1",
         waybillQuantity: "1",
         releaseNumber: "",
         datePicker: "",
@@ -537,6 +545,11 @@ export default {
     handleClick() {},
     next() {
       if (this.activeStep++ > 2) this.activeStep = 0;
+    },
+    handleCheckAllChange(val) {
+      const checkboxs = ["check01", "check02", "check03", "check04"];
+      this.checked = val ? checkboxs : [];
+      this.isIndeterminate = false;
     },
   },
 };

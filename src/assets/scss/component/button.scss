@@ -82,6 +82,10 @@
       font-size: $--font-size-small;
       letter-spacing: -0.0375rem;
     }
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   // color
@@ -132,16 +136,21 @@
       vertical-align: middle;
     }
   }
-  &-bluetooth {
+  &-prev {
     width: 24px;
     height: 24px;
-    background: url("../../assets/images/icon-bluetooth.svg") no-repeat center / contain;
+    background: url("../../assets/images/icon-arrow-left.svg") no-repeat 50% 50% / contain;
   }
   &-alarm {
     width: 24px;
     height: 24px;
     position: relative;
     background: url("../../assets/images/icon-bell.svg") no-repeat center / contain;
+  }
+  &-bluetooth {
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/icon-bluetooth.svg") no-repeat center / contain;
   }
   &-menu {
     width: 24px;
@@ -153,15 +162,10 @@
     height: 24px;
     background: url("../../assets/images/icon-camera.svg") no-repeat 50% 50% / contain;
   }
-  &-prev {
-    width: 24px;
-    height: 24px;
-    background: url("../../assets/images/icon-arrow-left.svg") no-repeat 50% 50% / contain;
-  }
   &-setting {
     width: 24px;
     height: 24px;
-    background: url("../../assets/images/icon-settings.svg") no-repeat 50% 50% / contain;
+    background: url("../../assets/images/icon-setting.svg") no-repeat 50% 50% / contain;
   }
   &-close {
     width: 24px;
@@ -173,6 +177,27 @@
     height: 24px;
     background: url("../../assets/images/icon-clock.svg") no-repeat 50% 50% / contain;
   }
+  &-refresh {
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/icon-refresh.svg") no-repeat 50% 50% / contain;
+  }
+  &-scan {
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/icon-scan.svg") no-repeat 50% 50% / contain;
+  }
+  &-search {
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/icon-search.svg") no-repeat 50% 50% / contain;
+  }
+  &-sorting {
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/icon-sorting.svg") no-repeat 50% 50% / contain;
+  }
+
   &:disabled {
     border: none !important;
     background-color: $--color--inactive !important;
