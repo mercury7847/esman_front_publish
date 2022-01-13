@@ -1,234 +1,55 @@
-//icon
 i {
   display: inline-block;
 }
 [class^="icon"] {
+  width: 24px;
+  height: 24px;
   vertical-align: middle;
-}
-.icon {
-  &-size {
-    &-small {
-      width: 14px;
-      height: 14px;
-    }
-    &-regular {
-      width: 18px;
-      height: 18px;
-    }
-    &-large {
-      width: 24px;
-      height: 24px;
-    }
-    &-xlarge {
-      width: 42px;
-      height: 42px;
-    }
-    &-xxxlarge {
-      width: 120px;
-      height: 120px;
-    }
-  }
-  &-arrow-left {
-    background: url("../../assets/images/icon-arrow-left.svg") no-repeat 50% 50% / contain;
-  }
-  &-arrow-right {
-    background: url("../../assets/images/icon-arrow-right.svg") no-repeat 50% 50% / contain;
-  }
-  &-arrow-down {
-    background: url("../../assets/images/icon-arrow-down.svg") no-repeat 50% 50% / contain;
-    &.is-on {
-      background: url(../../assets/images/icon-arrow-up-active.svg) no-repeat 50% 50% / contain;
-      transform: rotate(180deg);
-    }
-  }
-  &-arrow-up {
-    background: url("../../assets/images/icon-arrow-up.svg") no-repeat 50% 50% / contain;
-    &.is-on {
-      background: url(../../assets/images/icon-arrow-up-active.svg) no-repeat 50% 50% / contain;
-    }
-  }
-  &-more {
+  &.xsmall {
     width: 14px;
     height: 14px;
-    background: url("../../assets/images/icon-arrow-right.svg") no-repeat 50% 50% / contain;
-    margin: 2px 0 0 2px;
   }
-
-  //
-  &-chevrons-up {
+  &.small {
     width: 18px;
     height: 18px;
-    background: url(../../assets/images/icon-chevrons-down.svg) no-repeat 50% 50% / contain;
+  }
+  &.is-active {
+    background: url("../../assets/images/icon-arrow-up-active.svg") no-repeat center / contain;
+  }
+}
+.icon {
+  &-arrow-left {
+    background: url("../../assets/images/icon-arrow-left.svg") no-repeat center / contain;
+  }
+  &-arrow-right {
+    background: url("../../assets/images/icon-arrow-right.svg") no-repeat center / contain;
+  }
+  &-arrow-down {
+    background: url("../../assets/images/icon-arrow-down.svg") no-repeat center / contain;
+  }
+  &-arrow-up {
+    background: url("../../assets/images/icon-arrow-up.svg") no-repeat center / contain;
+  }
+  &-chevrons-up {
+    background: url(../../assets/images/icon-chevrons-down.svg) no-repeat center / contain;
     transform: rotate(180deg);
   }
   &-chevrons-down {
-    width: 18px;
-    height: 18px;
-    background: url(../../assets/images/icon-chevrons-down.svg) no-repeat 50% 50% / contain;
-  }
-  &-complete {
-    background: url(../../assets/images/check-circle.svg) no-repeat 50% 50% / contain;
+    background: url(../../assets/images/icon-chevrons-down.svg) no-repeat center / contain;
   }
   &-trash {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-trash.svg) no-repeat 50% 50% / contain;
-  }
-  &-edit {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-edit.svg) no-repeat 50% 50% / contain;
+    background: url(../../assets/images/icon-trash.svg) no-repeat center / contain;
   }
   &-search {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-search.svg) no-repeat 50% 50% / contain;
-    &.small {
-      width: 18px;
-      height: 18px;
-    }
-  }
-  &-refresh {
-    width: 18px;
-    height: 18px;
-    background: url(../../assets/images/icon-refresh.svg) no-repeat 50% 50% / contain;
+    background: url(../../assets/images/icon-search.svg) no-repeat center / contain;
   }
   &-more-vertical {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-more-vertical.svg) no-repeat 50% 50% / contain;
-  }
-  &-corner-left {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-corner-left.svg) no-repeat 50% 50% / contain;
-    &.small {
-      width: 18px;
-      height: 18px;
-    }
-  }
-  &-check-circle {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-check-circle.svg) no-repeat 50% 50% / contain;
-    &.small {
-      width: 12px;
-      height: 12px;
-    }
-    &.white {
-      filter: invert(1);
-    }
-  }
-  &-map-pin {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-map-pin.svg) no-repeat 50% 50% / contain;
-    &.small {
-      width: 12px;
-      height: 14px;
-    }
-    &.white {
-      filter: invert(1);
-    }
-  }
-  &-phone-incoming {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-phone-incoming.svg) no-repeat 50% 50% / contain;
-    &.medium {
-      width: 18px;
-      height: 18px;
-    }
-    &.small {
-      width: 12px;
-      height: 12px;
-    }
-  }
-  &-phone-outgoing {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-phone-outgoing.svg) no-repeat 50% 50% / contain;
-    &.medium {
-      width: 18px;
-      height: 18px;
-    }
-    &.small {
-      width: 12px;
-      height: 12px;
-    }
-  }
-  &-dot {
-    display: inline-block;
-    width: 3px;
-    height: 3px;
-    margin: -3px 10px 0;
-    background-color: $--color--grey;
-    border-radius: 50%;
+    background: url(../../assets/images/icon-more-vertical.svg) no-repeat center / contain;
   }
   &-plus {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-plus.svg) no-repeat 50% 50% / contain;
+    background: url(../../assets/images/icon-plus.svg) no-repeat center / contain;
   }
   &-minus {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-minus.svg) no-repeat 50% 50% / contain;
-  }
-  &-pin {
-    width: 32px;
-    height: 40px;
-    background: url(../../assets/images/icon-pin.svg) no-repeat 50% 50% / contain;
-    &.is-on {
-      background: url(../../assets/images/icon-pin-active.svg) no-repeat 50% 50% / contain;
-    }
-  }
-  &-envelope {
-    width: 18px;
-    height: 18px;
-    background: url(../../assets/images/icon-envelope.svg) no-repeat 50% 50% / contain;
-    &.is-on {
-      background: url(../../assets/images/icon-envelope-open.svg) no-repeat 50% 50% / contain;
-    }
-  }
-  &-bell {
-    width: 26px;
-    height: 26px;
-    background: url(../../assets/images/icon-bell.svg) no-repeat 50% 50% / contain;
-  }
-  &-sms {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-sms.svg) no-repeat 50% 50% / contain;
-  }
-  &-happycall {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-happycall.svg) no-repeat 50% 50% / contain;
-  }
-  &-report-defective {
-    width: 14px;
-    height: 24px;
-    background: url(../../assets/images/icon-report-defective.svg) no-repeat 50% 50% / contain;
-  }
-  &-mileage {
-    width: 26px;
-    height: 24px;
-    background: url(../../assets/images/icon-mileage.svg) no-repeat 50% 50% / contain;
-  }
-  &-refund {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-refund.svg) no-repeat 50% 50% / contain;
-  }
-  &-map {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-map.svg) no-repeat 50% 50% / contain;
-  }
-  &-customer-inquiry {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/images/icon-customer-inquiry.svg) no-repeat 50% 50% / contain;
+    background: url(../../assets/images/icon-minus.svg) no-repeat center / contain;
   }
 }

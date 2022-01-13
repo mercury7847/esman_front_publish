@@ -1,9 +1,10 @@
 <template>
+  <!-- 기획 변경됨 220112 삭제 예정 -->
   <div class="l-side-menu">
     <div class="l-menu l-scroll">
       <div class="l-fixed">
         <div class="menu-header">
-          <img src="@/assets/images/logo.svg" alt="한진택배">
+          <img src="@/assets/images/logo.svg" alt="한진택배" />
           <div class="btn-group">
             <button class="btn btn-setting" @click="switchSetting"></button>
             <button class="btn btn-close" @click="switchSideMenu"></button>
@@ -11,7 +12,7 @@
         </div>
         <div class="menu-user">
           <div class="user-thumb">
-            <img src="../../assets/images/user.png" alt="">
+            <img src="../../assets/images/user.svg" alt="" />
           </div>
           <div class="user-info">
             <p class="user-name"><span class="ft-weight-bold">김한진</span>님 안녕하세요</p>
@@ -22,7 +23,7 @@
           <div class="l-inp l-search">
             <div class="inp">
               <div class="inp-inner">
-                <input type="text" class="input-text-line" placeholder="검색어를 입력하세요." id="inp-01" autofocus>
+                <input type="text" class="input-text-line" placeholder="검색어를 입력하세요." id="inp-01" autofocus />
               </div>
               <button class="btn btn-search small"></button>
             </div>
@@ -32,11 +33,7 @@
       <div class="menu-list scroll-y" v-show="!isSearch">
         <el-row class="tac">
           <el-col :span="24">
-            <el-menu
-              default-active="2"
-              class=""
-              @open="handleOpen"
-              @close="handleClose">
+            <el-menu default-active="2" class="" @open="handleOpen" @close="handleClose">
               <el-submenu index="1">
                 <template slot="title">
                   <span>고객/클레임 관리</span>
@@ -92,11 +89,7 @@
         <div class="menu-list scroll-y">
           <el-row class="tac">
             <el-col :span="24">
-              <el-menu
-                default-active="2"
-                class=""
-                @open="handleOpen"
-                @close="handleClose">
+              <el-menu default-active="2" class="" @open="handleOpen" @close="handleClose">
                 <el-submenu index="1">
                   <template slot="title">
                     <span>기본 설정</span>
@@ -152,34 +145,34 @@
 </template>
 
 <script>
-  export default {
-    name:'SideMenu',
-    data() {
-      return {
-        sideMenuOn: true,
-        isSearch : false,
-        settingOn: false,
-        value1: false,
-        value2: false,
-        value3: false,
-        value4: false,
-        value5: false,
-        value6: false,
-      }
+export default {
+  name: "SideMenu",
+  data() {
+    return {
+      sideMenuOn: true,
+      isSearch: false,
+      settingOn: false,
+      value1: false,
+      value2: false,
+      value3: false,
+      value4: false,
+      value5: false,
+      value6: false,
+    };
+  },
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
     },
-    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      switchSideMenu: function () {
-        this.$emit('click')
-      },
-      switchSetting: function () {
-        this.settingOn = !this.settingOn;
-      },
-    }
-  }
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    switchSideMenu: function() {
+      this.$emit("click");
+    },
+    switchSetting: function() {
+      this.settingOn = !this.settingOn;
+    },
+  },
+};
 </script>

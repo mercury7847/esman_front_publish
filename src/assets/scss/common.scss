@@ -139,45 +139,11 @@ button {
   }
 }
 .txt {
-  &-warning {
-    font-size: $--font-size-regular;
-    color: $--color--red;
-  }
-  &-message {
-    font-size: $--font-size-small;
-    color: $--color--placeholder;
-    line-height: 1.45em;
-    font-weight: 300;
-  }
-  &-title {
-    font-size: $--font-size-xlarge;
-    font-weight: bold;
-    line-height: 1.4em;
-  }
-  &-secondary {
-    font-size: $--font-size-regular;
-    color: $--color--blue;
-  }
   &-primary {
     color: $--color--main !important;
   }
   &-sub {
     color: $--color--grey !important;
-  }
-  &-link {
-    color: $--color--sub;
-    font-size: $--font-size-regular;
-    text-decoration: none;
-    &.underline {
-      text-decoration: underline;
-    }
-    &.detail {
-      color: $--color--placeholder;
-      display: flex;
-      align-items: center;
-      justify-items: space-between;
-      font-weight: 200;
-    }
   }
 }
 
@@ -241,7 +207,7 @@ button {
     margin-bottom: 0 !important;
   }
   &-5 {
-    margin-bottom: 5 !important;
+    margin-bottom: 5px !important;
   }
   &-10 {
     margin-bottom: 10px !important;

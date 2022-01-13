@@ -133,7 +133,7 @@
               margin-top: 2px;
               width: 18px;
               height: 18px;
-              background: url("../../assets/images/icon-close-round.svg") no-repeat center center / contain;
+              background: url("../../assets/images/icon-close-round.svg") no-repeat center / contain;
               &::before {
                 display: none;
               }
@@ -326,7 +326,7 @@
           letter-spacing: -0.0437rem;
         }
         .el-select__caret {
-          background: url("../../assets/images/icon-arrow-down.svg") no-repeat center center / 18px 18px;
+          background: url("../../assets/images/icon-arrow-down.svg") no-repeat center / 18px 18px;
           transform: rotateZ(0);
           &.is-reverse {
             transform: rotateZ(180deg);

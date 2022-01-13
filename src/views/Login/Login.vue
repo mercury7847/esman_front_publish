@@ -33,7 +33,7 @@
             <div class="l-checkbox login-service-check">
               <el-checkbox v-model="isAcceptLocation"><span class="ft-weight-bold">위치정보 제공동의</span></el-checkbox>
             </div>
-            <button class="btn btn-more small"><span>상세보기</span></button>
+            <button class="btn btn-more"><span>상세보기</span></button>
           </div>
         </el-form-item>
       </el-form>

@@ -1,4 +1,3 @@
-// dialog
 .l-dialog {
   .el-dialog {
     top: 50%;
@@ -32,9 +31,6 @@
     &__body {
       padding: 0 16px 30px !important;
       color: $--color--contents !important;
-      // .l-inp.l-search {
-      //   margin: 0;
-      // }
     }
     &__footer {
       height: 52px;
@@ -59,50 +55,6 @@
         }
       }
     }
-    // &-full {
-    //   .el-dialog {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100% !important;
-    //     height: 100%;
-    //     transform: none;
-    //     background-color: $--color--light-blue;
-    //     &__header {
-    //       padding: 16px 16px 30px 50px;
-    //       &btn {
-    //         .el-dialog__close {
-    //           color: $--color--black;
-    //         }
-    //         top: 16px;
-    //         right: unset;
-    //         left: 16px;
-    //       }
-    //     }
-    //     &__body {
-    //       width: 100%;
-    //       height: calc(100% - 70px);
-    //       padding: 0 16px 30px !important;
-    //       box-sizing: border-box;
-    //       overflow-y: auto;
-    //       .content {
-    //         width: 100%;
-    //         height: 100%;
-    //         padding: 50px 20px;
-    //         background-color: $--color--white;
-    //         box-shadow: 15px 15px 30px 5px rgba(93, 114, 167, 0.1);
-    //         border-radius: 5px;
-    //         box-sizing: border-box;
-    //         overflow-y: auto;
-    //       }
-    //     }
-    //   }
-    //   &.bg-white {
-    //     .el-dialog {
-    //       background-color: $--color--white;
-    //     }
-    //   }
-    // }
   }
   &.small {
     .el-dialog {

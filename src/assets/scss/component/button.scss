@@ -111,153 +111,67 @@
   }
 
   &-txt {
-    // background-color: transparent !important;
-    // color: $--color--sub;
-    // border-bottom: 1px solid $--color--sub;
-    // border-radius: unset;
+    background-color: transparent !important;
     &.underline {
       text-decoration: underline;
     }
-    // &:disabled {
-    //   color: $--color--inactive;
-    // }
   }
   &-more {
     display: inline-flex;
     align-items: center;
-    // height: 20px;
+    color: $--color--grey;
+    font-size: $--font-size-regular;
+    letter-spacing: -0.0437rem;
     &::after {
       content: "";
       display: inline-block;
-      width: 18px;
-      height: 18px;
-      background: url("../../assets/images/icon-arrow-right.svg") no-repeat 50% 50% / contain;
+      width: 14px;
+      height: 14px;
+      margin: 2px 0 0 2px;
+      background: url("../../assets/images/icon-arrow-right.svg") no-repeat center / contain;
       vertical-align: middle;
     }
-    &.small {
-      color: $--color--grey;
-      font-size: $--font-size-regular;
-      letter-spacing: -0.0437rem;
-      &::after {
-        width: 14px;
-        height: 14px;
-        margin: 2px 0 0 2px;
-      }
-    }
   }
-  &-edit {
-    padding: 0;
-    border: none;
-    border-bottom: 1px solid $--color--sub;
-    color: $--color--sub;
-    font-size: $--font-size-regular;
-  }
-  &-delete {
-    border: none;
-    width: 18px;
-    height: 18px;
-    border-radius: 18px;
-    background: url(../../assets/images/btn-delete.svg) no-repeat 50% 50% / contain;
-    position: absolute;
-    left: -9px;
-    top: -9px;
-  }
-  &-link {
-    display: inline-block;
-    height: 33px;
-    padding: 0 12px;
-    line-height: 33px;
-    vertical-align: middle;
-    text-decoration: none;
-  }
-  &-drag {
-    width: 20px;
-    height: 10px;
-    border: none;
-    background: url(../../assets/images/icon-drag.svg) no-repeat 50% 50% / contain;
-    &.medium {
-      width: 18px;
-      height: 8px;
-    }
-  }
-  &-revert {
+  &-bluetooth {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/icon-corner-left-active.svg) no-repeat 50% 50% / contain;
-    &.small {
-      width: 18px;
-      height: 18px;
-    }
-    &:disabled {
-      background-color: transparent;
-      background-image: url(../../assets/images/icon-corner-left.svg);
-    }
+    background: url("../../assets/images/icon-bluetooth.svg") no-repeat center / contain;
   }
-  &-search {
+  &-alarm {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/icon-search.svg) no-repeat 50% 50% / contain;
-    &.small {
-      width: 18px;
-      height: 18px;
-    }
-    &:disabled {
-      background-color: transparent;
-    }
+    position: relative;
+    background: url("../../assets/images/icon-bell.svg") no-repeat center / contain;
   }
-  &-plus {
+  &-menu {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/icon-outline-plus.svg) no-repeat 50% 50% / contain;
+    background: url("../../assets/images/icon-menu.svg") no-repeat center / contain;
   }
   &-camera {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/icon-camera.svg) no-repeat 50% 50% / contain;
+    background: url("../../assets/images/icon-camera.svg") no-repeat 50% 50% / contain;
   }
   &-prev {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/icon-arrow-left.svg) no-repeat 50% 50% / contain;
+    background: url("../../assets/images/icon-arrow-left.svg") no-repeat 50% 50% / contain;
   }
   &-setting {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/icon-settings.svg) no-repeat 50% 50% / contain;
+    background: url("../../assets/images/icon-settings.svg") no-repeat 50% 50% / contain;
   }
   &-close {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/icon-close.svg) no-repeat 50% 50% / contain;
+    background: url("../../assets/images/icon-close.svg") no-repeat 50% 50% / contain;
   }
   &-clock {
     width: 24px;
     height: 24px;
-    background: url(../../assets/images/icon-clock.svg) no-repeat 50% 50% / contain;
-  }
-  &.is-on {
-    // .icon-search {
-    //   background: url(../../assets/images/icon-search-active.svg) no-repeat 50% 50% / contain;
-    // }
-    .icon-corner-left {
-      background: url(../../assets/images/icon-corner-left-active.svg) no-repeat 50% 50% / contain;
-    }
-    .icon-search,
-    .icon-arrow-up,
-    .icon-arrow-down,
-    .icon-chevrons-up,
-    .icon-chevrons-down {
-      filter: invert(46%) sepia(46%) saturate(6050%) hue-rotate(171deg) brightness(102%) contrast(101%);
-    }
-  }
-  &-bookmark-add {
-    width: 60px;
-    height: 60px;
-    border: 1px solid $--color--white;
-    border-radius: 50%;
-    .icon-plus {
-      filter: invert(1);
-    }
+    background: url("../../assets/images/icon-clock.svg") no-repeat 50% 50% / contain;
   }
   &:disabled {
     border: none !important;

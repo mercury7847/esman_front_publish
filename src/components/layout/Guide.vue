@@ -213,10 +213,17 @@
               <button class="btn btn-txt">btn-txt</button>
               <button class="btn btn-txt underline">btn-txt underline</button>
             </div>
-            <p class="title-sub mb-15">더보기 버튼</p>
+            <el-divider></el-divider>
+            <p class="title-sub mb-15">아이콘 버튼</p>
             <div class="btn-group mb-20">
-              <button class="btn btn-more"></button>
               <button class="btn btn-more small"><span>상세보기</span></button>
+              <button class="btn btn-bluetooth"></button>
+              <button class="btn btn-alarm"></button>
+              <button class="btn btn-menu"></button>
+              <button class="btn btn-prev"></button>
+              <button class="btn btn-setting"></button>
+              <button class="btn btn-close"></button>
+              <button class="btn btn-clock"></button>
             </div>
           </el-tab-pane>
           <el-tab-pane label="badge" name="5">
@@ -327,6 +334,19 @@
             <h2 class="title-section ft-color-primary mb-20">인원 정보 #1</h2>
             <h2 class="title mb-20">title : 14px</h2>
             <h2 class="title-sub mb-20">title-sub : 12px</h2>
+          </el-tab-pane>
+          <el-tab-pane label="icon" name="10">
+            <i class="icon-arrow-left is-active"></i>
+            <i class="icon-arrow-right"></i>
+            <i class="icon-arrow-down"></i>
+            <i class="icon-arrow-up"></i>
+            <i class="icon-chevrons-up"></i>
+            <i class="icon-chevrons-down"></i>
+            <i class="icon-trash"></i>
+            <i class="icon-search"></i>
+            <i class="icon-more-vertical"></i>
+            <i class="icon-plus"></i>
+            <i class="icon-minus"></i>
           </el-tab-pane>
         </el-tabs>
       </div>
