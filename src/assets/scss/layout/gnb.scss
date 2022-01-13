@@ -5,6 +5,7 @@
   width: 100%;
   height: 56px;
   z-index: 99;
+  background-color: $--color--white;
   .header {
     position: relative;
     display: flex;
@@ -12,20 +13,30 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 16px;
+    padding: 13px 16px;
     .user {
       display: flex;
       align-items: center;
-      &-name {
+      &-info {
         font-weight: 700;
       }
-      &-num {
-        // color: $--color--grey3;
+      &-name {
         margin-left: 10px;
       }
-      .logo {
-        width: 82px;
-        margin-right: 20px;
+      &-company {
+        position: relative;
+        margin-left: 10px;
+        padding-left: 8px;
+        color: $--color--grey2;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 6px;
+          left: 0;
+          width: 2px;
+          height: 10px;
+          background-color: $--color--border;
+        }
       }
     }
     .navi {
@@ -34,7 +45,7 @@
       .btn-prev {
         font-size: 0;
       }
-      .subject {
+      &-title {
         margin-left: 10px;
       }
     }
@@ -46,19 +57,6 @@
         height: 24px;
         &:not(:first-child) {
           margin-left: 24px;
-        }
-        &-bluetooth {
-          height: 26px;
-          background: url("../../assets/images/icon-bluetooth.svg") no-repeat 50% 50% / contain;
-        }
-        &-alarm {
-          position: relative;
-          width: 26px;
-          height: 26px;
-          background: url("../../assets/images/icon-bell.svg") no-repeat 50% 50% / contain;
-        }
-        &-menu {
-          background: url("../../assets/images/icon-menu.svg") no-repeat 50% 50% / contain;
         }
       }
       .alram-count-num {
@@ -73,84 +71,4 @@
       }
     }
   }
-}
-
-.header {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // z-index: 30;
-  // position: fixed;
-  // left: 0;
-  // top: 0;
-  // width: 100%;
-  // height: 56px;
-  // padding: 16px;
-  // box-sizing: border-box;
-  // background-color: $--color--white;
-  // .user {
-  //   display: flex;
-  //   align-items: center;
-  //   font-size: 0;
-  //   &-thumb {
-  //     display: inline-block;
-  //     width: 30px;
-  //     height: 30px;
-  //     border-radius: 50%;
-  //     overflow: hidden;
-  //     vertical-align: middle;
-  //     img {
-  //       width: 100%;
-  //     }
-  //   }
-  //   &-info {
-  //     display: inline-block;
-  //     vertical-align: middle;
-  //     span {
-  //       padding: 0 8px;
-  //       display: inline-block;
-  //       font-size: $--font-size-regular;
-  //       font-weight: 600;
-  //     }
-  //     .user-name {
-  //       padding: 0 10px;
-  //       color: $--color--black;
-  //     }
-  //     .user-addr {
-  //       color: #ccc;
-  //       font-weight: 400;
-  //       position: relative;
-  //       &:before {
-  //         content: "";
-  //         display: inline-block;
-  //         clear: both;
-  //         width: 2px;
-  //         height: 10px;
-  //         background-color: $--color--border;
-  //         position: absolute;
-  //         left: 0;
-  //         top: 50%;
-  //         transform: translateY(-50%);
-  //       }
-  //     }
-  //   }
-  // }
-  // .navi {
-  //   .navi-action {
-  //     .btn-prev {
-  //       width: 24px;
-  //       height: 24px;
-  //       background: url(../../assets/images/icon-arrow-left.svg) no-repeat 50% 50% / contain;
-  //       border: 0 none;
-  //       font-size: 0;
-  //     }
-  //   }
-  //   .subject {
-  //     padding-left: 10px;
-  //     color: $--color--black;
-  //     font-size: $--font-size-large;
-  //     font-weight: 700;
-  //     letter-spacing: -0.9px;
-  //   }
-  // }
 }
