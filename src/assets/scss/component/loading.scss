@@ -1,0 +1,12 @@
+.el-loading-mask {
+  background-color: rgba(#000, 0.7) !important;
+  z-index: 1;
+  .el-icon-loading {
+    width: 50px;
+    height: 50px;
+    background: url("../../assets/images/loading.png") no-repeat center center / contain;
+    &::before {
+      display: none;
+    }
+  }
+}
