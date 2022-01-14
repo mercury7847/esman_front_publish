@@ -1,43 +1,62 @@
-//card
 .card {
-  border-radius: 5px;
-  background-color: $--color--white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.03);
-  margin: 10px 0;
   position: relative;
-  &-inner {
-    box-sizing: border-box;
-    padding: 15px;
+  padding: 15px 54px 15px 48px;
+  background-color: $--color--white;
+  border: 1px solid $--color--border;
+  border-radius: 5px;
+  &-list {
+    li {
+      position: relative;
+      margin-bottom: 15px;
+      &.is-active {
+        .card {
+          border-color: $--color--main;
+        }
+      }
+      .l-form {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+      }
+      .btn-more-vertical {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        &.is-active {
+          filter: invert(46%) sepia(46%) saturate(6050%) hue-rotate(171deg) brightness(102%) contrast(101%);
+        }
+      }
+    }
   }
   &-header {
-    text-align: left;
-    font-size: $--font-size-large;
-    color: $--color--sub;
-    font-weight: bold;
-    margin-bottom: 20px;
-    button {
-      border: none;
-      text-align: left;
-      font-size: $--font-size-regular;
-      color: $--color--sub;
-      font-weight: bolder;
-      background-color: transparent;
-    }
-    .btn-title {
-      color: $--color--sub;
-      font-weight: 700;
-    }
+    margin-bottom: 5px;
   }
-  &-tabs {
-    display: inline-block;
-    &.yesterday {
+  &-content {
+    display: flex;
+  }
+  .delivery {
+    &-number {
       color: $--color--grey;
-      margin-left: 15px;
+      font-size: $--font-size-small;
+      margin-left: 10px;
     }
-  }
-  &.type-02 {
-    border: 1px solid $--color--border;
-    border-radius: 4px;
-    box-shadow: none;
+    &-time {
+      flex-shrink: 0;
+      color: $--color--main;
+    }
+    &-area {
+      flex-shrink: 0;
+      color: $--color--hotpink;
+      margin-left: 10px;
+    }
+    &-address {
+      max-width: 100%;
+      margin-left: 10px;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
 }

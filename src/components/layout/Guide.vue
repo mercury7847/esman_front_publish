@@ -1,5 +1,5 @@
 <template>
-  <div class="l-container menu-active">
+  <div class="l-container footer-active" v-loading="loading" element-loading-spinner="el-icon-loading">
     <gnb />
     <div class="l-contents">
       <div class="l-tab">
@@ -123,23 +123,9 @@
             <el-form class="l-form">
               <el-form-item class="checkbox mb-20">
                 <div class="l-checkbox">
-                  <el-checkbox v-model="check01">전체 약관 동의</el-checkbox>
+                  <el-checkbox v-model="check01"></el-checkbox>
                 </div>
               </el-form-item>
-              <el-form-item class="checkbox mb-15">
-                <div class="l-checkbox">
-                  <el-checkbox v-model="check02">위치정보 제공동의</el-checkbox>
-                </div>
-              </el-form-item>
-
-              <div class="l-checkbox">
-                <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">Check all</el-checkbox>
-              </div>
-              <el-checkbox-group v-model="checked">
-                <div class="l-checkbox">
-                  <el-checkbox v-for="checkbox in checkboxs" :label="checkbox" :key="checkbox">{{ checkbox }}</el-checkbox>
-                </div>
-              </el-checkbox-group>
             </el-form>
             <el-divider></el-divider>
             <h2 class="title-sub mb-15">radio</h2>
@@ -171,7 +157,16 @@
                   </el-radio-group>
                 </div>
               </el-form-item>
+              <el-form-item label="radio button">
+                <div class="l-radio">
+                  <el-radio-group v-model="radioButton">
+                    <el-radio-button label="수동"></el-radio-button>
+                    <el-radio-button label="자동"></el-radio-button>
+                  </el-radio-group>
+                </div>
+              </el-form-item>
             </el-form>
+            <el-divider></el-divider>
             <h2 class="title-sub mb-15">switch</h2>
             <el-form :model="ruleForm" ref="ruleForm" class="l-form">
               <el-form-item label="label" class="switch mb-20">
@@ -204,10 +199,6 @@
               <button class="btn btn-size-xsmall white">btn-size-xsmall white</button>
               <button class="btn btn-size-xsmall point">btn-size-xsmall point</button>
             </div>
-            <div class="btn-group type-02 mb-20" style="width: auto">
-              <button class="btn btn-size-large white primary">수동</button>
-              <button class="btn btn-size-large white">자동</button>
-            </div>
             <div class="btn-group mb-20">
               <button class="btn btn-txt">btn-txt</button>
               <button class="btn btn-txt underline">btn-txt underline</button>
@@ -227,6 +218,7 @@
               <button class="btn btn-scan"></button>
               <button class="btn btn-search"></button>
               <button class="btn btn-sorting"></button>
+              <button class="btn btn-more-vertical"></button>
             </div>
           </el-tab-pane>
           <el-tab-pane label="badge" name="5">
@@ -360,27 +352,22 @@
 
 <script>
 import { Gnb, FootMenu } from "@/components/layout";
-// import Floating from "../../components/layout/Floating";
 
 export default {
   components: { Gnb, FootMenu },
   name: "Guide",
   data() {
     return {
-      activeName: "4",
+      loading: false, //로딩
+      activeName: "1",
       inputpw: "",
       input01: "",
-
-      checkAll: false,
-      checked: [],
-      checkboxs: ["check01", "check02", "check03", "check04"],
-      isIndeterminate: true,
-
       check01: false,
       check02: false,
       check03: false,
       check04: false,
       switch01: false,
+      radioButton: "",
       selectEmail: "",
       select01: "",
       select02: "",
@@ -545,11 +532,6 @@ export default {
     handleClick() {},
     next() {
       if (this.activeStep++ > 2) this.activeStep = 0;
-    },
-    handleCheckAllChange(val) {
-      const checkboxs = ["check01", "check02", "check03", "check04"];
-      this.checked = val ? checkboxs : [];
-      this.isIndeterminate = false;
     },
   },
 };

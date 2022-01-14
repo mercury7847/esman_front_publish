@@ -3,7 +3,6 @@ body {
   font-size: 1rem;
   color: $--color--black;
   height: 100%;
-  overflow: auto;
   * {
     box-sizing: border-box;
   }
@@ -113,7 +112,7 @@ button {
     }
   }
   &-letter-normal {
-    letter-spacing: normal;
+    letter-spacing: normal !important;
   }
 }
 .title {
@@ -260,5 +259,45 @@ button {
   }
   &-20 {
     margin-right: 20px !important;
+  }
+}
+.pt {
+  &-0 {
+    padding-top: 0 !important;
+  }
+  &-5 {
+    padding-top: 5px !important;
+  }
+  &-10 {
+    padding-top: 10px !important;
+  }
+  &-15 {
+    padding-top: 15px !important;
+  }
+  &-20 {
+    padding-top: 20px !important;
+  }
+  &-30 {
+    padding-top: 30px !important;
+  }
+}
+.pb {
+  &-0 {
+    padding-bottom: 0 !important;
+  }
+  &-5 {
+    padding-bottom: 5px !important;
+  }
+  &-10 {
+    padding-bottom: 10px !important;
+  }
+  &-15 {
+    padding-bottom: 15px !important;
+  }
+  &-20 {
+    padding-bottom: 20px !important;
+  }
+  &-30 {
+    padding-bottom: 30px !important;
   }
 }

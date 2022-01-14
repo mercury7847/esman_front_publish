@@ -1,0 +1,23 @@
+.el-popover {
+  &.l-popover {
+    min-width: 68px !important;
+    padding: 0 !important;
+    margin-top: 5px !important;
+  }
+  .contex-menu {
+    li {
+      &:not(:first-child) {
+        border-top: 1px solid $--color--border;
+      }
+      .menu {
+        padding: 8px 12px;
+        font-size: $--font-size-small;
+        letter-spacing: -0.0375rem;
+        &:active {
+          background-color: $--color--skyblue;
+          color: $--color--main;
+        }
+      }
+    }
+  }
+}

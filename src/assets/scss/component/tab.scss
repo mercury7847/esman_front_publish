@@ -10,7 +10,9 @@
     &__content {
       height: 100%;
       padding: 0 16px;
-      overflow-y: auto;
+      .el-tab-pane {
+        height: 100%;
+      }
     }
     &__item {
       height: 42px;
@@ -40,10 +42,12 @@
     &--card {
       .el-tabs {
         &__header {
+          padding-left: 16px;
           border-bottom: none;
           .el-tabs {
             &__nav {
               border: none;
+              transform: none !important;
               &-wrap {
                 &.is-scrollable {
                   padding: 0;

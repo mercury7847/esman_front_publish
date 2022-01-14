@@ -1,5 +1,5 @@
 <template>
-  <div class="l-container menu-active bg">
+  <div class="l-container footer-active bg">
     <gnb />
     <div class="l-contents dashboard">
       dashboard

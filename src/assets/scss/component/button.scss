@@ -22,29 +22,6 @@
       padding: 0 16px;
       box-sizing: border-box;
     }
-    &.type-02 {
-      display: inline-block;
-      // min-width: 120px;
-      // margin-right: 10px;
-      border: 1px solid $--color--border;
-      border-radius: 5px;
-      .btn {
-        &.white {
-          width: 56px;
-          padding: 12px 15px;
-          border: none;
-        }
-        &:not(:first-child) {
-          border-left: 1px solid $--color--border;
-          margin-left: 0;
-        }
-        &-size-large {
-          font-size: $--font-size-regular;
-          letter-spacing: -0.0437rem;
-          font-weight: 400;
-        }
-      }
-    }
   }
 
   // size
@@ -196,6 +173,11 @@
     width: 24px;
     height: 24px;
     background: url("../../assets/images/icon-sorting.svg") no-repeat 50% 50% / contain;
+  }
+  &-more-vertical {
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/icon-more-vertical.svg") no-repeat 50% 50% / contain;
   }
 
   &:disabled {
