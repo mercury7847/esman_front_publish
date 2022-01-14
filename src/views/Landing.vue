@@ -1,5 +1,5 @@
 <template>
-  <div class="landing" v-loading="loading" element-loading-spinner="el-icon-loading" element-loading-background="rgba(0, 0, 0, 0.3)">
+  <div class="landing" v-loading="loading" element-loading-spinner="el-icon-loading">
     <div class="logo">
       <img src="@/assets/images/logo-white.svg" alt="" />
       <p class="slogun ft-size-regular"><span>소비자 중심경영 인증기업</span></p>
