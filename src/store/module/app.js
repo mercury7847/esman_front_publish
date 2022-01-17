@@ -5,8 +5,8 @@ export default {
   // 동기적 setter
   mutations: {
     /* mutAppInfo(state, payload) {
-      state.info = M.info.app();
-    },*/
+       state.info = M.info.app();
+     },*/
   },
   // 비동기적 setter
   actions: {},

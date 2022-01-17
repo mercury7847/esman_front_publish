@@ -1,13 +1,9 @@
 <template>
   <div class="service-menu">
     <ul>
-      <li
-        v-for="item in serviceMenu"
-        :key="item.menu"
-        :class="{ 'is-active': $route.path == item.path }"
-      >
+      <li v-for="item in serviceMenu" :key="item.menu" :class="{ 'is-active': $route.path == item.path }">
         <router-link :to="item.path">
-          <i :class="item.icon" />
+          <i :class="item.icon"></i>
           <span>{{ item.menu }}</span>
         </router-link>
       </li>
@@ -16,34 +12,34 @@
 </template>
 <script>
 export default {
-  name: 'FootMenu',
+  name: "FootMenu",
   data() {
     return {
       serviceMenu: [
         {
-          menu: 'Home',
-          path: '/dashboard',
-          icon: 'icon-home',
+          menu: "Home",
+          path: "/dashboard",
+          icon: "icon-home",
         },
         {
-          menu: '준비',
-          path: '/delivery',
-          icon: 'icon-start',
+          menu: "준비",
+          path: "/delivery",
+          icon: "icon-start",
         },
         {
-          menu: '처리',
-          path: '/delivery-processing',
-          icon: 'icon-complet',
+          menu: "처리",
+          path: "/delivery-processing",
+          icon: "icon-complet",
         },
         {
-          menu: '실적',
-          path: '/',
-          icon: 'icon-search',
+          menu: "실적",
+          path: "/",
+          icon: "icon-search",
         },
         {
-          menu: '이력',
-          path: '/',
-          icon: 'icon-history',
+          menu: "이력",
+          path: "/",
+          icon: "icon-history",
         },
       ],
     };

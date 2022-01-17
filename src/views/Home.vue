@@ -1,90 +1,38 @@
 <template>
   <div class="l-inner mt-30">
-    <p class="title-page mb-30">
-      퍼블 완료 페이지 목록
-    </p>
+    <p class="title-page mb-30">퍼블 완료 페이지 목록</p>
+    <div class="mb-30"><router-link to="/guide" class="btn btn-size-large primary">공통 컴포넌트</router-link></div>
+    <div class="mb-30"><router-link to="/" class="btn btn-size-large primary">스플래시</router-link></div>
     <div class="mb-30">
-      <router-link
-        to="/guide"
-        class="btn btn-size-large primary"
-      >
-        공통 컴포넌트
-      </router-link>
-    </div>
-    <div class="mb-30">
-      <router-link
-        to="/"
-        class="btn btn-size-large primary"
-      >
-        스플래시
-      </router-link>
-    </div>
-    <div class="mb-30">
-      <router-link
-        to="/login"
-        class="btn btn-size-large primary"
-      >
-        로그인
-      </router-link>
+      <router-link to="/login" class="btn btn-size-large primary">로그인</router-link>
       <ul class="title mt-20">
-        <li class="mb-10">
-          로그인 메인페이지,
-        </li>
-        <li class="mb-10">
-          로그인오류팝업,
-        </li>
-        <li class="mb-10">
-          접속제한안내팝업,
-        </li>
-        <li class="mb-10">
-          로그전송팝업,
-        </li>
-        <li class="mb-10">
-          사번찾기팝업,
-        </li>
-        <li class="mb-10">
-          비밀번호재발급 팝업,
-        </li>
-        <li class="mb-10">
-          최초 로그인시 비밀번호 설정팝업
-        </li>
-        <li class="mb-10 ft-color-grey">
-          미완료: 위치정보 제공동의 상세보기 팝업 (기획없음)
-        </li>
+        <li class="mb-10">로그인 메인페이지,</li>
+        <li class="mb-10">로그인오류팝업,</li>
+        <li class="mb-10">접속제한안내팝업,</li>
+        <li class="mb-10">로그전송팝업,</li>
+        <li class="mb-10">사번찾기팝업,</li>
+        <li class="mb-10">비밀번호재발급 팝업,</li>
+        <li class="mb-10">최초 로그인시 비밀번호 설정팝업</li>
+        <li class="mb-10 ft-color-grey">미완료: 위치정보 제공동의 상세보기 팝업 (기획없음)</li>
       </ul>
     </div>
     <div class="mb-30">
-      <router-link
-        to="/dashboard"
-        class="btn btn-size-large white"
-      >
-        홈
-      </router-link>
+      <router-link to="/dashboard" class="btn btn-size-large white">홈</router-link>
     </div>
     <div class="mb-30">
-      <router-link
-        to="/delivery-start"
-        class="btn btn-size-large white"
-      >
-        집배송 출발
-      </router-link>
+      <router-link to="/delivery-start" class="btn btn-size-large white">집배송 출발</router-link>
     </div>
     <div class="mb-30">
-      <router-link
-        to="/delivery-processing"
-        class="btn btn-size-large white"
-      >
-        집배송 처리
-      </router-link>
+      <router-link to="/delivery-processing" class="btn btn-size-large white">집배송 처리</router-link>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex';
+import { mapGetters, mapState } from "vuex";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {},
   //  mixins: [CommonUtil.mixingInfiniteScroll()],
   created() {},

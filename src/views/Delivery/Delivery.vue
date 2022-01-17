@@ -9,80 +9,38 @@
             <div class="l-total">
               <div class="d-flex-align-center">
                 <div class="input-checkbox">
-                  <input
-                    id="chk-all"
-                    type="checkbox"
-                  >
-                  <label for="chk-all" />
+                  <input type="checkbox" id="chk-all" />
+                  <label for="chk-all"></label>
                 </div>
                 <div class="d-inline-block txt-sub">
                   <p>0/<span class="txt-primary">4</span></p>
                 </div>
               </div>
               <div class="btn-group">
-                <button
-                  class="btn btn-size-regular secondary"
-                  disabled
-                >
-                  삭제
-                </button>
-                <button
-                  class="btn btn-size-regular white"
-                  @click="popVisible"
-                >
-                  송장번호
-                </button>
-                <button class="btn">
-                  <i class="icon-refresh" />
-                </button>
-                <button
-                  class="btn"
-                  :class="isSearch ? 'is-on' : 'is-default'"
-                  @click="switchSearch"
-                >
-                  <i class="icon-search small" />
-                </button>
+                <button class="btn btn-size-regular secondary" disabled>삭제</button>
+                <button class="btn btn-size-regular white" @click="popVisible">송장번호</button>
+                <button class="btn"><i class="icon-refresh"></i></button>
+                <button class="btn" @click="switchSearch" :class="isSearch ? 'is-on' : 'is-default'"><i class="icon-search small"></i></button>
               </div>
             </div>
-            <div
-              v-show="isSearch"
-              class="l-inp l-search"
-            >
+            <div class="l-inp l-search" v-show="isSearch">
               <div class="inp">
                 <div class="inp-inner">
-                  <input
-                    id="inp"
-                    type="text"
-                    class="input-text-line"
-                    placeholder="화물을 검색하세요."
-                    autofocus
-                  >
+                  <input type="text" class="input-text-line" placeholder="화물을 검색하세요." id="inp" autofocus />
                 </div>
-                <button
-                  class="btn btn-search small"
-                  @click="switchSearch"
-                />
+                <button class="btn btn-search small" @click="switchSearch"></button>
               </div>
             </div>
             <!-- 스캔 후 -->
-            <ul
-              v-show="!isScanBefore"
-              class="scroll-y"
-            >
-              <li
-                v-for="item in deliveryList01"
-                :key="item.index"
-              >
+            <ul class="scroll-y" v-show="!isScanBefore">
+              <li v-for="item in deliveryList01" :key="item.index">
                 <div class="card type-02">
                   <div class="card-inner">
                     <div class="contents d-flex-be-center">
                       <div class="d-flex-align-center">
                         <div class="input-checkbox">
-                          <input
-                            id="chk-01"
-                            type="checkbox"
-                          >
-                          <label for="chk-01" />
+                          <input type="checkbox" id="chk-01" />
+                          <label for="chk-01"></label>
                         </div>
                         <div class="l-delivery-address">
                           <div class="delivery-address-badge">
@@ -92,38 +50,20 @@
                             <span class="badge green">배송</span>
                             <span class="txt-sub ft-size-xsmall">{{ item.number }}</span>
                           </div>
-                          <p class="delivery-address-desc">
-                            {{ item.address }}
-                          </p>
+                          <p class="delivery-address-desc">{{ item.address }}</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="l-collapse">
-                    <el-collapse
-                      v-model="activeNames"
-                      @change="handleChange"
-                    >
+                    <el-collapse v-model="activeNames" @change="handleChange">
                       <el-collapse-item>
                         <div class="d-flex-be-center">
-                          <button class="btn-close-pop">
-                            접기
-                          </button>
-                          <button class="btn btn-circle blue">
-                            출발확정
-                          </button>
-                          <button class="btn btn-circle">
-                            삭제
-                          </button>
-                          <button class="btn btn-circle">
-                            스캔취소
-                          </button>
-                          <button
-                            class="btn btn-circle"
-                            @click="detailDialogVisible = true"
-                          >
-                            상세
-                          </button>
+                          <button class="btn-close-pop">접기</button>
+                          <button class="btn btn-circle blue">출발확정</button>
+                          <button class="btn btn-circle">삭제</button>
+                          <button class="btn btn-circle">스캔취소</button>
+                          <button class="btn btn-circle" @click="detailDialogVisible = true">상세</button>
                         </div>
                       </el-collapse-item>
                     </el-collapse>
@@ -132,12 +72,9 @@
               </li>
             </ul>
             <!-- 스캔 전 -->
-            <div
-              v-show="isScanBefore"
-              class="l-scan-before"
-            >
+            <div class="l-scan-before" v-show="isScanBefore">
               <p class="ft-size-xsmall txt-sub">
-                배송 대상 화물이 등록되지 않았습니다.<br>
+                배송 대상 화물이 등록되지 않았습니다.<br />
                 송장의 바코드를 스캔해서 등록해주세요.
               </p>
             </div>
@@ -148,82 +85,38 @@
             <div class="l-total">
               <div class="d-flex-align-center">
                 <div class="input-checkbox">
-                  <input
-                    id="chk-all"
-                    type="checkbox"
-                  >
-                  <label for="chk-all" />
+                  <input type="checkbox" id="chk-all" />
+                  <label for="chk-all"></label>
                 </div>
                 <div class="d-inline-block txt-sub">
                   <p>0/<span class="txt-primary">4</span></p>
                 </div>
               </div>
               <div class="btn-group">
-                <button
-                  class="btn btn-size-regular secondary"
-                  disabled
-                >
-                  삭제
-                </button>
-                <button
-                  class="btn btn-size-regular white"
-                  @click="popVisible"
-                >
-                  송장번호
-                </button>
-                <button class="btn">
-                  <i class="icon-refresh" />
-                </button>
-                <button
-                  class="btn"
-                  :class="isSearch ? 'is-on' : 'is-default'"
-                  @click="switchSearch"
-                >
-                  <i class="icon-search small" />
-                </button>
+                <button class="btn btn-size-regular secondary" disabled>삭제</button>
+                <button class="btn btn-size-regular white" @click="popVisible">송장번호</button>
+                <button class="btn"><i class="icon-refresh"></i></button>
+                <button class="btn" @click="switchSearch" :class="isSearch ? 'is-on' : 'is-default'"><i class="icon-search small"></i></button>
               </div>
             </div>
-            <div
-              v-show="isSearch"
-              class="l-inp l-search"
-            >
+            <div class="l-inp l-search" v-show="isSearch">
               <div class="inp">
                 <div class="inp-inner">
-                  <input
-                    id="inp"
-                    type="text"
-                    class="input-text-line"
-                    placeholder="화물을 검색하세요."
-                    autofocus
-                  >
+                  <input type="text" class="input-text-line" placeholder="화물을 검색하세요." id="inp" autofocus />
                 </div>
-                <button
-                  class="btn btn-search"
-                  @click="switchSearch"
-                >
-                  <i class="icon-search small" />
-                </button>
+                <button class="btn btn-search" @click="switchSearch"><i class="icon-search small"></i></button>
               </div>
             </div>
             <!-- 스캔 후 -->
-            <ul
-              v-show="!isScanBefore"
-              class="scroll-y"
-            >
-              <li
-                v-for="item in deliveryList02"
-                :key="item.index"
-              >
+            <ul class="scroll-y" v-show="!isScanBefore">
+              <li v-for="item in deliveryList02" :key="item.index">
                 <div class="card type-02">
                   <div class="card-inner">
                     <div class="contents d-flex-be-center">
                       <div class="d-flex-align-center">
                         <div class="input-checkbox">
-                          <input
-                            id="chk-01"
-                            type="checkbox"
-                          >
-                          <label for="chk-01" />
+                          <input type="checkbox" id="chk-01" />
+                          <label for="chk-01"></label>
                         </div>
                         <div class="l-delivery-address">
                           <div class="delivery-address-badge">
@@ -233,9 +126,7 @@
                             <span class="badge yellow">집하</span>
                             <span class="txt-sub ft-size-xsmall">{{ item.number }}</span>
                           </div>
-                          <p class="delivery-address-desc">
-                            {{ item.address }}
-                          </p>
+                          <p class="delivery-address-desc">{{ item.address }}</p>
                         </div>
                       </div>
                     </div>
@@ -244,24 +135,11 @@
                     <el-collapse accordion>
                       <el-collapse-item name="">
                         <div class="d-flex-be-center">
-                          <button class="btn-close-pop">
-                            접기
-                          </button>
-                          <button class="btn btn-circle blue">
-                            출발확정
-                          </button>
-                          <button class="btn btn-circle">
-                            삭제
-                          </button>
-                          <button class="btn btn-circle">
-                            스캔취소
-                          </button>
-                          <button
-                            class="btn btn-circle"
-                            @click="detailDialogVisible = true"
-                          >
-                            상세
-                          </button>
+                          <button class="btn-close-pop">접기</button>
+                          <button class="btn btn-circle blue">출발확정</button>
+                          <button class="btn btn-circle">삭제</button>
+                          <button class="btn btn-circle">스캔취소</button>
+                          <button class="btn btn-circle" @click="detailDialogVisible = true">상세</button>
                         </div>
                       </el-collapse-item>
                     </el-collapse>
@@ -270,12 +148,9 @@
               </li>
             </ul>
             <!-- 스캔 전 -->
-            <div
-              v-show="isScanBefore"
-              class="l-scan-before"
-            >
+            <div class="l-scan-before" v-show="isScanBefore">
               <p class="ft-size-xsmall txt-sub">
-                배송 대상 화물이 등록되지 않았습니다.<br>
+                배송 대상 화물이 등록되지 않았습니다.<br />
                 송장의 바코드를 스캔해서 등록해주세요.
               </p>
             </div>
@@ -290,117 +165,64 @@
         <li><span class="title">집하</span><span class="num ft-color-yellow">4</span></li>
         <li><span class="title">스캔</span><span class="num ft-color-purple">4</span></li>
       </ul>
-      <button
-        class="btn btn-size-full btn-size-large primary badge-circle"
-        @click="departureDialogVisible = true"
-      >
-        출발 확정 대상
-      </button>
+      <button class="btn btn-size-full btn-size-large primary badge-circle" @click="departureDialogVisible = true">출발 확정 대상</button>
     </div>
 
     <!-- 화물 상세정보 -->
     <div class="l-dialog">
-      <el-dialog
-        title="화물 상세정보"
-        :visible.sync="detailDialogVisible"
-        class="el-dialog-full"
-        width="100%"
-      >
-        <div
-          slot="title"
-          class="el-dialog__title"
-        >
-          화물 상세정보 <button class="btn btn-setting" />
-        </div>
+      <el-dialog title="화물 상세정보" :visible.sync="detailDialogVisible" class="el-dialog-full" width="100%">
+        <div slot="title" class="el-dialog__title">화물 상세정보 <button class="btn btn-setting"></button></div>
         <div class="content">
-          <p class="ft-size-large ft-weight-bold">
-            운송료
-          </p>
-          <p class="ft-size-xxlarge">
-            13,000
-          </p>
+          <p class="ft-size-large ft-weight-bold">운송료</p>
+          <p class="ft-size-xxlarge">13,000</p>
           <div class="l-badge d-flex-be-center">
             <div>
               <span class="badge purple">스캔</span>
               <span class="badge green">배송</span>
               <span class="txt-sub ft-size-xsmall">610587461481</span>
             </div>
-            <button class="btn">
-              <i class="icon-more-vertical" />
-            </button>
+            <button class="btn"><i class="icon-more-vertical"></i></button>
           </div>
           <div class="l-list-line">
             <ul>
               <li>
                 <div class="d-flex-be-start">
-                  <p class="title">
-                    도로명 주소
-                  </p>
-                  <p class="desc">
-                    경기도 고양시 덕양구<br>덕수천 2로 118
-                  </p>
+                  <p class="title">도로명 주소</p>
+                  <p class="desc">경기도 고양시 덕양구<br />덕수천 2로 118</p>
                 </div>
                 <div class="d-flex-be-start">
-                  <p class="title">
-                    지번 주소
-                  </p>
-                  <p class="desc">
-                    경기도 고양시 덕양구<br>동산동 368-3 창릉초등학교
-                  </p>
+                  <p class="title">지번 주소</p>
+                  <p class="desc">경기도 고양시 덕양구<br />동산동 368-3 창릉초등학교</p>
                 </div>
               </li>
               <li>
                 <div class="d-flex-be-start">
-                  <p class="title">
-                    화물 이동내역
-                  </p>
-                  <p class="desc">
-                    간선상차 완료
-                  </p>
+                  <p class="title">화물 이동내역</p>
+                  <p class="desc">간선상차 완료</p>
                 </div>
                 <div class="d-flex-be-start">
-                  <p class="title">
-                    상품명
-                  </p>
-                  <p class="desc">
-                    간장게장
-                  </p>
+                  <p class="title">상품명</p>
+                  <p class="desc">간장게장</p>
                 </div>
               </li>
               <li>
                 <div class="d-flex-be-start">
-                  <p class="title">
-                    송하인
-                  </p>
-                  <p class="desc">
-                    김송하
-                  </p>
+                  <p class="title">송하인</p>
+                  <p class="desc">김송하</p>
                 </div>
                 <div class="d-flex-be-start">
-                  <p class="title">
-                    수하인
-                  </p>
-                  <p class="desc">
-                    이수령
-                  </p>
+                  <p class="title">수하인</p>
+                  <p class="desc">이수령</p>
                 </div>
               </li>
               <li>
                 <div class="d-flex-be-start">
-                  <p class="title">
-                    고객요청사항
-                  </p>
-                  <p class="desc">
-                    문앞에 놓아주세요. (예정 시간 7시)
-                  </p>
+                  <p class="title">고객요청사항</p>
+                  <p class="desc">문앞에 놓아주세요. (예정 시간 7시)</p>
                 </div>
                 <div class="d-flex-be-start">
-                  <p class="title">
-                    메모
-                  </p>
-                  <p class="desc">
-                    진상 고객임
-                  </p>
+                  <p class="title">메모</p>
+                  <p class="desc">진상 고객임</p>
                 </div>
               </li>
             </ul>
@@ -411,82 +233,45 @@
 
     <!-- 출발 확정 대상 -->
     <div class="l-dialog">
-      <el-dialog
-        title="출발 확정 대상"
-        :visible.sync="departureDialogVisible"
-        class="el-dialog-full bg-white l-dialog-departure"
-        width="100%"
-      >
-        <div
-          slot="title"
-          class="el-dialog__title"
-        >
-          출발 확정 대상 <button
-            class="btn btn-clock"
-            @click="drawer = true"
-          />
-        </div>
+      <el-dialog title="출발 확정 대상" :visible.sync="departureDialogVisible" class="el-dialog-full bg-white l-dialog-departure" width="100%">
+        <div slot="title" class="el-dialog__title">출발 확정 대상 <button class="btn btn-clock" @click="drawer = true"></button></div>
         <div class="l-departure l-scroll">
           <div class="l-card-tab">
             <ul>
               <li>
                 <div class="card all is-on">
-                  <p class="card-title">
-                    ALL
-                  </p>
-                  <p class="card-desc">
-                    10개
-                  </p>
+                  <p class="card-title">ALL</p>
+                  <p class="card-desc">10개</p>
                 </div>
               </li>
               <li>
                 <div class="card">
-                  <p class="card-title">
-                    <span class="badge-circle-secondary">A</span> ~9시
-                  </p>
-                  <p class="card-desc">
-                    10개
-                  </p>
+                  <p class="card-title"><span class="badge-circle-secondary">A</span> ~9시</p>
+                  <p class="card-desc">10개</p>
                 </div>
               </li>
               <li>
                 <div class="card is-on">
-                  <p class="card-title">
-                    <span class="badge-circle-secondary">B</span> ~9시
-                  </p>
-                  <p class="card-desc">
-                    10개
-                  </p>
+                  <p class="card-title"><span class="badge-circle-secondary">B</span> ~9시</p>
+                  <p class="card-desc">10개</p>
                 </div>
               </li>
               <li>
                 <div class="card">
-                  <p class="card-title">
-                    <span class="badge-circle-secondary">C</span> ~9시
-                  </p>
-                  <p class="card-desc">
-                    10개
-                  </p>
+                  <p class="card-title"><span class="badge-circle-secondary">C</span> ~9시</p>
+                  <p class="card-desc">10개</p>
                 </div>
               </li>
               <li>
                 <div class="card">
-                  <p class="card-title">
-                    <span class="badge-circle-secondary">C</span> ~9시
-                  </p>
-                  <p class="card-desc">
-                    10개
-                  </p>
+                  <p class="card-title"><span class="badge-circle-secondary">C</span> ~9시</p>
+                  <p class="card-desc">10개</p>
                 </div>
               </li>
               <li>
                 <div class="card">
-                  <p class="card-title">
-                    <span class="badge-circle-secondary">C</span> ~9시
-                  </p>
-                  <p class="card-desc">
-                    10개
-                  </p>
+                  <p class="card-title"><span class="badge-circle-secondary">C</span> ~9시</p>
+                  <p class="card-desc">10개</p>
                 </div>
               </li>
             </ul>
@@ -495,26 +280,15 @@
             <div class="d-flex-be-center">
               <div class="txt-sub">
                 <div class="input-checkbox">
-                  <input
-                    id="chk-all"
-                    type="checkbox"
-                  >
+                  <input type="checkbox" id="chk-all" />
                   <label for="chk-all">전체 <span class="txt-primary">8</span>개</label>
                 </div>
               </div>
               <div class="btn-group">
-                <button class="btn  btn-size-xsmall white is-active">
-                  자동
-                </button>
+                <button class="btn  btn-size-xsmall white is-active">자동</button>
                 <!-- <button class="btn btn-size-regular white">수동</button> -->
-                <button
-                  class="btn btn-revert small ml-20"
-                  disabled
-                />
-                <button
-                  class="btn btn-search small"
-                  disabled
-                />
+                <button class="btn btn-revert small ml-20" disabled></button>
+                <button class="btn btn-search small" disabled></button>
               </div>
             </div>
           </div>
@@ -522,11 +296,8 @@
             <ul class="card-list is-drag">
               <li>
                 <div class="input-checkbox">
-                  <input
-                    id="chk-01"
-                    type="checkbox"
-                  >
-                  <label for="chk-01" />
+                  <input type="checkbox" id="chk-01" />
+                  <label for="chk-01"></label>
                 </div>
                 <div class="delivery-txt">
                   <p class="delivery-title">
@@ -540,18 +311,15 @@
                   </p>
                 </div>
                 <div class="delivery-btn">
-                  <button class="btn-drag" />
+                  <button class="btn-drag"></button>
                 </div>
               </li>
             </ul>
             <ul class="card-list">
               <li>
                 <div class="input-checkbox">
-                  <input
-                    id="chk-01"
-                    type="checkbox"
-                  >
-                  <label for="chk-01" />
+                  <input type="checkbox" id="chk-01" />
+                  <label for="chk-01"></label>
                 </div>
                 <div class="delivery-txt">
                   <p class="delivery-title">
@@ -565,18 +333,15 @@
                   </p>
                 </div>
                 <div class="delivery-btn">
-                  <button class="btn-drag" />
+                  <button class="btn-drag"></button>
                 </div>
               </li>
             </ul>
             <ul class="card-list">
               <li>
                 <div class="input-checkbox">
-                  <input
-                    id="chk-01"
-                    type="checkbox"
-                  >
-                  <label for="chk-01" />
+                  <input type="checkbox" id="chk-01" />
+                  <label for="chk-01"></label>
                 </div>
                 <div class="delivery-txt">
                   <p class="delivery-title">
@@ -590,21 +355,15 @@
                   </p>
                 </div>
                 <div class="delivery-btn">
-                  <button class="btn-drag" />
+                  <button class="btn-drag"></button>
                 </div>
               </li>
             </ul>
-            <ul
-              class="card-list card-list-group"
-              :class="isVisible ? 'is-on' : 'is-default'"
-            >
+            <ul class="card-list card-list-group" :class="isVisible ? 'is-on' : 'is-default'">
               <li @click="visibleLayer">
                 <div class="input-checkbox">
-                  <input
-                    id="chk-01"
-                    type="checkbox"
-                  >
-                  <label for="chk-01" />
+                  <input type="checkbox" id="chk-01" />
+                  <label for="chk-01"></label>
                 </div>
                 <div class="delivery-txt">
                   <p class="delivery-title">
@@ -617,30 +376,16 @@
                   </p>
                 </div>
                 <div class="delivery-btn">
-                  <button
-                    v-show="!isVisible"
-                    class="btn-drag"
-                  />
-                  <button
-                    v-show="isVisible"
-                    class="btn txt-sub ft-size-xsmall btn-txt"
-                  >
-                    접기
-                  </button>
+                  <button class="btn-drag" v-show="!isVisible"></button>
+                  <button class="btn txt-sub ft-size-xsmall btn-txt" v-show="isVisible">접기</button>
                 </div>
               </li>
-              <li
-                v-show="isVisible"
-                class="l-card-layer"
-              >
+              <li class="l-card-layer" v-show="isVisible">
                 <ul>
                   <li>
                     <div class="input-checkbox">
-                      <input
-                        id="chk-01"
-                        type="checkbox"
-                      >
-                      <label for="chk-01" />
+                      <input type="checkbox" id="chk-01" />
+                      <label for="chk-01"></label>
                     </div>
                     <div class="delivery-txt">
                       <p class="delivery-title">
@@ -654,16 +399,13 @@
                       </p>
                     </div>
                     <div class="delivery-btn">
-                      <button class="btn-drag" />
+                      <button class="btn-drag"></button>
                     </div>
                   </li>
                   <li>
                     <div class="input-checkbox">
-                      <input
-                        id="chk-01"
-                        type="checkbox"
-                      >
-                      <label for="chk-01" />
+                      <input type="checkbox" id="chk-01" />
+                      <label for="chk-01"></label>
                     </div>
                     <div class="delivery-txt">
                       <p class="delivery-title">
@@ -677,16 +419,13 @@
                       </p>
                     </div>
                     <div class="delivery-btn">
-                      <button class="btn-drag" />
+                      <button class="btn-drag"></button>
                     </div>
                   </li>
                   <li>
                     <div class="input-checkbox">
-                      <input
-                        id="chk-01"
-                        type="checkbox"
-                      >
-                      <label for="chk-01" />
+                      <input type="checkbox" id="chk-01" />
+                      <label for="chk-01"></label>
                     </div>
                     <div class="delivery-txt">
                       <p class="delivery-title">
@@ -700,86 +439,38 @@
                       </p>
                     </div>
                     <div class="delivery-btn">
-                      <button class="btn-drag" />
+                      <button class="btn-drag"></button>
                     </div>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
-          <div
-            class="l-departure-bottom"
-            :class="{ 'is-order': isOrder }"
-          >
-            <div
-              v-show="isOrder"
-              class="l-order-layer"
-            >
+          <div class="l-departure-bottom" :class="{ 'is-order': isOrder }">
+            <div class="l-order-layer" v-show="isOrder">
               <div class="l-select">
                 <div class="select">
-                  <el-select
-                    v-model="value"
-                    placeholder="1"
-                  >
-                    <el-option
-                      v-for="item in selectOptions"
-                      :key="item.value"
-                      :label="item.label"
-                      :value="item.value"
-                    />
+                  <el-select v-model="value" placeholder="1">
+                    <el-option v-for="item in selectOptions" :key="item.value" :label="item.label" :value="item.value"> </el-option>
                   </el-select>
                 </div>
-                <button class="btn pale-grey is-on">
-                  <i class="icon-arrow-up" />
-                </button>
-                <button class="btn pale-grey is-on">
-                  <i class="icon-chevrons-up" />
-                </button>
+                <button class="btn pale-grey is-on"><i class="icon-arrow-up"></i></button>
+                <button class="btn pale-grey is-on"><i class="icon-chevrons-up"></i></button>
                 <div class="select">
-                  <el-select
-                    v-model="value"
-                    placeholder="1"
-                  >
-                    <el-option
-                      v-for="item in selectOptions"
-                      :key="item.value"
-                      :label="item.label"
-                      :value="item.value"
-                    />
+                  <el-select v-model="value" placeholder="1">
+                    <el-option v-for="item in selectOptions" :key="item.value" :label="item.label" :value="item.value"> </el-option>
                   </el-select>
                 </div>
-                <button class="btn pale-grey">
-                  <i class="icon-arrow-down" />
-                </button>
-                <button class="btn pale-grey">
-                  <i class="icon-chevrons-down" />
-                </button>
+                <button class="btn pale-grey"><i class="icon-arrow-down"></i></button>
+                <button class="btn pale-grey"><i class="icon-chevrons-down"></i></button>
               </div>
             </div>
             <div class="btn-group btn-size-full">
-              <button
-                class="btn btn-size-full btn-size-large white ft-weight-bold"
-                :class="{ 'is-on': isOrder }"
-                @click="deliveryOrder"
-              >
-                순서
-              </button>
-              <button
-                class="btn btn-size-full btn-size-large white ft-weight-bold"
-                @click="drawerDeliveryTime = true"
-              >
-                시간
-              </button>
+              <button class="btn btn-size-full btn-size-large white ft-weight-bold" @click="deliveryOrder" :class="{ 'is-on': isOrder }">순서</button>
+              <button class="btn btn-size-full btn-size-large white ft-weight-bold" @click="drawerDeliveryTime = true">시간</button>
             </div>
-            <button class="btn btn-size-full btn-size-large primary mr-5">
-              <i class="icon-check-circle small white mr-5" />출발 확정
-            </button>
-            <button
-              class="btn btn-size-full btn-size-large yellow"
-              @click="drawerRouting = true"
-            >
-              <i class="icon-map-pin small white mr-5" />라우팅
-            </button>
+            <button class="btn btn-size-full btn-size-large primary mr-5"><i class="icon-check-circle small white mr-5"></i>출발 확정</button>
+            <button class="btn btn-size-full btn-size-large yellow" @click="drawerRouting = true"><i class="icon-map-pin small white mr-5"></i>라우팅</button>
           </div>
         </div>
       </el-dialog>
@@ -787,17 +478,10 @@
 
     <!-- 출발 확정 대상 - 배송 순서 / 시간 지정 -->
     <div class="l-drawer l-scroll l-delivery-order">
-      <el-drawer
-        :visible.sync="drawer"
-        direction="btt"
-        size="92%"
-        :with-header="false"
-      >
+      <el-drawer :visible.sync="drawer" direction="btt" size="92%" :with-header="false">
         <div class="drawer-title d-flex-be-center">
           <span>배송 순서 / 시간 지정</span>
-          <button class="btn  btn-size-xsmall white btn-auto-manual is-on">
-            자동
-          </button>
+          <button class="btn  btn-size-xsmall white btn-auto-manual is-on">자동</button>
           <!-- <button class="btn btn-size-regular white">수동</button> -->
         </div>
         <div class="l-inner l-fixed">
@@ -805,138 +489,93 @@
             <label for="inp-01">1시간 당 평균 배송 화물 수</label>
             <div class="inp">
               <div class="inp-inner">
-                <input
-                  id="inp-01"
-                  type="text"
-                  class="input-text-line"
-                  placeholder=""
-                  autofocus
-                >
+                <input type="text" class="input-text-line" placeholder="" id="inp-01" autofocus />
               </div>
             </div>
           </div>
-          <div class="l-total">
-            <span class="ft-weight-bold mr-5">금일 화물 수</span> <span class="ft-weight-bold txt-primary">71</span>
-          </div>
+          <div class="l-total"><span class="ft-weight-bold mr-5">금일 화물 수</span> <span class="ft-weight-bold txt-primary">71</span></div>
         </div>
         <div class="scroll-y l-table-time">
           <table>
             <colgroup>
-              <col width="10%">
-              <col width="30%">
-              <col width="30%">
-              <col width="30%">
+              <col width="10%" />
+              <col width="30%" />
+              <col width="30%" />
+              <col width="30%" />
             </colgroup>
             <tbody>
-              <tr>
-                <th><span>09</span><span>10</span></th>
-                <td><span class="ft-weight-bold">A </span><span>소권역</span></td>
-                <td><span class="txt-primary ft-weight-bold">20</span></td>
-                <td>
-                  <button
-                    class="btn btn-clock"
-                    @click="timeDialogVisible = true"
-                  />
-                  <button class="btn-drag medium" />
-                </td>
-              </tr>
-              <tr class="is-on">
-                <th><span>09</span></th>
-                <td><span class="ft-weight-bold">A </span><span>소권역</span></td>
-                <td><span class="txt-primary ft-weight-bold">20</span></td>
-                <td>
-                  <button
-                    class="btn btn-clock"
-                    @click="timeDialogVisible = true"
-                  />
-                  <button class="btn-drag medium" />
-                </td>
-              </tr>
-              <tr class="is-drag">
-                <th><span>09</span></th>
-                <td><span class="ft-weight-bold">A </span><span>소권역</span></td>
-                <td><span class="txt-primary ft-weight-bold">20</span></td>
-                <td>
-                  <button
-                    class="btn btn-clock"
-                    @click="timeDialogVisible = true"
-                  />
-                  <button class="btn-drag medium" />
-                </td>
-              </tr>
-              <tr>
-                <th><span>09</span></th>
-                <td />
-                <td />
-                <td />
-              </tr>
-              <tr class="disabled">
-                <th><span>09</span></th>
-                <td />
-                <td />
-                <td />
-              </tr>
-              <tr class="disabled">
-                <th><span>09</span></th>
-                <td />
-                <td />
-                <td />
-              </tr>
+            <tr>
+              <th><span>09</span><span>10</span></th>
+              <td><span class="ft-weight-bold">A </span><span>소권역</span></td>
+              <td><span class="txt-primary ft-weight-bold">20</span></td>
+              <td>
+                <button class="btn btn-clock" @click="timeDialogVisible = true"></button>
+                <button class="btn-drag medium"></button>
+              </td>
+            </tr>
+            <tr class="is-on">
+              <th><span>09</span></th>
+              <td><span class="ft-weight-bold">A </span><span>소권역</span></td>
+              <td><span class="txt-primary ft-weight-bold">20</span></td>
+              <td>
+                <button class="btn btn-clock" @click="timeDialogVisible = true"></button>
+                <button class="btn-drag medium"></button>
+              </td>
+            </tr>
+            <tr class="is-drag">
+              <th><span>09</span></th>
+              <td><span class="ft-weight-bold">A </span><span>소권역</span></td>
+              <td><span class="txt-primary ft-weight-bold">20</span></td>
+              <td>
+                <button class="btn btn-clock" @click="timeDialogVisible = true"></button>
+                <button class="btn-drag medium"></button>
+              </td>
+            </tr>
+            <tr>
+              <th><span>09</span></th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="disabled">
+              <th><span>09</span></th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="disabled">
+              <th><span>09</span></th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
             </tbody>
           </table>
         </div>
         <div class="l-departure-bottom">
-          <button class="btn btn-size-full btn-size-large primary mr-10">
-            확인
-          </button>
-          <button class="btn btn-size-full btn-size-large yellow">
-            <i class="icon-map-pin small white mr-5" />라우팅
-          </button>
+          <button class="btn btn-size-full btn-size-large primary mr-10">확인</button>
+          <button class="btn btn-size-full btn-size-large yellow"><i class="icon-map-pin small white mr-5"></i>라우팅</button>
         </div>
       </el-drawer>
     </div>
 
     <!-- 배송시간 늘리기 -->
     <div class="l-dialog l-delivery-time">
-      <el-dialog
-        title="B 소권역 배송 시간 수정"
-        :visible.sync="timeDialogVisible"
-        width="100%"
-      >
+      <el-dialog title="B 소권역 배송 시간 수정" :visible.sync="timeDialogVisible" width="100%">
         <div class="l-inp">
           <div>
-            <label
-              for="time-start"
-              class="ft-weight-bold"
-            >시작 시간</label>
+            <label for="time-start" class="ft-weight-bold">시작 시간</label>
             <div class="inp mt-10">
               <div class="inp-inner">
-                <input
-                  id="time-start"
-                  type="text"
-                  class="input-text-line ft-align-center"
-                  placeholder=""
-                  autofocus
-                  value="12"
-                >
+                <input type="text" class="input-text-line ft-align-center" placeholder="" id="time-start" autofocus value="12" />
               </div>
             </div>
           </div>
           <div class="ml-15">
-            <label
-              for="time-end"
-              class="ft-weight-bold"
-            >완료 시간</label>
+            <label for="time-end" class="ft-weight-bold">완료 시간</label>
             <div class="inp mt-10">
               <div class="inp-inner">
-                <input
-                  id="time-end"
-                  type="text"
-                  class="input-text-line ft-align-center txt-primary"
-                  placeholder=""
-                  autofocus
-                  value="14"
-                >
+                <input type="text" class="input-text-line ft-align-center txt-primary" placeholder="" id="time-end" autofocus value="14" />
               </div>
             </div>
           </div>
@@ -944,9 +583,7 @@
         <ul class="time-list">
           <li>12</li>
           <li>13</li>
-          <li class="is-on">
-            14
-          </li>
+          <li class="is-on">14</li>
           <li>15</li>
           <li>16</li>
           <li>17</li>
@@ -954,83 +591,37 @@
           <li>17</li>
           <li>17</li>
         </ul>
-        <div
-          slot="footer"
-          class="dialog-footer"
-        >
-          <el-button @click="timeDialogVisible = false">
-            닫기
-          </el-button>
-          <el-button
-            type="primary"
-            @click="timeDialogVisible = false"
-          >
-            확인
-          </el-button>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="timeDialogVisible = false">닫기</el-button>
+          <el-button type="primary" @click="timeDialogVisible = false">확인</el-button>
         </div>
       </el-dialog>
     </div>
 
     <!-- 배송예정시간변경 -->
     <div class="l-drawer l-scroll l-drawer-delivery-time">
-      <el-drawer
-        :visible.sync="drawerDeliveryTime"
-        direction="btt"
-        size="92%"
-        :with-header="false"
-      >
+      <el-drawer :visible.sync="drawerDeliveryTime" direction="btt" size="92%" :with-header="false">
         <div class="drawer-title d-flex-be-center">
           <span>변경할 시간을 선택하세요.</span>
           <div>
-            <button class="btn txt-sub">
-              취소
-            </button>
-            <button class="btn txt-primary ml-20">
-              확인
-            </button>
+            <button class="btn txt-sub">취소</button>
+            <button class="btn txt-primary ml-20">확인</button>
           </div>
         </div>
         <div class="scroll-y l-radio l-list">
-          <el-radio-group
-            v-model="radio"
-            class=""
-          >
-            <el-radio :label="1">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="2">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="3">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="4">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="5">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="6">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="7">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="8">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="8">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="8">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="8">
-              오전 8시 ~ 9시
-            </el-radio>
-            <el-radio :label="8">
-              오전 8시 ~ 9시
-            </el-radio>
+          <el-radio-group v-model="radio" class="">
+            <el-radio :label="1">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="2">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="3">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="4">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="5">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="6">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="7">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="8">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="8">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="8">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="8">오전 8시 ~ 9시</el-radio>
+            <el-radio :label="8">오전 8시 ~ 9시</el-radio>
           </el-radio-group>
         </div>
       </el-drawer>
@@ -1038,12 +629,7 @@
 
     <!-- 라우팅맵 -->
     <div class="l-drawer l-scroll l-drawer-routing">
-      <el-drawer
-        :visible.sync="drawerRouting"
-        direction="btt"
-        size="92%"
-        :with-header="false"
-      >
+      <el-drawer :visible.sync="drawerRouting" direction="btt" size="92%" :with-header="false">
         <div class="drawer-title d-flex-be-center l-fixed border-none">
           <span>A-1 청파동 1가 62-20</span>
         </div>
@@ -1054,12 +640,8 @@
               <div class="map-title">
                 <span class="ft-color-white">A <span class="ft-color-yellow-02">1개</span> </span>
               </div>
-              <p class="icon-pin">
-                <span>A-1</span>
-              </p>
-              <p class="icon-pin is-on">
-                <span>A-2</span>
-              </p>
+              <p class="icon-pin"><span>A-1</span></p>
+              <p class="icon-pin is-on"><span>A-2</span></p>
             </div>
             <div class="map">
               <div class="map-title">
@@ -1081,39 +663,29 @@
           </div>
         </div>
         <div class="l-floating-zoom">
-          <button class="btn">
-            <i class="icon-plus" />
-          </button>
-          <button
-            class="btn"
-            disabled
-          >
-            <i class="icon-minus" />
-          </button>
+          <button class="btn"><i class="icon-plus"></i></button>
+          <button class="btn" disabled><i class="icon-minus"></i></button>
         </div>
       </el-drawer>
     </div>
 
     <!-- 송장번호입력 -->
-    <pop-waybill
-      v-if="popOn"
-      @click="popVisible"
-    />
+    <pop-waybill v-if="popOn" @click="popVisible" />
 
     <Foot-menu />
   </div>
 </template>
 
 <script>
-import Gnb from '../../components/layout/Gnb';
-import FootMenu from '../../components/layout/FootMenu';
-import PopWaybill from '../Modal/PopWaybill';
+import Gnb from "../../components/layout/Gnb";
+import FootMenu from "../../components/layout/FootMenu";
+import PopWaybill from "../Modal/PopWaybill";
 export default {
-  name: 'Delivery',
   components: { Gnb, FootMenu, PopWaybill },
+  name: "Delivery",
   data() {
     return {
-      activeNames: '',
+      activeNames: "",
       isScanBefore: false,
       popOn: false,
       detailDialogVisible: false,
@@ -1127,108 +699,108 @@ export default {
       isOrder: false,
       deliveryList01: [
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
       ],
       deliveryList02: [
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
         {
-          number: '610587461481',
-          address: '청파동 1가 62-20 102호',
+          number: "610587461481",
+          address: "청파동 1가 62-20 102호",
         },
       ],
-      value: '',
+      value: "",
       selectOptions: [
         {
-          value: '1',
-          label: '1',
+          value: "1",
+          label: "1",
         },
         {
-          value: '2',
-          label: '2',
+          value: "2",
+          label: "2",
         },
         {
-          value: '3',
-          label: '3',
+          value: "3",
+          label: "3",
         },
         {
-          value: '4',
-          label: '4',
+          value: "4",
+          label: "4",
         },
       ],
-      radio: '',
+      radio: "",
     };
   },
   methods: {
@@ -1238,16 +810,16 @@ export default {
     handleChange(val) {
       console.log(val);
     },
-    switchSearch() {
+    switchSearch: function() {
       this.isSearch = !this.isSearch;
     },
-    visibleLayer() {
+    visibleLayer: function() {
       this.isVisible = !this.isVisible;
     },
-    deliveryOrder() {
+    deliveryOrder: function() {
       this.isOrder = !this.isOrder;
     },
-    popVisible() {
+    popVisible: function() {
       this.popOn = !this.popOn;
     },
   },
