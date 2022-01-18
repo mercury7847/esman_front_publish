@@ -1,4 +1,5 @@
 <template>
+  <!-- 삭제예정 -->
   <div class="l-dialog small">
     <el-dialog title="운송장 번호" :visible.sync="DeliveryComplete" width="300px" center>
       <div class="l-inp l-search">

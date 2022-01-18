@@ -77,6 +77,16 @@
       }
     }
   }
+  &.pop-sorting {
+    .el-dialog {
+      &__header {
+        padding-bottom: 0;
+      }
+      &__body {
+        padding-bottom: 15px !important;
+      }
+    }
+  }
 }
 
 .v-modal {

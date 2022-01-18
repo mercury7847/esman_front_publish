@@ -23,13 +23,13 @@ export default {
         },
         {
           menu: "준비",
-          path: "/delivery",
-          icon: "icon-start",
+          path: "/delivery-start",
+          icon: "icon-complet",
         },
         {
           menu: "처리",
           path: "/delivery-processing",
-          icon: "icon-complet",
+          icon: "icon-start",
         },
         {
           menu: "실적",

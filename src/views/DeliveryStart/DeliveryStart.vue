@@ -17,7 +17,7 @@
                   </div>
                 </el-form-item>
               </el-form>
-              <div class="l-section-header mb-20">
+              <div class="l-section-header mb-15">
                 <div class="left">
                   <el-form class="l-form">
                     <el-form-item class="checkbox">
@@ -31,10 +31,10 @@
                 </div>
                 <div class="right">
                   <button class="btn btn-size-small white" :disabled="!isChecked">삭제</button>
-                  <button class="btn btn-sorting"></button>
+                  <button class="btn btn-sorting" @click="isPopSortingActive = true"></button>
                   <button class="btn btn-scan"></button>
                   <button class="btn btn-refresh"></button>
-                  <button class="btn btn-search"></button>
+                  <button class="btn btn-search" @click="isPopWaybillActive = true"></button>
                 </div>
               </div>
               <div class="l-tag mb-20">
@@ -76,6 +76,27 @@
                   </li>
                 </ul>
               </div>
+              <div class="l-bottom">
+                <div class="l-section-header mb-10">
+                  <div class="left ft-weight-bold"><span>전체</span>&nbsp;<span class="ft-color-primary">10</span></div>
+                  <div class="right">
+                    <span>배송</span>&nbsp;<b class="ft-color-primary">10</b> <span class="ml-10">집하</span>&nbsp;<b class="ft-color-primary">10</b> <span class="ml-10">스캔</span>&nbsp;<b
+                      class="ft-color-primary"
+                      >10</b
+                    >
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <div class="l-radio">
+                    <el-radio-group v-model="radioButton">
+                      <el-radio-button label="수동"></el-radio-button>
+                      <el-radio-button label="자동"></el-radio-button>
+                    </el-radio-group>
+                  </div>
+                  <button class="btn btn-size-full btn-size-large primary">출발 확정 대상</button>
+                  <button class="btn btn-list"><i class="icon-list"></i></button>
+                </div>
+              </div>
             </div>
           </el-tab-pane>
 
@@ -98,20 +119,26 @@
       </div>
     </div>
 
-    <foot-menu />
+    <foot-menu v-if="isFooterActive" />
+    <pop-waybill v-if="isPopWaybillActive" @click="isPopWaybillActive = !isPopWaybillActive"></pop-waybill>
+    <pop-sorting v-if="isPopSortingActive" @click="isPopSortingActive = !isPopSortingActive"></pop-sorting>
   </div>
 </template>
 
 <script>
 import { Gnb, FootMenu } from "@/components/layout";
+import PopWaybill from "@/views/Modal/PopWaybill";
+import PopSorting from "@/views/Modal/PopSorting";
 
 export default {
-  components: { Gnb, FootMenu },
+  components: { Gnb, FootMenu, PopWaybill, PopSorting },
   name: "DeliveryStart",
   data() {
     return {
       loading: false, //로딩
       isFooterActive: true, //하단 메뉴
+      isPopWaybillActive: false,
+      isPopSortingActive: false,
       activeName: "1",
       radio: "1",
       isChecked: false,
@@ -139,7 +166,26 @@ export default {
           isSelected: false,
           popoverActive: false,
         },
+        {
+          scan: false,
+          number: "9117159",
+          time: "미정",
+          area: "A01",
+          address: "청파동 1가 62-20 102호",
+          isSelected: false,
+          popoverActive: false,
+        },
+        {
+          scan: false,
+          number: "9117159",
+          time: "미정",
+          area: "A01",
+          address: "청파동 1가 62-20 102호",
+          isSelected: false,
+          popoverActive: false,
+        },
       ],
+      radioButton: "수동",
     };
   },
   methods: {

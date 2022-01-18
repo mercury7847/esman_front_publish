@@ -1,13 +1,13 @@
 <template>
-  <div class="l-dialog small">
+  <div class="l-dialog small pop-waybill">
     <el-dialog title="운송장 번호" :visible.sync="PopWaybill" width="300px" center>
-      <div class="l-inp l-search">
+      <div class="l-inp">
         <div class="inp">
           <div class="inp-inner">
-            <input type="text" class="input-text-line" placeholder="송장번호를 입력하세요." id="inp-01" autofocus />
-            <button class="btn-close"></button>
+            <el-input type="number" placeholder="운송장 번호를 입력하세요." v-model="inputWaybill" class="inp-text-line">
+              <button slot="append" class="btn btn-camera"></button>
+            </el-input>
           </div>
-          <button class="btn btn-search"></button>
         </div>
       </div>
       <div slot="footer" class="dialog-footer">
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       PopWaybill: true,
+      inputWaybill: "",
     };
   },
   methods: {
