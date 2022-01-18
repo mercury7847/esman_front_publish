@@ -1,6 +1,6 @@
 <template>
   <div class="l-dialog small pop-sorting">
-    <el-dialog title="정렬방식 선택" :visible.sync="PopWaybill" width="300px" center>
+    <el-dialog title="정렬방식 선택" :visible.sync="PopSorting" width="300px" center>
       <div class="l-radio list">
         <el-radio-group v-model="radioTypeList">
           <el-radio label="1">기본순</el-radio>
@@ -18,10 +18,10 @@
 
 <script>
 export default {
-  name: "PopWaybill",
+  name: "PopSorting",
   data() {
     return {
-      PopWaybill: true,
+      PopSorting: true,
       radioTypeList: "1",
     };
   },
