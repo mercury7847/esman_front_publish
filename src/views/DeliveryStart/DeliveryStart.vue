@@ -32,9 +32,9 @@
                 <div class="right">
                   <button class="btn btn-size-small white" :disabled="!isChecked">삭제</button>
                   <button class="btn btn-sorting" @click="isPopSortingActive = true"></button>
-                  <button class="btn btn-scan"></button>
+                  <button class="btn btn-scan" @click="isPopWaybillActive = true"></button>
                   <button class="btn btn-refresh"></button>
-                  <button class="btn btn-search" @click="isPopWaybillActive = true"></button>
+                  <button class="btn btn-search" @click="isPopSearchCargoActive = true"></button>
                 </div>
               </div>
               <div class="l-tag mb-20">
@@ -120,8 +120,12 @@
     </div>
 
     <foot-menu v-if="isFooterActive" />
+    <!-- 운송장 번호 팝업 -->
     <pop-waybill v-if="isPopWaybillActive" @click="isPopWaybillActive = !isPopWaybillActive"></pop-waybill>
+    <!-- 정렬방식선택 팝업 -->
     <pop-sorting v-if="isPopSortingActive" @click="isPopSortingActive = !isPopSortingActive"></pop-sorting>
+    <!-- 화물 검색 -->
+    <pop-search-cargo v-if="isPopSearchCargoActive" @click="isPopSearchCargoActive = !isPopSearchCargoActive"></pop-search-cargo>
   </div>
 </template>
 
@@ -129,9 +133,10 @@
 import { Gnb, FootMenu } from "@/components/layout";
 import PopWaybill from "@/views/Modal/PopWaybill";
 import PopSorting from "@/views/Modal/PopSorting";
+import PopSearchCargo from "@/views/DeliveryStart/PopSearchCargo";
 
 export default {
-  components: { Gnb, FootMenu, PopWaybill, PopSorting },
+  components: { Gnb, FootMenu, PopWaybill, PopSorting, PopSearchCargo },
   name: "DeliveryStart",
   data() {
     return {
@@ -139,6 +144,8 @@ export default {
       isFooterActive: true, //하단 메뉴
       isPopWaybillActive: false,
       isPopSortingActive: false,
+      isPopSearchCargoActive: false,
+
       activeName: "1",
       radio: "1",
       isChecked: false,
