@@ -227,6 +227,7 @@
     .el-radio {
       margin: 0;
       &__label {
+        color: $--color--contents;
         font-size: $--font-size-regular;
         vertical-align: middle;
       }

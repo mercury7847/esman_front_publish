@@ -303,3 +303,15 @@ b {
     padding-bottom: 30px !important;
   }
 }
+
+.bg {
+  &-yellow {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 10px 16px;
+    background-color: $--color--light-yellow;
+    color: $--color--orange;
+    font-weight: 500;
+    line-height: 1.3125rem;
+  }
+}

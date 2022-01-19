@@ -52,10 +52,11 @@
     }
   }
   &-bottom {
-    // position: absolute;
     bottom: 0;
-    width: 100%;
-    padding: 15px 0;
+    width: calc(100% + 30px);
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 15px 16px;
     background-color: $--color--white;
     box-shadow: 20px 0 45px 10px rgba(0, 0, 0, 0.1);
     .btn-group {
@@ -111,7 +112,7 @@
         color: $--color--white;
         line-height: 21px;
       }
-      .badge-circle-blue {
+      .badge-circle.blue {
         position: absolute;
         top: 0;
         right: 0;
