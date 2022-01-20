@@ -1,7 +1,7 @@
 <template>
   <div class="l-container" v-loading="loading" element-loading-spinner="el-icon-loading">
     <gnb />
-    <div class="l-contents delivery-start" :class="{ 'footer-active': isFooterActive }">
+    <div class="l-contents delivery-start" :class="{ 'footer-active': !isCardSelected }">
       <div class="l-tab pt-20">
         <el-tabs type="card" v-model="activeName" @tab-click="handleClick">
           <el-tab-pane name="1">
@@ -17,12 +17,12 @@
                   </div>
                 </el-form-item>
               </el-form>
-              <div class="l-section-header mb-20">
+              <div class="l-section-header mb-15">
                 <div class="left">
                   <el-form class="l-form">
                     <el-form-item class="checkbox">
                       <div class="l-checkbox">
-                        <el-checkbox v-model="checkAll">
+                        <el-checkbox v-model="allSelected" @change="cardSelect()">
                           <div class="l-total"><span class="num">0</span><span class="total">/5</span></div>
                         </el-checkbox>
                       </div>
@@ -30,11 +30,11 @@
                   </el-form>
                 </div>
                 <div class="right">
-                  <button class="btn btn-size-small white" :disabled="!isChecked">삭제</button>
-                  <button class="btn btn-sorting"></button>
-                  <button class="btn btn-scan"></button>
+                  <button class="btn btn-size-small white" :disabled="!isCardSelected">삭제</button>
+                  <button class="btn btn-sorting" @click="isPopSortingActive = true"></button>
+                  <button class="btn btn-scan" @click="isPopWaybillActive = true"></button>
                   <button class="btn btn-refresh"></button>
-                  <button class="btn btn-search"></button>
+                  <button class="btn btn-search" @click="isPopSearchCargoActive = true"></button>
                 </div>
               </div>
               <div class="l-tag mb-20">
@@ -69,12 +69,40 @@
                     <el-form class="l-form">
                       <el-form-item>
                         <div class="l-checkbox">
-                          <el-checkbox v-model="item.checked" @change="cardActive(item)"></el-checkbox>
+                          <el-checkbox v-model="item.isSelected" @change="cardSelect()"></el-checkbox>
                         </div>
                       </el-form-item>
                     </el-form>
                   </li>
                 </ul>
+              </div>
+              <div class="l-bottom">
+                <div class="btn-group-02 mb-10" v-show="isCardSelected">
+                  <button class="btn btn-size-full btn-size-large" @click="isPopDeliveryTimeActive = true">배송 시간 설정</button>
+                  <button class="btn btn-size-full btn-size-large" @click="isPopTransferRequestActive = true">이관</button>
+                </div>
+                <div class="l-section-header mb-10">
+                  <div class="left ft-weight-bold"><span>전체</span>&nbsp;<span class="ft-color-primary">10</span></div>
+                  <div class="right">
+                    <span>배송</span>&nbsp;<b class="ft-color-primary">10</b> <span class="ml-10">집하</span>&nbsp;<b class="ft-color-primary">10</b> <span class="ml-10">스캔</span>&nbsp;<b
+                      class="ft-color-primary"
+                      >10</b
+                    >
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <div class="l-radio">
+                    <el-radio-group v-model="radioButton">
+                      <el-radio-button label="수동"></el-radio-button>
+                      <el-radio-button label="자동"></el-radio-button>
+                    </el-radio-group>
+                  </div>
+                  <button class="btn btn-size-full btn-size-large primary" :disabled="!isScanActive">
+                    출발 확정 대상
+                    <span class="badge-circle white ml-5" v-show="isScanActive">2</span>
+                  </button>
+                  <button class="btn btn-list"><i class="icon-list"></i></button>
+                </div>
               </div>
             </div>
           </el-tab-pane>
@@ -98,26 +126,48 @@
       </div>
     </div>
 
-    <foot-menu />
+    <!-- <foot-menu v-if="isFooterActive" /> -->
+    <foot-menu v-if="!isCardSelected" />
+
+    <!-- 운송장 번호 팝업 -->
+    <pop-waybill v-if="isPopWaybillActive" @click="isPopWaybillActive = !isPopWaybillActive"></pop-waybill>
+    <!-- 정렬방식선택 팝업 -->
+    <pop-sorting v-if="isPopSortingActive" @click="isPopSortingActive = !isPopSortingActive"></pop-sorting>
+    <!-- 화물 검색 팝업-->
+    <pop-search-cargo v-if="isPopSearchCargoActive" @click="isPopSearchCargoActive = !isPopSearchCargoActive"></pop-search-cargo>
+    <!-- 배송예정시간 변경 팝업 -->
+    <pop-delivery-time v-if="isPopDeliveryTimeActive" @click="isPopDeliveryTimeActive = !isPopDeliveryTimeActive"></pop-delivery-time>
+    <!-- 대상이관요청 팝업 -->
+    <pop-transfer-request v-if="isPopTransferRequestActive" @click="isPopTransferRequestActive = !isPopTransferRequestActive"></pop-transfer-request>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import Vue from "vue";
 import { Gnb, FootMenu } from "@/components/layout";
+import PopWaybill from "@/views/Modal/PopWaybill";
+import PopSorting from "@/views/Modal/PopSorting";
+import PopSearchCargo from "@/views/DeliveryStart/PopSearchCargo";
+import PopDeliveryTime from "@/views/DeliveryStart/PopDeliveryTime";
+import PopTransferRequest from "@/views/DeliveryStart/PopTransferRequest";
 
 export default {
-  components: { Gnb, FootMenu },
+  components: { Gnb, FootMenu, PopWaybill, PopSorting, PopSearchCargo, PopDeliveryTime, PopTransferRequest },
   name: "DeliveryStart",
   data() {
     return {
       loading: false, //로딩
       isFooterActive: true, //하단 메뉴
+      isPopWaybillActive: false,
+      isPopSortingActive: false,
+      isPopSearchCargoActive: false,
+      isPopDeliveryTimeActive: false,
+      isPopTransferRequestActive: false,
+      isCardSelected: false, // 선택한 카드가 있는 경우
+      isScanActive: true, //스캔 완료한 화물이 있는 경우
       activeName: "1",
       radio: "1",
-      isChecked: false,
-      checkAll: false,
-      check01: true,
-      check02: false,
       popDetail: false,
       dynamicTags: ["A01", "간장게장 5kg", "청파동", "김한진", "검색 조건 01", "검색 조건 02"],
       cardData: [
@@ -139,9 +189,43 @@ export default {
           isSelected: false,
           popoverActive: false,
         },
+        {
+          scan: false,
+          number: "9117159",
+          time: "미정",
+          area: "A01",
+          address: "청파동 1가 62-20 102호",
+          isSelected: false,
+          popoverActive: false,
+        },
+        {
+          scan: false,
+          number: "9117159",
+          time: "미정",
+          area: "A01",
+          address: "청파동 1가 62-20 102호",
+          isSelected: false,
+          popoverActive: false,
+        },
       ],
+      radioButton: "수동",
     };
   },
+  computed: {
+    allSelected: {
+      set(isSelected) {
+        this.cardData.forEach(function(item) {
+          item.isSelected = isSelected;
+        });
+      },
+      get() {
+        return this.cardData.every(function(item) {
+          return item.isSelected;
+        });
+      },
+    },
+  },
+
   methods: {
     handleClick(tab, event) {
       // console.log(tab, event);
@@ -149,8 +233,8 @@ export default {
     handleClose(tag) {
       this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
     },
-    cardActive(item) {
-      item.isSelected = !item.isSelected;
+    cardSelect() {
+      this.isCardSelected = this.cardData.find((item) => item.isSelected) !== undefined;
     },
   },
 };

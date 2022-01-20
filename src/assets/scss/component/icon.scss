@@ -30,6 +30,9 @@ i {
   &-arrow-up {
     background: url("../../assets/images/icon-arrow-up.svg") no-repeat center / contain;
   }
+  &-list {
+    background: url("../../assets/images/icon-list.svg") no-repeat center / contain;
+  }
 
   //
   &-chevrons-up {
@@ -39,9 +42,6 @@ i {
   &-chevrons-down {
     background: url("../../assets/images/icon-chevrons-down.svg") no-repeat center / contain;
   }
-  // &-more-vertical {
-  //   background: url("../../assets/images/icon-more-vertical.svg") no-repeat center / contain;
-  // }
   &-plus {
     background: url("../../assets/images/icon-plus.svg") no-repeat center / contain;
   }

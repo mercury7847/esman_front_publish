@@ -1,7 +1,7 @@
 <template>
   <div class="l-container footer-active" v-loading="loading" element-loading-spinner="el-icon-loading">
     <gnb />
-    <div class="l-contents">
+    <div class="l-contents" :class="{ 'footer-active': isFooterActive }">
       <div class="l-tab">
         <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="input" name="1">
@@ -50,7 +50,7 @@
                 <div class="l-inp">
                   <div class="inp">
                     <div class="inp-inner">
-                      <el-input type="number" placeholder="" v-model="input01" class="input-with-select">
+                      <el-input type="number" placeholder="운송장 번호를 입력하세요." v-model="input01" class="inp-text-line">
                         <button slot="append" class="btn btn-camera"></button>
                       </el-input>
                     </div>
@@ -135,6 +135,15 @@
                   <el-radio-group v-model="ruleForm.radioType1">
                     <el-radio label="1">배송</el-radio>
                     <el-radio label="2">집하</el-radio>
+                  </el-radio-group>
+                </div>
+              </el-form-item>
+              <el-form-item label="radioLabel" prop="radioType" class="mb-20">
+                <div class="l-radio list">
+                  <el-radio-group v-model="radioTypeList">
+                    <el-radio label="1">기본순</el-radio>
+                    <el-radio label="2">스캔순</el-radio>
+                    <el-radio label="3">권역순</el-radio>
                   </el-radio-group>
                 </div>
               </el-form-item>
@@ -338,6 +347,7 @@
 
             <i class="icon-chevrons-up mr-10"></i>
             <i class="icon-chevrons-down mr-10"></i>
+            <i class="icon-list mr-10"></i>
 
             <i class="icon-plus"></i>
             <i class="icon-minus"></i>
@@ -346,7 +356,7 @@
       </div>
     </div>
 
-    <foot-menu />
+    <foot-menu v-if="isFooterActive" />
   </div>
 </template>
 
@@ -359,6 +369,7 @@ export default {
   data() {
     return {
       loading: false, //로딩
+      isFooterActive: false, //하단 메뉴
       activeName: "1",
       inputpw: "",
       input01: "",
@@ -368,6 +379,7 @@ export default {
       check04: false,
       switch01: false,
       radioButton: "",
+      radioTypeList: "1",
       selectEmail: "",
       select01: "",
       select02: "",

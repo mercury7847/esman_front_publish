@@ -23,21 +23,17 @@
       <div class="global-state">
         <button class="btn btn-bluetooth" v-if="$route.name === 'dashboard'"></button>
         <button class="btn btn-clock" v-if="$route.name === '집배송 출발'" @click="timeTabelActive = true"></button>
-        <button class="btn btn-alarm"><span class="alram-count-num badge-circle-blue">2</span></button>
-        <button class="btn btn-menu" @click="sideMenuActive = !sideMenuActive"></button>
+        <button class="btn btn-alarm"><span class="alram-count-num badge-circle blue">2</span></button>
+        <button class="btn btn-menu"></button>
       </div>
-      <side-menu v-if="sideMenuActive" @click="sideMenuActive = !sideMenuActive" />
     </div>
   </div>
 </template>
 <script>
-import SideMenu from "../../components/layout/SideMenu";
 export default {
-  components: { SideMenu },
   name: "Gnb",
   data() {
     return {
-      sideMenuActive: false,
       timeTabelActive: false,
     };
   },

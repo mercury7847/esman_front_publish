@@ -14,13 +14,17 @@
         margin-left: 10px;
       }
     }
-    &.bottom {
-      position: fixed;
-      left: 0;
-      bottom: 16px;
-      width: 100%;
-      padding: 0 16px;
-      box-sizing: border-box;
+    &-02 {
+      display: flex;
+      align-items: center;
+      border: 1px solid $--color--border;
+      border-radius: 5px;
+      .btn {
+        font-weight: 400;
+        &:not(:first-child) {
+          border-left: 1px solid $--color--border;
+        }
+      }
     }
   }
 
@@ -178,6 +182,12 @@
     width: 24px;
     height: 24px;
     background: url("../../assets/images/icon-more-vertical.svg") no-repeat 50% 50% / contain;
+  }
+  &-list {
+    width: 45px;
+    height: 45px;
+    background: url("../../assets/images/icon-list.svg") no-repeat 50% 50% / 24px 24px;
+    border: 1px solid $--color--border;
   }
 
   &:disabled {

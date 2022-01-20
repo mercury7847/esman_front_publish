@@ -227,6 +227,7 @@
     .el-radio {
       margin: 0;
       &__label {
+        color: $--color--contents;
         font-size: $--font-size-regular;
         vertical-align: middle;
       }
@@ -318,14 +319,19 @@
         }
       }
     }
-    &.l-list {
-      border-top: 1px solid $--color--border;
-      overflow-x: hidden;
+    &.list {
       .el-radio {
         width: 100%;
-        box-sizing: border-box;
-        padding: 14px 16px 16px;
-        border-bottom: 1px solid $--color--border;
+        padding: 15px 0;
+        &:not(:first-child) {
+          border-top: 1px solid $--color--border;
+        }
+        & + .el-radio {
+          margin-left: 0;
+        }
+        &-group {
+          width: 100%;
+        }
       }
     }
   }
