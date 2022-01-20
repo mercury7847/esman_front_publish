@@ -4,12 +4,13 @@
     width: 100%;
     text-align: center;
     font-size: $--font-size-small;
+    line-height: 18px;
     thead {
       th {
         height: 38px;
-        padding: 10px 0;
+        padding: 10px 0 !important;
         border-bottom: 1px solid $--color--border;
-        background-color: $--color--light-blue;
+        background-color: $--color--light-blue !important;
         color: $--color--grey;
         font-weight: 700;
         vertical-align: middle;
@@ -20,6 +21,7 @@
         position: relative;
         height: 46px;
         padding: 14px;
+        background-color: $--color--white !important;
         border-bottom: 1px solid $--color--border;
         color: $--color--contents;
         vertical-align: middle;
@@ -54,6 +56,16 @@
       }
     }
   }
+  .el-table {
+    &__cell {
+      border-bottom: 1px solid $--color--border !important;
+    }
+    .cell {
+      line-height: 18px;
+    }
+  }
+
+  //
   &-time {
     padding: 0 16px;
     table {
