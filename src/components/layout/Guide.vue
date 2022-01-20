@@ -295,7 +295,7 @@
                   <table>
                     <colgroup>
                       <col span="2" />
-                      <col width="76px" />
+                      <col width="95px" />
                     </colgroup>
                     <thead>
                       <tr>
@@ -313,16 +313,16 @@
                         <tr :key="item.index">
                           <td>{{ item.name }}</td>
                           <td>{{ item.status }}</td>
-                          <td rowspan="2">
-                            <div class="btn-group">
-                              <button class="btn btn-size-xsmall white ">요청</button>
-                              <button class="btn btn-size-xsmall white mt-20">삭제</button>
-                            </div>
+                          <td class="is-btn">
+                            <button class="btn btn-size-small white">요청</button>
                           </td>
                         </tr>
                         <tr :key="item.index">
                           <td>{{ item.phone }}</td>
                           <td>{{ item.date }}</td>
+                          <td class="is-btn">
+                            <button class="btn btn-size-small white">삭제</button>
+                          </td>
                         </tr>
                       </template>
                     </tbody>
