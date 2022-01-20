@@ -32,11 +32,9 @@
           </div>
         </el-form-item>
       </el-form>
-      <!-- <div class="l-scroll">
-      </div> -->
 
       <div slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="popClick">확인</el-button>
+        <el-button type="primary" @click="transferRequest">확인</el-button>
       </div>
     </el-dialog>
   </div>
@@ -54,6 +52,10 @@ export default {
   methods: {
     popClick() {
       this.$emit("click");
+    },
+    transferRequest() {
+      this.$emit("click");
+      this.$emit("transferRequest");
     },
   },
 };
