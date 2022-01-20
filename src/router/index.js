@@ -13,7 +13,6 @@ const Login = () => import(/* webpackChunkName: "chunk/model" */'../views/Login/
 const Landing = () => import(/* webpackChunkName: "chunk/model" */'../views/Landing');
 const Dashboard = () => import(/* webpackChunkName: "chunk/model" */'../views/Dashboard/Dashboard');
 const DeliveryStart = () => import(/* webpackChunkName: "chunk/model" */'../views/DeliveryStart/DeliveryStart');
-const DeliveryProcessing = () => import(/* webpackChunkName: "chunk/model" */'../views/Delivery/DeliveryProcessing');
 
 Vue.use(Router)
 
@@ -26,10 +25,8 @@ const router = new Router({
     { path: '/', name: 'landing', component: Landing },
     { path: '/home', name: '홈', component:  () => import('../views/Home.vue'), },
     { path: '/login', name: '로그인', component: Login },
-
-    { path: '/dashboard', name: 'dashboard', component: Dashboard },
+    { path: '/dashboard', name: '홈', component: Dashboard },
     { path: '/delivery-start', name: '집배송 출발', component: DeliveryStart },
-    { path: '/delivery-processing', name: '집배송 처리', component: DeliveryProcessing },
 
   ],
 });

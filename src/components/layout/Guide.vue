@@ -5,82 +5,92 @@
       <div class="l-tab">
         <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="input" name="1">
-            <el-form class="l-form" label-position="top">
-              <el-form-item label="label" class="mb-20">
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="text" placeholder="텍스트를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+            <div class="l-scroll">
+              <div class="scroll-y">
+                <el-form class="l-form" label-position="top">
+                  <el-form-item label="label" class="mb-20">
+                    <div class="l-inp">
+                      <div class="inp">
+                        <div class="inp-inner">
+                          <el-input type="text" placeholder="텍스트를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </el-form-item>
-              <el-form-item label="휴대전화 번호" class="mb-20">
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="text" placeholder="휴대전화 번호를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+                  </el-form-item>
+                  <el-form-item label="휴대전화 번호" class="mb-20">
+                    <div class="l-inp">
+                      <div class="inp">
+                        <div class="inp-inner">
+                          <el-input type="text" placeholder="휴대전화 번호를 입력하세요." v-model="input01" class="inp-text-line"></el-input>
+                        </div>
+                      </div>
+                      <button class="btn btn-size-large primary">인증번호</button>
                     </div>
-                  </div>
-                  <button class="btn btn-size-large primary">인증번호</button>
-                </div>
-              </el-form-item>
-              <el-form-item label="인증 번호" class="mb-20">
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="text" placeholder="인증 번호를 입력하세요." v-model="input01" class="inp-text-line">
-                        <span slot="suffix">2:33</span>
-                      </el-input>
+                  </el-form-item>
+                  <el-form-item label="인증 번호" class="mb-20">
+                    <div class="l-inp">
+                      <div class="inp">
+                        <div class="inp-inner">
+                          <el-input type="text" placeholder="인증 번호를 입력하세요." v-model="input01" class="inp-text-line">
+                            <span slot="suffix">2:33</span>
+                          </el-input>
+                        </div>
+                      </div>
+                      <button class="btn btn-size-large primary">확인</button>
                     </div>
-                  </div>
-                  <button class="btn btn-size-large primary">확인</button>
-                </div>
-              </el-form-item>
-              <el-form-item label="disabled" class="mb-20">
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="text" placeholder="텍스트를 입력하세요." class="inp-text-line" disabled value="이정민"></el-input>
+                  </el-form-item>
+                  <el-form-item label="disabled" class="mb-20">
+                    <div class="l-inp">
+                      <div class="inp">
+                        <div class="inp-inner">
+                          <el-input type="text" placeholder="텍스트를 입력하세요." class="inp-text-line" disabled value="이정민"></el-input>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </el-form-item>
-              <el-form-item label="camera" class="mb-20">
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="number" placeholder="운송장 번호를 입력하세요." v-model="input01" class="inp-text-line">
-                        <button slot="append" class="btn btn-camera"></button>
-                      </el-input>
+                  </el-form-item>
+                  <el-form-item label="camera" class="mb-20">
+                    <div class="l-inp">
+                      <div class="inp">
+                        <div class="inp-inner">
+                          <el-input type="number" placeholder="운송장 번호를 입력하세요." v-model="input01" class="inp-text-line">
+                            <button slot="append" class="btn btn-camera"></button>
+                          </el-input>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </el-form-item>
-            </el-form>
-            <el-form class="l-form login-form" label-position="top">
-              <el-form-item label="비밀번호(clearable)" class="mb-20">
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="password" placeholder="비밀번호를 입력하세요." v-model="inputpw" class="inp-text-line" clearable></el-input>
+                  </el-form-item>
+                </el-form>
+                <el-form class="l-form login-form" label-position="top">
+                  <el-form-item label="비밀번호(clearable)" class="mb-20">
+                    <div class="l-inp">
+                      <div class="inp">
+                        <div class="inp-inner">
+                          <el-input type="password" placeholder="비밀번호를 입력하세요." v-model="inputpw" class="inp-text-line" clearable></el-input>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </el-form-item>
-            </el-form>
-            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form" label-position="top">
-              <el-form-item label="label(validation)" prop="sender" class="mb-20">
-                <div class="l-inp">
-                  <div class="inp">
-                    <div class="inp-inner">
-                      <el-input type="text" placeholder="보내는 분을 입력해주세요." class="inp-text-line" v-model="ruleForm.sender"></el-input>
+                  </el-form-item>
+                </el-form>
+                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="l-form" label-position="top">
+                  <el-form-item label="label(validation)" prop="sender" class="mb-20">
+                    <div class="l-inp">
+                      <div class="inp">
+                        <div class="inp-inner">
+                          <el-input type="text" placeholder="보내는 분을 입력해주세요." class="inp-text-line" v-model="ruleForm.sender"></el-input>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </el-form-item>
-            </el-form>
-            <el-form class="l-form"> </el-form>
+                  </el-form-item>
+                </el-form>
+                <el-form class="l-form" label-position="top">
+                  <el-form-item label="사유" class="mb-20">
+                    <div class="l-textarea">
+                      <el-input type="textarea" placeholder="이관 사유를 입력하세요." v-model="textarea"> </el-input>
+                    </div>
+                  </el-form-item>
+                </el-form>
+              </div>
+            </div>
           </el-tab-pane>
 
           <el-tab-pane label="select" name="2">
@@ -305,17 +315,7 @@
               </el-table>
             </div>
           </el-tab-pane>
-          <el-tab-pane label="step" name="8">
-            <div class="l-step">
-              <el-steps :active="activeStep">
-                <el-step></el-step>
-                <el-step></el-step>
-                <el-step></el-step>
-              </el-steps>
-              <el-button @click="next">Next step</el-button>
-            </div>
-          </el-tab-pane>
-          <el-tab-pane label="font" name="9">
+          <el-tab-pane label="font" name="8">
             <p class="ft-size-large mb-20">ft-size-large : 18px</p>
             <p class="ft-size-regular mb-20">ft-size-regular : 14px</p>
             <p class="ft-size-small mb-20">ft-size-small : 12px</p>
@@ -339,7 +339,7 @@
             <h2 class="title mb-20">title : 14px</h2>
             <h2 class="title-sub mb-20">title-sub : 12px</h2>
           </el-tab-pane>
-          <el-tab-pane label="icon" name="10">
+          <el-tab-pane label="icon" name="9">
             <i class="icon-arrow-left is-active mr-10"></i>
             <i class="icon-arrow-right mr-10"></i>
             <i class="icon-arrow-down mr-10"></i>
@@ -373,6 +373,7 @@ export default {
       activeName: "1",
       inputpw: "",
       input01: "",
+      textarea: "",
       check01: false,
       check02: false,
       check03: false,
@@ -385,7 +386,6 @@ export default {
       select02: "",
       slider01: 5,
       slider02: 7,
-      activeStep: 1,
       ruleForm: {
         company: "",
         phone: "",
@@ -542,9 +542,6 @@ export default {
   },
   methods: {
     handleClick() {},
-    next() {
-      if (this.activeStep++ > 2) this.activeStep = 0;
-    },
   },
 };
 </script>
