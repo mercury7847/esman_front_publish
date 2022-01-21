@@ -4,56 +4,54 @@
     width: 100%;
     text-align: center;
     font-size: $--font-size-small;
-    thead {
-      th {
-        height: 38px;
-        padding: 10px 0;
-        border-bottom: 1px solid $--color--border;
-        background-color: $--color--light-blue;
-        color: $--color--grey;
-        font-weight: 700;
-        vertical-align: middle;
-      }
+    line-height: 18px;
+    th {
+      padding: 10px 0 !important;
+      border-bottom: 1px solid $--color--border;
+      background-color: $--color--light-blue !important;
+      color: $--color--grey;
+      font-weight: 700;
+      vertical-align: middle;
     }
-    tbody {
-      td {
-        position: relative;
-        height: 46px;
-        padding: 14px;
-        border-bottom: 1px solid $--color--border;
-        color: $--color--contents;
-        vertical-align: middle;
-      }
+    td {
+      position: relative;
+      padding: 10px 0 !important;
+      background-color: $--color--white !important;
+      border-bottom: 1px solid $--color--border;
+      color: $--color--contents;
+      vertical-align: middle;
     }
   }
   &.row2 {
-    border-top: 1px solid #000;
     table {
-      thead {
-        th {
-          &:nth-child(2) {
-            border-right: 1px solid $--color--border;
-          }
+      th {
+        &:nth-child(2) {
+          border-right: 1px solid $--color--border;
         }
       }
-      tbody {
-        td {
-          &:nth-child(2) {
-            border-right: 1px solid $--color--border;
-          }
-          .btn-group {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            .btn {
-              margin: 0;
-            }
+      td {
+        &:nth-child(2) {
+          border-right: 1px solid $--color--border;
+        }
+        &.is-btn {
+          text-align: right;
+          .btn-size-small {
+            width: 80px;
           }
         }
       }
     }
   }
+  .el-table {
+    &__cell {
+      border-bottom: 1px solid $--color--border !important;
+    }
+    .cell {
+      line-height: 18px;
+    }
+  }
+
+  //
   &-time {
     padding: 0 16px;
     table {

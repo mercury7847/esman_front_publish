@@ -54,6 +54,9 @@
           background-color: $--color--white;
           color: $--color--main;
         }
+        &.is-disabled {
+          color: $--color--grey;
+        }
       }
     }
   }

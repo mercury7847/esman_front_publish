@@ -37,13 +37,13 @@
                   <button class="btn btn-search" @click="isPopSearchCargoActive = true"></button>
                 </div>
               </div>
-              <div class="l-tag mb-20">
+              <div class="l-tag mb-20" v-if="isSearchList">
                 <el-tag v-for="tag in dynamicTags" :key="tag" closable :disable-transitions="false" effect="dark" @close="handleClose(tag)">
                   {{ tag }}
                 </el-tag>
               </div>
               <div class="l-delivery-list scroll-y">
-                <ul class="card-list is-select">
+                <ul class="card-list is-select" v-if="listData">
                   <li v-for="item in cardData" :key="item.index" :class="{ 'is-active': item.isSelected }">
                     <div class="card" @click="popDetail = true">
                       <div class="card-header">
@@ -75,6 +75,9 @@
                     </el-form>
                   </li>
                 </ul>
+                <div class="l-list-none" v-if="!listData">
+                  <span class="ft-color-grey">해당 시간대에 집배송 예정 화물이 없습니다.</span>
+                </div>
               </div>
               <div class="l-bottom">
                 <div class="btn-group-02 mb-10" v-show="isCardSelected">
@@ -126,7 +129,6 @@
       </div>
     </div>
 
-    <!-- <foot-menu v-if="isFooterActive" /> -->
     <foot-menu v-if="!isCardSelected" />
 
     <!-- 운송장 번호 팝업 -->
@@ -134,11 +136,15 @@
     <!-- 정렬방식선택 팝업 -->
     <pop-sorting v-if="isPopSortingActive" @click="isPopSortingActive = !isPopSortingActive"></pop-sorting>
     <!-- 화물 검색 팝업-->
-    <pop-search-cargo v-if="isPopSearchCargoActive" @click="isPopSearchCargoActive = !isPopSearchCargoActive"></pop-search-cargo>
+    <pop-search-cargo v-if="isPopSearchCargoActive" @click="popSearchCargo"></pop-search-cargo>
     <!-- 배송예정시간 변경 팝업 -->
     <pop-delivery-time v-if="isPopDeliveryTimeActive" @click="isPopDeliveryTimeActive = !isPopDeliveryTimeActive"></pop-delivery-time>
     <!-- 대상이관요청 팝업 -->
-    <pop-transfer-request v-if="isPopTransferRequestActive" @click="isPopTransferRequestActive = !isPopTransferRequestActive"></pop-transfer-request>
+    <pop-transfer-request v-if="isPopTransferRequestActive" @click="isPopTransferRequestActive = !isPopTransferRequestActive" @transferRequest="transferRequest"></pop-transfer-request>
+    <!-- 대상이관요청 사유 입력 팝업 -->
+    <pop-transfer-reason v-if="isPopTransferReasonActive" @click="isPopTransferReasonActive = !isPopTransferReasonActive" @transferReason="transferReason"></pop-transfer-reason>
+    <!-- 이관 완료 -->
+    <pop-alert v-if="isPopTransferComplete" @click="isPopTransferComplete = !isPopTransferComplete" popTitle="이관 완료" :popMsg="popMsg" popBtn="확인"></pop-alert>
   </div>
 </template>
 
@@ -151,21 +157,26 @@ import PopSorting from "@/views/Modal/PopSorting";
 import PopSearchCargo from "@/views/DeliveryStart/PopSearchCargo";
 import PopDeliveryTime from "@/views/DeliveryStart/PopDeliveryTime";
 import PopTransferRequest from "@/views/DeliveryStart/PopTransferRequest";
+import PopTransferReason from "@/views/DeliveryStart/PopTransferReason";
+import PopAlert from "@/views/Modal/PopAlert";
 
 export default {
-  components: { Gnb, FootMenu, PopWaybill, PopSorting, PopSearchCargo, PopDeliveryTime, PopTransferRequest },
+  components: { Gnb, FootMenu, PopWaybill, PopSorting, PopSearchCargo, PopDeliveryTime, PopTransferRequest, PopTransferReason, PopAlert },
   name: "DeliveryStart",
   data() {
     return {
+      listData: true, //배송리스트
       loading: false, //로딩
-      isFooterActive: true, //하단 메뉴
+      isCardSelected: false, // 선택한 카드가 있는 경우
+      isScanActive: true, //스캔 완료한 화물이 있는 경우
+      isSearchList: false, //검색어 리스트
       isPopWaybillActive: false,
       isPopSortingActive: false,
       isPopSearchCargoActive: false,
       isPopDeliveryTimeActive: false,
       isPopTransferRequestActive: false,
-      isCardSelected: false, // 선택한 카드가 있는 경우
-      isScanActive: true, //스캔 완료한 화물이 있는 경우
+      isPopTransferReasonActive: false,
+      isPopTransferComplete: false,
       activeName: "1",
       radio: "1",
       popDetail: false,
@@ -209,8 +220,10 @@ export default {
         },
       ],
       radioButton: "수동",
+      popMsg: "<span class='ft-color-primary'>2021-10-26 11:23</span><br>이성진 (131311223) 님에게<br>이관 요청이 전달 되었습니다.",
     };
   },
+
   computed: {
     allSelected: {
       set(isSelected) {
@@ -235,6 +248,18 @@ export default {
     },
     cardSelect() {
       this.isCardSelected = this.cardData.find((item) => item.isSelected) !== undefined;
+    },
+    popSearchCargo() {
+      this.isPopSearchCargoActive = !this.isPopSearchCargoActive;
+      this.isSearchList = true;
+    },
+    transferRequest() {
+      this.isPopTransferRequestActive = false;
+      this.isPopTransferReasonActive = true;
+    },
+    transferReason() {
+      this.isPopTransferReasonActive = false;
+      this.isPopTransferComplete = true;
     },
   },
 };
