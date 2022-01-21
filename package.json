@@ -3,18 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port=17075 ",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "copy": "npm run css && cp ./src/** /Users/pparknon/workspace/morpheus/workspace/esman/frontend/src",
     "css": "node-sass src/assets/scss/index.scss src/assets/scss/index.css"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
+    "secure-ls": "^1.2.6",
     "vue": "^2.6.11",
     "vue-router": "^3.5.2",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

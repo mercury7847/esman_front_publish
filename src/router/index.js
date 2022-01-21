@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+
 // lazyload 미적용
 // import intro from '../views/intro';
 
@@ -14,6 +15,9 @@ const Landing = () => import(/* webpackChunkName: "chunk/model" */'../views/Land
 const Dashboard = () => import(/* webpackChunkName: "chunk/model" */'../views/Dashboard/Dashboard');
 const DeliveryStart = () => import(/* webpackChunkName: "chunk/model" */'../views/DeliveryStart/DeliveryStart');
 const DeliveryProcessing = () => import(/* webpackChunkName: "chunk/model" */'../views/Delivery/DeliveryProcessing');
+
+
+const Test = () => import(/* webpackChunkName: "chunk/model" */'../views/Test');
 
 Vue.use(Router)
 
@@ -31,6 +35,7 @@ const router = new Router({
     { path: '/delivery-start', name: '집배송 출발', component: DeliveryStart },
     { path: '/delivery-processing', name: '집배송 처리', component: DeliveryProcessing },
 
+    { path: '/test', name: 'test', component: Test },
   ],
 });
 // 전역 네비게이션

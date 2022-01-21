@@ -11,6 +11,10 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
+import common from './plugins/common.js';
+Vue.use(common, { someOption: true , store})
+
+
 new Vue({
   render: (h) => h(App),
   store,
